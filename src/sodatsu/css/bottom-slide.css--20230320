@@ -1,0 +1,47 @@
+/* CSS Document */
+
+.bottom_slide{
+	width:100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.bottom_slide:not(.noloop),
+.bottom_slide:not(.noloop) *{max-height: 25vw;}
+.bottom_slide.setup{
+	height:225px;
+}
+.bottom_slide .arrow{
+	width: 65px;
+	min-width: 65px;
+	padding: 0 19px;
+}
+.bottom_slide .arrow img{
+	cursor: pointer;
+}
+.bottom_slide .menu{
+	overflow: hidden;
+	flex-grow: 1;
+	position: relative;
+}
+.bottom_slide.setup .menu{
+	z-index: -1;
+	visibility: hidden;
+}
+.bottom_slide:not(.setup) .menu ul{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.bottom_slide.noloop .menu{
+	overflow: unset;
+}
+.bottom_slide.noloop .menu ul{
+	justify-content: center;
+}
+.bottom_slide.noloop .menu ul li:nth-child(n+2){margin-left: 10px;}
+@media screen and (max-width: 999px){
+	.bottom_slide.noloop .menu{padding: 0 5%;}
+	.bottom_slide.noloop .menu ul{flex-flow: column;}
+	.bottom_slide.noloop .menu ul li:nth-child(n+2){margin-left: 0;margin-top: 10px;}
+}

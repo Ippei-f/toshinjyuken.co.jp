@@ -1,0 +1,69 @@
+/* CSS Document */
+
+.bottom_slide{
+	width:100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.bottom_slide.arrow_on{position: relative;}
+.bottom_slide:not(.noloop),
+.bottom_slide:not(.noloop) *{max-height: 25vw;}
+.bottom_slide.setup{
+	height:225px;
+}
+.bottom_slide .arrow{
+	width: 65px;
+	min-width: 65px;
+	padding: 0 19px;
+}
+.bottom_slide .arrow.type2{
+	width: 70px;
+	min-width: 70px;
+	padding: 10px;
+}
+.bottom_slide.arrow_on .arrow{
+	position: absolute;
+	z-index: 2;
+}
+.bottom_slide.arrow_on .arrow.L{left:0;}
+.bottom_slide.arrow_on .arrow.R{right:0;}
+.bottom_slide .arrow img{
+	cursor: pointer;
+	width:100%;
+}
+.bottom_slide .menu{
+	overflow: hidden;
+	flex-grow: 1;
+	position: relative;
+}
+.bottom_slide.setup .menu{
+	z-index: -1;
+	visibility: hidden;
+}
+.bottom_slide:not(.setup) .menu ul{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.bottom_slide.noloop .menu{
+	overflow: unset;
+}
+.bottom_slide.noloop .menu ul{
+	justify-content: center;
+}
+.bottom_slide.noloop .menu ul li:nth-child(n+2){margin-left: 10px;}
+@media screen and (max-width: 999px){
+	.bottom_slide:not(.noloop),
+	.bottom_slide:not(.noloop) *{
+		max-height: 41vw;
+		max-height:calc(100vw * 170 / 414);
+	}
+	.bottom_slide .arrow.type2{
+		width: 50px;
+		min-width: 50px;
+	}
+	.bottom_slide.noloop .menu{padding: 0 5%;}
+	.bottom_slide.noloop .menu ul{flex-flow: column;}
+	.bottom_slide.noloop .menu ul li:nth-child(n+2){margin-left: 0;margin-top: 10px;}
+}

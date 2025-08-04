@@ -1,0 +1,12 @@
+/* CSS Document */
+
+header .submenu tr > *:nth-child(1),
+header .submenu tr > *:nth-child(2),
+header .submenu tr > *:nth-child(3){display: none;}
+header .submenu tr > *:nth-child(4){margin-top: 0;}
+
+@media screen and (max-width: 999px) {
+	header .submenu > table{display: none;}
+	#pagebottom_btn{bottom: 0;}
+	footer{padding-bottom: 0;}
+}

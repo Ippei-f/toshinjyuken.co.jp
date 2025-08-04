@@ -1,0 +1,91 @@
+/* CSS Document */
+
+.gallery_slide{display: flex;}
+.gallery_slide .flexslider{
+	max-width: 52%;
+}
+.gallery_slide .flex-control-nav{
+	width:80.12820513%; 
+	left: 100%;
+	top: 0;
+	bottom:auto;
+	margin-left: 9.294871795%;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	justify-content: flex-start;
+}
+.gallery_slide .flex-control-nav li{
+	margin: 0;
+	width:16.33466135%;
+	margin-left: 0.398406375%;
+	margin-bottom: 0.398406375%;
+	background-color: #000;
+}
+.gallery_slide .flex-control-nav li:nth-child(6n+1){margin-left: 0;}
+.gallery_slide .flex-control-paging li a{
+	width:100%;
+	height:auto;
+	padding-top: 100%;	
+	-webkit-box-shadow:none;
+  -moz-box-shadow:none;
+  -o-box-shadow:none;
+  box-shadow:none;
+	opacity: 0.7;
+}
+.gallery_slide .flex-control-paging li a:hover,
+.gallery_slide .flex-control-paging li a.flex-active{opacity: 1;}
+.gallery_slide .flex-direction-nav{
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height:auto;
+	padding-top: 65.38461538%;
+}
+.gallery_slide .flex-direction-nav a{
+	width:44px;
+	height:44px;
+	margin: -22px 0 0;
+	background-color: #B3A263;
+	background-image: url(../images/content/search/arrow-gallery.svg);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.gallery_slide .flex-direction-nav a:before{content: '';}
+.gallery_slide .flex-direction-nav a.flex-next:before{content: '';}
+.gallery_slide .flex-direction-nav .flex-prev{left: -44px;}
+.gallery_slide .flexslider:hover .flex-direction-nav .flex-prev {
+  opacity: 1;
+  left: 0;
+}
+.gallery_slide .flex-direction-nav .flex-next{
+	right:-44px;
+	transform: scaleX(-1);
+}
+.gallery_slide .flexslider:hover .flex-direction-nav .flex-next{
+	opacity: 1;
+  right: 0;
+}
+.gallery_slide .flexslider .slides img,
+.gallery_slide .flex-control-paging li a{
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-color:transparent;
+}
+.gallery_slide .flexslider .slides img{
+	width:100%!important;
+	background-size: contain;
+}
+.gallery_slide .flexslider .slides img + div{
+	text-align:center;
+	padding-top: 1em;
+	line-height: 125%;
+}
+@media screen and (max-width: 999px) {
+	.gallery_slide .flexslider{max-width:100%;}
+	.gallery_slide .flex-control-nav{display: none;}
+}

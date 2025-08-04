@@ -1,0 +1,288 @@
+/* CSS Document */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@400;700&display=swap');
+
+.font_notosans{
+	font-family: 'Noto Sans JP',"メイリオ", sans-serif;
+	font-weight: 500;
+}
+
+/*
+.bottom_slide,
+.bottom_bnr{display: none!important;}
+*/
+
+.omoi_pagetitle{
+	padding-top: 90px;
+	padding-bottom: 50px;
+}
+.omoi_pagetitle h3{
+	font-size: 200%;
+	font-weight: 500;
+	color:#FF64A5;
+}
+.omoi_pagetitle hr{
+	margin: 1.25em 0;
+	border-top:dotted 2px #999999;
+}
+.omoi_pagetitle h2{
+	font-size: 150%;
+	font-weight: 500;
+}
+@media screen and (max-width: 999px) {
+	.omoi_pagetitle{
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+	.omoi_pagetitle h3{font-size: 175%;}
+}
+
+.omoi_mainpic{
+	background-image: url(../images/content/omoi/bg-pagetitle.svg);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: 100% 440px;
+	min-height: 530px;
+}
+.omoi_mainpic > *{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.omoi_mainpic .text{
+	text-align: left;
+	min-width: 590px;
+}
+.omoi_mainpic .text .t1{
+	font-size: 200%;
+	line-height: 200%;
+	color:#FF64A5;
+	margin-bottom: 0.5em;
+}
+.omoi_mainpic .text .t2{
+	background-color: rgba(255,255,255,0.80);
+	display: inline-block;
+	padding: 1em;
+}
+.omoi_mainpic .text .t2 > div{margin-bottom: 1em;}
+.omoi_mainpic .text .t2 span{display:inline-block;}
+.omoi_mainpic .text .t2 div + span{font-size: 150%;}
+.omoi_mainpic .text .t2 span + span{opacity:0.5;}
+@media screen and (min-width: 1000px) {
+	.omoi_mainpic .text .t2 span + span{margin-left: 0.5em;}
+}
+@media screen and (max-width: 999px) {
+	.omoi_mainpic{
+		background-position: center top;
+		background-size: 100% 350px;
+		min-height: 0;
+	}
+	.omoi_mainpic > *{
+		flex-direction: column;
+		align-items: stretch;
+	}
+	.omoi_mainpic .text{
+		min-width: 0;
+		position: relative;
+	}
+	.omoi_mainpic .text .t1{
+		font-size: 130%;
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+	.omoi_mainpic .text .t2{
+		position: absolute;
+		top: 100%;
+		left: 0;
+		display: flex;
+		flex-direction: column;
+		width: 154px;
+		font-size: 85%;
+		margin-top: 36px;
+	}
+	.omoi_mainpic .text .t2 > div{
+		line-height: 125%;
+	}
+	.omoi_mainpic .text .t2 > div,
+	.omoi_mainpic .text .t2 div + span{
+		margin-bottom: 10px;
+	}
+	.omoi_mainpic .photo{
+		width:206px;
+		margin-left: auto;
+	}
+}
+
+.omoi_box{max-width: 900px;}
+.omoi_box .o_list{
+	margin-top:160px;
+	margin-bottom: 110px;
+	text-align: left;
+	line-height: 200%;
+}
+.omoi_box .o_list li:nth-child(n+2){
+	margin-top: 90px;
+}
+.omoi_box .o_list li h3{
+	font-size: 175%;
+	font-weight: 500;
+	color:#FF64A5;
+	margin-bottom: 0.5em;
+}
+.omoi_box .o_list li img{width:100%;}
+.omoi_box .o_list li .p_set{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.omoi_box .o_list li .p_set img[src*="p04-2"],
+.omoi_box .o_list li .p_set img[src*="p04-3"]{
+	width:49%;
+	width:calc(100% * 222 / 450);
+	margin-top: 2%;
+	margin-top: calc(100% * 6 / 450);
+}
+@media screen and (min-width: 1000px) {
+	.omoi_box .o_list li > img,
+	.omoi_box .o_list li .p_set{
+		margin-top: 0.5em;
+		margin-bottom: 0.25em;
+	}
+	.omoi_box .o_list li img[src*="p01"],
+	.omoi_box .o_list li img[src*="p02"],
+	.omoi_box .o_list li img[src*="p03"]{width: 350px;}
+	.omoi_box .o_list li .p_set{width:450px;}
+	.omoi_box .o_list li img[src*="p01"],
+	.omoi_box .o_list li img[src*="p03"]{
+		float: right;
+		margin-left: 1em;
+	}
+	.omoi_box .o_list li img[src*="p02"],
+	.omoi_box .o_list li .p_set{
+		float: left;
+		margin-right: 1em;
+	}
+	.omoi_box .o_list li img[src*="p05"]{
+		margin-top: 1em;
+		margin-bottom: 0;
+	}
+}
+@media screen and (max-width: 999px) {
+	.omoi_box .o_list,
+	.omoi_box .o_list li:nth-child(n+2){margin-top: 40px;}
+	.omoi_box .o_list{margin-bottom: 40px;}
+	.omoi_box .o_list li{
+		display: flex;
+		flex-direction: column;
+		font-size: 85%;
+	}
+	.omoi_box .o_list li h3{font-size: 150%;}
+	.omoi_box .o_list li > img,
+	.omoi_box .o_list li .p_set{
+		order:2;
+		margin-top: 1em;
+	}
+	.omoi_box .o_list li b + br{display: none;}
+}
+
+.omoi_bnr{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 120px;
+}
+.omoi_bnr .bnrA + .bnrA{margin-top:50px;}
+.omoi_bnr img[src*="text-yorokobi"]{
+	margin-top: 90px;
+	margin-bottom: 30px;
+}
+@media screen and (max-width: 999px) {
+	.omoi_bnr{margin-bottom: 60px;}
+	.omoi_bnr .bnrA + .bnrA{margin-top:25px;}
+	.omoi_bnr img[src*="text-yorokobi"]{
+		margin-top: 65px;
+		margin-bottom: 10px;
+	}
+}
+
+.omoi_bottom{margin-bottom: 55px;}
+.omoi_bottom img[src*="text-zokuzoku"]{
+	width: 572px;
+	margin: 0 auto;
+}
+.omoi_bottom .link{
+	margin-top: 20px;
+	display: flex;
+}
+.omoi_bottom .link a{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	flex-grow: 1;	
+	line-height: 150%;
+}
+.omoi_bottom .link a span{
+	display: inline-block;
+	margin-right: 0.125em;
+}
+.omoi_bottom .link a:nth-child(1){
+	background-color: #FF64A5;
+	color:#FFF;
+}
+.omoi_bottom .link a:nth-child(2){
+	background-color: #ECFF00;
+}
+.omoi_bottom .link svg > *{
+	fill:none;
+	stroke:#4C4345;
+	stroke-miterlimit:10;
+	stroke-width:2px;
+}
+.omoi_bottom .link a:nth-child(1) svg > *{stroke:#fff;}
+@media screen and (min-width: 1000px) {
+	.omoi_bottom .link a{
+		width: 50%;
+		font-size: 175%;
+		padding: 35px 0;
+	}
+	.omoi_bottom .link a span{
+		font-size: 150%;
+		font-weight: 900;
+	}
+	.omoi_bottom .link svg{margin-top: 10px;}
+}
+@media screen and (max-width: 999px) {
+	.omoi_bottom .link{
+		flex-direction: column;
+		align-items: center;
+	}
+	.omoi_bottom .link a{
+		width:320px;
+		border-radius: 4em;
+		-webkit-border-radius: 4em;
+		-moz-border-radius: 4em;
+		box-shadow: 8px 8px 16px 0px rgba(0,0,0,0.15);
+		-webkit-box-shadow: 8px 8px 16px 0px rgba(0,0,0,0.15);
+		-moz-box-shadow: 8px 8px 16px 0px rgba(0,0,0,0.15);
+		border:solid 3px #000;
+		display: block;
+		font-size: 125%;
+		line-height: 24px;
+		padding: 5px 0;
+	}
+	.omoi_bottom .link a > div{display: inline;}
+	.omoi_bottom .link a:nth-child(1){
+		border-color:#ECFF00;
+		padding: 17px 0;
+	}
+	.omoi_bottom .link a:nth-child(1) br{display: none;}
+	.omoi_bottom .link a:nth-child(2){border-color:#FF64A5;}
+	.omoi_bottom .link a + a{margin-top: 20px;}
+	.omoi_bottom .link svg{
+		width: 1.2em;
+		height: 0.3em;
+		margin-bottom: 0.3em;
+		margin-left: 0.1em;
+	}
+	.omoi_bottom .link svg > *{stroke-width: 4px;}
+}

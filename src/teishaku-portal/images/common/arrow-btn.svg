@@ -1,0 +1,6 @@
+<svg class="arrow_btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21.45 10.79">
+<defs><style>
+.arrow_btn polyline{fill:none;stroke-miterlimit:10;}
+</style></defs>
+<polyline points="0 5.39 20 5.39 13.63 0.39"/>
+</svg>

@@ -1,0 +1,15 @@
+/* CSS Document */
+
+.map_box{
+	height:600px;
+	text-align: left;
+}
+.map_box .map_text{}
+.map_box .map_text a b{display: inline-block;}
+/* .map_box .map_text a div{max-width: 10em;} */
+.map_box .map_text a .kaiin{
+	display: inline-block;
+	background-color: #FF64A5;
+	color:#FFF;
+	padding: 0 0.5em;
+}

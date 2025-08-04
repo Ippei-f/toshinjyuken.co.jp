@@ -1,0 +1,170 @@
+/* CSS Document */
+
+.pan > div{border-bottom:none;}
+.p_title{
+	background-color: #4C4345;
+	color:#FFF;
+	font-size: 175%;
+	padding: 1em 0;
+}
+.p_title > * span{border-bottom:none;}
+
+.search_title{
+	font-size: 200%;
+	padding: 1em 0;
+}
+.search_title span{
+	display: inline-block;
+	vertical-align: middle;
+	line-height: 40px;
+}
+.search_title .chiku{
+	background-color: #000;
+	color:#FFF;
+	padding: 0 0.75em;
+	margin-right: 0.5em;
+	font-size: 50%;
+}
+.search_title .title{
+	font-weight: bold;
+}
+
+.search_data1{
+	padding-top: 45px;
+	padding-bottom: 60px;
+}
+.search_data1 tr > td{vertical-align: top;padding-bottom: 0.75em;}
+.search_data1 tr > td:nth-child(1){width:2.75em;}
+.search_data1 tr > td:nth-child(1) span{
+	display: block;
+	text-align: center;
+	vertical-align: middle;
+	/*
+	background-color: #253138;
+	color:#FFF;
+	*/
+	background-color: #f4f1e9;
+	padding: 0.25em 0;
+	font-size: 75%;
+}
+.search_data1 tr > td:nth-child(2){
+	padding-left: 0.5em;
+}
+.search_data1 tr > td:nth-child(2) b{
+	/* font-size:150%; */
+	font-size:120%;
+	display: inline-block;
+	margin-top: -0.125em;
+}
+.search_data2{
+	padding-top: 45px;
+	padding-bottom: 45px;
+	font-size: 110%;
+	line-height: normal;
+}
+.search_data3{
+	padding-bottom: 60px;
+}
+.search_data3 h3{
+	margin-top: 75px;
+	margin-bottom: 60px;
+	font-size: 175%;
+	line-height: normal;
+}
+.search_data3 .box_kukaku{}
+.search_data3 .box_kukaku img{
+	margin-bottom: 60px;
+}
+.search_data3 .kukaku_top{
+	width:100%;
+	/* border-bottom: solid 4px #000; */
+	margin-top: 60px;
+	margin-bottom: 30px;
+}
+.search_data3 .kukaku_top tr > *{
+	text-align: left;
+	vertical-align: middle;
+}
+.search_data3 .kukaku_top tr > *:nth-child(1){
+	font-size: 300%;
+	font-weight: bold;
+}
+/*
+.search_data3 .kukaku_top tr > *:nth-child(2){}
+.search_data3 .kukaku_top tr > *:nth-child(2) span{
+	display: block;
+	border-left: solid 1px #000;
+	padding-left: 1em;
+	height:3em;
+	position: relative;
+}
+.search_data3 .kukaku_top tr > *:nth-child(2) span img{
+	height: 100%;
+	float: left;
+}
+.search_data3 .kukaku_top tr > *:nth-child(2) span a:nth-child(2) img{margin-left: 0.5em;}
+*/
+
+.search_data3 .kukaku_top tr > *:nth-child(3) > div{
+	margin-bottom: -0.75em;
+}
+.search_data3 .kukaku_top tr > *:nth-child(3) > strong{
+	font-size: 175%;
+}
+.search_data3 .kukaku_top tr > *:nth-child(3) > strong span{
+	font-size: 150%;
+}
+@media screen and (min-width: 1000px) {
+	.search_data3 .kukaku_top tr > *:nth-child(1){width: 6em;}
+	/* .search_data3 .kukaku_top tr > *:nth-child(2){width: 19em;} */
+	.search_data3 .kukaku_top tr > *:nth-child(3){width: 12em;}
+}
+@media screen and (max-width: 999px) {
+	.search_data3 .kukaku_top tr > *:nth-child(1){/*float: left; width:59%;*/font-size: 240%;}
+	/*
+	.search_data3 .kukaku_top tr > *:nth-child(2){float: right; width:40%;}
+	.search_data3 .kukaku_top tr > *:nth-child(2) span{margin-top: 1.25em;}
+	*/
+	.search_data3 .kukaku_top tr > *:nth-child(2){clear: both;}
+	.search_data3 .kukaku_top tr > *:nth-child(3){margin-top: 0.5em;}
+}
+
+.box_gallery{
+	width:100%;
+	max-width: 100%;
+	overflow: hidden;
+}
+.search_data3 .box_access{margin-bottom: 75px;}
+.search_data3 .box_access > .Wbase{padding-top: 500px;}
+.search_data3 .box_access > .Wbase iframe{
+	position: absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	margin: auto;
+	border: none;
+}
+.search_data3 .box_bukken{margin-bottom: 150px;}
+.search_data3 .box_shuuhen li:nth-child(n+2),
+.search_data3 .box_bukken li:nth-child(n+2){
+	margin-top: 1em;
+	padding-top: 1em;
+	border-top:solid 1px #C8C8C8;
+}
+@media screen and (min-width: 1000px) {
+	.search_data3 .box_shuuhen tr td:nth-child(1){
+		width:22.85714286%;
+	}
+	.search_data3 .box_bukken tr td:nth-child(1){
+		width:36.25%;
+		padding-left: 5%;
+	}
+}
+@media screen and (max-width: 999px) {
+}
+.search_data3 .box_contact{}
+.search_data3 .box_contact .btn_bgLtoR{
+	font-size: 175%;
+	font-weight: bold;
+}
