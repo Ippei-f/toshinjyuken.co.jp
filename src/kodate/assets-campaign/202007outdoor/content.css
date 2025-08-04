@@ -1,0 +1,60 @@
+@charset "utf-8";
+/* CSS Document */
+
+.ali-C {margin:0 auto !important; text-align: center !important;}
+.contBnr {margin-bottom:20px;}
+
+
+@media screen and (max-width: 999px) {
+.contBnr img {width:100%;}
+
+.ttlMainTitle {margin:30px auto 20px auto;}
+.ttlChance {font-size:7vw; margin:50px auto 20px auto; line-height:1.6;}
+.txtChance {margin:0 auto; text-align: left;  line-height:2;}
+
+ul.campaignForExam { margin:50px auto;}
+ul.campaignForExam li {margin:0 auto 30px auto; width:80%;}
+ul.campaignForExam li dl {}
+ul.campaignForExam li dl dt {margin:0 auto 20px auto !important; width:80%;}
+ul.campaignForExam li dl dt img {display: block !important; margin:0 auto !important; width:100%;}
+ul.campaignForExam li dl dd {text-align: left; line-height: 1.6; margin:0 ; padding:0;}
+
+.ttlPropertyList {font-size:5vw; font-weight: bolder; border:solid 1px #000; padding:15px; margin:50px auto 20px auto;}
+ul.campaignProperty { margin:0 auto 50px auto;}
+ul.campaignProperty li {margin:0 auto 10px auto; border:solid 5px #e73911; background-color:#fad8c7; padding:6px;}
+ul.campaignProperty li a {display: block;}
+ul.campaignProperty li a h4 {font-size:5vw; font-weight: bolder; padding:10px 0; background-color:#e73911; color:#fff;}
+ul.campaignProperty li a .txtAddress {margin:20px auto; line-height:1.6;}
+ul.campaignProperty li a .txtPrice {font-size:5vw; font-weight: bolder; margin:20px auto 10px auto;}
+ul.campaignProperty li a .txtPrice span {font-weight:lighter; font-size:3.5vw; margin-left:10px;}
+.pcOnly {display: none;}
+
+}
+
+
+@media screen and (min-width: 1000px) {
+.ttlMainTitle {margin:50px auto 20px auto;}
+.ttlChance {font-size:40px; margin:50px auto 20px auto; line-height:1.6;}
+.txtChance {width:1000px; margin:0 auto; text-align: left;  line-height:2;}
+
+ul.campaignForExam {width:1000px; margin:50px auto; display: flex; flex-wrap: nowrap; justify-content: space-between;}
+ul.campaignForExam li {width:294px;}
+ul.campaignForExam li dl {}
+ul.campaignForExam li dl dt {margin:0 auto 20px auto !important;}
+ul.campaignForExam li dl dt img {display: block !important; margin:0 auto !important;}
+ul.campaignForExam li dl dd {text-align: left; line-height: 1.6; margin:0 ; padding:0;}
+
+.ttlPropertyList {font-size:28px; font-weight: bolder; border:solid 1px #000; padding:25px; margin:50px auto 20px auto;}
+ul.campaignProperty {width:1200px; margin:0 auto 50px auto; display: flex; flex-wrap: wrap; justify-content:flex-start;}
+ul.campaignProperty li {width:380px; margin:0 30px 30px 0; border:solid 5px #e73911; background-color:#fad8c7; padding:6px;}
+ul.campaignProperty li:nth-child(3n) {margin-right:0;}
+ul.campaignProperty li a {display: block;}
+ul.campaignProperty li a h4 {font-size:24px; font-weight: bolder; padding:20px 0; background-color:#e73911; color:#fff;}
+ul.campaignProperty li a .txtAddress {margin:20px auto; line-height:1.6; font-size:14px;}
+ul.campaignProperty li a .txtPrice {font-size:18px; font-weight: bolder; margin:20px auto 10px auto;}
+ul.campaignProperty li a .txtPrice span {font-weight:lighter; font-size:12px; margin-left:10px;}
+.spOnly {display: none;}
+
+}
+
+

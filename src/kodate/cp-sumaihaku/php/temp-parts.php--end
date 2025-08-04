@@ -1,0 +1,304 @@
+<?php
+//<meta charset="utf-8">
+function SUMAI_HEADER(){
+	global $sumai_param;
+?>
+	<header>
+		<h1 class="v20230601"><a href="https://www.toshinjyuken.co.jp"><img src="<?php echo $sumai_param['素材階層']; ?>img/0601/logo.svg" alt="東新住建" width="139"></a></h1>
+		<a class="fixbtn" href="<?php echo $sumai_param['物件リンク']; ?>">
+			<picture>
+			<source media="(max-width:768px)" srcset="<?php echo $sumai_param['素材階層']; ?>img/0426/r-btn1-sp.svg" width="39">
+			<img src="<?php echo $sumai_param['素材階層']; ?>img/0426/r-btn1.svg" alt="物件一覧" width="56">
+			</picture>
+		</a>
+		<a class="fixbtn" href="<?php echo $sumai_param['問合リンク']; ?>">
+			<picture>
+			<source media="(max-width:768px)" srcset="<?php echo $sumai_param['素材階層']; ?>img/0426/r-btn2-sp.svg" width="39">
+			<img src="<?php echo $sumai_param['素材階層']; ?>img/0426/r-btn2.svg" alt="お問い合わせ" width="56">
+			</picture>
+		</a>
+	</header>
+<?php
+}
+
+function SUMAI_MAINPIC(){
+	global $sumai_param;
+?>
+		<div class="mv">
+			<div class="mv_inner">
+				<picture>
+					<source media="(max-width:768px)" srcset="<?php echo $sumai_param['素材階層']; ?>img/0601/sp_mv.png" width="756" height="1194">
+					<img src="<?php echo $sumai_param['素材階層']; ?>img/0601/mv.png" alt="住まい博-春のキャンペーン" width="2579" height="1165">
+				</picture>
+			</div>
+			<div class="mv_mask"></div>
+			<div class="left-flag">
+				<picture>
+					<source media="(max-width:768px)" srcset="<?php echo $sumai_param['素材階層']; ?>img/l-deco_sp.png" width="218" height="133">
+					<img src="<?php echo $sumai_param['素材階層']; ?>img/l-deco.png" alt="旗" width="607" height="334">
+				</picture>
+			</div>
+			<div class="right-flag">
+				<picture>
+					<source media="(max-width:768px)" srcset="<?php echo $sumai_param['素材階層']; ?>img/r-deco_sp.png" width="218" height="133">
+					<img src="<?php echo $sumai_param['素材階層']; ?>img/r-deco.png" alt="旗" width="607" height="334">
+				</picture>
+			</div>
+		</div>
+<?php
+}
+
+function LOCAL_BNR_BUKKEN($class=''){
+global $sumai_param;
+//サイトに合わせて↓のリンクを設定する
+	if($class!=''){$class=' '.$class;}
+	echo '<div class="btn_v2'.$class.'">
+<a href="'.$sumai_param['物件リンク'].'"><img src="'.$sumai_param['素材階層'].'img/0426/btn1.svg"><img src="'.$sumai_param['素材階層'].'img/0426/btn1-sp.svg"></a>
+<a href="'.$sumai_param['問合リンク'].'"><img src="'.$sumai_param['素材階層'].'img/0426/btn2.svg"><img src="'.$sumai_param['素材階層'].'img/0426/btn2-sp.svg"></a>
+</div>'.chr(10);
+}
+
+function SUMAI_CAMPAIGN(){
+	global $sumai_param;
+?>
+<div class="campaign">
+			<div class="campaign-list js-fadeUp">
+				<div class="chara L1">
+					<picture>
+						<source media="(max-width:768px)" srcset="<?php echo $sumai_param['素材階層']; ?>img/chara-L1.svg" width="102" height="150">
+						<img src="<?php echo $sumai_param['素材階層']; ?>img/chara-L1.svg" alt="キャラクター" width="102" height="150">
+					</picture>
+				</div>
+				<div class="chara L2">
+					<picture>
+						<source media="(max-width:768px)" srcset="<?php echo $sumai_param['素材階層']; ?>img/chara-L2sp.svg" width="191" height="150">
+						<img src="<?php echo $sumai_param['素材階層']; ?>img/chara-L2.svg" alt="キャラクター" width="94" height="150">
+					</picture>
+				</div>
+				<div class="chara R1">
+					<picture>
+						<source media="(max-width:768px)" srcset="<?php echo $sumai_param['素材階層']; ?>img/chara-R1sp.svg" width="112" height="150">
+						<img src="<?php echo $sumai_param['素材階層']; ?>img/chara-R1.svg" alt="キャラクター" width="95" height="150">
+					</picture>
+				</div>
+				<div class="chara R2">
+					<picture>
+						<source media="(max-width:768px)" srcset="<?php echo $sumai_param['素材階層']; ?>img/0601/chara-R2sp.svg" width="247">
+						<img src="<?php echo $sumai_param['素材階層']; ?>img/chara-R2.svg" alt="キャラクター" width="123" height="150">
+					</picture>
+				</div>
+				<picture>
+					<source media="(max-width:768px)" srcset="<?php echo $sumai_param['素材階層']; ?>img/<?php
+					echo str_replace('mv-','sp_mv-',$sumai_param['特典画像']); ?>" width="696"><!-- height="1230" -->
+					<img src="<?php echo $sumai_param['素材階層']; ?>img/<?php echo $sumai_param['特典画像']; ?>" alt="キャンペーン詳細" width="1800"><!--  height="2280" -->
+				</picture>
+			</div>
+<?php
+LOCAL_BNR_BUKKEN();
+?>
+		</div>
+<?php
+}
+
+function SUMAI_CONTAINER(){
+	global $sumai_param;
+?>
+		<div class="container">
+			<div class="schedule">
+				<div class="schedule_inner js-fadeUp">
+					<div class="chara R3">
+						<picture>
+							<source media="(max-width:768px)" srcset="<?php echo $sumai_param['素材階層']; ?>img/chara-R3sp.svg" width="110" height="150">
+							<img src="<?php echo $sumai_param['素材階層']; ?>img/chara-R3.svg" alt="キャラクター" width="146" height="150">
+						</picture>
+					</div>
+					<div class="chara L3">
+						<picture>
+							<source media="(max-width:768px)" srcset="<?php echo $sumai_param['素材階層']; ?>img/chara-L3sp.svg" width="117" height="150">
+							<img src="<?php echo $sumai_param['素材階層']; ?>img/chara-L3.svg" alt="キャラクター" width="141" height="150">
+						</picture>
+					</div>
+					<div class="chara R4">
+						<picture>
+							<source media="(max-width:768px)" srcset="<?php echo $sumai_param['素材階層']; ?>img/chara-R4sp.svg" width="149" height="150">
+							<img src="<?php echo $sumai_param['素材階層']; ?>img/chara-R4.svg" alt="キャラクター" width="95" height="150">
+						</picture>
+					</div>
+					<picture>
+					<source media="(max-width:768px)" srcset="<?php echo $sumai_param['素材階層']; ?>img/0601/sp_schedule.png" width="652">
+					<img src="<?php echo $sumai_param['素材階層']; ?>img/0601/schedule.png" alt="特典スケジュール" width="1246">
+					</picture>
+					<?php LOCAL_BNR_BUKKEN(); ?>
+				</div>
+			</div>
+			<?php LOCAL_BNR_BUKKEN('sp'); ?>
+			
+<?php
+if(isset($sumai_param['カリフォルニア'])){
+?>
+<style>
+.bnr_cari{
+	position: relative;
+	z-index: 2;
+	display: flex;
+	justify-content: center;
+	padding-bottom: 30px;
+	max-width: 90%;
+	margin: auto;
+}
+.bnr_cari img{width: 100%;max-width: 900px;}
+@media screen and (min-width: 769px){
+	.bnr_cari{margin-top: -85px;}
+	.bnr_cari img[src*="-sp"]{display: none;}
+}
+/*
+@media screen and (max-width: 768px){
+	.bnr_cari img:not([src*="-sp"]){display: none;}
+}
+*/
+</style>
+<div class="bnr_cari"><a href="<?php echo $sumai_param['カリフォルニア']; ?>" target="_blank">
+<img src="<?php echo $sumai_param['素材階層']; ?>img/0502/bnr-cari.jpg" width="900">
+</a></div>
+<?php
+/*
+
+<img src="<?php echo $sumai_param['素材階層']; ?>img/0502/bnr-cari-sp.jpg" width="">
+*/
+}			
+?>
+			
+			<div class="island">
+				<div class="island_inner js-fadeUp">
+					<div class="chara R5"><img src="<?php echo $sumai_param['素材階層']; ?>img/chara-R5.svg" alt="キャラクター" width="146" height="150"></div>
+					<div class="chara R6"><img src="<?php echo $sumai_param['素材階層']; ?>img/chara-R6.svg" alt="キャラクター" width="105" height="150"></div>
+					<div class="chara R7"><img src="<?php echo $sumai_param['素材階層']; ?>img/chara-R7.svg" alt="キャラクター" width="124" height="150"></div>
+					<!--<div class="chara L4"><img src="<?php echo $sumai_param['素材階層']; ?>img/chara-L4.svg" alt="キャラクター" width="186" height="150"></div>-->
+					<div class="chara L5"><img src="<?php echo $sumai_param['素材階層']; ?>img/chara-L5.svg" alt="キャラクター" width="117" height="150"></div>
+					<div class="chara L6"><img src="<?php echo $sumai_param['素材階層']; ?>img/chara-L6.svg" alt="キャラクター" width="146" height="150"></div>
+					<div class="chara L7"><img src="<?php echo $sumai_param['素材階層']; ?>img/chara-L7.svg" alt="キャラクター" width="110" height="150"></div>
+					<picture>
+						<source media="(max-width:768px)" srcset="<?php echo $sumai_param['素材階層']; ?>img/sp_island.png" 	width="692" height="957">
+						<img src="<?php echo $sumai_param['素材階層']; ?>img/island.png" alt="東新アイランド" width="1246" height="2546">
+					</picture>
+					<h2 class="marker-text yellow">これから育まれる、<br class="sp">すべての	「新・かぞく」に。</h2>
+					<p class="main-text">東新住建は、創業46年の歴史と<br class="sp">累計23,000棟を超える豊富な実績から<br>シングルママ・DINKs・シニアご夫婦・兄弟姉妹・<br class="sp">ペットとの暮らしなど、<br class="pc">ふたり暮らしにちょうどいい、<br class="sp">ライフスタイルや家族構成に合わせた<br>これから育まれる「新・かぞく」にぴったりな、<br class="sp">特別な一邸をお届けします。</p>
+					<div><img src="<?php echo $sumai_param['素材階層']; ?>img/jisseki.png" width="1144" height="409" alt="実績"></div>
+					<h3 class="marker-text sub">創業から変わらない<br class="sp">「循環・共生」への取り組み</h3>
+					<p class="main-text second">東新住建は5つのテーマを通じて、<br class="sp">SDGsの達成に取り組んでいます。</p>
+					<div class="sdgs">
+						<picture>
+							<source media="(max-width:768px)" srcset="<?php echo $sumai_param['素材階層']; ?>img/sdgs_sp.png" 	width="661" height="442">
+							<img src="<?php echo $sumai_param['素材階層']; ?>img/sdgs.png" alt="sdgs" width="800" height="100">
+						</picture>
+					</div>
+					<a class="small-btn info" href="https://www.toshinjyuken.co.jp/kodate/sdgs.php"><img src="<?php echo $sumai_param['素材階層']; ?>img/btn-small.png" alt="詳しくはこちら" width="800" height="101"></a>
+				</div>
+			</div>
+			<div class="brand">
+				<div><img src="<?php echo $sumai_param['素材階層']; ?>img/brand_ttl.png" alt="ブランド" width="722" height="319"></div>
+				<div class="chara R5"><img src="<?php echo $sumai_param['素材階層']; ?>img/chara-R5sp.svg" alt="キャラクター" width="117" height="150"></div>
+				<div class="chara R6"><img src="<?php echo $sumai_param['素材階層']; ?>img/chara-R6sp.svg" alt="キャラクター" width="105" height="150"></div>
+				<div class="chara R7"><img src="<?php echo $sumai_param['素材階層']; ?>img/chara-R7sp.svg" alt="キャラクター" width="106" height="150"></div>
+				<div class="chara L4"><img src="<?php echo $sumai_param['素材階層']; ?>img/chara-L4sp.svg" alt="キャラクター" width="186" height="150"></div>
+				<div class="chara L5"><img src="<?php echo $sumai_param['素材階層']; ?>img/chara-L5sp.svg" alt="キャラクター" width="241" height="150"></div>
+				<div class="chara L6"><img src="<?php echo $sumai_param['素材階層']; ?>img/chara-L6sp.svg" alt="キャラクター" width="124" height="150"></div>
+				<div class="chara L7"><img src="<?php echo $sumai_param['素材階層']; ?>img/chara-L7sp.svg" alt="キャラクター" width="110" height="150"></div>
+				<div class="chara L8 pc"><img src="<?php echo $sumai_param['素材階層']; ?>img/chara-L8.svg" alt="キャラクター" width="124" height="150"></div>
+				<div class="chara R8 pc"><img src="<?php echo $sumai_param['素材階層']; ?>img/chara-R8.svg" alt="キャラクター" width="122" height="150"></div>
+				<div class="chara R9"><img src="<?php echo $sumai_param['素材階層']; ?>img/chara-R9sp.svg" alt="キャラクター" width="114" height="150"></div>
+				<div class="brand-list js-fadeUp">
+					<a target="_blank" href="https://www.toshinjyuken.co.jp/hiraya/"><img src="<?php echo $sumai_param['素材階層']; ?>img/hiraya.png" alt="HIRAYA" width="532" height="801"></a>
+					<a target="_blank" href="https://www.toshinjyuken.co.jp/sodatsu/"><img src="<?php echo $sumai_param['素材階層']; ?>img/sodatsu.png" alt="そだつプロジェクト" width="532" height="801"></a>
+					<a target="_blank" href="https://www.toshinjyuken.co.jp/teishaku-portal/index.php"><img src="<?php echo $sumai_param['素材階層']; ?>img/teisyaku.png" alt="東新住建のテイシャク" width="532" height="801"></a>
+					<a target="_blank" href="https://www.dup-m.jp/index.php"><img src="<?php echo $sumai_param['素材階層']; ?>img/dup-r.png" alt="DUPレジデンス" width="532" height="801"></a>
+					<a target="_blank" href="https://www.toshinjyuken.co.jp/dup-hills/"><img src="<?php echo $sumai_param['素材階層']; ?>img/dup-h.png" alt="DUPヒルズ" width="532" height="801"></a>
+					<a target="_blank" href="https://www.toshinjyuken.co.jp/kodate/"><img src="<?php echo $sumai_param['素材階層']; ?>img/toshin.png" alt="東新住建の家" width="532" height="801"></a>
+				</div>
+				<div class="chara L8"><img src="<?php echo $sumai_param['素材階層']; ?>img/chara-L8.svg" alt="キャラクター" width="124" height="150"></div>
+				<div class="chara R8"><img src="<?php echo $sumai_param['素材階層']; ?>img/chara-R8sp.svg" alt="キャラクター" width="122" height="150"></div>
+				<?php LOCAL_BNR_BUKKEN(); ?>
+			</div>
+		</div>
+<?php
+}
+
+function SUMAI_OTHER(){
+	global $sumai_param;
+?>
+		<div class="other">
+			<div class="new js-fadeUp">
+				<?php
+				/*
+				if(!isset($sumai_param['カリフォルニア告知削除'])){
+				?>
+				<picture>
+					<source media="(max-width:768px)" srcset="<?php echo $sumai_param['素材階層']; ?>img/hiraya-banner_sp.png" 	width="661" height="442">
+					<img src="<?php echo $sumai_param['素材階層']; ?>img/hiraya-banner.png" alt="平屋カリフォルニアデザイン">
+				</picture>				
+				<?php
+				}
+				*/
+				?>
+				<div class="book">
+					<div class="chara L9">
+						<picture>
+							<source media="(max-width:768px)" srcset="<?php echo $sumai_param['素材階層']; ?>img/chara-L9sp.svg" width="214" height="150">
+							<img src="<?php echo $sumai_param['素材階層']; ?>img/chara-L9.svg" alt="キャラクター" width="101" height="150">
+						</picture>
+					</div>
+					<div class="chara R9"><img src="<?php echo $sumai_param['素材階層']; ?>img/chara-R9.svg" alt="キャラクター" width="139" height="150"></div>
+					<div class="book-contents-top">
+						<h2><span class="yellow">この一冊から、</span><br><span class="yellow">あなたの人生を応援したい！</span></h2>
+						<img class="pc" src="<?php echo $sumai_param['素材階層']; ?>img/ttl_icon.png" alt="本の紹介" width="349" height="357">
+					</div>
+					<div class="book-contents-bottom">
+						<p>シングルマザーだって、LGBTQカップルだって、一人暮らしだって、<br class="pc">家を持つ夢があって当然。それなのに、物件見学や問い合わせ、<br class="pc">住宅ローンの話をするのも何だか気がひける、<br class="pc">そんな思いを抱いて一歩を踏み出せないとしたら、<br class="pc">私たち住宅メーカーは大いに反省しなければなりません。<br>人の生き方も、家族のカタチも多様性を認め合う時代のはずなのに・・・<br class="pc">家という生きる場所を自由に選べない人たちをなくしたい。<br>そんな思いから、家探し、お引越し、ローンやキャッシュフローまで、<br class="pc">しっかりサポートできるよう「あなたの背中を押す読本」を作りました。<br>この冊子を手にした時から、<br class="pc">あなたの暮らしもこの世界も少しずつ変化していくはず。<br class="pc">さぁ、勇気を出して、一歩をここから踏み出しまてみませんか！</p>
+						<picture>
+							<source media="(max-width:768px)" srcset="<?php echo $sumai_param['素材階層']; ?>img/book-img_sp.png" width="626" height="600">
+							<img src="<?php echo $sumai_param['素材階層']; ?>img/book-img.png" alt="本の紹介" width="629" height="672">
+						</picture>
+					</div>
+					<div class="bottom-btn">
+						<a href="<?php echo $sumai_param['問合リンク']; ?>"><img src="<?php echo $sumai_param['素材階層']; ?>img/free-btn.svg" width="300" height="48" alt="無料で申し込み"></a>
+					</div>
+				</div>
+				<?php LOCAL_BNR_BUKKEN(); ?>
+				<p class="quote-txt">※ご予約状況によっては当日のQUOカードをお渡しできない可能性がございます。その場合は後日郵送にてご対応いたしております。</p>
+			</div>
+		</div>
+<?php
+}
+
+function SUMAI_FOOTER(){
+	global $sumai_param;
+?>
+	<footer class="v20230601">
+		<div class="footer-main">
+			<div class="footer-main-inner">
+				<a class="logo" href="https://www.toshinjyuken.co.jp" ><img src="<?php echo $sumai_param['素材階層']; ?>img/0601/logo.svg" width="160" alt="東新住建"></a>
+				<a class="tel" href="tel:0800-170-5104"><img src="<?php echo $sumai_param['素材階層']; ?>img/tel.svg" width="300" height="32" alt="電話番号"></a>
+				<address class="day">〒492-8628　愛知県稲沢市高御堂一丁目3-18(稲沢本店)<br>【営業時間】10：00～18：00　【定休日】水曜日</address>
+			</div>
+			<div class="sp_footer-main-inner">
+				<div>
+					<a class="logo" href="https://www.toshinjyuken.co.jp" ><img src="<?php echo $sumai_param['素材階層']; ?>img/logo.svg" width="300" height="59" alt="東新住建"></a>
+					<a class="tel" href="tel:0800-170-5104"><img src="<?php echo $sumai_param['素材階層']; ?>img/tel.svg" width="300" height="32" alt="電話番号"></a>		
+				</div>
+				<address class="day">〒492-8628　愛知県稲沢市高御堂一丁目3-18(稲沢本店)<br>【営業時間】10：00～18：00　【定休日】水曜日</address>
+			</div>
+		</div>
+		<p class="footer-center">宅地建物取引業免許：国土交通大臣（3）7873号　特定建設業許可：愛知県知事許可（特-4）第61271号　（公社）愛知県宅地建物取引業協会会員　東海不動産取引協議会加盟</p>
+		<p class="footer-bottom"><small>Copyright (C) TOSHIN JYUKEN All Rights Reserved.</small></p>
+	</footer>
+<?php
+}
+
+/*
+function SUMAI_xxx(){
+	global $sumai_param;
+?>
+<?php
+}
+*/
+?>

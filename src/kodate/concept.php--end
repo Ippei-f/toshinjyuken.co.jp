@@ -1,0 +1,231 @@
+<?php
+$p_type='content';
+$kaisou='';
+$dir=$kaisou.'images/content/concept/';
+$p_title='コンセプト';
+require $kaisou."temp_php/basic.php";
+?>
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<?php echo $temp_meta; ?>
+<title><?php echo $temp_title; ?></title>
+<link href="css/common.css" rel="stylesheet" type="text/css">
+<link href="css/content.css" rel="stylesheet" type="text/css">
+<?php echo $temp_java; ?>
+<style>
+.con_maint .text{
+	width:800px;
+}
+
+.local_marubatu{
+	padding-top: 100px;
+}
+.local_marubatu .icon{margin: auto;}
+.local_marubatu tr > *{
+	vertical-align: middle;
+	text-align: center;
+}
+.local_marubatu .t > *{
+	background-color: #231815;
+	color:#FFF;
+	font-size: 250%;
+	line-height: 100%;
+	font-weight: bold;
+	padding: 0.25em 0;
+}
+.local_marubatu .o > *,
+.local_marubatu .x > *{
+	font-size: 125%;
+	line-height: 175%;
+}
+.local_marubatu .o > *:nth-of-type(1),
+.local_marubatu .x > *:nth-of-type(1){width:20%;}
+.local_marubatu .o > *:nth-of-type(2),
+.local_marubatu .x > *:nth-of-type(2){
+	text-align: left;
+	padding-right: 1em;
+}
+.local_marubatu .o > *{
+	background-color: #F63402;
+	color:#FFF;
+	height:9em;
+}
+.local_marubatu .o .icon{width:44px;}
+.local_marubatu .x > *{
+	background-color: #F0F0F0;
+	height:9em;
+}
+.local_marubatu .x .icon{width:32px;}
+@media screen and (min-width: 1000px) {
+	.local_marubatu table{width:48.5%;}
+	.local_marubatu table:nth-of-type(1){float: left;}
+	.local_marubatu table:nth-of-type(2){float: right;}
+}
+@media screen and (max-width: 999px) {
+	.local_marubatu{padding-top: 30px;}
+	.local_marubatu table{width:100%;}
+	.local_marubatu table:nth-child(n+2){margin-top: 30px;}
+	.local_marubatu .t > *{font-size: 175%;}
+	.local_marubatu .o > *,
+	.local_marubatu .x > *{font-size: 85%;}
+	.local_marubatu .o > *:nth-of-type(1),
+	.local_marubatu .x > *:nth-of-type(1){width:17.5%;}
+	.local_marubatu .o .icon{width:7.729468599vw;}
+	.local_marubatu .x .icon{width:5.797101449vw;}
+}
+
+.local_list{
+	margin-top: 110px;
+	margin-bottom: 130px;
+	text-align: center;
+}
+.local_list .title{
+	font-size:225%;
+	line-height: 166%;
+	font-weight: bold;
+	background-color: #E9EDF0;
+	color:#F63402;
+}
+.local_list ul{
+	display: inline-block;
+	text-align: left;
+	padding-top: 1em;
+	font-size:150%;
+}
+.local_list li{
+	padding-top:1em;
+	line-height: 100%;
+	font-weight: bold;
+}
+@media screen and (max-width: 999px) {
+	.local_list{
+		margin-top: 50px;
+		margin-bottom: 50px;
+	}
+	.local_list .title{font-size:125%;}
+	.local_list ul{font-size:100%;}
+	.local_list li{line-height: 150%;}
+}
+</style>
+</head>
+
+<body class="borderbox">
+<?php echo $temp_pagetop; ?>
+<div align="center">
+<!-- * -->
+<?php echo $temp_header; ?>
+<!-- ** -->
+<?php echo PAN(array($p_title)); ?>
+<?php echo PAGE_TITLE($p_title); ?>
+<!-- *** -->
+<div class="content_box"><div class="W1200 Wmax100per mgnAuto">
+
+<?php echo CONTENT_MAINTITLE('土地がついた<br class="pc_vanish">オーダーハウス'
+,'注文住宅と分譲住宅の<br class="pc_vanish">メリットを<br class="sp_vanish">併せ持った住まい'
+,'分譲住宅は、価格が手頃で負担が少ない反面、決まりきった間取りや内装にも妥協せざるを得ません。かたや注文住宅は、自由に設計できる一方、土地探しや予算オーバー等の問題が起こりがちです。スケルトンオーダーは、これら双方のメリットだけを採り入れた住まい。合理性と自由度をあわせもつ新しい家づくりのスタイルです。'
+); ?>
+
+<div style="padding-top:40px;"><img src="images/content/concept/mainpic.jpg" class="W100per"></div>
+
+<div class="local_marubatu">
+<?php
+$arr=array
+('分譲住宅'=>array
+	('購入前に住宅を確認できる
+注文住宅よりも費用が割安
+利便性の高い場所にある
+早く住める'
+	,'間取りや内装などの個性に乏しい
+建築プロセスが見れない
+条件を満たす物件に出会えるまで時間がかかる'
+	)
+,'注文住宅'=>array
+	('自由度が高い家づくりができる
+建築プロセスを確認できる
+自由に予算配分できる'
+	,'分譲住宅に比べ費用が割高
+入居までの時間が長くなる
+土地を探す手間がかかる'
+	)
+);
+foreach($arr as $k => $v){
+	echo '<table border="0" cellpadding="0" cellspacing="0">
+<tr class="t"><td colspan="2">'.$k.'</td></tr>
+<tr class="o">
+<td><img src="images/content/concept/icon-o.svg" class="icon"></td>
+<td>'.WORD_BR($v[0]).'</td>
+</tr>
+<tr class="x">
+<td><img src="images/content/concept/icon-x.svg" class="icon"></td>
+<td>'.WORD_BR($v[1]).'</td>
+</tr>
+</table>'.chr(10);
+}
+?>
+<div class="clear"></div>
+</div>
+
+<div class="local_list">
+<span class="title"><?php echo WORD_BR('スケルトンオーダーは、
+こういう方におすすめ!'); ?></span>
+<div><ul>
+<?php
+$arr=array
+('土地を持っていないが、注文住宅を検討している'
+,'注文住宅は予算オーバーで諦めてしまった'
+,'土地探しがうまくいかない'
+,'分譲住宅をいくつか見学したが、納得いくものが見つからなかった'
+,'時間を無駄にしたくないので、打ち合わせなどは少なくしたい'
+,'早く新生活をはじめたい'
+);
+foreach($arr as $k => $v){
+	echo '<li class="indent_mn">●'.$v.'</li>';
+}
+?>
+</ul></div>
+</div>
+
+<div class="W1000 Wmax100per mgnAuto">
+<?php echo MAINPIC($dir,array('mainpic'=>'p-hikaku.svg')); ?>
+<div class="sp_vanish" style="height:50px;"></div>
+<div class="pc_vanish" style="height:35px;"></div>
+</div>
+
+<?php
+echo CONTENT_READMORE(array
+('大地震が実証した確かな答え'=>array
+ 	('link'=>'特長-不変'
+	,'cate'=>'変わらない価値'
+	,'text'=>'2×4工法の耐震性能を証明した阪神大震災。地盤改良技術の効果と必要性を実証した東日本大震災。液状化のリスクを抱える東海地方では、こうした教訓が生かされた家を選ぶことが大切です。'
+	)
+/*'もしもの時にも頼りになる'=>array
+ 	('link'=>'特長-災害'
+	,'cate'=>'特長'
+	,'text'=>'長く安心して暮らすためには、災害への備えが必要です。スケルトンオーダーは、災害時でも建物の倒壊や損壊を防ぎ、地盤の液状化から家族の暮らしを守ります。'
+	)*/
+,'選べるインテリアスタイル'=>array
+ 	('link'=>'インテリア'
+	,'cate'=>'インテリアセレクト'
+	,'text'=>'理想の住まいを手軽に実現する3つのインテリアスタイルをご用意しています。内装や設備の豊富なカラーセレクト＆コーディネートで、自分たちだけのこだわりの空間がつくれます。'
+	)
+/*
+,'3つのインテリアパッケージ'=>array
+ 	('link'=>'インテリア'
+	,'cate'=>'インテリアパッケージ'
+	,'text'=>'理想の空間づくりを、手軽に実現する全13項目のインテリアパッケージ。ライフスタイルやご予算に合わせて自由な家づくりが楽しめます。組み合わせ次第でどんな空間も思いのままに。'
+	)*/
+));
+?>
+
+<div class="textC" style="padding-top: 80px; padding-bottom: 100px;"><?php echo EFFECT_BTN('物件検索','すべての物件を見る',array('arrow'=>true,'style'=>'width:15em;')); ?></div>
+
+</div></div>
+<!-- ** -->
+<?php echo $temp_footer; ?>
+<!-- * -->
+</div>
+<?php echo $temp_bodyend; ?>
+</body>
+</html>

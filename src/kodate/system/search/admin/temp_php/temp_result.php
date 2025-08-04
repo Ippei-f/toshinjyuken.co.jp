@@ -1,0 +1,465 @@
+<?php if(false){ ?>
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+<body>
+<div id="container">
+<?php } ?>
+
+<?php
+$type_edit=false;
+require 'temp_php/temp_arrayset.php';
+?>
+  <table class="borderTable01">
+    <tr>
+      <th>登録年月日</th>
+      <td align="left"><?php echo "$up_ymd_array[0] 年 $up_ymd_array[1] 月 $up_ymd_array[2] 日 \n";?></td>
+      </tr>
+  <tr>
+	<th style="width:20%">公開・非公開</th><td><?php echo $resDataArr[7] == 1 ? '公開':'非公開';?></td>
+  </tr>
+<tr>
+	<th>物件名</th>
+	<td><?php /* <span class="dpIB label">スケルトンオーダー</span> */ echo $resDataArr[2]; ?></td>
+</tr>
+<tr>
+	<th>サブタイトル</th>
+	<td><?php echo COMMENT_SET(19); ?></td>
+</tr>
+<tr>
+	<th>エリア</th>
+	<td><?php echo TextToKanma($categoryArr_area[1][$resDataArr[17]]);?></td>
+</tr>
+<tr>
+	<th>サブエリア</th>
+	<td><?php echo TextToKanma($resDataArr[18]);?></td>
+</tr>
+<tr>
+	<th>ブランド</th>
+	<td><?php
+	//echo TextToKanma($categoryArr_area[2][$resDataArr[23]]);
+	$check='|'.implode('|',$commentArr[23]).'|';
+	$a=array();
+	foreach($categoryArr_area[2] as $k => $v){
+		if(strpos($check,'|'.$k.'|')!==false){
+			$a[]=$v;
+		}
+	}
+	echo implode('、',$a);
+	?></td>
+</tr>
+<tr>
+	<th>フェイズ</th>
+	<td><?php echo TextToKanma($categoryArr[$resDataArr[3]]);?></td>
+</tr>
+<tr>
+	<th>その他カテゴリ</th>
+	<td><?php
+	//echo TextToKanma($categoryArr_area[3][$resDataArr[24]]);
+	//print_r($commentArr[24]);
+	$check='|'.implode('|',$commentArr[24]).'|';
+	$a=array();
+	foreach($categoryArr_area['その他'] as $k => $v){
+		if(strpos($check,'|'.$k.'|')!==false){
+			$a[]=$v;
+		}
+	}
+	echo implode('、',$a);
+	?></td>
+</tr>
+<tr>
+	<th>住所</th>
+	<td><?php echo COMMENT_SET(6); ?></td>
+</tr>
+<tr>
+	<th>交通</th>
+	<td><?php echo COMMENT_SET(6); ?></td>
+</tr>
+<?php
+/*
+    <tr>
+      <th>タイトル</th>
+      <td><?php echo TextToKanma($resDataArr[2]);?></td>
+    </tr>
+    <?php if(!empty($categoryArr)){ ?>
+    <tr>
+      <th>カテゴリ</th>
+      <td><?php echo TextToKanma($categoryArr[$resDataArr[3]]);?></td>
+    </tr>
+    <?php } ?>
+    
+      <tr>
+        <th>直リンクURL</th>
+        <td><?php echo (!empty($resDataArr[4])) ? '<a href="'.$resDataArr[4].'" target="_blank">'.$resDataArr[4].'</a>' : '';
+		if(!empty($resDataArr[4])){
+			echo '<br />リンクの開き方：';
+			echo ($resDataArr[5] == 1) ? '同一ウインドウ' : '別ウインドウ';
+		}
+        ?>
+        </td>
+      </tr>
+<?php 
+	for($i=0;$i<$linklFileCount;$i++){
+		foreach($extensionList as $val){
+			$upFilePath = $img_updir.'/'.$id.'-'.$i.'link_file.'.$val;
+			
+			if(file_exists($upFilePath)){
+?>
+    <tr>
+      <th>直リンクファイル</th>
+      <td><a href="<?php echo $upFilePath;?>" target="_blank">リンクファイル</a></td>
+    </tr>
+<?php				
+			break;
+			}
+		}
+	}
+?>
+*/
+?>
+</table>
+
+<style>
+.cleditor_res *{line-height: normal;}
+</style>
+<table class="borderTable01">
+<tr>
+	<th>コメント</th>
+	<td class="cleditor_res"><?php echo COMMENT_SET(6); ?></td>
+</tr>
+</table>
+
+<table class="borderTable01">
+<tr>
+	<th colspan="2">メインビジュアル<?php /* 内装オーダー */ ?></th>
+</tr>
+<tr>
+	<th>カウントダウン</th>
+	<td><?php
+	echo $resDataArr[8];
+	if($resDataArr[8]!=''){
+		$arr=COMMON_PARAM('order_count');
+		echo '（終了日：'.date('Y 年 m 月 d 日',strtotime($up_ymd_array[0].'-'.$up_ymd_array[1].'-'.$up_ymd_array[2].' +'.$arr[$resDataArr[8]])).'）';
+	}
+	?></td>
+</tr>
+<tr>
+	<th>写真</th>
+	<td><?php
+	$arr=array('大','小1','小2','小3','サムネイル');
+	foreach($arr as $k => $v){
+		if($k>0){echo '<hr>';}
+		echo '<span class="dpIB label">写真：'.$v.'</span>'.IMG_THUMB('order').chr(10);
+	}
+	?>
+	<div style="height: 0.5em;"></div></td>
+</tr>
+</table>
+
+<style>
+.kukaku_hidden{
+	background-color: aliceblue;
+	margin-bottom: -1em;
+	overflow: hidden;
+	height: 1.5em;
+	padding-top: 0!important;
+}
+.kukaku_hidden::before{
+	content: "非表示";
+	color: #FF0004;
+}
+</style>
+<table class="borderTable01">
+<tr>
+	<th colspan="2">販売区画</th>
+</tr>
+<tr>
+	<th>区画図</th>
+	<td><?php echo IMG_THUMB('kukaku'); ?></td>
+</tr>
+<tr>
+	<th>各タイプ情報</th>
+	<td>
+	<?php
+	//$arr=array('A','B','C','D','E','F','G','H','I','J');
+	$arr=array();
+	for($i=0;$i<count($commentArr[9]);$i+=4){
+		$arr[]=$commentArr[9][$i];
+	}
+	foreach($arr as $k => $v){		
+		$cmt=array(COMMENT_SET(9),COMMENT_SET(9),COMMENT_SET(9),COMMENT_SET(9));
+		$img=IMG_THUMB('kukaku');
+		//if($cmt[0]==''){continue;}
+	?>
+	<div class="padbox kukaku dotline<?php echo ($cmt[0]=='')?' kukaku_hidden':''; ?>">
+	<div><span class="dpIB label">タイプ名</span><?php echo $cmt[0]; ?></div>
+	<div><span class="dpIB label">VR見学ボタン</span><?php echo ($commentArr[10][$k]!='')?'<a href="'.$commentArr[10][$k].'" target="_blank">'.$commentArr[10][$k].'</a>':'非表示'; ?></div>
+	<div><span class="dpIB label">アウトレット</span><?php echo ($commentArr[20][$k]>0)?'あり':'なし'; ?></div>
+	<div><span class="dpIB label T">敷地・延床面積</span><span class="dpIB"><?php echo $cmt[1]; ?></span></div>
+	<div><span class="dpIB label">販売価格</span><?php echo (is_numeric($cmt[2]))?number_format($cmt[2]):$cmt[2]; ?> 万円</div>
+	<div><span class="dpIB label">フリーワード</span><?php echo $cmt[3]; ?></div>
+	<div><span class="dpIB label">間取り</span><?php echo $img; ?></div>
+	</div>
+	<?php
+		}
+	?>
+	<div style="height: 0.5em;"></div>
+	</td>
+</tr>
+</table>
+
+<table class="borderTable01"><tr>
+<th>動画</th>
+<td><?php
+if($resDataArr[21]!=''){
+	$str=TextToKanma($resDataArr[21]);
+	echo '<div style="margin-bottom:0.5em;">'.$str.'</div>
+<iframe src="'.$str.'" style="display:block; width: 600px; height: 360px;" frameborder="0" allowfullscreen=""></iframe>';
+}
+?></td>
+</tr></table>
+
+<table class="borderTable01">
+<tr>
+	<th colspan="2">ギャラリー</th>
+</tr>
+<tr>
+<th>物件情報・周辺情報</th>
+<td>
+<div class="padbox gallery addbox sorttable">
+<?php
+/*
+print_r($commentArr[11]);
+echo '<p></p>';
+print_r($commentArr[12]);
+echo '<p></p>';
+print_r($upFilePath['gallery']);
+*/
+$str='';
+foreach($commentArr[11] as $k => $v){
+	switch($v){
+		case 'T':
+		$cmt=COMMENT_SET(12);
+		if($cmt!=''){
+			$str.='<div class="bg_title">'.$cmt.'</div>';
+		}
+		break;
+		case 'P':		
+		$img=IMG_THUMB('gallery');
+		$cmt=COMMENT_SET(12);
+		if((strip_tags($img).$cmt)!=''){
+			$str.='<div>'.$img.'<div>'.$cmt.'</div></div>';
+		}
+		break;
+		default://大見出し
+		$str.='<div class="bg_title big">'.$v.'</div>';
+	}
+}
+echo $str;
+?>
+</div></td>
+</tr>
+<?php
+/*
+foreach($commentArr[11] as $k => $v){
+	switch($v){
+		case 'T':
+		$cmt=COMMENT_SET(12);
+		if($cmt!=''){
+			$str.='<div class="bg_title">'.$cmt.'</div>';
+		}
+		break;
+		case 'P':		
+		$img=IMG_THUMB('gallery');
+		$cmt=COMMENT_SET(12);
+		if((strip_tags($img).$cmt)!=''){
+			$str.='<div>'.$img.'<div>'.$cmt.'</div></div>';
+		}
+		break;
+		default:
+		if($k>0){
+			$str.='</div></td></tr>'.chr(10);
+		}
+		$str.='<tr>
+	<th>'.$v.'</th>
+	<td><div class="padbox gallery addbox sorttable">'.chr(10);
+	}
+}
+$str.='</div></td></tr>'.chr(10);
+echo $str;
+*/
+?>
+</table>
+
+<table class="borderTable01">
+<tr>
+	<th>物件概要</th>
+	<td><?php echo COMMENT_SET(6); ?></td>
+</tr>
+<tr>
+	<th>販売会社</th>
+	<td>
+	<div style="font-size: 110%; line-height: 150%;"><?php echo COMMENT_SET(6); ?></div>
+	<div style="font-size: 90%; line-height: 150%;"><?php echo COMMENT_SET(6); ?></div>
+	<?php
+	/*
+	<span class="dpIB label T">文字・大</span><span class="dpIB"><?php echo COMMENT_SET(6); ?></span>
+	<hr>
+	<span class="dpIB label T">文字・小</span><span class="dpIB"><?php echo COMMENT_SET(6); ?></span>
+	*/
+	?>	
+	</td>
+</tr>
+<?php
+//if(false){
+?>
+<tr>
+	<th>資料ダウンロード</th>
+	<td><?php
+	/*
+	<?php echo IMG_THUMB('shiryou'); ?><hr>
+	ファイル名：
+	*/
+	$shiryou=glob('../upload/shiryou/'.$resDataArr[0].'/*');
+	if(file_exists($shiryou[0])){
+		$link=$shiryou[0];
+		$shiryou=explode('/',$shiryou[0]);
+		echo '<a href="'.$link.'" target="_blank">'.end($shiryou).'</a>';
+		/*		
+		$shiryou=explode('.',end($shiryou));
+		echo ($resDataArr[22]!=''?TextToKanma($resDataArr[22]):$shiryou[0]).'.'.$shiryou[1];
+		*/
+	}
+	?></td>
+</tr>
+<?php
+//}//if(false)
+?>
+</table>
+
+<table class="borderTable01">
+<tr>
+	<th colspan="2">アクセス・周辺環境</th>
+</tr>
+<tr>
+	<th>座標</th>
+	<td><?php
+$lat=COMMENT_SET(13);
+$lng=COMMENT_SET(13);
+?><div class="padbox">
+	<div><span class="dpIB label">緯度</span><?php echo $lat; ?></div>
+	<div><span class="dpIB label">経度</span><?php echo $lng; ?></div>
+	</div>
+<hr />
+<div id="map" style="height:450px;"></div>
+<script>
+var markerData = [
+{	name:'<?php echo TextToKanma($resDataArr[2].(($commentArr[2]!='')?'<br>'.$commentArr[2]:''));?>',
+	lat:<?php echo $lat; ?>,
+	lng:<?php echo $lng; ?>,
+	icon:'../../../images/common/map-pin.png'
+}];
+var zoom=14;
+var center_lat=<?php echo $lat; ?>;
+var center_lng=<?php echo $lng; ?>;
+</script>
+<script src="../../../js/map.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA_i_iJYycEUupc7WiJz4UsVS3QeryomzE&callback=initMap"></script>
+</td>
+</tr>
+<tr>
+	<th>周辺情報</th>
+	<td><div class="padbox access addbox sorttable">
+	<?php
+$str='';
+$max=count($commentArr[13]);
+for($i=2;$i<$max;$i++){
+	$str.='<div><span class="dpIB label T" style="font-size: 100%;">'.COMMENT_SET(13).'</span><span class="dpIB">'.COMMENT_SET(6).'</span></div>'.chr(10);
+}
+echo $str;
+	?>
+	</div></td>
+</tr>
+</table>
+
+<table class="borderTable01">
+<tr>
+	<th>バナー</th>
+	<td><div class="padbox banner addbox sorttable">
+	<?php
+$str='';
+$max=count($commentArr[14]);
+for($i=0;$i<$max;$i++){
+	$img=IMG_THUMB('banner');
+	$cmt=array(COMMENT_SET(14),COMMENT_SET(15));
+	if(strip_tags($img)!=''){
+		$str.='<div>'.$img.'<div>'.$cmt[0].'…'.$cmt[1].'</div></div>';
+	}
+}
+echo $str;
+	?>
+	</div></td>
+</tr>
+</table>
+
+<table class="borderTable01">
+<tr>
+	<th>周辺の物件</th>
+	<td><div class="padbox near"><?php echo COMMENT_SET(16); ?></div></td>
+</tr>
+</table>
+<?php
+/*
+<table class="borderTable01">
+<?php 
+$commentArr = explode($dataSeparateStr,$resDataArr[6]);
+for($i=0;$i<=$maxCommentCount;$i++){
+	
+	//ファイル存在判定と存在したらセット
+	$upfileTag = '';
+	foreach($extensionList as $val){
+		$upFilePath = $img_updir.'/'.$resDataArr[0].'-'.$i.'.'.$val;
+		if(file_exists($upFilePath)){
+			
+			if($val == 'jpg' || $val == 'png' || $val == 'gif'){
+				$upfileTag .= "<img src=\"{$upFilePath}?".uniqid()."\">\n";
+			}else{
+				$upfileTag .= "<a href=\"{$upFilePath}\" target=\"_blank\">アップファイル</a>\n";
+			}
+			
+			break;
+		}
+	}
+
+	if(!empty($commentArr[$i]) || !empty($upfileTag)){
+	
+?>
+<tr>
+<th>本文</th>
+<td><?php echo (!empty($commentArr[$i])) ? TextToKanma($commentArr[$i]) : '';?></td>
+</tr>
+<tr>
+<th>ファイル</th>
+<td><?php echo $upfileTag;?></td>
+</tr>
+<tr>
+<td colspan="3" style="border:0;height:10px;padding:0"></td>
+</tr>    
+<?php 
+	} 
+}
+?>
+</table>
+*/
+?>
+
+
+<?php if(false){ ?>
+</div>
+</body>
+</html>
+<?php } ?>

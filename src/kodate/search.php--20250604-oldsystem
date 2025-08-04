@@ -1,0 +1,536 @@
+<?php
+$p_type='content';
+$kaisou='';
+$dir=$kaisou.'images/content/xxxx/';
+$p_title='物件検索';
+require $kaisou."temp_php/basic.php";
+
+//CMS読み込み
+$dir_sys= $kaisou.'system/search/';
+require $dir_sys.'function/cms-load.php';//軽量版
+?>
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<?php echo $temp_meta; ?>
+<title><?php echo $temp_title; ?></title>
+<link href="css/common.css" rel="stylesheet" type="text/css">
+<link href="css/top.css" rel="stylesheet" type="text/css">
+<?php
+//バナーシステム2023年度ver読み込み
+$toushin_bnr_url=$kaisou.'../recaptcha/';
+require $toushin_bnr_url.'func-common-bnr-setup2023.php';
+?>
+<?php echo $temp_java; ?>
+<style>
+.anchor{
+	top:-180px;
+}
+@media screen and (max-width: 999px) {
+	.anchor{
+		top:-webkit-calc(-110px - 6.6em);
+		top:calc(-110px - 6.6em);
+	}
+}
+.local_title{
+	background-color: #F0F0F0;
+	padding: 0.5em 0;
+	font-size: 150%;
+	line-height: 100%;
+	margin-bottom: 1.5em;
+}
+.local_title.bg_K{
+	background-color: #000;
+	color:#FFF;
+}
+.local_title .icon{
+	display: inline-block;
+	height:1.25em;
+	margin: -0.125em 0;
+	margin-right: 0.5em;
+	vertical-align: middle;
+}
+.areabox > div:nth-child(n+2){
+	margin-top: 2em;
+}
+.areabox ul{}
+.areabox ul li table{width:100%;}
+.areabox tr > *{
+	text-align: left;
+	vertical-align: top;
+}
+@media screen and (min-width: 1000px) {
+	.areabox ul li{
+		width:530px;
+		max-width: 49%;
+		padding-bottom: 3%;
+	}
+	.areabox ul li:nth-child(2n+1){
+		float: left;
+		clear: both;
+	}
+	.areabox ul li:nth-child(2n+2){
+		float: right;
+	}
+	.areabox .pic{width:250px;}
+	.areabox .pad{width:25px;}
+	.areabox .text{width:255px;}
+}
+@media screen and (max-width: 999px) {
+	.areabox table:not(.sp_tblbreak) .pic,
+	.areabox table.sp_col2 .pic{width:43%;}
+	.areabox table.sp_col2 .pic{
+		float: left;
+    margin-right: 3%;
+		padding-bottom: 0;
+	}
+	.areabox ul li{
+		padding-bottom: 2em;
+		clear: both;
+	}
+	.areabox .pic{padding-bottom: 1em;}
+	.areabox .pad{width:3%;}
+	.areabox table.sp_tblbreak .pad{display: none;}
+}
+
+
+.areabox .pic img{
+	width:100%;
+	background-color: rgba(0,0,0,0.25);
+}
+.areabox .pic .p_catch{
+	position: absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	z-index: 2;
+	background-color: rgba(0,0,0,0.6);
+}
+.areabox .pic .p_catch > *{
+	position: absolute;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	margin: auto;
+	height:1.5em;
+	color: #F63402;
+	font-size: 100%;
+	font-weight: bold;
+	line-height: 150%;
+	text-align: center;
+}
+.areabox .pic .p_catch > *.H2{height:3em;}
+.areabox .pic .countdown{
+	position: absolute;
+	bottom:0;
+	left:0;
+	z-index: 3;
+	width:100%;
+	background-color: #738DA0;
+	color:#FFF;
+	text-align: center;
+	font-size: 75%;
+	line-height: 100%;
+	padding: 0.5em 0;
+}
+.areabox .pic .countdown > *{
+	display: inline-block;
+	font-size: 150%;
+	line-height: 100%;
+	vertical-align: middle;
+	padding: 0 0.25em;
+}
+
+.areabox .text .icon{
+	min-height:1.5em;
+	margin-right: -1em;
+}
+.areabox .text .icon span{
+	font-size: 66%;
+	line-height: 100%;
+	padding: 0.5em;
+	margin-right: 1em;
+	border:solid 1px #000;
+	color:#FFF;
+	width:9em;
+	text-align: center;
+}
+.areabox .text .icon span.bg_VR{
+	background-color:#DDC400;
+	border-color: hsl(53 100% 33% / 0);
+}
+.areabox .text .icon span.bg_phase4{
+	background-color:#FFF;
+	border-color: #F00;
+	color: #F00;
+}
+.areabox .text .subtitle{
+	padding-top: 0.5em;
+	margin-bottom: -0.5em;
+	font-size: 85%;
+	/*
+	font-weight: bold;
+	color:#738DA0;
+	*/
+}
+.areabox .text .title{
+	font-weight: bold;
+	padding: 0.75em 0;
+	border-bottom: solid 2px #000;
+	margin-bottom: 0.75em;
+}
+.areabox .text .addr,
+.areabox .text .price{
+	font-size: 75%;
+	line-height: 150%;
+}
+.areabox .text .price{
+	margin-top: 1em;
+	margin-right: -1em;
+}
+.areabox .text .price span{margin-right: 1em;}
+@media screen and (max-width: 999px) {
+	.areabox table.sp_col2 .text .title,
+	.areabox table.sp_col2 .text .addr{
+		display: inline-block;
+    width: 54%;
+	}
+	/*
+	.areabox table.sp_col2 .text .addr,
+	.areabox table.sp_col2 .text .price{
+		font-size: 60%;
+	}
+	*/
+	.areabox table.sp_col2 .text .addr{
+		min-height: 7em;
+		/* display: none; */
+	}
+	.areabox table.sp_col2 .text .price{
+		font-size: 72.5%;
+		/* margin-top: 0; */
+	}
+}
+
+.local_jumpbtn{padding: 1em;}
+.local_jumpbtn > div{
+	width:1000px;
+	max-width: 100%;
+	margin: auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.local_jumpbtn.static{padding-bottom: 2em;}
+.local_jumpbtn.fixed{
+	position: fixed;
+	top:94px;
+	left:0;
+	right:0;
+	background-color: #FFF;
+	opacity: 0;
+	z-index: -1;
+}
+.local_jumpbtn a{
+	display: block;
+	border: solid 1px #000;
+	padding: 0.75em 0;
+	font-weight: bold;
+	flex-grow: 1;
+}
+.local_jumpbtn a:hover{
+	background-color:#F63402;
+	color: #FFF;
+}
+@media screen and (min-width: 1000px) {
+	.local_jumpbtn a{width: 15%;}
+	.local_jumpbtn a:nth-child(n+2){margin-left: 1%;}
+}
+@media screen and (max-width: 999px) {
+	.local_jumpbtn.fixed{top:103px;}
+	.local_jumpbtn > div{flex-wrap: wrap;}
+	.local_jumpbtn a{
+		width: 30%;
+		margin-left: 2%;
+		padding: 0.5em 0;
+	}
+	.local_jumpbtn a:nth-child(3n+1){margin-left: 0;}
+	.local_jumpbtn a:nth-child(n+4){margin-top: 2%;}
+}
+</style>
+<script>
+$(document).ready(function() {
+	sj_btn = $('.local_jumpbtn.fixed');
+	LOCAL_JUMPBTN();
+});
+$(window).load(function(){	
+	$(window).scroll(function(){
+		LOCAL_JUMPBTN();
+  });
+});
+function LOCAL_JUMPBTN(){
+	st1=$('.local_jumpbtn.static').offset().top;
+	st2=$('.local_jumpbtn.fixed').offset().top;
+	//$('.test').text(st1+'/'+st2);
+	if(st1>st2){
+		//sj_btn.fadeOut();
+		sj_btn.css('opacity',0);
+		sj_btn.css('z-index',-1);
+	}
+	else{
+		//sj_btn.fadeIn();
+		sj_btn.css('opacity',1);
+		sj_btn.css('z-index',990);
+	}
+}
+</script>
+</head>
+
+<body class="borderbox">
+<?php echo $temp_pagetop; ?>
+<div align="center">
+<!-- * -->
+<?php echo $temp_header; ?>
+<!-- ** -->
+<?php echo PAN(array($p_title)); ?>
+<?php echo PAGE_TITLE($p_title); ?>
+<div class="sp_vanish" style="margin-top: -2em;"></div>
+<?php
+//バナーシステム2023ver
+echo TOUSHIN_COMMON_BNR_2023('家/物件一覧');
+?>
+<div class="pc_br_del fontP175 sp_fontP100 LH150">新着物件ぞくぞく完成！<br>東新住建の新築一戸建て</div>
+<!-- map -->
+<?php
+/*
+//※2024/11/27…MAP一時封印
+<div class="top_map">
+<div class="title W1200 Wmax100per mgnAuto bg_78A col_FFF">東新住建の家　物件MAP</div>
+<?php
+require $kaisou."temp_php/temp_map.php";
+?>
+<div id="map" class="textL W1200 Wmax100per mgnAuto" style="height:600px;"></div>
+</div>
+*/
+?>
+<!-- map -->
+<div class="sp_vanish" style="height:2em;"></div>
+<div class="pc_vanish" style="height:1.5em;"></div>
+<!-- *** -->
+<?php
+$area1=$area2=$area_n=$bukken=array();
+foreach($area_list_num as $k => $v){
+	$area1[$k]=$v;
+	$area_n[$v]=$k;
+}
+/*
+$cnt=1;
+foreach($area_list as $k => $v){
+	$area1[$cnt]=$k;
+	$area2[$cnt]=$v;
+	$area_n[$k]=$cnt;
+	$cnt++;
+}
+*/
+//print_r($area1);
+
+//$add=($_GET['area']=='search')?' style="opacity: 1; z-index: 990;"':'';
+
+$arr=array();
+$arr[0]='<div class="local_jumpbtn static">';
+$arr[1]='<div class="local_jumpbtn fixed">';//'.$add.'
+$arr[2]='<div>';
+
+foreach($area1 as $k => $v){
+	$v=str_replace(array("エリア"),'<span class="sp_vanish fontP075">エリア</span>',$v);
+	$arr[2].='<a href="#sec'.sprintf('%02d',$k).'">'.$v.'</a>'.chr(10);
+}
+/*
+<a href="#sec01" class="pc_vanish">すべての物件</a>
+<div class="clear"></div>
+*/
+$arr[2].='</div></div>'.chr(10);
+
+echo $arr[0].$arr[2];
+echo $arr[1].$arr[2];
+//<div class="test"></div>
+?>
+<div class="content_box">
+<div class="W1200 Wmax100per mgnAuto areabox">
+<?php
+/*
+<h3 class="local_title bg_K"><?php /<img src="images/common/icon-refine_search.svg" class="icon">/ ?>地域選択</h3>
+*/
+?>
+
+<?php
+foreach($sysdata_proto as $key => $sysdata){
+	if(CMS_OPEN()){continue;}
+	CMS_DATA_REPLACE();
+	CMS_IMGSET($sysdata[0]);
+	//echo '<li>'.$sysdata[2].'</li>';
+	$sysdata[17]=$area1[$sysdata[17]];
+	if($sysdata[17]==''){$sysdata[17]=$area1[1];}
+	$bukken[$sysdata[17]][]=$sysdata;
+}
+
+foreach($area_list_num as $n => $k){
+	echo ANCHOR($area_n[$k]).'<div><h3 class="local_title">'.$k.'</h3><ul>'.chr(10);
+	if(empty($bukken[$k])){
+		$bukken[$k]=array();//空データ用意
+		//continue;
+	}
+	foreach($bukken[$k] as $k2 => $v2){
+	
+		$icon=$picadd='';
+		/*
+		switch($v2[3]){//フェイズ・写真上キャッチ
+			case 1:
+			//$picadd.='<div class="p_catch bg_cover" style=" background-image: url(images/content/search/member-only.png);"></div>';
+			break;
+			case 2:
+			//$picadd.='<div class="p_catch"><span>オーダー受付中</span></div>';
+			break;
+			case 3:
+			//$picadd.='<div class="p_catch"><span class="H2">随時見学イベント<br>受付中</span></div>';
+			break;
+			case 4:
+			//$picadd.='<div class="p_catch"><span>モデルハウス公開</span></div>';
+			break;
+		}
+		*/
+		$picadd.='<div class="p_catch bg_cover" style=" background-image: url(images/content/search/phase'.$v2[3].'.svg);"></div>';
+		switch($v2[3]){//フェイズ・カウントダウン
+			case 2:
+			//case 3:
+			if($v2[8]!=''){
+/*
+$arr=COMMON_PARAM('order_count');
+$stt=array();
+$stt[]=strtotime($v2[1].$arr[$v2[8]]);
+$stt[]=strtotime($v2[1]);
+$stt[]=strtotime(date('Y-m-d'));
+$cd=floor(($stt[0]-$stt[2])/(60 * 60 * 24));//タイムスタンプの差を時×分×秒で割る
+if($cd<0){$cd=0;}
+echo '<!-- 　登録日：'.$v2[1].'/'.$stt[1].' -->';
+echo '<!-- 　期限日：'.date('Y-m-d',$stt[0]).'/'.$stt[0].' -->';
+echo '<!-- 日数換算：'.($stt[0]-$stt[1]).'=>'.sprintf('%02d',floor(($stt[0]-$stt[1])/(60 * 60 * 24))).' -->';
+echo '<!-- 　　今日：'.date('Y-m-d').'/'.$stt[2].' -->';
+echo '<!-- 　　残り：'.($stt[0]-$stt[2]).'=>'.sprintf('%02d',$cd).' -->';
+*/
+			$cd='<strong>'.$v2[8]/*sprintf('%02d',$cd)*/.'</strong>';
+			$picadd.='<div class="countdown">オーダー受付 あと'.$cd.'</div>';
+			}
+			break;
+		}
+		
+		$login_window='';
+		switch($v2[3]){//フェイズ・アイコン
+			case 1:
+			$icon.='<span class="dpIB bg_F30">予告物件</span>';
+			if(!isset($_SESSION['member'])){
+				$login_window=' login_window" onclick="return false;';
+			}
+			break;
+			case 2:
+			$icon.='<span class="dpIB bg_000">オーダー受付中</span>';
+			break;
+			/*
+			case 3:			
+			break;
+			*/
+			case 4:
+			$icon.='<span class="dpIB bg_phase4">完成モデル</span>';
+			break;
+		}
+		//VRアイコン
+		$flag=false;
+		//print_r($v2[10]);
+		if(!empty($v2[10])){
+			if(!is_array($v2[10])){
+				$v2[10]=array($v2[10]);
+			}
+			foreach($v2[10] as $v3){
+				if(empty($v3)){$v3='';}
+				switch($v3){
+					case '0':
+					case '':
+					break;
+					default:
+					$icon.='<span class="dpIB bg_VR">VR見学</span>';
+					$flag=true;
+				}
+				if($flag){break;}
+			}
+		}
+		//if(!empty($v2[10])){$icon.='<span class="dpIB bg_555">VR見学</span>';}
+		
+		
+		//プライス
+		$price='';
+		if(!is_array($v2[9])){$v2[9]=array($v2[9],'','','');}
+		if($v2[3]!=1){
+			//会員限定以外の時にプライス表示
+			for($i=0;$i<count($v2[9]);$i+=4){
+				$v2[9][$i]=WORD_SPACEDEL($v2[9][$i]);
+				if($v2[9][$i]==''){continue;}
+				$price.='<span class="dpIB">'.$v2[9][$i].'：'.(is_numeric($v2[9][$i+2])?number_format($v2[9][$i+2]):$v2[9][$i+2]).'万円</span>';
+			}
+		}
+		
+		//サムネイル
+		//print_r($v2['order-num']);
+		$photo=(file_exists($v2['order-num'][4]))?$v2['order-num'][4]:$v2['order'][0];
+		
+		//サブタイトル
+		if(!is_array($v2[19])){$v2[19]=array($v2[19]);}
+		if($v2[19][0]!=''){
+			$v2[19][0]=chr(10).'<div class="subtitle">'.$v2[19][0].'</div>';
+		}
+		
+		//出力
+		echo '<li><a href="'.$link_list['物件詳細'][0].'?id='.$v2[0].'" class="dpB'.$login_window.'"><table border="0" cellpadding="0" cellspacing="0" class="sp_tblbreak sp_col2 bukken"><tr>
+<td class="pic"><div class="pos_rel"><img src="images/common/clear.png" class="bg_cover" style="background-image: url('.$photo.');">'.$picadd.'</div></td>
+<td class="pad"></td>
+<td class="text">
+<div class="icon">'.$icon.'</div>'.$v2[19][0].'
+<div class="title">'.$v2[2].'</div>
+<div class="addr">'.WORD_BR('<span class="sp_vanish">'.$v2[6][0].chr(10).'</span>'.$v2[6][1]).'</div>
+<div class="price">'.$price.'</div>
+</td>
+</tr></table><div class="clear"></div></a></li>'.chr(10);
+		//print_r($v2);
+	}
+	echo '<div class="clear"></div>
+</ul></div>'.chr(10);
+}
+
+//print_r($bukken);
+?>
+</div>
+</div>
+<!-- ** -->
+<?php echo $temp_footer; ?>
+<!-- * -->
+</div>
+<?php
+//ログインボックス
+require $kaisou."temp_php/temp_loginbox.php";
+?>
+<?php echo $temp_bodyend; ?>
+<?php
+/*
+//※2024/11/27…MAP一時封印
+<script>
+var markerData = [<?php echo $mapset; ?>];
+var zoom=10;
+var center_lat=<?php echo $map_center_lat; ?>;
+var center_lng=<?php echo $map_center_lng; ?>;
+</script>
+<?php echo $temp_googlemap_js; ?>
+*/
+?>
+</body>
+</html>

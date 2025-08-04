@@ -1,0 +1,148 @@
+/* CSS Document */
+
+.con_maint{
+	border-top: solid 1px rgba(35,24,21,0.50);
+	padding-top: 85px;
+	text-align: center;
+}
+.con_maint h3{
+	font-size: 400%;
+	line-height: 100%;
+	margin-bottom: 100px;
+}
+.con_maint .catch{
+	font-size: 300%;
+	line-height: 125%;
+	font-weight: bold;
+	margin-bottom: 30px;
+}
+.con_maint .text{
+	line-height: 200%;
+	display: inline-block;
+	max-width: 100%;
+}
+@media screen and (max-width: 999px) {
+	.con_maint{
+		padding-top: 2em;
+	}
+	.con_maint h3{
+		font-size: 225%;
+    line-height: 133%;
+    margin-bottom: 50px;
+	}
+	.con_maint .catch{font-size: 150%;}
+	.con_maint .text{text-align: left;}
+}
+
+
+
+.con_readmorebox{}
+.con_readmorebox > a{
+	display: block;
+	position: relative;
+	background-color: #231815;
+	color:#FFF;
+	padding: 1em 2em;
+	text-align: center;
+}
+.con_readmorebox > a .kado{
+	position: absolute;
+	top:0;
+	left:0;
+	border-top: solid 2em #F63402;
+	border-right:solid 2em transparent;
+}
+.con_readmorebox > a .cate{
+	padding-bottom: 1em;
+}
+.con_readmorebox > a .cate span{
+	display: inline-block;
+	padding: 0.25em 1em;
+	background-color: #F63402;
+	/* color:#000; */
+	font-weight: bold;
+	font-size: 90%;
+	line-height: 100%;
+}
+.con_readmorebox > a .title{
+	font-size: 150%;
+	line-height: 100%;
+	font-weight: bold;
+	padding-bottom: 1em;
+}
+.con_readmorebox > a .text{
+	text-align: left;
+	font-size: 90%;
+	line-height: 175%;
+	min-height: 6em;
+}
+.con_readmorebox > a .readmore{
+	margin-left: auto;
+	margin-top: 0.25em;
+	width: 6.875em;
+}
+@media screen and (min-width: 1000px) {
+	.con_readmorebox > a{
+		width:49.5%;
+	}
+	.con_readmorebox > a:nth-of-type(2n+1){
+		float: left;
+		clear: both;
+	}
+	.con_readmorebox > a:nth-of-type(2n+2){
+		float: right;
+	}
+	.con_readmorebox > a:nth-of-type(n+3){
+		margin-top: 1em;
+	}
+}
+@media screen and (max-width: 999px) {
+	.con_readmorebox > a{padding: 1em;}
+	.con_readmorebox > a:nth-of-type(n+2){
+		margin-top: 1em;
+	}
+	.con_readmorebox > a .readmore{
+		margin-top: 0.75em;
+	}
+}
+
+.hearing_bnr table{
+	border: dashed 1px #D9DADA;
+	background-color: #FFF;
+	width:800px;
+	max-width: 100%;
+	margin: auto;
+}
+.hearing_bnr tr > *:nth-child(1){
+	text-align: left;
+	vertical-align: top;
+}
+.hearing_bnr h4{
+	font-size: 150%;
+	line-height: 150%;
+}
+.hearing_bnr tr > *:nth-child(1) div{
+	padding-top: 1em;
+	line-height: 150%;
+}
+@media screen and (min-width: 1000px) {
+	.hearing_bnr tr > *:nth-child(1){
+		width:62.5%;
+		padding-left: 4%;
+		padding-top: 3%;
+	}
+	.hearing_bnr tr > *:nth-child(2){
+		width:37.5%;
+		padding:1.5% 5%;
+	}	
+}
+@media screen and (max-width: 999px) {
+	.hearing_bnr{padding: 0 1em;}
+	.hearing_bnr tr > *:nth-child(1){padding: 1.5em 1em 0;}
+	.hearing_bnr tr > *:nth-child(2){padding: 1.5em 0}
+	.hearing_bnr tr > *:nth-child(2) img{
+		width:50%;
+		margin: auto;
+	}
+}
+

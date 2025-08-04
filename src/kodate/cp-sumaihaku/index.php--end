@@ -1,0 +1,26 @@
+<?php
+$dir_temp=(strpos($_SERVER['SERVER_NAME'],'dup-m.jp')===false)?'../../kodate/cp-sumaihaku/':'';
+include_once $dir_temp.'php/temp-meta.php';
+include_once $dir_temp.'php/temp-parts.php';
+?>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<?php SUMAI_META(1); ?>
+<link rel="stylesheet" href="<?php echo $sumai_param['素材階層']; ?>css/index.css">
+<?php SUMAI_META(2); ?>
+</head>
+<body id="index">
+<?php SUMAI_HEADER(); ?>
+<main>
+<?php SUMAI_MAINPIC(); ?>
+<?php SUMAI_CAMPAIGN(); ?>
+<!--↓class#container↓-->
+<?php SUMAI_CONTAINER(); ?>		
+<!--↑class#container↑-->
+<?php SUMAI_OTHER(); ?>
+</main>
+<?php SUMAI_FOOTER() ?>
+</body>
+</html>
