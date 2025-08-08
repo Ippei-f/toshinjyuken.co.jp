@@ -76,13 +76,7 @@ include $kaisou . '_assets/php/basic.php';
 
 				<!-- Wbase -->
 				<div class="Wbase">
-					<div class="font_pw" style="font-size: min(25px,max(13px,calc(1vw * 13 / 3.75)));">私たちの家は、強く、長寿命で、家族を守る家。
-						自然素材にこだわり、五感に響く空間を創り上げます。
-
-						東新住建が家づくりで最も大切にしているのは、
-						お客様に永く住み続けていただくこと。
-
-						住み始めたその先の変化まで見据え、<br class="pc_vanish">安心の住まいをお届けします。</div>
+					<div class="font_pw" style="font-size: min(25px,max(13px,calc(1vw * 13 / 3.75)));">私たちの家は、強く、長寿命で、家族を守る家。<br>自然素材にこだわり、五感に響く空間を創り上げます。<br><br>東新住建が家づくりで最も大切にしているのは、<br>お客様に永く住み続けていただくこと。<br><br>住み始めたその先の変化まで見据え、<br class="pc_vanish">安心の住まいをお届けします。</div>
 					<?php echo ANCHOR('alc') ?>
 					<div class="tokuchou">
 						<h3 style="font-size: min(35px,max(15px,calc(1vw * 15 / 3.75)));">ALCコンクリートの４つの特徴</h3>

@@ -647,12 +647,16 @@ echo CONTENT_PAD(70,40);
 			</div>
 		</div>
 		<!-- *** -->
+
+		<!--
 		<div class="top_sec05 content_box bg_FFF">
 			<div class="Wbase W1200">
 				<div class="text"><?php echo WORD_BR('オンライン予約で、気軽に。【SPBR】「無人でモデルハウス見学」'); ?></div>
 				<?php echo EFFECT_BTN('外部-無人で物件見学', 'さらに詳しく見る'); ?>
 			</div>
 		</div>
+		-->
+
 		<!-- ** -->
 		<?php echo $temp_footer; ?>
 		<!-- * -->
