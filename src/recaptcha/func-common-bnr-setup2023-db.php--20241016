@@ -1,0 +1,92 @@
+<?php
+//<meta charset="utf-8">
+
+//共通バナーデータベース
+$toushin_bnr_arr=array
+(''//空白
+//--------------------
+,'1000万マイホーム'=>array
+	('url'=>array
+		('そだつ'		=>'@news.php?id=86'
+		,'テイシャク'=>'@news.php?id=58'
+		//,'平屋'			 =>'@news.php?id=38'
+		//,'DUPHILLS'	 =>'@news.php?id=33'
+		)
+	,'bnr'=>'bnr-1000man-myhome.jpg'
+	)
+//--------------------
+,'dokuhon'=>array
+	('url'=>'contact.php'
+	,'bnr'=>'bnr-dokuhon-pc.png'
+	,'div'=>true
+	)
+//--------------------
+,'202403住まい'=>array
+	('url'=>array
+		('家'				=>'@news.php?id=114'
+		,'そだつ'		=>'@news.php?id=110'
+		,'テイシャク'=>'@news.php?id=85'
+		,'平屋'			 =>'@news.php?id=69'
+		,'発電'			 =>'https://www.toshinjyuken.co.jp/kodate/news.php?id=114'//東新住建の家と同じ（絶対参照）
+		)
+	,'bnr'=>'bnr-202403sumai.jpg'
+	,'div'=>true
+	,'style'=>'max-width:600px;'
+	,'date'=>'YmdH'
+	,'s'=>2024030107
+	,'e'=>2024050107
+	)
+//--------------------
+,'202407ドリーム'=>array
+	('url'=>array
+		('家'				=>'@news.php?id=134'
+		,'そだつ'		=>'@news.php?id=120'
+		//,'テイシャク'=>'@news.php?id=85'
+		,'平屋'			 =>'@news.php?id=73'
+		,'発電'			 =>'https://www.toshinjyuken.co.jp/kodate/news.php?id=134'//東新住建の家と同じ（絶対参照）
+		)
+	,'bnr'=>'bnr-202407dream.jpg'
+	,'div'=>true
+	,'style'=>'max-width:600px;'
+	,'date'=>'YmdH'
+	,'s'=>2024070807
+	,'e'=>2024080100
+	)
+//--------------------
+,'rainbow2023'=>array
+	('url'=>array
+		('家'				=>'@news.php?id=85'
+		,'そだつ'		=>'@news.php?id=79'
+		)
+	,'bnr'=>'bnr-2023NRP.jpg'
+	,'div'=>true
+	)
+//--------------------
+,'weekday'=>array
+	('url'=>array
+		('家'				=>'@news.php?id=41'
+		,'DUPHILLS'	 =>'@news.php?id=9'
+		)
+	,'bnr'=>array
+		(500			=>'bnr-weekday.jpg'
+		,'500火金'=>'bnr-weekday-Tue-Fri.png'
+		)
+	)
+//--------------------
+,'taptogo-mujin'=>array
+	('url'=>'https://www.toshinjyuken.co.jp/taptogolp/'
+	//,'bnr'=>'bnr-taptogo-mujin.jpg'
+	,'bnr'=>'bnr-taptogo-mujin-20230531.jpg'
+	,'div'=>true
+	)
+//--------------------
+/*
+,'taptogo'=>array
+	('url'=>'https://www.toshinjyuken.co.jp/taptogo/'
+	,'bnr'=>'bnr-taptogo.jpg'
+	)
+*/
+//--------------------
+);
+unset($toushin_bnr_arr[0]);//空白削除
+?>

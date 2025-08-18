@@ -1,0 +1,309 @@
+<?php
+//<meta charset="utf-8">
+echo '<link href="../'.$kaisou.'recaptcha/common-bnr.css" rel="stylesheet" type="text/css">'.chr(10);
+
+//共通バナーデータベース
+require_once $toushin_bnr_url.'func-common-bnr-setup2023-db.php';//差分ファイルに隔離
+
+function TCB_SET_2023($setname2){
+	global $toushin_bnr_arr;
+	$res=array();
+	switch($setname2[0]){
+		//=================
+		case '家':
+		switch($setname2[1]){
+			//-----------------
+			case 'TOP':
+			//$res[]=array('weekday','bnr'=>'500火金');
+			//$res[]=array('taptogo');
+			$res[]=array('202503住まい博');
+			break;
+			case 'TOP-map下':
+			//echo '<style>.top_search ~ .top_bnrbox_2023{margin-bottom:50px;}</style>'.chr(10);
+			//$res[]=array('202503住まい博');
+			break;
+			case 'TOP-slide'://スライダーセットアップ
+			global $toushin_bnr_arr,$kaisou;
+			global $top_slide_arr;
+			$dir_slide='@images/top/bnr/';
+			$top_slide_arr=array();
+			$top_slide_arr['taptogoLP']=array
+			('url'=>'https://www.toshinjyuken.co.jp/taptogolp/'
+			,'bnr'=>$dir_slide.'bnr-mujin-W450H200.svg');
+			$top_slide_arr['sdgs']=array
+			('url'=>'@sdgs.php'
+			,'bnr'=>'bnr-sdgs-W450H200-2024.svg');
+			$top_slide_arr['rainbow2023']=array
+			('url'=>'@news.php?id=85'
+			,'bnr'=>'bnr-rainbow-W450H200.jpg');
+			break;
+			//-----------------
+			case '物件一覧':
+			//$res[]=
+			break;
+			//-----------------
+		}
+		break;
+		//=================
+		case 'そだつ':
+		global $toushin_bnr_arr,$kaisou;
+		$toushin_bnr_arr['movie']=array
+		('movie'=>'QnJLQKL2Jdk'
+		,'bnr'=>'bnr-20230417movie.png'
+		,'bnr-text1'=>array('bnr-20220613movie-text1.svg','w'=>208,'mb'=>10));
+		$toushin_bnr_arr['派生:LGBT']=array
+		('url'=>$kaisou.'lgbtq/'
+		,'bnr'=>'@images/top/so/bnr-lgbt.jpg');
+		$toushin_bnr_arr['派生:中古']=array
+		('url'=>$kaisou.'chuuko-hikaku/'
+		,'bnr'=>'bnr-chuko-2023-W441-pc.png');
+		//,'bnr'=>'@images/top/so/bnr-chuko-2023-pc.png'
+		switch($setname2[1]){
+			//-----------------
+			case 'TOP':
+			echo '<style>.top_bnrbox_2023{align-items: flex-end;}</style>'.chr(10);
+			$res[]=array('202503住まい博');
+			$res[]=array('派生:中古');
+			$res[]='div';
+			$res[]=array('movie');
+			break;
+			//-----------------
+			case 'TOP・物件情報下'://現在空			
+			break;
+			//-----------------
+			case 'TOP・資産がそだつ下':
+			$res[]=array('派生:LGBT');
+			break;
+			//-----------------
+			case 'TOP・お客様の声下':
+			$res[]=array('dokuhon');
+			break;
+			//-----------------
+			case 'LGBT':
+			case '中古':
+			
+			break;
+			//-----------------
+		}
+		break;
+		//=================
+		case 'DUPHILLS'://更新終了？
+		switch($setname2[1]){
+			//-----------------
+			case 'TOP':
+			$res[]=array('weekday','bnr'=>'500火金');
+			break;
+		}
+		break;
+		//=================
+		case 'テイシャク':
+		switch($setname2[1]){
+			//-----------------
+			case 'TOP':
+			$res[]=array('202503住まい博');
+			/*
+			$toushin_bnr_arr[$k='特集:一宮']=array
+			('url'=>'@news.php?id=38'
+			,'bnr'=>'bnr-20221209-ichinomiya.svg');
+			$res[]=array($k);
+			$toushin_bnr_arr[$k='特集:清須']=array
+			('url'=>'@news.php?id=39'
+			,'bnr'=>'bnr-20221209-kiyosu.svg');
+			$res[]=array($k);
+			*/
+			break;
+			case 'TOP・動画下':
+			//$res[]=array('202410テイシャク');
+			break;
+			case 'TOP・新着下':
+			$res[]=array('taptogo-mujin');//平屋でも設置するので共通化
+			/*
+			$res[]='div';
+			*/
+			break;
+			case '物件一覧':
+			$res[]=array('taptogo-mujin');//平屋でも設置するので共通化
+			break;
+		}
+		break;
+		//=================
+		case '平屋':
+		switch($setname2[1]){
+			//-----------------
+			case 'TOP':
+			$res[]=array('202503住まい博');
+			break;
+			case 'TOP・おすすめ上':
+			echo '<style>.top_sec01 h2 ~ .top_bnrbox_2023{margin-top:50px;}</style>'.chr(10);			
+			//$res[]=array('202410テイシャク');
+			break;
+			case 'TOP・新着下':
+			$res[]=array('taptogo-mujin');
+			break;
+		}
+		break;
+		//=================
+		case '発電':
+		switch($setname2[1]){
+			//-----------------
+			case 'TOP-style':
+			echo '<style>.top_bnrbox_2023{margin-top:50px;}
+			style + .top_bnrbox_2023{margin-bottom:50px;}</style>'.chr(10);
+			break;
+			case 'TOP':
+			break;
+			case 'TOP・キャッチ下':
+			break;
+		}
+		break;
+		//=================
+	}
+	return $res;
+}
+
+function TOUSHIN_COMMON_BNR_2023($setname='',$addprm=array()){
+	global $toushin_bnr_arr,$toushin_bnr_url,$kaisou;
+	$setname2=explode('/',$setname);
+	$arr=TCB_SET_2023($setname2);//リスト作成
+	$data_set=array();
+	foreach($arr as $v){
+		if(!is_array($v)){
+			$data_set[]=$v;
+			continue;
+		}
+		if(!isset($toushin_bnr_arr[$v[0]])){continue;}
+		$data=$toushin_bnr_arr[$v[0]];
+		$flag=true;
+		if(isset($data['date'])){
+			$now=date($data['date']);
+			//開始日判定
+			if(isset($data['s'])){
+				if($now<$data['s']){$flag=false;}
+			}
+			//終了日判定
+			if(isset($data['e'])){
+				if($now>=$data['e']){$flag=false;}
+			}
+		}
+		if($flag){
+			if(isset($data['movie'])){
+				//ムービーバナー
+				$data_set[]=$data;
+				continue;
+			}
+			if(is_array($data['url'])){
+				$data['url']=$data['url'][$setname2[0]];
+			}
+			if(is_array($data['bnr'])){
+				if(isset($v['bnr'])){
+					$data['bnr']=$data['bnr'][$v['bnr']];
+				}
+			}
+			$data_set[]=$data;
+		}
+	}//foreach($arr as $v)
+	$str='';
+	if(count($data_set)>0){
+		$str.='<ul class="top_bnrbox_2023">'.chr(10);
+		foreach($data_set as $v){			
+			if(!is_array($v)){
+				switch($v){
+					case 'div':
+					$str.='<div></div>'.chr(10);
+					break;
+				}
+				continue;
+			}
+			if(isset($v['movie'])){
+				$str.='<li>'.TOUSHIN_COMMON_MOVIE_BNR_2023($v).'</li>'.chr(10);
+				continue;
+			}
+			if($v['url']!=''){
+				if(strpos($v['url'],'@')!==false){$v['url']=str_replace('@',$kaisou,$v['url']);}
+				if(strpos($v['url'],'://')!==false){$v['url'].='" target="_blank';}
+				$v['url']=' href="'.$v['url'].'"';
+			}
+			$dir_bnr=$toushin_bnr_url.'bnr/';
+			if(strpos($v['bnr'],'@')!==false){
+				//バナーのサイト内リンク
+				$v['bnr']=str_replace('@','',$v['bnr']);
+				$dir_bnr=$kaisou;
+			}
+			$class='';
+			if(!isset($v['bnr-sp'])){
+				//スマホバナー自動判別
+				$v['bnr-sp']=$v['bnr'];
+				$v['bnr-sp']=str_replace('-pc.','.',$v['bnr-sp']);
+				$v['bnr-sp']=str_replace('.','-sp.',$v['bnr-sp']);
+				if(file_exists($dir_bnr.$v['bnr-sp'])){
+					$class=(strpos($v['bnr'],'-pc.')!==false)?'vanish_branch':'vanish_branch_onoff';
+					$class=' class="'.$class.'"';
+					$v['bnr-sp']='<img src="'.$dir_bnr.$v['bnr-sp'].'">';
+				}
+				else{$v['bnr-sp']='';}
+			}
+			else{
+				//スマホ版バナーが設定済みの場合
+				if($v['bnr-sp']!='x'){
+					$v['bnr'].='" class="sp_vanish';
+					$v['bnr-sp']='<img src="'.$dir_bnr.$v['bnr-sp'].'" class="pc_vanish">';
+				}
+				else{$v['bnr-sp']='';}
+			}
+			if(isset($v['style'])){
+				$v['bnr'].='" style="'.$v['style'];
+			}
+			$str.='<li><a'.$v['url'].$class.'><img src="'.$dir_bnr.$v['bnr'].'">'.$v['bnr-sp'].'</a></li>'.chr(10);
+			if(isset($v['div'])&&($v['div'])){
+				$str.='<div></div>'.chr(10);
+			}
+		}
+		$str.='</ul>'.chr(10);
+	}
+	return $str;
+}
+
+function TOUSHIN_COMMON_MOVIE_BNR_2023($data,$class='js-modal-video'){
+	global $toushin_bnr_url;
+	$text=array();
+	if(isset($data['bnr-text2'])){
+		$text[]='<img src="'.$toushin_bnr_url.'bnr/'.$data['bnr-text2'][0].'" class="text2 sp_vanish pcOnly" style="width:'.$data['bnr-text2']['w'].'px;">
+<img src="'.$toushin_bnr_url.'bnr/'.str_replace('.','-sp.',$data['bnr-text2'][0]).'" class="text2 pc_vanish spOnly" style="width:'.($data['bnr-text2']['w']/2).'px;">';
+	}
+	if(isset($data['bnr-text1'])){
+		if(!isset($data['bnr-text1']['mb'])){
+			$data['bnr-text1']['mb']='';
+		}
+		else{
+			$data['bnr-text1']['mb']='margin-bottom: '.$data['bnr-text1']['mb'].'px;';
+		}
+		$text[]='<img src="'.$toushin_bnr_url.'bnr/'.$data['bnr-text1'][0].'" class="text1" style="width:'.$data['bnr-text1']['w'].'px;'.$data['bnr-text1']['mb'].'">';
+	}
+	$bnr='<img src="'.$toushin_bnr_url.'bnr/'.$data['bnr'].'">';
+	if(file_exists($bnr_sp=$toushin_bnr_url.'bnr/'.str_replace('.','-sp.',$data['bnr']))){
+		$class.=' vanish_branch_onoff';
+		$bnr.=chr(10).'<img src="'.$bnr_sp.'">';
+	}
+	$text=implode('',$text);
+	return '<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/modal-video@2.4.6/css/modal-video.min.css"/>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/modal-video@2.4.6/js/jquery-modal-video.min.js"></script>
+<div class="top_moviebox_2023">
+'.$text.'
+<a href="javascript:void(0);" data-video-id="'.$data['movie'].'" class="'.$class.'">
+'.$bnr.'
+</a>
+</div>
+<script>
+$(window).load(function(){
+	if ($(".'.$class.'").length) {
+    $(".'.$class.'").modalVideo({
+      channel: "youtube",
+      youtube: {
+        controls: 1,
+      },
+    });
+  }
+});
+</script>'.chr(10);
+}
+?>

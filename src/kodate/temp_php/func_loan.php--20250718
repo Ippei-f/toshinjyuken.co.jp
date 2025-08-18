@@ -1,0 +1,132 @@
+<?php
+//<meta charset="utf-8">
+
+$loan_prm=array
+('諸費用'=>260
+//--------------
+,'変動金利'	=>0.5//変動金利（地方銀行など）
+,'固定金利'	=>1.8//固定金利（フラット35）
+,'1割分金利'=>2.9
+//--------------
+,'借入期間最大'=>40
+);
+?>
+<script>
+$(window).load(function(){
+
+	//ローンシミュレーション表示
+	$(".loan_btn").click(function(){
+		n=$(this).attr('n');
+		$(".loanbox.lb"+n).slideToggle();
+  });
+
+	//数字制限
+	$('.loanbox .number_only').on('keydown', function(e) {
+		var k = e.keyCode;
+		<?php /*// 0～9, テンキ―0～9, スペース, backspace, delete, →, ←, 以外は入力キャンセル*/ ?>
+		if(!((k >= 48 && k <= 57) || (k >= 96 && k <= 105) || k == 32 || k == 8 || k == 46 || k == 39 || k == 37)) {
+			return false;
+		}
+	});
+
+	//チェックボックスのラジオボタン化
+	$('.loanbox input.cb_radio').click(function(){
+		if($(this).hasClass('loan_input1')){
+			$(this).parents('.loanbox').find('input.loan_input1').prop('checked','');
+		}
+		if($(this).hasClass('loan_input6')){
+			$(this).parents('.loanbox').find('input.loan_input6').prop('checked','');
+			n=$(this).attr('n');
+			$(this).parents('.loanbox').find('.kinri').hide();
+			$(this).parents('.loanbox').find('.kinri.k'+n).show();
+		}
+		$(this).prop('checked','checked');
+	});
+	
+	//諸費用について
+	$('.loanbox .aco_btn').click(function(){
+		$(this).parents('.box').find('.aco_text').slideToggle();
+	});
+
+	//LOAN_INPUT($('.loanbox .loan_result'));
+	$('.loanbox .LI').change(function() {
+			LOAN_INPUT($(this));
+  });
+	$('.loanbox .simu_btn').click(function(){
+		//str='';
+		var a= new Array();
+		/*str+=*/a[0]=Number($(this).parents('.loanbox').find('input.loan_input4').val())*10000;//借入額
+		/*str+=*/a[1]=Number($(this).parents('.loanbox').find('input.loan_input5').val())*10000;//ボーナス加算額	
+		/*str+=*/a[2]=Number($(this).parents('.loanbox').find('select.loan_input7').val());//借入期間（年）
+		a[0]-=a[1]*2*a[2];//借入額からボーナス時の返済額を除外（＝ 借入額 -（ボーナス * 2 * 借入期間））
+		
+		/*str+=*/a[3]=Number($(this).parents('.loanbox').find('input.loan_input6:checked').val());//金利（年）
+		/*str+=*/a[4]=Number($(this).parents('.loanbox').find('input.loan_input6:checked').attr('month'));//月変動
+
+		if(a[4]!=0){
+			//フラット35　金利=通常の金利 9 : 別途金額 1
+			a[3]=(a[3]*9+<?php echo $loan_prm['1割分金利']; ?>)/10;
+		}
+		//金利を％表記から計算用の実数にする
+		a[3]=a[3]/100;
+		
+		//月利＝年利/12
+		/*str+=*/a[5] = (a[3]/12);
+		//月利を支払い回数（＝借入期間 * 12）の分累乗
+		/*str+=*/a[6] = Math.pow((1+a[5]),a[2]*12);		
+		//月支払い金額＝借入額×月利×月利累乗÷（月利累乗-1）
+		a[7] =(a[0] * a[5] * a[6]) /(a[6] - 1);
+		//四捨五入
+		/*str+=*/a[7] =Math.round(a[7]);	
+		
+		//返済額代入
+		$(this).parents('.loanbox').find(".res_price1").text(comma(a[7]));// 毎月返済額
+		if(a[1]>0){
+			$(this).parents('.loanbox').find(".res_price2").text(comma(a[1]));// ボーナス月返済額
+		}
+		else{
+			$(this).parents('.loanbox').find(".res_price2").text('--,---');// ボーナス月返済額
+		}
+		
+		//計算結果表示
+		$(this).parents('.loanbox').find('.loan_result').slideToggle();/* .slideDown(); */
+		//$(this).parents('.loanbox').find('.test').text(str);
+		
+	});
+ });
+
+//入力内容の変化
+function LOAN_INPUT(obj){
+	//str='';
+	var a= new Array();
+	obj.parents('.loanbox').find('.loan_result').slideUp();
+	
+	/*str+=*/a[0]=obj.parents('.loanbox').find('input.loan_input1:checked').val();
+	/*str+=*/a[1]=obj.parents('.loanbox').find('input.loan_input2').val();
+	/*str+=*/a[2]=obj.parents('.loanbox').find('input.loan_input2B').val();
+	/*str+=*/a[3]=obj.parents('.loanbox').find('input.loan_input3').val();
+	//借入額＝パッケージ＋物件価格＋諸費用－頭金
+	v=a[0]-(-a[1])-(-a[2])-a[3];
+	obj.parents('.loanbox').find('span.loan_input4').text(comma(v));
+	obj.parents('.loanbox').find('input.loan_input4').val(v);
+	
+	/*str+=*/obj.parents('.loanbox').find('input.loan_input5').val();
+	/*str+=*/v=obj.parents('.loanbox').find('input.loan_input6:checked').val();
+	obj.parents('.loanbox').find('span.loan_input6').text(v);
+	/*str+=*/obj.parents('.loanbox').find('select.loan_input7').val();
+	//obj.parents('.loanbox').find('.test').text(str);
+}
+
+// 数値の桁区切り追加
+function comma(str) {
+	var num = new String(str).replace(/(\d)(?=(\d\d\d)+(?!\d))/g,'$1,');
+	return num;
+}
+</script>
+<?php
+/*
+function LOAN($data=array()){
+return 'loan';
+}
+*/
+?>

@@ -1,0 +1,174 @@
+<?php
+//<meta charset="utf-8">
+
+$url=$_SERVER['HTTP_HOST'].$_SERVER['SCRIPT_NAME'];
+//echo '<!-- URL:'.$url.' -->';
+switch(true){
+	case (strpos($url,'dup-m.jp')!==false)://DUPレジデンス
+	break;
+	default://その他
+	$dir_form_parts=$kaisou.$recaptcha_url.'form/';
+	//DUPのプログラムと共通化
+	break;
+}
+$dir_contact_img=$dir_form_parts.'img/';
+//スタイル読み込み
+include_once $dir_form_parts.'set/style.php';
+
+$tel_url='tel:0800-170-5104';
+$tel_svg='v20230809';
+if(isset($comp_data['TEL-fd'])){
+	//フリーダイヤルがあればそれに変更
+	$tel_url='tel:'.$comp_data['TEL-fd'];
+	$tel_svg='fd'.$comp_data['TEL-fd'];
+}
+$url_line='https://lin.ee/v4vz5KD';
+
+/*
+//2025/04/17廃止
+<div class="local_okonomi">
+<h3>お好みの方法でご連絡ください</h3>
+<ul>
+<li>
+<div><span><?php echo file_get_contents($dir_contact_img.'icon-tel.svg'); ?></span>お電話<font>で</font><?php echo file_get_contents($dir_contact_img.'cut.svg'); ?></div>
+<div><h4>すぐにご相談をされたい方はこちらまでお電話ください</h4>
+<?php
+echo '<a href="'.$tel_url.'" class="pc_vanish">'.file_get_contents($dir_contact_img.'tel-beta-'.$tel_svg.'.svg').'</a>
+<div class="sp_vanish"><a href="'.$tel_url.'">'.file_get_contents($dir_contact_img.'tel-'.$tel_svg.'.svg').'</a><div>営業時間／10:00～18:00　定休日／水曜日</div></div>';
+?>
+</div>
+</li>
+<li>
+<div><span><?php echo file_get_contents($dir_contact_img.'icon-form.svg'); ?></span>フォーム<font>で</font><?php echo file_get_contents($dir_contact_img.'cut.svg'); ?></div>
+<div><h4>事前入力でやりとりスムーズ</h4>
+<a href="#form_input">フォーム入力へすすむ<span class="font_gothic">&gt;</span></a>
+</div>
+</li>
+<li>
+<div><span><?php echo file_get_contents($dir_contact_img.'icon-line.svg'); ?></span>LINE<font>で</font><?php echo file_get_contents($dir_contact_img.'cut.svg'); ?></div>
+<div><h4>30秒でカンタン予約！</h4>
+<a href="<?php echo $url_line; ?>" target="_blank" class="pc_vanish">お友だち登録へすすむ<span class="font_gothic">&gt;</span></a>
+<img src="<?php echo $dir_contact_img; ?>bnr-line-v20231122.svg" class="sp_vanish">
+</div>
+</li>
+</ul>
+</div>
+
+<div class="local_customer">
+<h3>東新住建カスタマーサポートの心得5か条</h3>
+<div>
+<?php
+for($i=1;$i<=5;$i++){
+	echo file_get_contents($dir_contact_img.'customer-'.$i.'.svg');
+}
+?>
+</div>
+</div>
+
+</div></div>
+<!-- -->
+<div class="local_f_title">
+<div class="pos_rel"><a class="anchor" id="form_input" name="form_input"></a></div>
+<h2>ご来場予約・お問い合わせ<br class="pc_vanish">・資料請求フォーム</h2>
+</div>
+<!-- -->
+<div class="content_box"><div class="contact_box">
+*/
+?>
+<?php
+echo FORM_STEP();
+echo FORM_CAUTION();
+?>
+<hr>
+<div class="contact_title sp_LH150"><span>・</span>お問い合わせの項目をお選びください（複数選択可能）<span class="col_F00">＊</span></div>
+<div class="contact_inputarea_ver2023 colorbox">
+<?php
+$a=$form_arr['お問い合わせの項目'];
+$hissu='*';
+echo FORM_CHECK($a['select'],$a[1]);
+$hissu='';
+?>
+</div>
+<hr>
+
+<div class="acobox" n="1,2">
+<?php
+$arr=array
+('お問い合わせ物件名 1'
+//,'お問い合わせ物件名 2'
+//,'お問い合わせ物件名 3'
+);
+$a_set=array();
+foreach($arr as $k => $v){
+	$a=$form_arr[$v];
+	$a['select1']=$local_bukken_arr['エリア'];
+	$a['select2']+=$local_bukken_def;
+	if(isset($_REQUEST[$a[1].'1'])&&($_REQUEST[$a[1].'1']!='')){
+		if(isset($_REQUEST[$a[1].'2'])&&($_REQUEST[$a[1].'2']!='')){
+			$a['select2']+=$local_bukken_arr[$_REQUEST[$a[1].'1']];
+		}
+	}
+	else if(($k<1)&&(count($local_bukken_id)>=2)){
+		$a['select2']+=$local_bukken_arr[$local_bukken_id[0]];
+		$_REQUEST[$a[1].'1']=$local_bukken_id[0];
+		$_REQUEST[$a[1].'2']=$local_bukken_id[1];
+	}
+	$a_set[]=$a;
+}
+?>
+<div class="contact_title"><span>・</span>お問い合わせ物件名<span class="col_F00">＊</span></div>
+<?php
+$hissu='*';
+echo FORM_PARTS($a_set[0],'select',array('area-cnt'=>true));
+$hissu='';
+/*
+<div class="contact_I_caution acobox aco_raijou"><font class="col_F00">1日で複数物件巡ることもOKです。</font></div>
+<div class="contact_title"><span>・</span>お問い合わせ物件名 2</div>
+<?php
+echo FORM_PARTS($a_set[1],'select',array('area-cnt'=>true));
+?>
+<div class="contact_title"><span>・</span>お問い合わせ物件名 3</div>
+<?php
+echo FORM_PARTS($a_set[2],'select',array('area-cnt'=>true));
+?>
+*/
+?>
+<hr>
+</div>
+<?php
+/*
+//2025/04/17廃止
+<div class="acobox aco_03R">
+<div class="contact_title"><span>・</span>ご質問内容</div>
+<?php
+$a=$form_arr['ご質問内容'];
+echo FORM_PARTS($a,'textarea');
+echo FORM_INPUT_CAUTION($a);
+?>
+<hr>
+</div>
+*/
+echo FORM_SET_MAKE('名前漢字').'<hr>';
+echo FORM_SET_MAKE('メール').'<hr>';
+echo FORM_SET_MAKE('電話番号').'<hr>';
+?>
+<div class="acobox" n="2">
+<?php
+echo FORM_SET_MAKE('住所').'<hr>';
+?>
+</div>
+<div class="acobox" n="1">
+<div class="contact_title"><span>・</span>ご希望の来場日時<span class="col_F00">＊</span></div>
+<?php
+$a=$form_arr['希望見学日'];
+$hissu='*';
+echo FORM_PARTS($a,'date');
+$hissu='';
+echo FORM_INPUT_CAUTION($a);
+?>
+<hr>
+</div>
+<?php
+echo FORM_SET_MAKE('内容').'<hr>';
+echo FORM_SET_MAKE('同意');
+?>

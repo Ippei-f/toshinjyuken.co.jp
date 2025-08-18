@@ -1,0 +1,99 @@
+<?php
+//<meta charset="utf-8">
+/*
+		style・javascriptをひとまとめにしたテンプレート
+*/
+?>
+<style>
+.bg_FFF_gray .content_box{min-height: 0;}
+.contact_box .contact_inputarea.box_raijou .checkbox:nth-child(1){
+	font-size: 125%;
+	font-size: calc(1em * 5 / 4);
+	font-weight: bold;
+	margin-right: 0.8em;
+	margin-right: calc(1em * 4 / 5);
+}
+.contact_box .contact_inputarea.box_raijou .checkbox:nth-child(1) input{
+	font-size: 80%;
+	font-size: calc(1em * 4 / 5);
+}
+<?php
+$arr=$form_arr['お問い合わせの項目'];
+if(isset($_REQUEST[$arr[1]])){	
+	$check=implode('、',$_REQUEST[$arr[1]]);
+	foreach($arr['select'] as $k => $v){
+		if(is_array($v)){$v=$v[0];}
+		if(strpos($check,$v)!==false){echo '.acobox[n*="'.($k+1).'"]{display: block;}';}
+	}
+}
+?>
+</style>
+<script>
+$(window).load(function(){
+<?php
+if($step<3){
+//確認画面の時は「disable」つけないようにする（2025/07/29更新
+?>
+	FORM_ACO_2025($('.contact_box > .colorbox'),false);
+	$('input[name*="koumoku"]').on('change',function(){
+		FORM_ACO_2025($(this).parents('.colorbox'),true);
+	});
+<?php
+}
+?>
+	<?php
+	//物件選択
+	$arr=array
+	('お問い合わせ物件名 1'
+	//,'お問い合わせ物件名 2'
+	//,'お問い合わせ物件名 3'
+	);
+	foreach($arr as $k){
+	$v=$form_arr[$k][1];
+	?>
+	$('select[name="<?php echo $v; ?>1"]').change(function(){
+		v=$(this).val();
+		FORM_BUKKEN_CHANGE('select[name="<?php echo $v; ?>2"]',v);
+	});
+	<?php
+	}
+	?>
+});
+function FORM_ACO_2025(obj,slide_f){
+	$('.acobox').removeClass('opened');
+	obj.find('input').each(function(i,e){
+		num = parseInt(i+1);
+		//console.log($(this).prop('checked'));
+		if($(this).prop('checked')){
+			$('.acobox[n*='+num+']').addClass('opened');
+		}
+	});
+	if(slide_f){
+		$('.acobox.opened').slideDown();
+		$('.acobox:not(.opened)').slideUp();
+	}
+	$('.acobox.opened').find('input,select,textarea').removeProp('disabled');
+	$('.acobox:not(.opened)').find('input,select,textarea').prop('disabled',true);
+}
+function FORM_BUKKEN_CHANGE(obj,v){
+	$(obj).empty();
+	str='<option value="">── 物件名 ──</option>';
+	switch(v){
+		<?php
+		foreach($local_bukken_arr['エリア'] as $k => $v){
+			if(!is_numeric($k)){continue;}
+			$str='';
+			echo "case '".$v."':".chr(10);
+			foreach($local_bukken_arr[$v] as $vk => $vv){
+				if(!is_numeric($vk)){continue;}
+				$str.='<option>'.$vv.'</option>';
+			}
+			echo "str+='".$str."';";
+			echo "break;".chr(10);
+		}
+		?>
+		default:
+	}
+	$(obj).prepend(str);
+}
+</script>

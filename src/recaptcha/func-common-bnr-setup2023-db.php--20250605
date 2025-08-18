@@ -1,0 +1,82 @@
+<?php
+//<meta charset="utf-8">
+
+//共通バナーデータベース
+$toushin_bnr_arr=array
+(''//空白
+//--------------------
+,'dokuhon'=>array
+	('url'=>'contact.php'
+	,'bnr'=>'bnr-dokuhon-pc.png'
+	,'div'=>true
+	)
+//--------------------
+,'202410テイシャク'=>array
+	('url'=>array
+		(/*'家'				=>'@news.php?id=134'
+		,'そだつ'		=>'@news.php?id=120'
+		,*/'テイシャク'=>'@news.php?id=86'
+		,'平屋'			 =>'@news.php?id=74'
+		//,'発電'			 =>'https://www.toshinjyuken.co.jp/kodate/news.php?id=134'//東新住建の家と同じ（絶対参照）
+		)
+	,'bnr'=>'bnr-202410teishaku.jpg'
+	,'div'=>true
+	,'style'=>'max-width:600px;'
+	,'date'=>'YmdH'
+	,'s'=>2024101600
+	,'e'=>2024113009
+	)
+//--------------------
+,'202503住まい博'=>array
+	('url'=>array
+		('家'				=>'@news.php?id=160'
+		,'そだつ'		=>'@news.php?id=132'
+		,'テイシャク'=>'@news.php?id=89'
+		,'平屋'			 =>'@news.php?id=87'
+		//,'発電'			 =>'https://www.toshinjyuken.co.jp/kodate/news.php?id=134'//東新住建の家と同じ（絶対参照）
+		)
+	,'bnr'=>'bnr-202503sumaihaku.jpg'
+	,'div'=>true
+	,'style'=>'max-width:600px;'
+	,'date'=>'YmdH'
+	,'s'=>2025032900
+	,'e'=>2025060109
+	)
+//--------------------
+,'rainbow2023'=>array
+	('url'=>array
+		('家'				=>'@news.php?id=85'
+		,'そだつ'		=>'@news.php?id=79'
+		)
+	,'bnr'=>'bnr-2023NRP.jpg'
+	,'div'=>true
+	)
+//--------------------
+,'weekday'=>array
+	('url'=>array
+		('家'				=>'@news.php?id=41'
+		,'DUPHILLS'	 =>'@news.php?id=9'
+		)
+	,'bnr'=>array
+		(500			=>'bnr-weekday.jpg'
+		,'500火金'=>'bnr-weekday-Tue-Fri.png'
+		)
+	)
+//--------------------
+,'taptogo-mujin'=>array
+	('url'=>'https://www.toshinjyuken.co.jp/taptogolp/'
+	//,'bnr'=>'bnr-taptogo-mujin.jpg'
+	,'bnr'=>'bnr-taptogo-mujin-20230531.jpg'
+	,'div'=>true
+	)
+//--------------------
+/*
+,'taptogo'=>array
+	('url'=>'https://www.toshinjyuken.co.jp/taptogo/'
+	,'bnr'=>'bnr-taptogo.jpg'
+	)
+*/
+//--------------------
+);
+unset($toushin_bnr_arr[0]);//空白削除
+?>
