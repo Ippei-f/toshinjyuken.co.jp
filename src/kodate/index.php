@@ -683,7 +683,7 @@ foreach($sysdata_proto as $key => $sysdata){
 			}
 
 			.top_bnr_tel_line .line {
-				width: min(375px, max(325px, calc(1vw * 325 / 3.75)));
+				width: min(337px, max(325px, calc(1vw * 325 / 3.75)));
 			}
 
 			@media screen and (max-width: 999px) {
@@ -705,7 +705,13 @@ foreach($sysdata_proto as $key => $sysdata){
 			</div>
 			<div class="tt">電話・LINEでの<br class="pc_vanish">資料請求・お問い合わせはこちら</div>
 			<div class="tel"><a href="tel:0800-170-5104"><img src="images/top/bnr/bnr-tel.svg"></a>営業時間／10:00～18:00　定休日／水曜日</div>
-			<div class="line"><a href="https://lin.ee/v4vz5KD" target="_blank"><img src="images/top/bnr/bnr-line.svg"></a></div>
+
+			<div class="line">
+				<a href="https://lin.ee/v4vz5KD" target="_blank">
+					<img src="images/contact/line-bnr.svg" alt="LINE公式アカウント">
+				</a>
+			</div>
+
 		</div>
 		<!-- ** -->
 		<?php echo $temp_footer; ?>

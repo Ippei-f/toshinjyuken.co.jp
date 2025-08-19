@@ -125,7 +125,7 @@ echo '-->'.chr(10);
 		<div class="LINE-area">
 			<div class="LINE-area__fukidashi"><span>お問い合わせはLINEが便利です</span></div>
 			<div class="LINE-area__bnr">
-				<a href="">
+				<a href="https://lin.ee/v4vz5KD" target="_blank">
 					<img src="images/contact/line-bnr.svg" alt="LINE公式アカウント">
 				</a>
 			</div>
