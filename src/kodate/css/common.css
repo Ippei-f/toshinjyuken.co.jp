@@ -1560,6 +1560,21 @@ footer .copy {
 .brand_concept2025 > .halforder {
 	background-color: #fff;
 }
+.brand_concept2025 > .halforder .brand_list dd .text style_br {
+	flex-grow: 3;
+}
+.brand_concept2025 > .halforder .brand_list dd {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+@media screen and (max-width: 999px) {
+	.brand_concept2025 > .halforder .brand_list dd {
+		display: block;
+	}
+}
+
 .brand_concept2025 > .teishaku {
 	background-color: #f0ead9;
 }
