@@ -1,0 +1,61 @@
+<?php
+//<meta charset="utf-8">
+
+function TOP_SUBT_TEMP($k){
+	$res='<h2 class="top_subt_obi pc_br_del">';
+	switch($k){
+		case 1:
+		$res.='テイシャク平屋<span style="margin:0 0.5em;">／</span><br class="pc_br_del">土地付き平屋<span style="margin:0 0.5em;">／</span>注文平屋<span class="sp_vanish">　</span><br class="pc_br_del">徹底比較！';
+		break;
+	}
+	$res.='</h2>';
+	return $res;
+}
+
+function TOP_TEMP($k){
+	switch($k){
+		case 1:
+?>
+<div><b class="fontP150 sp_fontP100 LH150"><span class="textL sp_textC">定期借地の平屋は、<br class="pc_vanish">土地を購入する必要がないため、<br class="pc_vanish">少ない負担でマイホームに住めます。<br>また、土地代が浮いた分で豊かな暮らしが<br class="pc_vanish">できるというメリットもあります。</span></b></div>
+<?php echo CONTENT_PAD(40,'sp/2'); ?>
+<img src="images/top/hikaku-2-202505.svg" class="mgnAuto" style="width:896px;">
+<?php echo CONTENT_PAD(20,'sp/2'); ?>
+<b class="LH150"><div class="va_middle">
+<span class="fontP175 sp_fontP100">東新住建のテイシャクは土地付き住宅より</span><?php echo PAD_BR('0.5em'); ?><span class="fontP250 sp_fontP200">約<span class="col_04A fontP125">2,184</span>万円節約</span>
+</div>
+</b>
+<?php echo CONTENT_PAD(30,'sp/2'); ?>
+<div class="textL LH150 fontP075">※ 返済例は、三井住友銀行 住宅ローン1.225%（変動金利）を利用した場合です。金利は通年優遇を利用した場合で、優遇は条件を満たした方のみに適用されます。また、融資額は年収、その他の条件により異なります。※その他に事務手数料等の諸費用が必要となります。また保証料・火災保険料・担保設定費用が別途必要です。※返済例は2025年4月現在のもので、実際は融資実行時の金利が適用されます。※申し込みにあたり融資審査が必要となります。年収等諸条件により住宅ローンがご利用いただけない場合もございます。</div>
+<?php
+		break;
+		//-----
+		case 2:
+?>
+<div class="content_box">
+<div class="Wbase catch_202203_1" style="position: relative;">
+<div>定期借地権付戸建て<br>住宅供給実績</div>
+<div><img src="images/top/catch-2-1-2C-20250512.svg"></div>
+<div style="position: absolute;
+bottom: 0;
+right: 0;
+font-size: 0.75em;">※公益社団法人住宅総合センター</div>
+</div>
+<div class="Wbase"><hr style="border-width:8px; border-color: #004EA3; margin: 0;"></div>
+<div class="Wbase catch_202203_2">
+<div>
+<img src="images/top/catch-2-2-2C-20250512.svg">
+<img src="images/top/catch-2-3-2C-20250512.svg">
+</div>
+<div>
+<div><b style="font-size: 1.25em; line-height: 1.5em; font-family: sans-serif; text-align: right; display: inline-block;"><?php echo WORD_BR('定期借地権付き住宅販売全国<span style="font-size:1.5em;">No.1</span>
+31年間で<span style="font-size:1.5em;">1,200</span>棟を超える実績'); ?></b></div>
+<div>東新住建は定期借地権付き住宅販売全国No.1。31年間で1,200棟の販売・供給実績があります。平成6年から扱いを開始し、購入者様・地主様の双方をサポートしています。</div>
+</div>
+</div>
+</div>
+<?php
+		break;
+		//-----
+	}
+}
+?>
