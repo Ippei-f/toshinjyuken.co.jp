@@ -24,29 +24,14 @@ include $kaisou . '_assets/php/basic.php';
 		<?php TEMP_HEADER(); ?>
 		<!-- ** -->
 		<main>
-			<section class="lp_head">
-				<div class="Wbase">
-					<a href="https://www.toshinjyuken.co.jp/" target="_blank"><img src="_assets/img/common/logo-toushin.svg" alt="東新住建"></a>
-					<a><img src="_assets/img/common/logo-lp.png" alt="ヘーベル パワーボード　by Asahi Kasei"></a>
-				</div>
-			</section>
 
-			<div class="top_bnr_50th">
-				<a href="https://www.toshinjyuken.co.jp/kodate/news.php?id=177" target="_blank">
-					<img src="_assets/img/top/bnr-50th-1.jpg" alt="おかげさま来年7月で50周年カウントダウンフェア" />
-				</a>
-			</div>
-
-			<!-- *** -->
-			<section class="top_sec01">
-				<div class="Wbase">
-					<div class="catch">
-						<div>新たなる住宅への挑戦。</div>
-					</div>
-					<h1 class="logo"><img src="_assets/img/common/logo-NCLH.svg" alt="Newコンクリートログハウス"></h1>
-				</div>
+			<section class="mv"><picture><source srcset="_assets/img/top/mv_sp.png" media="(max-width: 768px)" /><img src="_assets/img/top/mv.png" alt="New コンクリートログハウス 五感で感じる、強い家。"></picture></section>
+			
+			<section class="intro">
+				<h2>自由な発想で家族色に染まる、「木地仕上げの家」</h2>
+				<p>堅牢な外壁。ぬくもりの木の内装。<br>外断熱だからこそ叶う、強さと心地よさの両立。<br>暮らしに合わせて自由にカスタマイズしながら、<br>いつまでも住み続けられる木の家が誕生しました。</p>
 			</section>
-			<!-- *** -->
+			
 			<?php
 			function LOCAL_MODELHOUSE()
 			{
@@ -54,48 +39,83 @@ include $kaisou . '_assets/php/basic.php';
 				$link = '../kodate/search';
 				$blank = $link_parts['blank'] . $link_parts['noref'];
 			?>
-				<section class="top_modelhouse c_pad">
-					<div class="Wbase" w="960">
-						<?php echo IMG_TAG_PCSP('top/MH-title.svg'); ?>
-						<div class="bnr">
-							<?php
-							echo '<a href="' . $link . '-detail.php?id=361' . $blank . '" class="ov_white">' . IMG_TAG_PCSP('top/MH-bnr1.jpg', 'alt="尾張地区 モデルハウス稲沢国府宮"') . '</a>' . PHP_EOL;
-							echo '<a href="' . $link . '-detail.php?id=295' . $blank . '" class="ov_white">' . IMG_TAG_PCSP('top/MH-bnr2.jpg', 'alt="三河地区 モデルハウス豊田金谷町"') . '</a>' . PHP_EOL;
-							//echo '<a href="'.$link.'.php?search=エリア,三河エリア'.$blank.'" class="ov_white">'.IMG_TAG_PCSP('top/MH-bnr2.jpg','alt="三河地区 モデルハウス豊田金谷町"').'</a>'.PHP_EOL;
-							//｜ブランド,Newコンクリートログハウス
-							?>
-						</div>
+				<section class="modelhouse">
+					<div class="Wbase">
+						<ul>
+							<li><picture><source srcset="_assets/img/top/modelhouse-inazawa_sp.png" media="(max-width: 768px)" /><img src="_assets/img/top/modelhouse-inazawa.png" alt="お気軽にご来場ください！ 稲沢国府宮モデルハウス 名鉄名古屋本線「国府宮」駅　徒歩約10分"/></picture></li>
+							<li>
+								<p><a href="https://www.toshinjyuken.co.jp/kodate/search-detail.php?id=361" target="_blank"><i><img src="_assets/img/top/i-pin.svg" alt=""/></i>モデルハウスの詳細はこちら</a></p>
+								<p><a href="https://www.toshinjyuken.co.jp/kodate/voice-detail.php?case=46" target="_blank"><i><img src="_assets/img/top/i-family.svg" alt=""/></i>実際に購入されたお客様の声</a></p>
+							</li>
+						</ul>
 					</div>
 				</section>
 			<?php
 			}
 			LOCAL_MODELHOUSE();
 			?>
+			
+			<section class="type">
+			<h3><picture><source srcset="_assets/img/top/ttl-type_sp.svg" media="(max-width: 768px)" /><img src="_assets/img/top/ttl-type.svg" alt="ENJOY YOUR STYLE! お好みの内装スタイルが選べる！"/></picture></h3>
+			 <div class="Wbase">
+				 <ul class="style">
+					 <li><picture><source srcset="_assets/img/top/type-style01_sp.png" media="(max-width: 768px)" /><img src="_assets/img/top/type-style01.png" alt="STYLE01 BROOKLYN STYLE ブルックリンスタイル"/></picture></li>
+					 <li><picture><source srcset="_assets/img/top/type-style02_sp.png" media="(max-width: 768px)" /><img src="_assets/img/top/type-style02.png" alt="STYLE02 NORTHERN EUROPE STYLE 北欧スタイル"/></picture></li>
+					 <li><picture><source srcset="_assets/img/top/type-style03_sp.png" media="(max-width: 768px)" /><img src="_assets/img/top/type-style03.png" alt="STYLE03 CALIFORNIA STYLE カリフォルニアスタイル"/></picture></li>
+					 <li><picture><source srcset="_assets/img/top/type-style04_sp.png" media="(max-width: 768px)" /><img src="_assets/img/top/type-style04.png" alt="STYLE04 BOHEMIAN STYLEE ボヘミアンスタイル"/></picture></li>
+				 </ul>
+				 <ul class="concept">
+					 <li><img src="_assets/img/top/type-concept.png" alt="この家は、何度でも楽しめる。"/><p>木の温もりあふれる住まいは、自由に作り込めるキャンバスそのもの。<br>あなたの色に染めて、理想の暮らしを描こう。<br>カスタマイズする楽しさが、ここにあります。</p></li>
+					 <li><ol><li>好きな場所に、好きな棚を作る</li><li>レンガ調の壁がアクセントに</li><li>壁にキャットウォークを作れる</li><li>ハンモックでゆったりくつろぐ<sup>など</sup></li></ol></li>
+				 </ul>
+			   <ul class="pic">
+					 <li><img src="_assets/img/top/type-pic01.png" alt=""/></li>
+					 <li><img src="_assets/img/top/type-pic02.png" alt=""/></li>
+					 <li><img src="_assets/img/top/type-pic03.png" alt=""/></li>
+				 </ul>
+				 <?php
+					LOCAL_SLIDE_SET(array(
+						'title' => array(2, '木地仕上げの施工事例', 274, 147),
+						'photo' => array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11)
+					));
+					?>
+			 </div>
+			</section>
+			
+			<section class="pride">
+			 <div class="Wbase">
+				 <h3>【 職人が誇る木地仕上げ 】</h3>
+				 <p>木の表情も釘の位置もすべて露になる木地仕上げ。<br>職人の精度と丁寧さが仕上がりを決めます。<br>自然素材にこだわり、五感に響く空間を創り上げます。<br></p>
+				 <ul>
+					 <li><img src="_assets/img/top/proud-pic.png" alt="この家は、何度でも楽しめる。"/></li>
+					 <li>
+						 <h4>国産材2×4の「木の家」</h4>
+						 <p>壁面には、国土交通大臣認定の壁量4.3倍の強度をもつ耐力壁を使用。地震に強い2×4工法の耐震性能を40％高めました。パネルの一部には国産材を利用。自社工場だから実現できる高品質・低コスト。</p>
+					 </li>
+				 </ul>
+			 </div>
+			</section>			
+
 			<!-- *** -->
 			<section class="top_sec02">
 
 				<!-- Wbase -->
 				<div class="Wbase">
-					<div class="font_pw" style="font-size: min(25px,max(13px,calc(1vw * 13 / 3.75)));">私たちの家は、強く、長寿命で、家族を守る家。<br>自然素材にこだわり、五感に響く空間を創り上げます。<br><br>東新住建が家づくりで最も大切にしているのは、<br>お客様に永く住み続けていただくこと。<br><br>住み始めたその先の変化まで見据え、<br class="pc_vanish">安心の住まいをお届けします。</div>
 					<?php echo ANCHOR('alc') ?>
+					<p class="sec-ttl"><picture><source srcset="_assets/img/top/ttl-alc_sp.svg" media="(max-width: 768px)" /><img src="_assets/img/top/ttl-alc.svg" alt="ALCコンクリートの４つの特徴"/></picture></p>
 					<div class="tokuchou">
-						<h3 style="font-size: min(35px,max(15px,calc(1vw * 15 / 3.75)));">ALCコンクリートの４つの特徴</h3>
+					  <h3 style="font-size: min(35px,max(15px,calc(1vw * 15 / 3.75)));"></h3>
 						<div class="icon">
 							<img src="_assets/img/top/icon-strong.svg">
 							<img src="_assets/img/top/icon-light.svg">
 							<img src="_assets/img/top/icon-quiet.svg">
 							<img src="_assets/img/top/icon-beauty.svg">
 						</div>
-					</div>
-				</div>
+				  </div>
+				<div class="subt"><img src="_assets/img/top/icon-strong.svg"><h2 class="font_pw">従来のコンクリートの約10倍！<br>高度な断熱性能を実現。</h2></div>
+			  </div>
 
 				<!-- Wbase -->
-				<div class="Wbase">
-					<div class="subt"><img src="_assets/img/top/icon-strong.svg">
-						<h2 class="font_pw">従来のコンクリートの約10倍！
-							高度な断熱性能を実現。</h2>
-					</div>
-				</div>
 				<div class="c_pad">
 					<div class="Wbase">
 
@@ -206,8 +226,7 @@ include $kaisou . '_assets/php/basic.php';
 				<!-- Wbase -->
 				<div class="Wbase">
 					<div class="subt"><img src="_assets/img/top/icon-beauty.svg">
-						<h2 class="font_pw">60年間張り替えが不要。
-							永く美しい外観を保ちます。</h2>
+						<h2 class="font_pw">60年間張り替えが不要。<br>永く美しい外観を保ちます。</h2>
 					</div>
 				</div>
 				<div class="c_pad">
@@ -248,7 +267,7 @@ include $kaisou . '_assets/php/basic.php';
 <div class="slick">' . $data['photo-set'] . '</div>
 </div>' . PHP_EOL;
 						?>
-							<script>
+					  <script>
 								$(window).load(function() {
 									$('.slide_set[num="<?php echo $data['title'][0]; ?>"] .slick').slick({
 										autoplay: false,
@@ -303,7 +322,6 @@ include $kaisou . '_assets/php/basic.php';
 						));
 						?>
 
-
 						<div class="ribbon"><?php echo IMG_TAG_PCSP('top/ribbon.svg', 'alt="東新住建は、2016年より旭化成建材のALC外壁を採用。「快適」と「環境保全」を両立した家づくりを追求し続けています。"'); ?></div>
 
 						<?php
@@ -320,102 +338,14 @@ include $kaisou . '_assets/php/basic.php';
 						?>
 
 					</div>
+					<p class="btm-bnr"><img src="_assets/img/top/sec02-btm.png"></p>
 				</div>
 			</section>
-			<!-- *** -->
-			<section class="top_sec03 bg_wall">
-				<div class="Wbase bg"></div>
-				<div class="Wbase in">
-					<h2>強さと温もり、両方を叶える家。</h2>
-					<?php echo IMG_TAG_PCSP('top/sec03.webp'); ?>
-				</div>
-			</section>
-			<!-- *** -->
-			<section class="top_sec04 c_pad">
-				<div class="Wbase">
-					<div class="catch font_pw">外断熱だから実現できる
-						ツーバイフォーの性能を備えながら
-						木の温もりに包まれた木地仕上げの内壁</div>
-					<div class="p_set">
-						<div order="2">
-							<div class="p1"><img src="_assets/img/top/sec04-1-1.jpg"><img src="_assets/img/top/sec04-1-2.jpg"></div>
-							<div class="cap">剥き出しの木材に包まれた家は他にはないエコロジカルな空間を演出します。自由な発想で作り込める居住空間は、あなた色に染まることでしょう。</div>
-						</div>
-						<div class="p2" order="1"><img src="_assets/img/top/sec04-2.jpg"></div>
-					</div>
-					<?php
-					LOCAL_SLIDE_SET(array(
-						'title' => array(2, '木地仕上げの施工事例', 274, 147),
-						'photo' => array(1, 2, 3, 4, 5)
-					));
-					?>
-					<!-- *** -->
-					<style>
-						.bnr_voice,
-						.bnr_voice a {
-							max-width: 100%;
-							display: flex;
-							justify-content: center;
-							align-items: center;
-						}
-
-						.bnr_voice {
-							padding-top: 40px;
-						}
-
-						.bnr_voice a {
-							position: relative;
-							width: min(510px, max(345px, calc(1vw * 345 / 3.75)));
-							height: min(255px, max(172px, calc(1vw * 172 / 3.75)));
-							background-color: #ea5902;
-						}
-
-						.bnr_voice img {
-							object-fit: cover;
-						}
-
-						.bnr_voice a>* {
-							position: absolute;
-							top: 0;
-							left: 0;
-							width: 100%;
-							height: 100%;
-							display: grid;
-							align-items: center;
-						}
-
-						.bnr_voice a>.frame {
-							border: solid min(4px, max(2px, calc(1vw * 2 / 3.75))) #000;
-						}
-
-						.bnr_voice a>.frame img {
-							margin: auto;
-							margin-left: calc(1% * 90 / 5.02);
-							width: calc(1% * 393 / 5.02);
-							max-width: max(266px, calc(1vw * 266 / 3.75));
-							max-height: max(142px, calc(1vw * 142 / 3.75));
-						}
-
-						.bnr_voice a>.frame+div img {
-							height: 100%;
-						}
-					</style>
-					<div class="bnr_voice content_box"><a href="<?php echo $link_list['外部:お客様の声'][0]; ?>">
-							<div class="frame"><img src="_assets/img/bnr/bnr_voice-photo.jpg"></div>
-							<div class="vanish_branch">
-								<img src="_assets/img/bnr/bnr_voice-pc.svg">
-								<img src="_assets/img/bnr/bnr_voice-sp.svg">
-							</div>
-						</a></div>
-					<!-- *** -->
-					<?php
-					LOCAL_VOICE_SET(2, 21, '暮らして快適 木地仕上げの家が選ばれるにはわけがある！');
-					?>
-				</div>
-			</section>
-			<!-- *** -->
+			
 			<?php LOCAL_MODELHOUSE(); ?>
+			
 		</main>
+
 		<script>
 			jQuery(window).load(function() {
 				var slide_img = $('.slide_set .slick .slick-slide img');
@@ -449,6 +379,7 @@ include $kaisou . '_assets/php/basic.php';
 				});
 			});
 		</script>
+
 		<div class="pop">
 			<div class="dark">
 				<div class="flex">
