@@ -1,0 +1,51 @@
+<?php
+$body_id = 'News';
+get_header(); ?>
+
+<div id="Contents">
+<div class="kv">
+	<div class="h1_copy">
+		<div><img src="<?php echo get_template_directory_uri(); ?>/images/news/h1_en.svg" alt="news" width="311" height="107"></div>
+		<h1>新着情報</h1>
+	</div>	
+</div>
+<ul class="topicpath">
+	<li><a href="<?php echo home_url(); ?>/">TOP</a></li>
+	<li>NEWS</li>
+</ul>
+
+<div class="wrapper">
+	<h2>新着情報一覧</h2>
+	<?php
+	$my_query = new WP_Query(
+	  array(
+		'paged' => $paged,
+		'post_type'      => 'post',
+		'posts_per_page' => 5,
+	  )
+	);
+	?>
+	<?php if ( $my_query ->have_posts()): while ( $my_query ->have_posts()) : $my_query ->the_post(); ?>
+	<ul>
+		<li class="item">
+			<p class="date"><?php the_time('Y/m/d'); ?></p>
+			<p class="ttl"><?php the_title(); ?></p>
+			<p class="txt"><?php echo get_the_excerpt(); ?></p>
+			<a href="<?php the_permalink() ?>" class="txt_link">記事を読む</a>
+		</li>
+	</ul>
+	<?php endwhile; endif; ?>
+	<div class="page_nav"><p><?php if(function_exists("wp_pagenavi")) wp_pagenavi(array('query' => $my_query)); ?></p></div>
+</div>
+	
+<section class="join_us">
+	<div class="join_us_inner front">
+		<div class="copy"><img src="<?php echo get_template_directory_uri(); ?>/images/common/joinus_copy.svg" alt="join us!"></div>
+		<p>さあ、ともに出発しよう！<br>エントリーはこちらから</p>
+		<div class="flex">
+			<a class="yoko" href="<?php echo home_url(); ?>/job/">募集要項</a>
+			<a class="entry" href="<?php echo home_url(); ?>/form/">ENTRY</a>
+		</div>
+	</div>	
+</section>
+<?php get_footer(); ?>
