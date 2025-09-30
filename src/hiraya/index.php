@@ -306,11 +306,6 @@ echo CONTENT_PAD(70,40);
 		</style>
 		<!-- *** -->
 
-		<div class="top_bnr_50th">
-			<a href="https://www.toshinjyuken.co.jp/kodate/news.php?id=177" target="_blank">
-				<img src="images/top/bnr-50th-1.jpg" alt="おかげさま来年7月で50周年カウントダウンフェア" />
-			</a>
-		</div>
 
 		<?php
 		//LPバナー
