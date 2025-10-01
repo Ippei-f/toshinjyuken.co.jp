@@ -516,6 +516,9 @@ foreach($sysdata_proto as $key => $sysdata){
 			</div>
 		</div>
 		<!-- *** -->
+
+
+		<!--
 		<div class="bg_FFF_gray" style="padding-bottom: 2.5em;"></div>
 		<div class="top_slide bg_FFF_gray">
 			<div class="wideslider borderbox">
@@ -574,6 +577,8 @@ foreach($sysdata_proto as $key => $sysdata){
 				</ul>
 			</div>
 		</div>
+				-->
+
 		<!-- *** -->
 		<div class="top_catch">
 			<h3 class="fontP200 sp_fontP170 LH150 font_thin col_F30" style="letter-spacing: 0.1em; margin-left: 0.1em;">LIFESTYLE TIPS</h3>
