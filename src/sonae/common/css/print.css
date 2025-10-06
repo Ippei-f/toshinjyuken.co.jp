@@ -1,0 +1,11 @@
+@charset "utf-8";
+.effect * {
+	opacity: 1.0!important;
+	transform: translate(0px,0px)!important;
+}
+.effect_sticky {
+	position: relative;
+}
+#header {
+	position: relative;
+}

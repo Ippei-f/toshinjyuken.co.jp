@@ -1,0 +1,114 @@
+@use 'common';
+
+.page-contents{
+
+    @media screen and (min-width:768px){
+        .secHeader{
+            .main{ width:201px; }
+        }
+        .coverPic{
+            width:100%; height:100%; object-fit: cover; object-position:center;
+        }
+        .central-pc{
+            display:flex; align-items: center; align-content: center; justify-content: center;
+        }
+
+        .contentWrapper{
+            min-width: 1400px;
+        }
+
+        #sakidoriSec{
+            width:721px; margin:0 auto; border-radius: 20px; overflow: hidden;
+
+            .headerBlock{
+                width:100%;
+
+                .pict{ width:100%; }
+            }
+            .contBlock{
+                padding:63px 92px 80px; background:#fff;
+
+                .header{
+                    font-size:22px; font-weight:700; line-height: 1.75; margin-bottom: 34px;
+                }
+                .text{
+                    font-size:19px; line-height: 1.75;
+                }
+
+                .btnCase{
+                    width:324.5px; margin:74px auto 0;
+
+                    .lineQRBtn{
+                        width:100%; height:69px; color:#fff; font-size:19px; font-weight:700; 
+                        background:#414141; border:1px solid #707070; margin-bottom: 10px;
+                        @extend .central-pc;
+                    }
+
+                    .cap{ font-size:15px; }
+                }
+                
+            }/*contBlock*/
+        }/*sakidoriSec*/  
+    }/* PC */
+        
+
+
+
+
+
+    @media screen and (max-width:767px){
+        .secHeader{
+            margin-bottom: 7.46vw;
+
+            .main{ width:30.13vw; }
+        }
+        .coverPic-sp{
+            width:100%; height:100%; object-fit: cover; object-position:center;
+        }
+        .central-sp{
+            display:flex; align-items: center; align-content: center; justify-content: center;
+        }
+
+        .contentWrapper{
+            padding:0 6.4vw;
+        }
+
+        #pageHeadSec{
+            margin-bottom:19.73vw;
+        }
+        #sakidoriSec{
+            width:100%; border-radius: 10px; overflow: hidden;
+
+            .headerBlock{
+                width:100%;
+
+                .pict{ width:100%; }
+            }
+            .contBlock{
+                padding:15.2vw 5.6vw; background:#fff;
+
+                .header{
+                    font-size:4.53vw; font-weight:600; line-height: 1.75; margin-bottom: 34px;
+                }
+                .text{
+                    font-size:4.53vw; line-height: 1.75;
+                }
+
+                .btnCase{
+                    margin-top:17.33vw;
+
+                    .lineQRBtn{
+                        width:85%; height:14.66vw; color:#fff; font-size:4vw; font-weight:700; 
+                        background:#414141; border:1px solid #707070; margin-bottom: 10px;
+                        @extend .central-sp;
+                    }
+
+                    .cap{ font-size:4vw; }
+                }
+                
+            }/*contBlock*/
+        }/*sakidoriSec*/  
+
+    }/* SP */
+
+}

@@ -1,0 +1,44 @@
+<?php
+//<meta charset="utf-8">
+
+$login_check=array
+('sonae'=>'tsn2025sne'
+);
+
+$login_prm=array();
+switch(true){
+	case isset($_SESSION['ID']):
+	$login_prm['ID']=$_SESSION['ID'];
+	break;
+	case isset($_POST['login_id']):
+	$login_prm['ID']=$_POST['login_id'];
+	break;
+}
+switch(true){
+	case isset($_SESSION['PW']):
+	$login_prm['PW']=$_SESSION['PW'];
+	break;
+	case isset($_POST['login_pw']):
+	$login_prm['PW']=$_POST['login_pw'];
+	break;
+}
+switch(true){
+	case !isset($login_prm['ID']):
+	case !isset($login_prm['PW']):
+	case empty($login_prm['ID']):
+	case empty($login_prm['PW']):
+	case $login_prm['PW']!=$login_check[$login_prm['ID']]:
+	$login_prm['err']=true;
+	break;
+}
+//print_r($login_prm);
+//exit();
+if(isset($login_prm['err'])){
+	header("Location: login.php?prm=err");
+	exit();
+}
+else if(isset($_POST['login_id'])){
+	$_SESSION['ID']=$login_prm['ID'];
+	$_SESSION['PW']=$login_prm['PW'];
+}
+?>

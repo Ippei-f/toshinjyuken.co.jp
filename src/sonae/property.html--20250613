@@ -1,0 +1,1175 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <!-- Google Tag Manager --> 
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5ZMSHR7');</script> 
+    <!-- End Google Tag Manager -->
+    <!-- Google Tag Manager 2025/03/25追加 --> 
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PRRJRDR');</script> 
+    <!-- End Google Tag Manager -->
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "q9muz1rfb0");
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>収益物件一覧|土地を持たない不動産投資｜SONAE</title>
+    <meta name="description" content="SONAEは土地を持たずにはじめられる新築・築浅メゾネット1棟アパート投資。定期借地を活用し、利回り10％超を実現。低リスク・高収益の新しい不動産投資スタイル。" />
+
+    <link rel="stylesheet" href="common/css/reset.css">
+    <link rel="stylesheet" href="common/css/style.css">
+
+    <!--font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@200;300;400;500;600;700;900&family=Passion+One:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <!--swiper-->
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+
+    <!-- タブレット最適化表示用 -->
+    <script>
+        var d=window.document;
+        if(
+            navigator.userAgent.indexOf('iPhone')>-1||navigator.userAgent.indexOf('iPod')>0||navigator.userAgent.indexOf('Android')>0
+        )
+            d.write('<meta id="vp" name="viewport" content="width=device-width; initial-scale=1;">');
+        else if(
+            navigator.userAgent.indexOf('iPad')>-1||navigator.userAgent.indexOf('macintosh')>-1 && 'ontouchend' in document||navigator.userAgent.indexOf('Android')>0&&navigator.userAgent.indexOf('Mobile')==-1
+        )
+            d.write('<meta name="viewport" content="width=1300, maximum-scale=1, user-scalable=yes"><link rel="stylesheet" type="text/css" href="../common/css/ipad.css" media="all">');
+    </script>
+    
+    <script>
+    if (screen.width > 767){
+        //var Android = document.getElementById('vp');
+        //Android.setAttribute('content','width=1200');
+    
+        var metalist = document.getElementsByTagName('meta');
+        for(var i = 0; i < metalist.length; i++) {
+            var name = metalist[i].getAttribute('name');
+            if(name && name.toLowerCase() === 'viewport') {
+                metalist[i].setAttribute('content', 'width=1300');
+                break;
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+    
+
+    <!--#include file="./common/include/header.php" -->
+
+
+    <script>//bodyに各ページ固有のclassを設定
+        document.addEventListener('DOMContentLoaded', function () {
+            document.body.classList.add('page-property', 'underPage');
+        });
+    </script>
+
+    <div id="pageHeadSec">
+        <div class="innerWrapper">
+            <h2 class="secHeader">
+                <p class="sub">収益物件一覧</p>
+                <p class="main pict"><img src="common/images/title-property.svg" alt="PROPERTY"></p>
+            </h2>
+
+            <div class="under">
+                <div class="header">
+                    <p class="mark pict">
+                        <img src="common/images/mark-secret.svg" alt="">
+                    </p>
+                    <p class="passion">SONAE<br>MENBERSHIP</p>
+                </div>
+                <div class="setsumei setsumei-header">
+                    <p class="header">
+                        <span class="passion">SONAE</span>&ensp;メンバーシップ限定物件のご案内について
+                    </p>
+                </div>
+                <div class="setsumei setsumei-text">
+                    <p class="text">
+                        SONAEメンバーシップにご登録いただくと、キャンペーンなどのお得な情報を定期的にお届けするとともに、会員様限定のシークレット物件情報にもアクセスいただけます。ご登録は、お問い合わせフォームよりお手続きいただけます。
+                    </p>
+                </div>
+
+                <a href="membership/contact.php" class="btn joinMemberBtn">会員登録はこちらから</a>
+            </div><!--under-->
+        </div><!--innerWrapper-->
+    </div>
+    <section class="" id="propertySec">
+        <div class="contBlock cardBlock">
+            <h3 class="blockHeader">
+                <p class="bar left"></p>
+                <p class="title">定期借地権物件</p>
+                <p class="bar right"></p>
+            </h3>
+            <div class="contBox">
+                <ul class="cardList">
+                    <li class="card teisyaku ">
+                            <div class="front">
+                                <div class="numBox">
+                                    <p class="num"><span class="strong">10</span>.<span class="few">03</span>%</p>
+                                </div>   
+                                <p class="address">名古屋市瑞穂区前田</p>
+                            </div><!--front-->
+                            <div class="back">
+                                <p class="pict">
+                                    <img src="images/summary/fixed-term_land001/photo001.jpg" alt="">
+                                </p>
+                                <div class="data">
+                                    <ul class="dataList normal">
+                                        <li class="topic">
+                                            <p class="header">所在地</p>
+                                            <p class="cont">名古屋市瑞穗区前田</p>
+                                        </li>
+                                        <li class="topic">
+                                            <p class="header">物件種別</p>
+                                            <p class="cont">メゾネット1棟5戸</p>
+                                        </li>
+                                        <li class="topic">
+                                            <p class="header">土地権利</p>
+                                            <p class="cont">一般定期借地権</p>
+                                        </li>
+                                        <li class="topic">
+                                            <p class="header">販売価格</p>
+                                            <p class="cont">¥68,000,000</p>
+                                        </li>
+                                    </ul>
+                                    <p class="bar"></p>
+                                    <ul class="dataList rimawari">
+                                        <li class="topic">
+                                            <p class="header">想定年間収入</p>
+                                            <p class="cont">¥6,823,608</p>
+                                        </li>
+                                        <li class="topic">
+                                            <p class="header">表面利回り</p>
+                                            <p class="cont">10.03%</p>
+                                        </li>
+                                    </ul>
+                                    <a href="summary/fixed-term_land001.html" class="btn">より詳しく知る</a>
+                                </div><!--data-->
+                            </div><!--back-->
+                    </li>
+                    <li class="card teisyaku">
+                        <div class="front">
+                            <div class="numBox">
+                                <p class="num"><span class="strong">10</span>.<span class="few">08</span>%</p>
+                            </div>   
+                            <p class="address">愛知県豊田市京町</p>
+                        </div><!--front-->
+                        <div class="back">
+                            <p class="pict">
+                                <img src="images/summary/fixed-term_land003/photo001.jpg" alt="">
+                            </p>
+                            <div class="data">
+                                <ul class="dataList normal">
+                                    <li class="topic">
+                                        <p class="header">所在地</p>
+                                        <p class="cont">愛知県豊田市京町</p>
+                                    </li>
+                                    <li class="topic">
+                                        <p class="header">物件種別</p>
+                                        <p class="cont">メゾネット1棟3戸</p>
+                                    </li>
+                                    <li class="topic">
+                                        <p class="header">土地権利</p>
+                                        <p class="cont">一般定期借地権</p>
+                                    </li>
+                                    <li class="topic">
+                                        <p class="header">販売価格</p>
+                                        <p class="cont">¥39,500,000</p>
+                                    </li>
+                                </ul>
+                                <p class="bar"></p>
+                                <ul class="dataList rimawari">
+                                    <li class="topic">
+                                        <p class="header">想定年間収入</p>
+                                        <p class="cont">¥3,984,000</p>
+                                    </li>
+                                    <li class="topic">
+                                        <p class="header">表面利回り</p>
+                                        <p class="cont">10.08%</p>
+                                    </li>
+                                </ul>
+                                <a href="summary/fixed-term_land003.html" class="btn">より詳しく知る</a>
+                            </div><!--data-->
+                        </div><!--back-->
+                    </li>
+                    <li class="card teisyaku">
+                        <div class="front">
+                            <div class="numBox">
+                                <p class="num"><span class="strong">10</span>.<span class="few">14</span>%</p>
+                            </div>   
+                            <p class="address">愛知県豊田市京町</p>
+                        </div><!--front-->
+                        <div class="back">
+                            <p class="pict">
+                                <img src="images/summary/fixed-term_land004/photo001.jpg" alt="">
+                            </p>
+                            <div class="data">
+                                <ul class="dataList normal">
+                                    <li class="topic">
+                                        <p class="header">所在地</p>
+                                        <p class="cont">愛知県豊田市京町</p>
+                                    </li>
+                                    <li class="topic">
+                                        <p class="header">物件種別</p>
+                                        <p class="cont">メゾネット1棟3戸</p>
+                                    </li>
+                                    <li class="topic">
+                                        <p class="header">土地権利</p>
+                                        <p class="cont">一般定期借地</p>
+                                    </li>
+                                    <li class="topic">
+                                        <p class="header">販売価格</p>
+                                        <p class="cont">¥39,300,000</p>
+                                    </li>
+                                </ul>
+                                <p class="bar"></p>
+                                <ul class="dataList rimawari">
+                                    <li class="topic">
+                                        <p class="header">想定年間収入</p>
+                                        <p class="cont">¥3,984,000</p>
+                                    </li>
+                                    <li class="topic">
+                                        <p class="header">表面利回り</p>
+                                        <p class="cont">10.14%</p>
+                                    </li>
+                                </ul>
+                                <a href="summary/fixed-term_land004.html" class="btn">より詳しく知る</a>
+                            </div><!--data-->
+                        </div><!--back-->
+                    </li>
+                    <li class="card teisyaku">
+                        <div class="front">
+                            <div class="numBox">
+                                <p class="num"><span class="strong">10</span>.<span class="few">51</span>%</p>
+                            </div>   
+                            <p class="address">愛知県一宮市北浦町</p>
+                        </div><!--front-->
+                        <div class="back">
+                            <p class="pict">
+                                <img src="images/summary/fixed-term_land002/photo004.jpg" alt="">
+                            </p>
+                            <div class="data">
+                                <ul class="dataList normal">
+                                    <li class="topic">
+                                        <p class="header">所在地</p>
+                                        <p class="cont">愛知県一宮市北浦町</p>
+                                    </li>
+                                    <li class="topic">
+                                        <p class="header">物件種別</p>
+                                        <p class="cont">メゾネット1棟4戸</p>
+                                    </li>
+                                    <li class="topic">
+                                        <p class="header">土地権利</p>
+                                        <p class="cont">一般定期借地権</p>
+                                    </li>
+                                    <li class="topic">
+                                        <p class="header">販売価格</p>
+                                        <p class="cont">¥39,200,000</p>
+                                    </li>
+                                </ul>
+                                <p class="bar"></p>
+                                <ul class="dataList rimawari">
+                                    <li class="topic">
+                                        <p class="header">想定年間収入</p>
+                                        <p class="cont">¥4,120,000</p>
+                                    </li>
+                                    <li class="topic">
+                                        <p class="header">表面利回り</p>
+                                        <p class="cont">10.51%</p>
+                                    </li>
+                                </ul>
+                                <a href="summary/fixed-term_land002.html" class="btn">より詳しく知る</a>
+                            </div><!--data-->
+                        </div><!--back-->
+                    </li>
+                    <li class="card teisyaku">
+                        <div class="front">
+                            <div class="numBox">
+                                <p class="num"><span class="strong">10</span>.<span class="few">00</span>%</p>
+                            </div>   
+                            <p class="address">愛知県稲沢市石橋</p>
+                        </div><!--front-->
+                        <div class="back">
+                            <p class="pict">
+                                <img src="images/summary/fixed-term_land008/photo001.jpg" alt="">
+                            </p>
+                            <div class="data">
+                                <ul class="dataList normal">
+                                    <li class="topic">
+                                        <p class="header">所在地</p>
+                                        <p class="cont">愛知県稲沢市石橋</p>
+                                    </li>
+                                    <li class="topic">
+                                        <p class="header">物件種別</p>
+                                        <p class="cont">メゾネット1棟3戸</p>
+                                    </li>
+                                    <li class="topic">
+                                        <p class="header">土地権利</p>
+                                        <p class="cont">一般定期借地権</p>
+                                    </li>
+                                    <li class="topic">
+                                        <p class="header">販売価格</p>
+                                        <p class="cont">¥26,650,000</p>
+                                    </li>
+                                </ul>
+                                <p class="bar"></p>
+                                <ul class="dataList rimawari">
+                                    <li class="topic">
+                                        <p class="header">想定年間収入</p>
+                                        <p class="cont">¥2,665,200</p>
+                                    </li>
+                                    <li class="topic">
+                                        <p class="header">表面利回り</p>
+                                        <p class="cont">10.00%</p>
+                                    </li>
+                                </ul>
+                                <a href="summary/fixed-term_land008.html" class="btn">より詳しく知る</a>
+                            </div><!--data-->
+                        </div><!--back-->
+                    </li>
+                    <li class="card teisyaku">
+                        <div class="front">
+                            <div class="numBox">
+                                <p class="num"><span class="strong">8</span>.<span class="few">10</span>%</p>
+                            </div>   
+                            <p class="address">岐阜県岐阜市瑞雲町</p>
+                        </div><!--front-->
+                        <div class="back">
+                            <p class="pict">
+                                <img src="images/summary/fixed-term_land010/photo001.jpg" alt="">
+                            </p>
+                            <div class="data">
+                                <ul class="dataList normal">
+                                    <li class="topic">
+                                        <p class="header">所在地</p>
+                                        <p class="cont">岐阜県岐阜市瑞雲町</p>
+                                    </li>
+                                    <li class="topic">
+                                        <p class="header">物件種別</p>
+                                        <p class="cont">重層長屋1棟2戸</p>
+                                    </li>
+                                    <li class="topic">
+                                        <p class="header">土地権利</p>
+                                        <p class="cont">一般定期借地権</p>
+                                    </li>
+                                    <li class="topic">
+                                        <p class="header">販売価格</p>
+                                        <p class="cont">¥20,000,000</p>
+                                    </li>
+                                </ul>
+                                <p class="bar"></p>
+                                <ul class="dataList rimawari">
+                                    <li class="topic">
+                                        <p class="header">想定年間収入</p>
+                                        <p class="cont">¥1,620,000</p>
+                                    </li>
+                                    <li class="topic">
+                                        <p class="header">表面利回り</p>
+                                        <p class="cont">8.10%</p>
+                                    </li>
+                                </ul>
+                                <a href="summary/fixed-term_land010.html" class="btn">より詳しく知る</a>
+                            </div><!--data-->
+                        </div><!--back-->
+                    </li>
+                    <li class="card teisyaku">
+                        <div class="front">
+                            <div class="numBox">
+                                <p class="num"><span class="strong">9</span>.<span class="few">66</span>%</p>
+                            </div>   
+                            <p class="address">岡崎市山綱町</p>
+                        </div><!--front-->
+                        <div class="back">
+                            <p class="pict">
+                                <img src="images/summary/fixed-term_land007/photo001.jpg" alt="">
+                            </p>
+                            <div class="data">
+                                <ul class="dataList normal">
+                                    <li class="topic">
+                                        <p class="header">所在地</p>
+                                        <p class="cont">岡崎市山綱町</p>
+                                    </li>
+                                    <li class="topic">
+                                        <p class="header">物件種別</p>
+                                        <p class="cont">メゾネット賃貸1棟5戸</p>
+                                    </li>
+                                    <li class="topic">
+                                        <p class="header">土地権利</p>
+                                        <p class="cont">一般定期借地権</p>
+                                    </li>
+                                    <li class="topic">
+                                        <p class="header">販売価格</p>
+                                        <p class="cont">¥50,000,000</p>
+                                    </li>
+                                </ul>
+                                <p class="bar"></p>
+                                <ul class="dataList rimawari">
+                                    <li class="topic">
+                                        <p class="header">想定年間収入</p>
+                                        <p class="cont">¥4,828,440</p>
+                                    </li>
+                                    <li class="topic">
+                                        <p class="header">表面利回り</p>
+                                        <p class="cont">9.66%</p>
+                                    </li>
+                                </ul>
+                                <a href="summary/fixed-term_land007.html" class="btn">より詳しく知る</a>
+                            </div><!--data-->
+                        </div><!--back-->
+                    </li>
+                    <li class="card teisyaku">
+                        <div class="front">
+                            <div class="numBox">
+                                <p class="num"><span class="strong">11</span>.<span class="few">01</span>%</p>
+                            </div>   
+                            <p class="address">愛知県あま市中萱津</p>
+                        </div><!--front-->
+                        <div class="back">
+                            <p class="pict">
+                                <img src="images/summary/fixed-term_land009/photo001.jpg" alt="">
+                            </p>
+                            <div class="data">
+                                <ul class="dataList normal">
+                                    <li class="topic">
+                                        <p class="header">所在地</p>
+                                        <p class="cont">愛知県あま市中萱津</p>
+                                    </li>
+                                    <li class="topic">
+                                        <p class="header">物件種別</p>
+                                        <p class="cont">メゾネット賃貸1棟5戸</p>
+                                    </li>
+                                    <li class="topic">
+                                        <p class="header">土地権利</p>
+                                        <p class="cont">一般定期借地権</p>
+                                    </li>
+                                    <li class="topic">
+                                        <p class="header">販売価格</p>
+                                        <p class="cont">¥39,400,000</p>
+                                    </li>
+                                </ul>
+                                <p class="bar"></p>
+                                <ul class="dataList rimawari">
+                                    <li class="topic">
+                                        <p class="header">想定年間収入</p>
+                                        <p class="cont">¥4,338,000</p>
+                                    </li>
+                                    <li class="topic">
+                                        <p class="header">表面利回り</p>
+                                        <p class="cont">11.01%</p>
+                                    </li>
+                                </ul>
+                                <a href="summary/fixed-term_land009.html" class="btn">より詳しく知る</a>
+                            </div><!--data-->
+                        </div><!--back-->
+                    </li>
+                    <li class="card teisyaku">
+                        <div class="front">
+                            <div class="numBox">
+                                <p class="num"><span class="strong">10</span>.<span class="few">58</span>%</p>
+                            </div>   
+                            <p class="address">愛知県碧南市天王町</p>
+                        </div><!--front-->
+                        <div class="back">
+                            <p class="pict">
+                                <img src="images/summary/fixed-term_land006/photo001.jpg" alt="">
+                            </p>
+                            <div class="data">
+                                <ul class="dataList normal">
+                                    <li class="topic">
+                                        <p class="header">所在地</p>
+                                        <p class="cont">愛知県碧南市天王町</p>
+                                    </li>
+                                    <li class="topic">
+                                        <p class="header">物件種別</p>
+                                        <p class="cont">メゾネット賃貸1棟5戸</p>
+                                    </li>
+                                    <li class="topic">
+                                        <p class="header">土地権利</p>
+                                        <p class="cont">一般定期借地権</p>
+                                    </li>
+                                    <li class="topic">
+                                        <p class="header">販売価格</p>
+                                        <p class="cont">¥88,000,000</p>
+                                    </li>
+                                </ul>
+                                <p class="bar"></p>
+                                <ul class="dataList rimawari">
+                                    <li class="topic">
+                                        <p class="header">想定年間収入</p>
+                                        <p class="cont">¥9,314,400</p>
+                                    </li>
+                                    <li class="topic">
+                                        <p class="header">表面利回り</p>
+                                        <p class="cont">10.58%</p>
+                                    </li>
+                                </ul>
+                                <a href="summary/fixed-term_land006.html" class="btn">より詳しく知る</a>
+                            </div><!--data-->
+                        </div><!--back-->
+                    </li>
+                    <li class="card teisyaku">
+                        <div class="front">
+                            <div class="numBox">
+                                <p class="num"><span class="strong">10</span>.<span class="few">00</span>%</p>
+                            </div>   
+                            <p class="address">愛知県豊田市小坂町</p>
+                        </div><!--front-->
+                        <div class="back">
+                            <p class="pict">
+                                <img src="images/summary/fixed-term_land005/photo001.jpg" alt="">
+                            </p>
+                            <div class="data">
+                                <ul class="dataList normal">
+                                    <li class="topic">
+                                        <p class="header">所在地</p>
+                                        <p class="cont">愛知県豊田市小坂町</p>
+                                    </li>
+                                    <li class="topic">
+                                        <p class="header">物件種別</p>
+                                        <p class="cont">メゾネット賃貸1棟8戸</p>
+                                    </li>
+                                    <li class="topic">
+                                        <p class="header">土地権利</p>
+                                        <p class="cont">一般定期借地権</p>
+                                    </li>
+                                    <li class="topic">
+                                        <p class="header">販売価格</p>
+                                        <p class="cont">¥84,800,000</p>
+                                    </li>
+                                </ul>
+                                <p class="bar"></p>
+                                <ul class="dataList rimawari">
+                                    <li class="topic">
+                                        <p class="header">想定年間収入</p>
+                                        <p class="cont">¥8,484,000</p>
+                                    </li>
+                                    <li class="topic">
+                                        <p class="header">表面利回り</p>
+                                        <p class="cont">10.00%</p>
+                                    </li>
+                                </ul>
+                                <a href="summary/fixed-term_land005.html" class="btn">より詳しく知る</a>
+                            </div><!--data-->
+                        </div><!--back-->
+                    </li>
+                </ul>
+            </div><!--cardBox-->
+        </div><!---cardBlock-->
+
+        <div class="contBlock cardBlock">
+            <h3 class="blockHeader">
+                <p class="bar left"></p>
+                <p class="title">所有権物件</p>
+                <p class="bar right"></p>
+            </h3>
+            <div class="contBox">
+                <ul class="cardList">
+
+<li class="card secret swiper-slide clearfix">
+	<div class="front"></div><!--front-->
+	<div class="back">
+		<a href="summary/ownership018.html">
+			<p class="pict"></p>
+			<div class="data"></div><!--data-->
+		</a>
+	</div><!--back-->
+</li>
+
+<li class="card secret swiper-slide clearfix">
+	<div class="front"></div><!--front-->
+	<div class="back">
+    <a href="summary/ownership017.html">
+			<p class="pict"></p>
+			<div class="data"></div><!--data-->
+    </a>
+	</div><!--back-->
+</li>
+
+<li class="card secret swiper-slide clearfix">
+	<div class="front"></div><!--front-->
+	<div class="back">
+    <a href="summary/ownership016.html">
+			<p class="pict"></p>
+			<div class="data"></div><!--data-->
+    </a>
+	</div><!--back-->
+</li>
+
+<li class="card secret swiper-slide clearfix">
+	<div class="front"></div><!--front-->
+	<div class="back">
+    <a href="summary/ownership015.html">
+			<p class="pict"></p>
+			<div class="data"></div><!--data-->
+    </a>
+	</div><!--back-->
+</li>
+
+<li class="card secret swiper-slide clearfix">
+	<div class="front"></div><!--front-->
+	<div class="back">
+    <a href="summary/ownership014.html">
+			<p class="pict"></p>
+			<div class="data"></div><!--data-->
+    </a>
+	</div><!--back-->
+</li>
+
+<li class="card secret swiper-slide clearfix">
+	<div class="front"></div><!--front-->
+	<div class="back">
+		<a href="summary/ownership013.html">
+			<p class="pict"></p>
+			<div class="data"></div><!--data-->
+		</a>
+	</div><!--back-->
+</li>
+
+                    <li class="card shoyuu">
+                            <div class="front">
+                                <div class="numBox">
+                                    <p class="num"><span class="strong">8</span>.<span class="few">00</span>%</p>
+                                </div>   
+                                <p class="address">三重県桑名市大字小泉</p>
+                            </div><!--front-->
+                            <div class="back">
+                                <p class="pict">
+                                    <img src="images/summary/ownership004/photo001.jpg" alt="">
+                                </p>
+                                <div class="data">
+                                    <ul class="dataList normal">
+                                        <li class="topic">
+                                            <p class="header">所在地</p>
+                                            <p class="cont">三重県桑名市大字小泉</p>
+                                        </li>
+                                        <li class="topic">
+                                            <p class="header">物件種別</p>
+                                            <p class="cont">2階建て戸建4棟</p>
+                                        </li>
+                                        <li class="topic">
+                                            <p class="header">土地権利</p>
+                                            <p class="cont">所有権</p>
+                                        </li>
+                                        <li class="topic">
+                                            <p class="header">販売価格</p>
+                                            <p class="cont">¥62,300,000</p>
+                                        </li>
+                                    </ul>
+                                    <p class="bar"></p>
+                                    <ul class="dataList rimawari">
+                                        <li class="topic">
+                                            <p class="header">想定年間収入</p>
+                                            <p class="cont">¥4,989,000</p>
+                                        </li>
+                                        <li class="topic">
+                                            <p class="header">表面利回り</p>
+                                            <p class="cont">8.00%</p>
+                                        </li>
+                                    </ul>
+                                    <a href="summary/ownership004.html" class="btn">より詳しく知る</a>
+                                </div><!--data-->
+                            </div><!--back-->
+                    </li>
+                    <li class="card shoyuu">
+                        <div class="front">
+                            <div class="numBox">
+                                <p class="num"><span class="strong">7</span>.<span class="few">51</span>%</p>
+                            </div>   
+                            <p class="address">愛知県弥富市五之三町</p>
+                        </div><!--front-->
+                        <div class="back">
+                            <p class="pict">
+                                <img src="images/summary/ownership008/photo001.jpg" alt="">
+                            </p>
+                            <div class="data">
+                                <ul class="dataList normal">
+                                    <li class="topic">
+                                        <p class="header">所在地</p>
+                                        <p class="cont">愛知県弥富市五之三町</p>
+                                    </li>
+                                    <li class="topic">
+                                        <p class="header">物件種別</p>
+                                        <p class="cont">メゾネット賃貸1棟4戸</p>
+                                    </li>
+                                    <li class="topic">
+                                        <p class="header">土地権利</p>
+                                        <p class="cont">所有権</p>
+                                    </li>
+                                    <li class="topic">
+                                        <p class="header">販売価格</p>
+                                        <p class="cont">¥48,700,000</p>
+                                    </li>
+                                </ul>
+                                <p class="bar"></p>
+                                <ul class="dataList rimawari">
+                                    <li class="topic">
+                                        <p class="header">想定年間収入</p>
+                                        <p class="cont">¥3,658,800</p>
+                                    </li>
+                                    <li class="topic">
+                                        <p class="header">表面利回り</p>
+                                        <p class="cont">7.51%</p>
+                                    </li>
+                                </ul>
+                                <a href="summary/ownership008.html" class="btn">より詳しく知る</a>
+                            </div><!--data-->
+                        </div><!--back-->
+                    </li>
+                    <li class="card shoyuu">
+                        <div class="front">
+                            <div class="numBox">
+                                <p class="num"><span class="strong">8</span>.<span class="few">01</span>%</p>
+                            </div>   
+                            <p class="address">岐阜県羽島郡岐南町</p>
+                        </div><!--front-->
+                        <div class="back">
+                            <p class="pict">
+                                <img src="images/summary/ownership007/photo001.jpg" alt="">
+                            </p>
+                            <div class="data">
+                                <ul class="dataList normal">
+                                    <li class="topic">
+                                        <p class="header">所在地</p>
+                                        <p class="cont">岐阜県羽島郡岐南町</p>
+                                    </li>
+                                    <li class="topic">
+                                        <p class="header">物件種別</p>
+                                        <p class="cont">メゾネット賃貸1棟8戸</p>
+                                    </li>
+                                    <li class="topic">
+                                        <p class="header">土地権利</p>
+                                        <p class="cont">所有権</p>
+                                    </li>
+                                    <li class="topic">
+                                        <p class="header">販売価格</p>
+                                        <p class="cont">¥81,300,000</p>
+                                    </li>
+                                </ul>
+                                <p class="bar"></p>
+                                <ul class="dataList rimawari">
+                                    <li class="topic">
+                                        <p class="header">想定年間収入</p>
+                                        <p class="cont">¥6,518,000</p>
+                                    </li>
+                                    <li class="topic">
+                                        <p class="header">表面利回り</p>
+                                        <p class="cont">8.01%</p>
+                                    </li>
+                                </ul>
+                                <a href="summary/ownership007.html" class="btn">より詳しく知る</a>
+                            </div><!--data-->
+                        </div><!--back-->
+                    </li>
+                    <li class="card shoyuu">
+                        <div class="front">
+                            <div class="numBox">
+                                <p class="num"><span class="strong">6</span>.<span class="few">15</span>%</p>
+                            </div>   
+                            <p class="address">三重県桑名市大字小泉</p>
+                        </div><!--front-->
+                        <div class="back">
+                            <p class="pict">
+                                <img src="images/summary/ownership006/photo001.jpg" alt="">
+                            </p>
+                            <div class="data">
+                                <ul class="dataList normal">
+                                    <li class="topic">
+                                        <p class="header">所在地</p>
+                                        <p class="cont">三重県桑名市大字小泉</p>
+                                    </li>
+                                    <li class="topic">
+                                        <p class="header">物件種別</p>
+                                        <p class="cont">2階建て戸建4棟</p>
+                                    </li>
+                                    <li class="topic">
+                                        <p class="header">土地権利</p>
+                                        <p class="cont">所有権</p>
+                                    </li>
+                                    <li class="topic">
+                                        <p class="header">販売価格</p>
+                                        <p class="cont">¥82,500,000</p>
+                                    </li>
+                                </ul>
+                                <p class="bar"></p>
+                                <ul class="dataList rimawari">
+                                    <li class="topic">
+                                        <p class="header">想定年間収入</p>
+                                        <p class="cont">¥5,078,000</p>
+                                    </li>
+                                    <li class="topic">
+                                        <p class="header">表面利回り</p>
+                                        <p class="cont">6.15%</p>
+                                    </li>
+                                </ul>
+                                <a href="summary/ownership006.html" class="btn">より詳しく知る</a>
+                            </div><!--data-->
+                        </div><!--back-->
+                    </li>
+                    <li class="card shoyuu">
+                        <div class="front">
+                            <div class="numBox">
+                                <p class="num"><span class="strong">6</span>.<span class="few">02</span>%</p>
+                            </div>   
+                            <p class="address">三重県桑名市大字江場</p>
+                        </div><!--front-->
+                        <div class="back">
+                            <p class="pict">
+                                <img src="images/summary/ownership003/photo001.jpg" alt="">
+                            </p>
+                            <div class="data">
+                                <ul class="dataList normal">
+                                    <li class="topic">
+                                        <p class="header">所在地</p>
+                                        <p class="cont">三重県桑名市大字江場</p>
+                                    </li>
+                                    <li class="topic">
+                                        <p class="header">物件種別</p>
+                                        <p class="cont">2階建て戸建4棟</p>
+                                    </li>
+                                    <li class="topic">
+                                        <p class="header">土地権利</p>
+                                        <p class="cont">所有権</p>
+                                    </li>
+                                    <li class="topic">
+                                        <p class="header">販売価格</p>
+                                        <p class="cont">¥82,950,000</p>
+                                    </li>
+                                </ul>
+                                <p class="bar"></p>
+                                <ul class="dataList rimawari">
+                                    <li class="topic">
+                                        <p class="header">想定年間収入</p>
+                                        <p class="cont">4,998,000</p>
+                                    </li>
+                                    <li class="topic">
+                                        <p class="header">表面利回り</p>
+                                        <p class="cont">6.02%</p>
+                                    </li>
+                                </ul>
+                                <a href="summary/ownership003.html" class="btn">より詳しく知る</a>
+                            </div><!--data-->
+                        </div><!--back-->
+                    </li>
+                    <li class="card shoyuu">
+                        <div class="front">
+                            <div class="numBox">
+                                <p class="num"><span class="strong">7</span>.<span class="few">12</span>%</p>
+                            </div>   
+                            <p class="address">四日市市楠町五味塚</p>
+                        </div><!--front-->
+                        <div class="back">
+                            <p class="pict">
+                                <img src="images/summary/ownership002/photo001.jpg" alt="">
+                            </p>
+                            <div class="data">
+                                <ul class="dataList normal">
+                                    <li class="topic">
+                                        <p class="header">所在地</p>
+                                        <p class="cont">四日市市楠町五味塚</p>
+                                    </li>
+                                    <li class="topic">
+                                        <p class="header">物件種別</p>
+                                        <p class="cont">メゾネット賃貸1棟6戸</p>
+                                    </li>
+                                    <li class="topic">
+                                        <p class="header">土地権利</p>
+                                        <p class="cont">所有権</p>
+                                    </li>
+                                    <li class="topic">
+                                        <p class="header">販売価格</p>
+                                        <p class="cont">¥77,500,000</p>
+                                    </li>
+                                </ul>
+                                <p class="bar"></p>
+                                <ul class="dataList rimawari">
+                                    <li class="topic">
+                                        <p class="header">想定年間収入</p>
+                                        <p class="cont">5,523,000</p>
+                                    </li>
+                                    <li class="topic">
+                                        <p class="header">表面利回り</p>
+                                        <p class="cont">7.12%</p>
+                                    </li>
+                                </ul>
+                                <a href="summary/ownership002.html" class="btn">より詳しく知る</a>
+                            </div><!--data-->
+                        </div><!--back-->
+                    </li>
+                    <li class="card shoyuu">
+                        <div class="front">
+                            <div class="numBox">
+                                <p class="num"><span class="strong">7</span>.<span class="few">20</span>%</p>
+                            </div>   
+                            <p class="address">三重県四日市市楠町南川</p>
+                        </div><!--front-->
+                        <div class="back">
+                            <p class="pict">
+                                <img src="images/summary/ownership001/photo001.jpg" alt="">
+                            </p>
+                            <div class="data">
+                                <ul class="dataList normal">
+                                    <li class="topic">
+                                        <p class="header">所在地</p>
+                                        <p class="cont">三重県四日市市楠町南川</p>
+                                    </li>
+                                    <li class="topic">
+                                        <p class="header">物件種別</p>
+                                        <p class="cont">重層長屋賃貸1棟10戸</p>
+                                    </li>
+                                    <li class="topic">
+                                        <p class="header">土地権利</p>
+                                        <p class="cont">所有権</p>
+                                    </li>
+                                    <li class="topic">
+                                        <p class="header">販売価格</p>
+                                        <p class="cont">¥97,000,000</p>
+                                    </li>
+                                </ul>
+                                <p class="bar"></p>
+                                <ul class="dataList rimawari">
+                                    <li class="topic">
+                                        <p class="header">想定年間収入</p>
+                                        <p class="cont">6,988,800</p>
+                                    </li>
+                                    <li class="topic">
+                                        <p class="header">表面利回り</p>
+                                        <p class="cont">7.20%</p>
+                                    </li>
+                                </ul>
+                                <a href="summary/ownership001.html" class="btn">より詳しく知る</a>
+                            </div><!--data-->
+                        </div><!--back-->
+                    </li>
+                    <li class="card shoyuu">
+                        <div class="front">
+                            <div class="numBox">
+                                <p class="num"><span class="strong">7</span>.<span class="few">00</span>%</p>
+                            </div>   
+                            <p class="address">岐阜県大垣市室村町</p>
+                        </div><!--front-->
+                        <div class="back">
+                            <p class="pict">
+                                <img src="images/summary/ownership012/photo001.jpg" alt="">
+                            </p>
+                            <div class="data">
+                                <ul class="dataList normal">
+                                    <li class="topic">
+                                        <p class="header">所在地</p>
+                                        <p class="cont">岐阜県大垣市室村町</p>
+                                    </li>
+                                    <li class="topic">
+                                        <p class="header">物件種別</p>
+                                        <p class="cont">メゾネット賃貸1棟6戸</p>
+                                    </li>
+                                    <li class="topic">
+                                        <p class="header">土地権利</p>
+                                        <p class="cont">所有権</p>
+                                    </li>
+                                    <li class="topic">
+                                        <p class="header">販売価格</p>
+                                        <p class="cont">¥80,900,000</p>
+                                    </li>
+                                </ul>
+                                <p class="bar"></p>
+                                <ul class="dataList rimawari">
+                                    <li class="topic">
+                                        <p class="header">想定年間収入</p>
+                                        <p class="cont">5,668,800</p>
+                                    </li>
+                                    <li class="topic">
+                                        <p class="header">表面利回り</p>
+                                        <p class="cont">7.00%</p>
+                                    </li>
+                                </ul>
+                                <a href="summary/ownership012.html" class="btn">より詳しく知る</a>
+                            </div><!--data-->
+                        </div><!--back-->
+                    </li>
+                    <li class="card shoyuu">
+                        <div class="front">
+                            <div class="numBox">
+                                <p class="num"><span class="strong">7</span>.<span class="few">04</span>%</p>
+                            </div>   
+                            <p class="address">岐阜県羽島市上中町</p>
+                        </div><!--front-->
+                        <div class="back">
+                            <p class="pict">
+                                <img src="images/summary/ownership011/photo001.jpg" alt="">
+                            </p>
+                            <div class="data">
+                                <ul class="dataList normal">
+                                    <li class="topic">
+                                        <p class="header">所在地</p>
+                                        <p class="cont">岐阜県羽島市上中町</p>
+                                    </li>
+                                    <li class="topic">
+                                        <p class="header">物件種別</p>
+                                        <p class="cont">メゾネット賃貸1棟8戸</p>
+                                    </li>
+                                    <li class="topic">
+                                        <p class="header">土地権利</p>
+                                        <p class="cont">所有権</p>
+                                    </li>
+                                    <li class="topic">
+                                        <p class="header">販売価格</p>
+                                        <p class="cont">¥92,000,000</p>
+                                    </li>
+                                </ul>
+                                <p class="bar"></p>
+                                <ul class="dataList rimawari">
+                                    <li class="topic">
+                                        <p class="header">想定年間収入</p>
+                                        <p class="cont">6,482,400</p>
+                                    </li>
+                                    <li class="topic">
+                                        <p class="header">表面利回り</p>
+                                        <p class="cont">7.04%</p>
+                                    </li>
+                                </ul>
+                                <a href="summary/ownership011.html" class="btn">より詳しく知る</a>
+                            </div><!--data-->
+                        </div><!--back-->
+                    </li>
+                    <li class="card shoyuu">
+                        <div class="front">
+                            <div class="numBox">
+                                <p class="num"><span class="strong">8</span>.<span class="few">00</span>%</p>
+                            </div>   
+                            <p class="address">岐阜県羽島市竹鼻町</p>
+                        </div><!--front-->
+                        <div class="back">
+                            <p class="pict">
+                                <img src="images/summary/ownership010/photo001.jpg" alt="">
+                            </p>
+                            <div class="data">
+                                <ul class="dataList normal">
+                                    <li class="topic">
+                                        <p class="header">所在地</p>
+                                        <p class="cont">岐阜県羽島市竹鼻町</p>
+                                    </li>
+                                    <li class="topic">
+                                        <p class="header">物件種別</p>
+                                        <p class="cont">メゾネット賃貸2棟10戸</p>
+                                    </li>
+                                    <li class="topic">
+                                        <p class="header">土地権利</p>
+                                        <p class="cont">所有権</p>
+                                    </li>
+                                    <li class="topic">
+                                        <p class="header">販売価格</p>
+                                        <p class="cont">¥115,200,000</p>
+                                    </li>
+                                </ul>
+                                <p class="bar"></p>
+                                <ul class="dataList rimawari">
+                                    <li class="topic">
+                                        <p class="header">想定年間収入</p>
+                                        <p class="cont">9,216,000</p>
+                                    </li>
+                                    <li class="topic">
+                                        <p class="header">表面利回り</p>
+                                        <p class="cont">8.00%</p>
+                                    </li>
+                                </ul>
+                                <a href="summary/ownership010.html" class="btn">より詳しく知る</a>
+                            </div><!--data-->
+                        </div><!--back-->
+                    </li>
+                    <li class="card shoyuu">
+                        <div class="front">
+                            <div class="numBox">
+                                <p class="num"><span class="strong">8</span>.<span class="few">49</span>%</p>
+                            </div>   
+                            <p class="address">三重県鈴鹿市岸岡町</p>
+                        </div><!--front-->
+                        <div class="back">
+                            <p class="pict">
+                                <img src="images/summary/ownership009/photo001.jpg" alt="">
+                            </p>
+                            <div class="data">
+                                <ul class="dataList normal">
+                                    <li class="topic">
+                                        <p class="header">所在地</p>
+                                        <p class="cont">三重県鈴鹿市岸岡町</p>
+                                    </li>
+                                    <li class="topic">
+                                        <p class="header">物件種別</p>
+                                        <p class="cont">メゾネット賃貸3棟20戸</p>
+                                    </li>
+                                    <li class="topic">
+                                        <p class="header">土地権利</p>
+                                        <p class="cont">所有権</p>
+                                    </li>
+                                    <li class="topic">
+                                        <p class="header">販売価格</p>
+                                        <p class="cont">¥179,000,000</p>
+                                    </li>
+                                </ul>
+                                <p class="bar"></p>
+                                <ul class="dataList rimawari">
+                                    <li class="topic">
+                                        <p class="header">想定年間収入</p>
+                                        <p class="cont">15,206,000</p>
+                                    </li>
+                                    <li class="topic">
+                                        <p class="header">表面利回り</p>
+                                        <p class="cont">8.49%</p>
+                                    </li>
+                                </ul>
+                                <a href="summary/ownership009.html" class="btn">より詳しく知る</a>
+                            </div><!--data-->
+                        </div><!--back-->
+                    </li>
+                </ul>
+            </div><!--cardBox-->
+        </div><!---cardBlock-->
+    </section><!--propertySec-->
+    <section class="bottomSec">
+        <a href="/sonae/" class="modoru">TOPページに戻る</a>
+    </section>
+
+    
+    <!--#include file="./common/include/footer.php" -->
+
+
+    <script>//スクロールアクション
+        window.addEventListener('scroll', function() {
+            const fadeInObj = document.querySelectorAll('.fadeInObj');
+            
+            fadeInObj.forEach((element, index) => {
+                const position = element.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.3;
+
+                if (position < screenPosition) {
+                    element.classList.add('visible');
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,15 @@
+<Files ~ "\.(html|css|jpg|jpeg|gif|png|swf|pdf|php|cgi|txt|ico)$">
+Header set Cache-Control "max-age=600"
+</Files>
+
+
+AddHandler application/x-httpd-php .php .html
+
+Options +FollowSymLinks
+RewriteEngine on
+RewriteCond %{THE_REQUEST} ^.*/index.html
+RewriteRule ^(.*)index.html$ https://www.toshinjyuken.co.jp/sonae/$1 [R=301,L]
+
+
+
+ErrorDocument 404 /sonae/404.html

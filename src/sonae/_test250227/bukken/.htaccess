@@ -1,0 +1,3 @@
+<Files ~ "\.(html|css|jpg|jpeg|gif|png|swf|pdf|php|cgi|txt|ico)$">
+Header set Cache-Control "max-age=0, no-cache, no-store, must-revalidate"
+</Files>

@@ -1,0 +1,154 @@
+@charset "UTF-8";
+.effect_sticky {
+	position: -webkit-sticky; /* Safari */
+	position: sticky;
+	top: 0;
+}
+.effect > * {
+	transition: 1.5s;
+}
+.effect > *:nth-child(2) {
+	transition-delay: .2s;
+}
+.effect > *:nth-child(3) {
+	transition-delay: .4s;
+}
+.effect > *:nth-child(4) {
+	transition-delay: .6s;
+}
+.effect > *:nth-child(5) {
+	transition-delay: .8s;
+}
+.effect > *:nth-child(6) {
+	transition-delay: 1s;
+}
+.effect > *:nth-child(7) {
+	transition-delay: 1.2s;
+}
+.effect > *:nth-child(8) {
+	transition-delay: 1.4s;
+}
+.effect > *:nth-child(9) {
+	transition-delay: 1.6s;
+}
+.effect > *:nth-child(10) {
+	transition-delay: 1.8s;
+}
+.effectBox01 article {
+	position: relative;
+	margin-top: 40px;
+}
+.effectBox01 article .frame {
+	padding: 5%;
+	width: 40%;
+	position: relative;
+	z-index: 1;
+}
+.effectBox01 article:nth-child(2n+1) .frame {
+	padding-left: 55%;
+}
+.effectBox01 article .frame .inBox {
+	background-color: rgba(0, 0, 0, 0.8);
+	-webkit-backdrop-filter: blur(5px);
+	backdrop-filter: blur(5px);
+	padding: 40px;
+	color: #FFF;
+	-webkit-box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.2);
+	box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.2);
+}
+.effectBox01 article .photo {
+	width: 60%;
+	background-position: center center;
+	background-size: cover;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	height: 100%;
+}
+.effectBox01 article:nth-child(2n+1) .photo {
+	left: 0px;
+	top: 0px;
+}
+.effectBox02 article {
+	position: relative;
+	margin-top: 40px;
+}
+.effectBox02 article .frame {
+	padding: 5%;
+	width: 55%;
+	position: relative;
+	z-index: 1;
+}
+.effectBox02 article:nth-child(2n+1) .frame {
+	padding-left: 40%;
+}
+.effectBox02 article .frame .inBox {
+	border: 1px solid #000;
+	background-color: rgba(255, 255, 255, 0.9);
+	-webkit-backdrop-filter: blur(5px);
+	backdrop-filter: blur(5px);
+	padding: 40px;
+	color: #000;
+	-webkit-box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.8);
+	box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.8);
+}
+.effectBox02 article .photo {
+	width: 45%;
+	background-position: center top;
+	background-size: contain;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	height: 100%;
+	background-repeat: no-repeat;
+	/* [disabled]z-index: 1; */
+}
+.effectBox02 article:nth-child(2n+1) .photo {
+	left: 0px;
+	top: 0px;
+}
+.effectBox02 article p {
+	line-height: 1.5em;
+}
+@media screen and (max-width: 700px) {
+	#width-----700px----- {}
+	.effectBox01 article .photo {
+		width: 100%;
+		height: 0px;
+		padding-top: 66.666%;
+	}
+	.effectBox01 article .frame {
+		width: auto;
+		padding-top: 60%;
+		padding-right: 20px !important;
+		padding-bottom: 20px !important;
+		padding-left: 20px !important;
+	}
+	.effectBox01 article .frame .inBox {
+		padding-top: 30px;
+		padding-right: 20px;
+		padding-left: 20px;
+		padding-bottom: 30px;
+	}
+	.effectBox02 article .photo {
+		width: 100%;
+		height: 0px;
+		padding-top: 66.666%;
+		z-index: inherit;
+		background-size: cover;
+	}
+	.effectBox02 article .frame {
+		width: auto;
+		padding-top: 60%;
+		padding-right: 20px !important;
+		padding-bottom: 20px !important;
+		padding-left: 20px !important;
+		z-index: 1;
+	}
+	.effectBox02 article .frame .inBox {
+		padding-top: 30px;
+		padding-right: 20px;
+		padding-left: 20px;
+		padding-bottom: 30px;
+	}
+}

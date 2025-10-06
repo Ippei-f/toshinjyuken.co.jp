@@ -1,0 +1,82 @@
+@charset "utf-8";
+html {
+	overflow-y: scroll;
+}
+* {
+	margin: 0px;
+	padding: 0px;
+}
+body {
+	font-family: "メイリオ", "ＭＳ Ｐゴシック", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", Osaka;
+	font-size: 13px;
+	line-height: 19px;
+	color: #666666;
+	text-align: center;
+	padding-top: 100px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+}
+img {
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	vertical-align: bottom;
+}
+a {
+	color: #0099EE;
+	text-decoration: none;
+}
+a:link {
+}
+a:visited {
+}
+a:hover {
+	text-decoration: underline;
+}
+a:active {
+	text-decoration: underline;
+}
+table {
+	margin-top: 10px;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #CCC;
+	border-left-width: 1px;
+	border-left-style: solid;
+	border-left-color: #CCC;
+	width: 80%;
+	margin-right: auto;
+	margin-left: auto;
+}
+td  {
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #CCC;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #CCC;
+	padding: 10px;
+	text-align: left;
+}
+td.l_Cel {
+	background-color: #EEE;
+	text-align: center;
+	width: 25%;
+}
+}
+p {
+	margin-top: 10px;
+}
+input {
+	padding: 10px;
+	margin: 20px;
+}
+.errMsg {
+	color: #FF0000;
+}
+#msgBox {
+	margin-top: 40px;
+	margin-bottom: 40px;
+}

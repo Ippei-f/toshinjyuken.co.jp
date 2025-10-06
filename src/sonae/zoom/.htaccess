@@ -1,0 +1,3 @@
+AddType application/x-httpd-php .php .html
+php_flag display_errors off
+

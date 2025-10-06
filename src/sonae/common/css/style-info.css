@@ -1,0 +1,27 @@
+/* CSS Document */
+/*
+		調整版
+*/
+@media screen and (min-width: 768px) {
+	.page-info .contentWrapper {
+    width: 1630px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+		flex-direction: column;
+		align-items: center;
+  }
+	.page-info #infoBlock .fandr .post .pict {
+    width: 150px;
+    /* aspect-ratio: 2/1; */
+		aspect-ratio: auto;
+    margin-right: 20px;
+    overflow: hidden;
+  }
+  .page-info #infoBlock .fandr .post .pict img {
+    transform-origin: 50% 50%;
+    transition: 0.2s;
+		aspect-ratio: 2/1;
+		object-fit: cover;
+  }
+}

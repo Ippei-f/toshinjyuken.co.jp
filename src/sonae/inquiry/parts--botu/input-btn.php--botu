@@ -1,0 +1,79 @@
+<?php
+//<meta charset="utf-8">
+?>
+<div class="formRow agreeBlock need">
+	<p class="text">
+		予め<a href="https://www.toshinjyuken.co.jp/corporate/privacy.html" target="_blank" class="linkText">個人情報保護方針</a>をお読みいただき、同意の上、お申込みください。
+	</p>
+	<div class="agreechk flexBox">
+		<input type="checkbox" class="<?= $arrBfContactForm["agreechk"]["check"]?>" name="<?= $arrBfContactForm["agreechk"]["name"]?>" bchk="agreechk" value="個人情報保護方針について同意する">
+			<p class="formTopicHeader">
+				<!--個人情報保護方針について同意する-->
+				<?= $arrBfContactForm["agreechk"]["title"]?>
+			</p>
+		<div id="<?= $arrBfContactForm["agreechk"]["name"]?>_er" style="color:red;"></div>
+	</div>
+</div><!--agreeBlock-->
+
+<div class="noticeBlock">
+	<p class="text">
+		<span class="strong">フォーム送信後、自動返信メールを送信しています。</span>メールが届かない場合は以下の点をご確認ください。
+	</p>
+	<dl class="deciList">
+		<li>
+			<p class="num">1.</p>
+			<div class="cont">
+				<p class="header">迷惑メール（スパム）フォルダのほうもご確認ください。</p>
+			</div>
+		</li>
+		<li>
+			<p class="num">2.</p>
+			<div class="cont">
+				<p class="header">メールアドレスに間違いがないかご確認ください。</p>
+			</div>
+		</li>
+		<li>
+			<p class="num">3.</p>
+			<div class="cont">
+				<p class="header">迷惑メール設定をご確認ください。</p>
+				<p class="text">
+					docomo、au、softbankなど各キャリアのセキュリティ設定のためユーザー受信拒否と認識されているか、お客様が迷惑メール対策等でドメイン指定受信を設定されている場合、メールが届かないことがございます。<span class="strong">「toshinjyuken.co.jp」のドメインを受信できるように設定</span>をお願いいたします。
+				</p>
+			</div>
+		</li>
+	</dl>
+	<p class="text pcOnly">上記、ご確認後なお自動返信メールが届かない場合は、お手数ですが <span class="strong">tel.0120-01-4898</span> までご連絡ください。</p>
+
+</div><!--noticeBlock-->
+
+
+<div id="error_message" style="text-align: center; color:red;"></div>
+<div style="text-align: center;">
+
+	<!-- reCPATCHA only when used area start -->
+	<div class="g-recaptcha" data-callback="clickReCaptcha" data-expired-callback="initReCaptcha" data-sitekey="<?= PUB_RE_CAPTCHA_KEY?>"></div>
+	<input type="hidden" id="hid_recaptcha_flg" value="<?= PUB_RE_CAPTCHA?>" />
+	<input type="hidden" id="hid_recaptcha_confirm" value="0" />
+	<div id="recaptcha_er" style="color:red;"></div>
+	<!-- reCPATCHA only when used area end -->
+
+	<br />
+	<br />
+	
+	<div class="sendBtnBox">
+		<!-- 入力が完了していない状態に表示される（ID値は変更不可） -->
+		<div id="required_confirm">必須項目が <span id="required_msg"></span> 件残っています</div>
+		<!-- 入力が完了している状態に表示される（ID値は変更不可） -->
+		<a href="javascript:void(0)" id="contact_submit" style="display:none;">入力内容を確認する</a>
+	</div><!--sendBtnBox-->
+</div>
+
+<div id="url_er" style="color:red;"></div>
+
+<!-- do not touch area start -->
+<input type="hidden" id="hid_input_check_flg" value="<?= PUB_INPUT_CHECK?>" />
+<input type="hidden" id="hid_upfile_extension" value="<?= PUB_UPFILE_EXTENSION?>" />
+<input type="hidden" id="hid_upfile_size" value="<?= PUB_UPFILE_SIZE?>" />
+<input type="hidden" id="hid_upfile_size_name" value="<?= PUB_UPFILE_SIZE_NAME?>" />
+<input type="hidden" id="hid_avaliable_url_num" value="<?= PUB_AVALIABLE_URL_NUM?>" />
+<!-- do not touch area end -->

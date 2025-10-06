@@ -1,0 +1,1315 @@
+@use 'common' as common;
+
+.page-strategy{
+
+    .karashi{
+        color:var(--karashiText);
+    }
+    .text{
+        line-height: 1.75; 
+    }
+    .orange{
+        font-weight:900; color:#F38900;
+    }
+    .footnote{
+        font-size:81.5%; margin-top: 1.75em;
+    }
+    span{
+        color:inherit;
+    }
+    @media screen and (min-width:768px){
+        .secHeader{
+            margin-bottom: 20px;
+
+            .main{
+                height:45.3px; text-align: center;
+
+                // img{ width:auto; height:100%; }
+            }
+        }
+        .coverPic{
+            width:100%; height:100%; object-fit: cover; object-position:center;
+        }
+        .central-pc{
+            display:flex; align-items: center; align-content: center; justify-content: center;
+        }
+
+        .text{
+            font-size:19px; font-weight:200; 
+        }
+        .cap{
+            font-size:15px;
+        }
+        .orange{
+            color:#F38900;
+        }
+
+        .sozokuInquiryBtn{
+            width:685px; height:120px; border-radius: 15px; background:#F38900;
+            color:#fff; font-weight:900; text-decoration: underline; 
+            display:flex; align-items: center; justify-content: center;
+            margin:100px auto; border:none; text-align: center; font-size: 26px; line-height: 1.4;
+
+            &:hover{
+                opacity: .6;
+            }
+        }
+
+        .contentWrapper{
+            width:clamp(1240px, 100%, 1440px); margin:0 auto; 
+            padding-left: 20px; padding-right: 20px;
+
+            .contSec{
+                padding:0;
+            }
+        }
+        #pageHeadSec{
+            margin-bottom:60px;
+
+            .headerBlock{
+                .secHeader{
+                    .main{
+                        width:219px;
+                    }
+                }/*secHeader*/
+            }/*headerBlock*/
+
+            .leadBlock{
+                .per60{
+                    width:100%; margin:100px auto; 
+                    display:flex; align-items: center; justify-content: center; height:465px;
+
+                    img{
+                        width:860px; height:auto;
+                    }
+                }
+
+                .contBox{
+                    width:fit-content; margin:0 auto; text-align: center;
+
+                    .header{
+                        .sub{ font-size:28px; font-weight: 900; color:var(--namari); margin-bottom: 10px; }
+                       .main{color:#707070; margin-bottom: 42px; font-size:41px;}
+                    }
+                    .text{
+                        font-size:19px; font-weight:200; line-height: 2;
+                    }
+                }
+            }/*leadBlock*/
+            .sectionalBox.contBox{
+                margin-top: 106px; position:relative; width:1120px;
+
+                .boxHeader{
+                    font-size:31px; font-weight:600; margin-bottom: 25px;
+
+                    .text{
+                        font-weight:600; font-size:31px; line-height: 1.4;
+                    }
+                    .orange{
+                        font-weight:900; color:#F38900;
+                    }
+                } 
+                .orange-maru{
+                    width:275px; position:absolute; top:-22px; right:-128px;
+                }
+            }
+        }/*pageHeadSec*/
+
+        .conbi{
+            display:flex; justify-content: space-between; margin-bottom: 105px;
+
+            .textBox{
+                width:538px;
+                .boxHeader{
+                    font-size:30px; font-weight:700; color:var(--namari);
+                    line-height: 1.4; margin-bottom: 20px;
+                }
+            }
+            .pictBox{
+                width:522px; 
+                .cap{
+                    margin-bottom: 12px; font-size:16px;
+                }
+            }
+        }
+        .copy{
+            font-size:20px; text-align: center; font-weight:900;
+
+            .orange{
+                font-size:28px; color:#F38900;
+            }
+        }
+        
+
+        #prologueSec{
+            margin-bottom: 160px;
+
+            .whiteBlock{
+                padding:96px 86px; border-radius:30px; background:#fff;
+                border:2px dashed var(--namari);
+            }
+            .headerBox{
+                margin-bottom: 85px;
+
+                .warn{
+                    display:flex; justify-content: center; align-items: center; margin-bottom: 18px;
+
+                    p{
+                        color:#F38900; font-size:24px; font-weight:600;
+                    }
+                    &::before{
+                        content:'!'; width:1.75em; height:1.75em; 
+                        color:#fff; font-size:24px; font-weight:600;
+                        display:flex; align-items: center; justify-content: center;
+                        background:#F38900; border-radius: 50%; margin-right:8px;
+                    }
+                }
+                .header{
+                    font-size:39px; text-align: center; font-weight:600; color:#707070;
+                    text-decoration: underline; text-underline-offset:.2em; margin-bottom: 30px;
+                }
+                .text{
+                    text-align: center;
+                }
+                .flexBox{
+                    justify-content: center; margin-top: 50px;
+
+                    .inBox{
+                        width:35%; 
+
+                        .pict{
+                            margin:0 auto 30px;
+                        }
+                    }
+                    .left{
+                         .pict{ width:296px; padding-top: 35px;}
+                    }
+                    .right{
+                        .pict{ width:350px;}
+                    }
+                    .jitsuha{
+                        font-size:22px; font-weight:600; text-align: center;
+
+                        &::first-letter{
+                            font-size:18px;
+                        }
+                    }
+                }
+            }
+            .contBox{
+                .boxHeader{
+                    display:flex; margin-bottom: 30px;
+
+                    .mark{
+                        width:99px; margin-right:10px;
+                    }
+                    .text{
+                        font-size:47px; font-weight:600; color:var(--namari); 
+                        
+                        .upperSize{
+                            font-size:120%; border-bottom-width: 4px; line-height: 1.2;
+                            display:inline-block;
+                        }
+                    }
+                }
+                .pictBox{
+                    .pict{
+                        width:440px; padding-top:30px;
+
+                        img{height:auto;}
+                    }
+                }
+            }
+            .feturesMidashiBox{
+                display:flex; justify-content: space-between;
+                background:#F0EFEC; padding:20px; margin-top: 50px;
+
+                &:has(.strong){
+                    align-items: center;  padding-bottom:15px;
+
+                    .text{ padding-bottom:6px; }
+                }
+
+                .mark{
+                    width:29px;
+                }
+                .text{
+                    width:calc(100% - 40px); font-size:20px; font-weight:600;
+
+                    & *{
+                        font-size:inherit; font-weight:inherit;
+                    }
+                    .orange{
+                        font-size:25px;
+
+                        .strong{
+                            font-size:42px; line-height: 0;
+                        }
+                    }
+                }
+            }
+            .tsumari{
+                .copy{
+                    font-size:32px; font-weight:600; line-height: 1.75; text-align: center;
+                    margin-bottom: 25px;
+
+                    .strong{
+                        font-size:130%; font-weight:900; 
+
+                        .underMarker{
+                            color:var(--karashiText); border-bottom-color:var(--karashiText);
+                        }
+                    }
+                }
+                .text{
+                    text-align: center;
+                }
+            }
+            .catch{
+                background:#575757; border-radius: 10px; padding:86px;
+
+                .header{
+                    display:flex; justify-content: center; align-items: center; margin-bottom: 40px;
+                    color:var(--karashiObj); font-weight:900; font-size:28px;
+                }
+                .logo{
+                    width:177px; height:42px; 
+                }
+                .text{
+                    color:#fff; text-align: center;
+
+                    .bold{
+                        font-weight:600;
+                    }
+                }
+            }
+            
+        }/*prologueSec*/
+
+        
+
+        #meritSec{
+            margin-bottom: 160px;
+
+            .secHeader{
+                display:flex; align-items: center; justify-content: center; height:122px;
+                border-top:5px solid var(--namariDeep); border-bottom:5px solid var(--namariDeep);
+                position:relative; margin-bottom: 70px;
+
+                p{ font-weight:600; }
+                .atama{
+                    font-size:27px; 
+
+                    .ten{
+                        display:inline-block; line-height: 2.2;
+                        background:top left / 1em .5em repeat-x radial-gradient(circle, #414141 .1em, rgba(0,0,0,0) .1em);
+                        // text-emphasis: filled dot #414141;
+                    }
+                }
+                .namariBGlogo{
+                    width:173px; margin-left:.5em;
+                }
+                .upperSize{
+                    font-size:44px;
+
+                    .smaller{
+                        font-size:75%;
+                    }
+                }
+                .illust{
+                    width:142px; position:absolute; left:15px; bottom:-30px;
+                }
+            }
+
+            .contBlock{
+                width:100%;
+
+                &.whiteBlock{
+                    padding:66px 86px 90px; border-radius:30px; background:#fff;
+                }
+                .contBox:last-of-type{
+                    margin-bottom: 0;
+                }
+            }/*contBlock*/
+
+            .whiteBlock{
+                margin-bottom: 50px;
+
+                .blockHeader{
+                    margin-bottom: 55px; display:flex; align-items: center; height:85px;
+
+                    .atama{
+                        width:186px; height:100%; margin-right: 15px; position:relative;
+                        display:flex; align-items: center; 
+                        
+                        p{ 
+                            color:#707070; font-size:27px;
+                         }
+
+                        .passion{
+                            font-size:59px; line-height: 1; color:var(--karashiObj); padding-top:2px;
+                            width:130px; text-align: center; margin-left: 2px; font-weight:400;
+                        }
+                        img{
+                            position:absolute; top:0; right:0; width:125px;
+                        }
+                    }
+                    .text{
+                        color:#707070; font-weight:700; font-size:35px; letter-spacing: .075em;
+                    }
+                }/*blockHeader*/
+
+                .sayuu{
+                    display:flex; justify-content: center; margin-bottom: 50px;
+
+                    & > .left,
+                    & > .right{width:470px; margin:0 37px;}
+
+                    .boxHeader{
+                        margin-bottom: 25px;  height:69px;
+                        display:flex; align-items: center; justify-content: center;
+
+                        .text{
+                            font-weight:600; font-size:28px; letter-spacing: .05em;
+                        }
+                        span{ color:inherit; font-size:75%; }
+                    }
+                    .boxSubHeader{
+                        color:var(--namariDeep); font-weight:600; width:fit-content;
+                        margin:0 auto;
+                    }
+                    .topic{
+                        margin-bottom: 35px;
+
+                        .topicHeader{
+                            background:var(--bgBeige);height:58px; padding:0 16px;
+                            display:flex; align-items: center;
+
+                            .text{
+                                font-size:22px; font-weight:900;
+                            }
+                            .mark{
+                                 width:25px; aspect-ratio: 1/1; position:relative; margin-right: 6px;
+                                 background-size:cover; background-repeat: no-repeat;
+                            }
+                        }
+
+                        .topicCont{
+                            font-size:21px; padding:12px 12px 0; display:flex;
+
+                            &::before{
+                                content:'・'; display:block;
+                            }
+                        }
+                    }/*topic*/
+
+                    .posiCase{
+                        .boxHeader{
+                            background:var(--namariDeep); 
+                            .text{
+                                color:#fff;
+                            }
+                        }
+                        .boxSubHeader{
+                            border-bottom:3px solid var(--yellowMarker);
+                        }
+                    }/*posiCase*/
+
+                    .negaCase{
+
+                        .boxHeader{
+                            font-size:3;  border:1px solid var(--namariDeep);
+
+                            .text{
+                                color:var(--namariDeep);
+                            }
+                        }
+                        .boxSubHeader{
+                            color:var(--namari);
+                        }
+                    }/*negaCase*/
+
+                }/*sayuu*/
+
+                .contBox.conbi.exception{
+                    display:block;
+
+                    .textBox{ width:100%; }
+                }
+                .sozokuzeiBox{
+                    width:966px; margin:0 auto 92px;
+
+                    .cap{ margin-bottom: 10px; }
+                    .footnote{
+                        text-align: right; margin-top: 15px;
+                    }
+                }/*sozokuzeiBox*/
+
+                &#point1{
+                    margin-top: 60px;
+
+                    .sageBox{
+                        width:966px; margin:95px auto;
+                        
+                        .boxHeader{
+                            font-size:22px; font-weight:600; background:#707070; border-radius: 5px;
+                            text-align: center; padding:10px; color:#fff; margin-bottom: 20px;
+                        } 
+                        .graphCase{
+                            margin-bottom: 50px;
+
+                            .cardList{
+                                justify-content: space-between; width:100%;
+                            }
+                        }
+                        .card{
+                            width:174px; height:396px; padding:10px 11px; border-radius: 8.5px;
+                            background:#EFEFEF;
+
+                            & > .pict{
+                                margin-bottom: 15px; height:128px; text-align: center;
+
+                                img{
+                                    width:auto; height:100%;
+                                }
+                            }
+                            .title{
+                                height:43px; background:#ABBDE0; display:flex; align-items: center; justify-content: center; color:#fff; font-size:19px; font-weight:600; margin-bottom: 15px;
+                                position:relative;
+                            }
+                            .cont{
+                                .header{
+                                    font-size:19px; color:var(--namariDeep); text-align: center; margin-bottom: 8px;
+                                }
+                                .num{
+                                    font-size:28px; color:var(--namariDeep); line-height: .8; text-align: center;
+
+                                    .passion{
+                                        font-size:180%;
+                                    }
+                                    .smaller{
+                                        font-size:80%;
+                                    }
+                                }
+                            }
+
+                            &.build{
+                                .title{
+                                    padding-bottom:3px; flex-wrap:wrap; line-height: 1.2;
+
+                                    span{
+                                        font-size:60%; line-height: 1;
+                                    }
+                                }
+                            }
+                            &.sonaeCard{
+                                width:218px; border:4px solid var(--namariDeep);
+
+                                .pict{ margin-bottom: 12px; }
+                                .namariBGlogo{
+                                    width:100%; background:var(--namariDeep);
+
+                                    img{ width:100%; }
+                                }
+                                .header{
+                                    font-weight:700; font-size:22px; color:#F38900; margin-bottom: 10px;
+                                }
+                                .cont{
+                                    .num{
+                                        color:#F38900; font-size:58px; line-height: .55;
+
+                                        .smaller{
+                                            font-size:65%; font-weight:700;
+                                        }
+                                    }
+                                }
+                                
+                            }
+                        }/*card*/
+                    }/*sageBox*/
+
+                }/*point1*/
+                &#point2{
+                    .graphBox{
+                        margin-top:100px;
+                    }
+                    .cap{
+                        margin-bottom: 15px;
+                    }
+                    .graphCase{
+                        margin-bottom: 26px;
+                    }
+                    .sayuu{
+                        margin-top: 76px;
+
+                        .left .header,
+                        .right .header{
+                            margin-bottom: 40px;
+                        }
+                    }
+                }/*point2*/
+                &#point3{
+                    .hikaku{
+                        width:815px; margin:55px auto 30px;
+
+                        .cap{ padding-left:10px;}
+                    }
+                }
+
+            }/*whiteBlock*/
+        }/*meritSec*/
+
+        .underMarker{
+            border-bottom:6px solid var(--yellowMarker); 
+        }
+        .hasen.contBox{
+            border:2px dashed var(--namari); border-radius: 10px; padding:33px; 
+            display:flex; justify-content: space-between;
+
+            .boxHeader{
+                color:var(--namari); font-weight:900; font-size:22px; display:flex; align-items: center;
+                margin-bottom: 18px;
+
+                &::before{
+                    content:''; display:inline-block;  width:32px; height:32px; margin-right:5px;
+                    background-image:url(../../images/return/marker-ex.svg);
+                    background-size:cover; background-repeat: no-repeat;
+                }
+            }
+
+            .hasenExbox{
+                background:#E9EEF7; border-radius: 5px; padding:22px; margin-top: 30px;
+                display:flex; 
+
+                .mark{ width:21px; margin-right: 10px; padding-top:5px}
+                .text{
+                    font-size:20px; font-weight:600; width:calc(100% - 31px);
+
+                    .orange{
+                        color:#F38900; font-weight:900;
+                    }
+                    .strong{
+                        font-size:40px; line-height: 0;
+                    }
+                }
+            }
+        }
+
+        a.bukken{
+            width:715px; height:124px; display:flex; align-items: center; justify-content: center;
+            background:#414141; border-radius: 6px; margin:0 auto;
+
+            .text{
+                color:#fff; font-weight:600; position:relative; font-size:26px; margin:0 17px;
+            }
+            &::before,
+            &::after{
+                content:''; display:inline-block; width:47px; height:26px;
+                background-image:url(../images/triple_arrow.svg); background-size:cover;
+            }
+            &::after{ transform: rotate(180deg); }
+        }
+    }/* PC */
+        
+
+
+
+
+
+    @media screen and (max-width:767px){
+        .secHeader{
+            margin-bottom: 7.46vw;
+
+            .main{
+                height:8.346vw; width:auto; text-align: center;
+
+                img{ height:100%; width:auto; }
+            }
+        }
+        .coverPic-sp{
+            width:100%; height:100%; object-fit: cover; object-position:center;
+        }
+        .central-sp{
+            display:flex; align-items: center; align-content: center; justify-content: center;
+        }
+        .cap{
+            font-size:4vw;
+        }
+        .sozokuInquiryBtn{
+            width:100%; height:20.26vw; border-radius: 8px; background:#F38900;
+            color:#fff; font-weight:900; text-decoration: underline; 
+            display:flex; align-items: center; justify-content: center;
+            margin:13.33vw 0; border:none; text-align: center; font-size: 3.73vw; line-height: 1.4;
+
+            &:hover{
+                opacity: .6;
+            }
+        }
+
+        .contentWrapper{
+            padding:0 6.4vw;
+        }
+
+        #pageHeadSec{
+            padding-bottom:10.66vw;
+
+            .headerBlock{
+                .secHeader{
+                    .main{
+                        width:40.325vw;
+                    }
+                }/*secHeader*/
+            }/*headerBlock*/
+            .leadBlock{
+                position:relative; width:100vw; top:0; left:-6.4vw; padding-top:85vw;
+                overflow: hidden;
+
+                .per60{
+                    position:absolute; top:0; left:50%; transform: translateX(-50%);
+                    width:108vw; 
+                    
+                    img{
+                        height:68.5vw;
+                    }
+                }/*per60*/
+                .contBox{
+                    padding:0 6.4vw;
+
+                    .header{
+                        margin-bottom: 6.66vw;
+
+                        .sub{
+                            font-size:5.06vw; color:var(--namari); text-align: center; margin-bottom: 12px;
+                             letter-spacing: .05em;
+                        }
+                        .main{
+                            font-size:8.533vw; line-height: 1.35; color:#707070;
+                        }
+                    }
+                }
+            }
+            .sectionalBox{
+                margin:13.3vw 0 3.73vw;
+
+                .boxHeader{
+                    display:flex; justify-content: space-between; align-items: center;
+
+                    .text{
+                        font-size:5.3vw; font-weight: 600; line-height: 1.4;
+                    }
+                    .orange-maru{
+                        width:40.8vw;
+                    }
+                }
+            }/*sectionalBox*/
+        }/*pageHeadSec*/
+
+        .text{
+            font-size:4.53vw; font-weight:200; line-height: 1.75;
+        }
+
+        .copy{
+            font-size:4.53vw; font-weight:900; line-height: 1.4;
+
+            .orange{
+                font-size:125%; color:#F38900;
+            }
+        }
+
+        #prologueSec{
+            margin-bottom: 16.266vw;
+
+            .whiteBlock{
+                padding:6.2vw; border-radius:10px; background:#fff;
+                border:2px dashed var(--namari);
+
+                & > div:nth-of-type(3){
+                    margin-bottom: 10vw;
+                }
+            }
+            .headerBox{
+                margin-bottom: 85px;
+
+                .warn{
+                    display:flex; justify-content: center; align-items: center; margin-bottom: 18px;
+
+                    p{
+                        color:#F38900; font-size:4.8vw; font-weight:600;
+                        width:calc(100% - 9.33vw); line-height: 1.3;
+                    }
+                    &::before{
+                        content:'!'; width:8.97vw; height:8.97vw; 
+                        color:#fff; font-size:5.86vw; font-weight:600;
+                        display:flex; align-items: center; justify-content: center;
+                        background:#F38900; border-radius: 50%; margin-right:8px;
+                    }
+                }
+                .header{
+                    font-size:6.93vw; text-align: left; font-weight:600; color:#707070;
+                    text-decoration: underline; text-underline-offset:.2em; margin-bottom: 30px;
+                }
+                .flexBox{
+                    margin-top: 30px; display:block;
+
+                    .inBox{
+                        width:100%; 
+
+                        .pict{
+                            margin:0 auto 5vw;
+                        }
+                    }
+                    .left{
+                        margin-bottom: 15vw;
+
+                         .pict{ width:85%;}
+                    }
+                    .right{
+                        .pict{ width:100%; }
+                    }
+                    .jitsuha{
+                        font-size:5.06vw; font-weight:600; text-align: center; line-height: 1;
+
+                        &::first-letter{
+                            font-size:80%;
+                        }
+                    }
+                }
+            }
+            .contBox{
+                .boxHeader{
+                    display:flex; margin-bottom: 30px;
+
+                    .mark{
+                        width:17.8vw; margin-right:10px; padding-top:5px;
+                        img{ width:100%; }
+                    }
+                    .text{
+                        font-size:6.93vw; font-weight:600; color:var(--namari); width:calc(100% - 20vw);
+                        line-height: 1.3;
+                        
+                        .upperSize{
+                            font-size:145%; border-bottom-width: 4px; line-height: 1.2;
+                            display:inline-block;
+                        }
+                    }
+                }
+                .pictBox{
+                    .pict{
+                        width:100%; padding-top:30px;
+
+                        img{height:auto;}
+                    }
+                }
+            }
+            .feturesMidashiBox{
+                display:flex; justify-content: space-between;
+                background:#F0EFEC; padding:20px; margin-top: 35px;
+
+                &:has(.strong){
+                    align-items: center;  padding-bottom:15px;
+
+                    .text{ padding-bottom:6px; }
+                }
+
+                .mark{
+                    width:5.866vw; padding-top:.35em;
+                }
+                .text{
+                    width:calc(100% - 7vw); font-size:4.53vw; font-weight:600;
+
+                    & *{
+                        font-size:inherit; font-weight:inherit;
+                    }
+                    .orange{
+                        font-size:25px;
+
+                        .strong{
+                            font-size:42px; line-height: 0;
+                        }
+                    }
+                }
+            }
+            .tsumari{
+                .copy{
+                    font-size:5.06vw; font-weight:600; line-height: 1.75; text-align: center;
+                    margin-bottom: 25px;
+
+                    .strong{
+                        font-size:130%; font-weight:900; 
+
+                        .underMarker{
+                            color:var(--karashiText); border-bottom-color:var(--karashiText);
+                        }
+                    }
+                }
+            }
+            .catch{
+                background:#575757; border-radius: 10px; padding:8.8vw 6.93vw; clear:both;
+
+                .header{
+                    margin-bottom: 15px; color:var(--karashiObj); font-weight:900; font-size:5.6vw;
+
+                    &::first-letter{
+                        line-height: 2; display:inline-block;
+                    }
+                }
+                .logo{
+                    width:35.86vw; float:left;
+                }
+                .text{
+                    color:#fff; 
+
+                    .bold{
+                        font-weight:600;
+                    }
+                }
+            }
+            .meritBlock{
+                margin-bottom: 24vw;
+                
+                .footnote{
+                    font-size:4vw;
+                }
+            }
+            
+        }/*prologueSec*/
+
+        #meritSec{
+            margin-bottom: 16.26vw;
+
+            .secHeader{
+                border-top:5px solid var(--namariDeep); border-bottom:5px solid var(--namariDeep);
+                position:relative; margin-bottom: 10.66vw; clear:both; padding:4vw 0;
+
+                p{ font-weight:600; }
+                .atama{
+                    font-size:4.53vw; margin-top: 2vw;
+
+                    .ten{
+                        display:inline-block; line-height: 2.2;
+                        background:top left / 1em .5em repeat-x radial-gradient(circle, #414141 .1em, rgba(0,0,0,0) .1em);
+                        // text-emphasis: filled dot #414141;
+                    }
+                }
+                .namariBGlogo{
+                    width:32vw; margin-bottom: 2.5vw;
+                }
+                .upperSize{
+                    font-size:8vw;
+
+                    .smaller{
+                        font-size:75%;
+                    }
+                }
+                .illust{
+                    width:21.5vw; float:left; margin:0 3vw 0 5vw;
+                }
+            }
+
+            .contBlock{
+                width:100%;
+
+                &.whiteBlock{
+                    padding:6.2vw; padding-bottom:10vw; border-radius:10px; background:#fff;
+                }
+            }/*contBlock*/
+
+            .whiteBlock{
+                margin-bottom: 8vw;
+
+                .blockHeader{
+                    margin-bottom: 5.3vw; 
+                    .atama{
+                        width:29.06vw; height:13.866vw; margin: 0 auto 12px; position:relative;
+                        display:flex; align-items: center; 
+
+                        p{ 
+                            color:#707070; font-size:3.73vw;
+                         }
+                         .passion{
+                            font-size:9.6vw; line-height: 1; color:var(--karashiObj); padding-top:2px;
+                            width:20.5vw; text-align: center; margin-left: 2px; font-weight:400;
+                        }
+                        img{
+                            position:absolute; top:0; right:0; width:20.5vw;
+                        }
+                    }
+                    .text{
+                        color:#707070; font-weight:700; font-size:6.4vw; letter-spacing: .025em;
+                    }
+                }/*blockHeader*/
+
+                .conbi{
+                    margin-bottom: 11.73vw;
+
+                    .textBox{
+                        margin-bottom: 10.93vw; width:100%;
+
+                        .boxHeader{
+                            font-size:5.86vw; font-weight:700; color:var(--namari);
+                            line-height: 1.4; margin-bottom: 3vw;
+                        }
+                    }
+                    .pictBox{
+                        width:100%;
+
+                        .cap{
+                            margin-bottom: 20px; font-size:15px;
+                        }
+                        .pict{
+                            width:100%;
+
+                            img{height:auto;}
+                        }
+                    }
+                }
+
+                .sayuu{
+                    margin-bottom: 50px;
+
+                    .left{
+                        margin-bottom: 10vw;
+                    }
+                    
+                    .posiCase{
+                        .boxHeader{
+                            background:var(--namariDeep); 
+                            .text{
+                                color:#fff;
+                            }
+                        }
+                        .boxSubHeader{
+                            border-bottom:3px solid var(--yellowMarker);
+                        }
+                        .topicHeader{
+                            .mark{
+                                background-image:url(../images/mark-maru.svg)
+                            }
+                        }
+                    }/*posiCase*/
+
+                    .boxHeader{
+                        margin-bottom: 5.86vw;  height:12.928vw;
+                        display:flex; align-items: center; justify-content: center;
+
+                        .text{
+                            font-weight:600; font-size:4.8vw; letter-spacing: .05em;
+                        }
+                        span{ color:inherit; font-size:75%; }
+                    }
+                    .boxSubHeader{
+                        color:var(--namariDeep); font-weight:600; width:fit-content;
+                        margin:0 auto;
+                    }
+
+                    .negaCase{
+
+                        .boxHeader{
+                            font-size:3;  border:1px solid var(--namariDeep);
+
+                            .text{
+                                color:var(--namariDeep);
+                            }
+                        }
+                        .boxSubHeader{
+                            color:var(--namari);
+                        }
+                        .topicHeader{
+                            .mark{
+                                background-image: url(../images/mark-batsu.svg);
+                            }
+                        }
+                    }/*negaCase*/
+                }/*sayuu*/
+
+                .feturesMidashiBox{
+                    display:flex; justify-content: space-between;
+                    background:#F0EFEC; padding:3vw 3.73vw; margin-top: 6.4vw;
+
+                    // &:has(.strong){
+                    //     .text{ padding-bottom:2px; }
+                    // }
+
+                    .mark{
+                        width:5vw; padding-top:.25em;
+                    }
+                    .text{
+                        width:calc(100% - 6vw); font-size:4.8vw; font-weight:600;
+
+                        & *{
+                            font-size:inherit; font-weight:inherit;
+                        }
+                        .orange{
+                            font-size:110%;
+
+                            .strong{
+                                font-size:150%; line-height: 0; font-weight:900;
+                            }
+                        }
+                    }
+                }
+
+                &#point1{
+                    margin-top: 60px;
+
+                    .sageBox{
+                        width:100%; margin:12vw 0;
+                        
+                        .boxHeader{
+                            font-size:4.8vw; font-weight:600; background:#707070; border-radius: 5px;
+                            text-align: center; padding:10px; color:#fff; margin-bottom: 20px;
+                        } 
+                        .graphCase{
+                            // overflow-x: scroll;
+                            // &::-webkit-scrollbar{
+                            //     height: 6px; background-color: #d0d0d0; border-radius: 3px;
+                            // }
+                            // &::-webkit-scrollbar-track {
+                            //     background-color: #d0d0d0;  border-radius: 3px;
+                            // }
+                            // &::-webkit-scrollbar-thumb {
+                            //     background:#959595; border-radius: 3px;
+                            // }
+                            padding-bottom:7vw; margin-bottom: 7vw;
+                        }
+                        .cardList{
+                            padding:0; width:fit-content; justify-content: flex-start;
+                        }
+                        .card{
+                            width:35vw; height:80vw; padding:10px 6px; border-radius: 8.5px;
+                            background:#EFEFEF; margin-right: 3.5vw;
+
+                            & > .pict{
+                                margin-bottom: 10px; height:27.2vw; text-align: center;
+
+                                img{
+                                    width:auto; height:100%;
+                                }
+                            }
+                            .title{
+                                height:8.53vw; background:#ABBDE0; display:flex; align-items: center; justify-content: center; color:#fff; font-size:4.27vw; font-weight:600; margin-bottom: 10px;
+                                position:relative;
+                            }
+                            .cont{
+                                .header{
+                                    font-size:4.27vw; color:var(--namariDeep); text-align: center; margin-bottom: 5px;
+                                }
+                                .num{
+                                    font-size:6vw; color:var(--namariDeep); line-height: .8; text-align: center;
+
+                                    .passion{
+                                        font-size:180%;
+                                    }
+                                    .smaller{
+                                        font-size:80%;
+                                    }
+                                }
+                            }
+
+                            &.build{
+                                .title{
+                                    padding-bottom:5px; flex-wrap:wrap; line-height: 1.2;
+
+                                    span{
+                                        font-size:60%; line-height: 1;
+                                    }
+                                }
+                            }
+                            &.sonaeCard{
+                                width:50vw; border:4px solid var(--namariDeep); padding:10px;
+
+                                .namariBGlogo{
+                                    width:100%; background:var(--namariDeep); margin-bottom: 5px;
+
+                                    img{ width:100%; }
+                                }
+                                .header{
+                                    font-weight:700; font-size:5vw; color:#F38900; margin-bottom: 5px;
+                                }
+                                .cont{
+                                    .num{
+                                        color:#F38900; font-size:11vw; line-height: .62;
+
+                                        .smaller{
+                                            font-size:65%; font-weight:700;
+                                        }
+                                    }
+                                }
+                                
+                            }
+                        }/*card*/
+                    }/*sageBox*/
+
+                    .sozokuzeiBox{
+                        .cap{
+                            margin-bottom: 10px;
+                        }
+                        .graphCase{
+                            padding-bottom:5vw;
+                            // overflow-x: scroll; 
+                            // &::-webkit-scrollbar{
+                            //     height: 6px;
+                            // }
+                            // &::-webkit-scrollbar-track {
+                            //     background-color: #d0d0d0;  border-radius: 3px;
+                            // }
+                            // &::-webkit-scrollbar-thumb {
+                            //     background:#959595; border-radius: 3px;
+                            // }
+                            .pict{
+                                width:150vw;
+                            }
+                        }
+                        .footnote{
+                            text-align: right; margin-top: 5px;
+                        }
+                    }
+                    .gerakuBox{
+                        width:100%; 
+
+                        
+                        .copy{
+                            font-size:4.53vw; text-align: left; font-weight:900; line-height: 7vw;
+                            margin-bottom: 10vw;
+
+                            .orange{
+                                font-size:125%; color:#F38900;
+                            }
+                        }
+                    }/*gerakuBox*/
+
+                }/*point1*/
+                &#point2{
+                    .sayuu{
+                        margin-top:13.33vw;
+
+                        .illust{
+                            img{
+                                width:100%; height:auto;
+                            }
+                        }
+                    }
+
+                    .graphBox{
+                        margin-top: 15.2vw;
+
+                        .cap{
+                            margin-bottom: 10px;
+                        }
+                    }
+                    .graphCase{
+                            // overflow-x: scroll;  
+                            // &::-webkit-scrollbar{
+                            //     height: 6px;
+                            // }
+                            // &::-webkit-scrollbar-track {
+                            //     background-color: #d0d0d0;  border-radius: 3px;
+                            // }
+                            // &::-webkit-scrollbar-thumb {
+                            //     background:#959595; border-radius: 3px;
+                            // }
+                            padding-bottom:7vw; margin-bottom: 7vw;
+
+                            .pict{
+                                width:170vw;
+
+                                img{
+                                    height:auto; width:100%;
+                                }
+                            }
+                        }
+                }/*point2*/
+                &#point3{
+                    .hikaku{
+                        width:100%; margin-top: 10.66vw; margin-bottom: 6.4vw;
+
+                        .cap{
+                            margin-bottom: 10px;
+                        }
+
+                        img{ width:100%; height:auto; }
+                    }
+                    #zoomingBtn{
+                        width:11.35vw; margin:4vw auto 0;
+
+                        button{
+                            -webkit-appearance: none;
+                            -moz-appearance: none;
+                            appearance: none;
+                            border:none; background:transparent; padding:0;
+                        }
+                    }
+                }/*point3*/
+            }/*whiteBlock*/
+        }/*maisonetteSec*/
+
+        .underMarker{
+            border-bottom:3px solid var(--yellowMarker); 
+        }
+
+        a.bukken{
+            width:87.466vw; height:21.33vw; display:flex; align-items: center; justify-content: center;
+            background:#414141; border-radius: 6px; margin:0 auto;
+
+            .text{
+                color:#fff; font-weight:600; position:relative; font-size:4.27vw; margin:0 17px;
+            }
+            &::before,
+            &::after{
+                content:''; display:inline-block; width:8vw; height:4.46vw;
+                background-image:url(../images/triple_arrow.svg); background-size:cover;
+            }
+            &::after{ transform: rotate(180deg); }
+        }
+
+        #yokinhikakuImg{
+            opacity:0;
+            position:fixed; width:100%; height:100%; top:0; left:0;
+            z-index: 10010; pointer-events: none; overflow: scroll; 
+
+            .closeBtn{
+                position:fixed; top:3vw; right:3vw; width:8vw; z-index: 11;
+            }
+
+            img{
+                width:100%; height:auto; transition:.2s;
+                transform-origin: 50% 50%; transform:scale(.5, .5);
+            }
+            button{
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+                border:none; background:transparent; padding:0;
+            }
+        }
+        #anmaku{
+            opacity: 0; position:fixed; width:100%; height:100%; top:0; left:0; 
+            background:rgba(0,0,0,.9);
+            z-index: 10009; pointer-events: none; /*transition:.2s;*/
+        }
+        
+
+    }/* SP */
+
+}
+
+body.inview{
+    overflow: hidden;
+
+    #yokinhikakuImg{
+        display:flex; align-items: center; justify-content: center;
+        width:100%; padding:3vw; pointer-events: all; opacity: 1;
+
+        img{
+            transform:scale(1, 1);
+        }
+        #kakudaiGraph{
+            z-index: 10;
+        }
+        #anmaku{
+            display: block; pointer-events: all; opacity: 1; z-index: 1;
+        }
+    }
+
+    
+}

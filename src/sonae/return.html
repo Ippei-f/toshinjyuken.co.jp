@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!--#include virtual="./common/include/gtm-head.php" -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>高利回りの理由|土地を持たない不動産投資｜SONAE</title>
+    <meta name="description" content="SONAEは土地を持たずにはじめられる新築・築浅メゾネット1棟アパート投資。定期借地を活用し、利回り10％超を実現。低リスク・高収益の新しい不動産投資スタイル。" />
+
+    <link rel="stylesheet" href="common/css/reset.css">
+    <link rel="stylesheet" href="common/css/style.css">
+
+    <!--font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@200;300;400;500;600;700;900&family=Passion+One:wght@400;700;900&display=swap" rel="stylesheet">
+    
+
+    <!--swiper-->
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <!-- タブレット最適化表示用 -->
+    <script>
+        var d=window.document;
+        if(
+            navigator.userAgent.indexOf('iPhone')>-1||navigator.userAgent.indexOf('iPod')>0||navigator.userAgent.indexOf('Android')>0
+        )
+            d.write('<meta id="vp" name="viewport" content="width=device-width; initial-scale=1;">');
+        else if(
+            navigator.userAgent.indexOf('iPad')>-1||navigator.userAgent.indexOf('macintosh')>-1 && 'ontouchend' in document||navigator.userAgent.indexOf('Android')>0&&navigator.userAgent.indexOf('Mobile')==-1
+        )
+            d.write('<meta name="viewport" content="width=1300, maximum-scale=1, user-scalable=yes"><link rel="stylesheet" type="text/css" href="../common/css/ipad.css" media="all">');
+    </script>
+    
+    <script>
+    if (screen.width > 767){
+        //var Android = document.getElementById('vp');
+        //Android.setAttribute('content','width=1200');
+    
+        var metalist = document.getElementsByTagName('meta');
+        for(var i = 0; i < metalist.length; i++) {
+            var name = metalist[i].getAttribute('name');
+            if(name && name.toLowerCase() === 'viewport') {
+                metalist[i].setAttribute('content', 'width=1300');
+                break;
+            }
+        }
+    }
+    </script>
+
+
+    <!--スクロールバー-->
+    <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css"/>
+    <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
+    <noscript>
+        <style>
+        .simplebar-content-wrapper {
+            scrollbar-width: auto;
+            -ms-overflow-style: auto;
+        }
+    
+        .simplebar-content-wrapper::-webkit-scrollbar,
+        .simplebar-hide-scrollbar::-webkit-scrollbar {
+            display: initial;
+            width: initial;
+            height: initial;
+        }
+        </style>
+    </noscript>
+
+    
+    <style>
+       #pageHeadSec .headerBlock .main{ width:291px; margin-left:auto; margin-right:auto; }
+       #pageHeadSec .leadBlock .per10{ width:860px; margin-left:auto; margin-right:auto; }
+    </style>
+</head>
+<body>
+    
+
+    <!--#include file="./common/include/header.php" -->
+
+
+    <script>//bodyに各ページ固有のclassを設定
+        document.addEventListener('DOMContentLoaded', function () {
+            document.body.classList.add('page-return', 'underPage');
+        });
+    </script>
+
+    <div class="contentWrapper">
+
+        <section class="" id="pageHeadSec">
+            <div class="contBlock headerBlock">
+                <div class="innerWrapper">
+                    <h2 class="secHeader">
+                        <p class="sub">高利回りの理由</p>
+                        <p class="main pict"><img src="common/images/title-high_return.svg" alt="HIGH_RETURN" width="290"></p>
+                    </h2>
+                </div><!--innerWrapper-->
+            </div><!--contBlock-->
+            <div class="contBlock leadBlock">
+                <p class="pict per10">
+                    <img src="images/return/illust-return-main.svg" alt="利回り10％以上" width="860" height="499.8">
+                </p>
+                <div class="contBox">
+                    <h2 class="header">
+                        <p class="sub">土地を持たない新しい不動産投資</p>
+                        <p class="main">ローリスクで10.0%以上の⾼利回りを実現</p>
+                    </h2>
+                    <p class="text">
+                        一般的な土地付き不動産投資は、土地購入費が大きな負担となり、収益性を圧迫します。<br>
+                        一方、SONAEは土地を定期借地とし、建物だけに投資することで初期費用や税負担を抑えることができます。<br>
+                        つまり、収益を生む建物のみに合理的に投資することで高利回りを実現しています。
+                    </p>
+                </div>
+            </div><!--leadBlockBlock-->
+        </section><!--pageHeadSec-->
+
+        <section class="contSec" id="simuSec">
+            <h2 class="secHeader">
+                <p><span class="hoshi karashi">★</span>5,000万円の物件での収⽀シミュレーション</p>
+                <span class="cap">1棟5戸物件 家賃（駐車場込）：7万円、地代：108万円/ 年　※利回り12%で売却した場合</span>
+            </h2>
+            <div class="contBlock swiper chartBlock">
+                <div class="inner swiper-wrapper">
+                    <div class="contBox swiper-slide" id="kounyuBox">
+                        <div class="header">
+                            <div class="text">購入</div>
+                        </div>
+                        <div class="cont">
+                            <div class="innerBox">
+                                <div class="upper">
+                                    <table>
+                                        <tr>
+                                            <td class="sahen">家賃（駐車場込み）：</td>
+                                            <td class="mark"></td>
+                                            <td class="uhen karashi">7万円</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="sahen">地代（借地料）：</td>
+                                            <td class="mark">▲</td>
+                                            <td class="uhen">108万円/年</td>
+                                        </tr>
+                                    </table>
+                                </div><!--upper-->
+                                <div class="under">
+                                    <table>
+                                        <tr><td></td></tr>
+                                        <tr><td class="karashi gokei">
+                                            <span class="mark">▲</span><span class="passion">5,000</span><span class="tani">万円</span>
+                                        </td></tr>
+                                    </table>
+                                    <p class="illust pict">
+                                        <img src="images/return/kounyu-illust.png" alt="">
+                                    </p>
+                                </div><!--under-->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contBox swiper-slide" id="after10Box">
+                        <div class="header">
+                            <div class="text"><span class="passion">10</span>年後</div>
+                        </div>
+                        <div class="cont">
+                            <div class="innerBox">
+                                <div class="upper">
+                                    <table>
+                                        <tr>
+                                            <td class="sahen">（A）10年間の家賃収入（累計）：</td>
+                                            <td class="mark"></td>
+                                            <td class="uhen karashi">4,000万円</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="sahen">（B）10年後の販売価格：</td>
+                                            <td class="mark"></td>
+                                            <td class="uhen karashi">4,000万円</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="sahen">（C）投資金額：</td>
+                                            <td class="mark">▲</td>
+                                            <td class="uhen">5,000万円</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="sahen">（D）10年間の経費 ：</td>
+                                            <td class="mark">▲</td>
+                                            <td class="uhen">1,050万円</td>
+                                        </tr>
+                                    </table>
+                                </div><!--upper-->
+                                <div class="under">
+                                    <table>
+                                        <tr><td>（A）+（B）-（C）-（D）=</td></tr><tr><td class="karashi gokei">
+                                            <span class="passion karashi">+1,250</span><span class="tani karashi">万円</span>
+                                        </td></tr>
+                                    </table>
+                                    
+                                </div><!--under-->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contBox swiper-slide" id="after15Box">
+                        <div class="header">
+                            <div class="text"><span class="passion">15</span>年後</div>
+                        </div>
+                        <div class="cont">
+                            <div class="innerBox">
+                                <div class="upper">
+                                    <table>
+                                        <tr>
+                                            <td class="sahen">（A）15年間の家賃収入（累計）：</td>
+                                            <td class="mark"></td>
+                                            <td class="uhen karashi">5,800万円</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="sahen">（B）15年後の販売価格：</td>
+                                            <td class="mark"></td>
+                                            <td class="uhen karashi">3,000万円</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="sahen">（C）投資金額：</td>
+                                            <td class="mark">▲</td>
+                                            <td class="uhen">5,000万円</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="sahen">（D）15年間の経費 ：</td>
+                                            <td class="mark">▲</td>
+                                            <td class="<table>
+                                        <tr><td>（A）+（B）-（C）-（D）=</td></tr>
+                                    </table>">1,575万円</td>
+                                        </tr>
+                                    </table>
+                                </div><!--upper-->
+                                <div class="under">
+                                    <table>
+                                        <tr><td>（A）+（B）-（C）-（D）=</td></tr>
+                                        <tr><td class="karashi gokei">
+                                            <span class="passion karashi">+2,225</span><span class="tani karashi">万円</span>
+                                        </td></tr>
+                                    </table>
+                                </div><!--under-->
+                            </div>
+                        </div>
+                    </div>
+                </div><!--inner-->
+                <p class="cap">※11〜15年に家賃が10%ダウンとして計算　※別途、購入時・売却時の諸経費がかかります</p>
+                <!-- If we need scrollbar -->
+                <div class="swiper-scrollbar chartScrollbar"></div>
+            </div><!--chartBlock-->
+
+<!------------------------------------------------------------->
+
+        <script>//chartBlockスマホ時ようスライダ
+            const swiperSlides = document.getElementsByClassName("chartBlock");
+            const breakPoint = 767; // ブレークポイントを設定
+            let swiper;
+            let swiperBool;
+
+            window.addEventListener(
+            "load",
+            () => {
+                if (breakPoint < window.innerWidth) {
+                    swiperBool = false;
+                } else {
+                    createSwiper();
+                    swiperBool = true;
+                    tateSwiper();
+                    swiperBool = true;
+                }
+            },
+            false
+            );
+
+            window.addEventListener(
+            "resize",
+            () => {
+                if (breakPoint < window.innerWidth && swiperBool) {
+                    swiper.destroy(false, true);
+                    swiperBool = false;
+                } else if (breakPoint >= window.innerWidth && !swiperBool) {
+                    createSwiper();
+                    swiperBool = true;
+                    tateSwiper();
+                    swiperBool = true;
+                }
+            },
+            false
+            );
+
+            const createSwiper = () => {
+                swiper = new Swiper(".chartBlock", {
+                    loop: false,
+                    slidesPerView: 1,
+                    spaceBetween: 5,
+                    
+                    // And if we need scrollbar
+                    scrollbar: {
+                        el: '.chartScrollbar',
+                    }
+                });
+            };
+        </script>
+<!------------------------------------------------------------->
+
+
+            <!--point1-->
+            <div class="contBlock whiteBlock" id="point1">
+                <h3 class="blockHeader">
+                    <p class="atama"><img src="images/return/block_header_marker-1.svg" alt="POINT1"></p>
+                    <p class="text"><font class="underMarker">収益を⽣む資産（建物）</font>だけに集中投資</p>
+                </h3>
+
+                <div class="contBox">
+                    <div class="text">
+                        SONAEは⼟地を購⼊せず、建物だけに投資する仕組みのため、初期費⽤を⼤幅に抑えることができます。<br>
+                        投資効率が⾼く、同じ⾃⼰資⾦でもより多くの収益が⾒込める設計となっており、結果として利回り10.0％以上という⾼い収益性を実現。<br>
+                        安定運⽤と⾼利回りを両⽴した新しい不動産投資モデルです。
+                    </div>
+                    <picture class="pict mainIllust">
+                        <source srcset="images/return/point1-illust.jpg" media="(min-width:768px)" />
+                        <img src="images/return/point1-illust-sp.jpg" width="618" alt="">
+                    </picture>
+                </div><!--contBox-->
+
+                <div class="contBox naze">
+                    <div class="boxHeader">なぜ、土地を持たない方がいいのか？</div>
+                    <div class="reasons">
+                        <div class="reason">
+                            <div class="header">
+                                <p class="text">土地を持たない理由</p><p class="num">1</p>
+                            </div>
+                            <div class="cont">
+                                投資額倍増で<br>借入リスクが大きい
+                            </div>
+                        </div>
+                        <div class="reason">
+                            <div class="header">
+                                <p class="text">土地を持たない理由</p><p class="num">2</p>
+                            </div>
+                            <div class="cont">
+                                重い税負担<br>（相続税・固定資産税等）
+                            </div>
+                        </div>
+                        <div class="reason">
+                            <div class="header">
+                                <p class="text">土地を持たない理由</p><p class="num">3</p>
+                            </div>
+                            <div class="cont">
+                                土地下落による<br>損失リスクが高い
+                            </div>
+                        </div>
+                    </div>
+                </div><!--naze-->
+
+                <div class="contBox conbi">
+                    <div class="textBox">
+                        <p class="boxHeader">
+                            借地料は土地を所有した経費とほぼ変わらない！？
+                        </p>
+                        <p class="text">
+                            土地を購入した場合、取得費に加えて固定資産税や管理費などのコストが長期にわたり発生します。実は、これらを30年間で試算すると、借地料の総額とほぼ同等になるケースも。SONAEは土地を持たず、家賃を生む建物だけに投資することで、無駄なコストを抑えた効率的な運用が可能です。
+                        </p>
+                    </div>
+                    <div class="pictBox">
+                        <p class="cap">■土地を所有した時と借地料を比較（30年間）</p>
+                        <p class="pict">
+                            <img src="images/return/point1-graph-hikaku.png" width="519" height="455" alt="">
+                        </p>
+                    </div>
+                </div><!--conbi-->
+
+                <div class="contBox hasen">
+                    <div class="left">
+                        <p class="boxHeader">SONAEは合理的な安定経営を実現</p>
+                        <div class="text">
+                            ⼟地にかかる維持費や地価下落のリスクがないため、将来にわたって安定した計画的経営が可能です。
+                        </div>
+                    </div>
+                    <div class="right">
+                        <p class="pict"><img src="images/return/point1-hasen-01.png" alt="建物＝純資産" width="333"></p>
+                        <p class="pict"><img src="images/return/point1-hasen-02.png" alt="土地＝リスク資産" width="319"></p>
+                    </div>
+                </div><!--hasen-->
+            </div><!--whiteBlock-->
+
+            <!--point2-->
+            <div class="contBlock whiteBlock" id="point2">
+                <h3 class="blockHeader">
+                    <p class="atama"><img src="images/return/block_header_marker-2.svg" alt="POINT2"></p>
+                    <p class="text"><font class="underMarker">新築‧築浅に限定</font>した⾼収益物件</p>
+                </h3>
+
+                <div class="contBox conbi">
+                    <div class="textBox">
+                        <p class="text">
+                            新築‧築浅物件は設備の劣化が少なく、修繕リスクも低いため、収⽀が安定しやすいのが特⻑です。⼊居需要も⾼く、将来的な資産価値も維持しやすいため、安⼼して⻑期的な運⽤が可能です。
+                        </p>
+                    </div>
+                    <div class="pictBox">
+                        <p class="pict">
+                            <img src="images/return/point2-mainpict.jpg" alt="外観" width="542" height="348">
+                        </p>
+                    </div>
+                </div><!--conbi-->
+
+                <div class="contBox sayuu">
+                    <div class="left posiCase">
+                        <div class="boxHeader">
+                            <p class="text">
+                                新築<span class="smaller">or</span>築浅物件<span class="smaller">の場合</span>
+                            </p>
+                            <p class="logo pcOnly"><img src="common/images/logo-white.svg" alt="SONAE"></p>
+                        </div>
+
+                        <ul>
+                            <li class="topic">
+                                <div class="topicHeader">
+                                    <p class="mark"></p><p class="text">少ない支出</p>
+                                </div>
+                                <p class="topicCont">新築だから設備投資がかからない</p>
+                                <p class="topicCont">10年間は⼤規模修繕はかからない</p>
+                            </li>
+                            <li class="topic">
+                                <div class="topicHeader">
+                                    <p class="mark"></p><p class="text">安定した収⼊</p>
+                                </div>
+                                <p class="topicCont">ファミリー向けの高い入居率を維持しやすい</p>
+                                <p class="topicCont">退去後も、すぐに埋まり空室期間が短い</p>
+                                <p class="topicCont">家賃が下がりにくい</p>
+                            </li>
+                            <li class="topic">
+                                <div class="topicHeader">
+                                    <p class="mark"></p><p class="text">しかも安心</p>
+                                </div>
+                                <p class="topicCont">時代に合った間取り・設備だから競争力が高い</p>
+                            </li>
+                        </ul>
+                    </div><!--left-->
+
+                    <div class="right negaCase">
+                        <div class="boxHeader">
+                            <p class="text">中古物件<span class="smaller">の場合</span></p>
+                        </div>
+
+                        <ul>
+                            <li class="topic">
+                                <div class="topicHeader">
+                                    <p class="mark"></p><p class="text">⼤きな⽀出</p>
+                                </div>
+                                <p class="topicCont">古いので、設備投資がかさむ</p>
+                                <p class="topicCont">購入後まもなく大規模修繕がある</p>
+                            </li>
+                            <li class="topic">
+                                <div class="topicHeader">
+                                    <p class="mark"></p><p class="text">安定した収⼊</p>
+                                </div>
+                                <p class="topicCont">入居率が悪くなる</p>
+                                <p class="topicCont">退去後の入居付けも難しく空室期間が長い</p>
+                                <p class="topicCont">家賃の下落幅が大きい</p>
+                            </li>
+                            <li class="topic">
+                                <div class="topicHeader">
+                                    <p class="mark"></p><p class="text">そもそも難しい</p>
+                                </div>
+                                <p class="topicCont">優良物件は入手困難<br> （プロでも物件見極めが難しい）</p>
+                            </li>
+                        </ul>
+                    </div><!--right-->
+                </div><!--sayuu-->
+
+                <div class="batsugun">
+                    <div class="textBox">
+                        <p class="text">
+                            SONAEの一棟アパートはキャッシュを生みつつも、節税効果バツグンです！
+                        </p>
+                    </div>
+                    
+                    <p class="pict">
+                        <img src="images/return/illust-gamaguchi.png" alt="" width="158" height="139">
+                    </p>
+                </div>
+            </div><!--whiteBlock-->
+
+            <!--point3-->
+            <div class="contBlock whiteBlock" id="point3">
+                <h3 class="blockHeader">
+                    <p class="atama"><img src="images/return/block_header_marker-3.svg" alt="POINT3"></p>
+                    <p class="text">高利回り&低価格だから<font class="underMarker">出口（再販）戦略に優位</font></p>
+                </h3>
+
+                <div class="contBox">
+                    <p class="text">
+                        高利回りかつ低価格で取得できるSONAEは、土地を含まないため地価下落のリスクがなく、出口戦略にも優れた投資商品です。実際に、過去には想定以上の価格で再販された実績もあり、高利回りと低リスクを両立。将来的な売却も見据えた柔軟な資産形成を可能にし、短期・中長期いずれの戦略にも対応できます。
+                    </p>
+                </div>
+
+                <div class="contBox sayuu">
+                    <div class="left negaCase">
+                        <div class="header">
+                            <div class="boxHeader">
+                                <p class="text">⼟地付き不動産投資<span class="smaller">の場合</span></p>
+                            </div>
+                            <p class="boxSubHeader">「⼟地」+「建物」を購⼊</p>
+                        </div>
+                        
+                        <p class="pict illust">
+                            <img src="images/return/point3-negaIllust.png" alt="" width="349" height="266">
+                        </p>
+                        <div class="topic">
+                            <div class="topicHeader">
+                                <p class="mark"></p><p class="text">総投資額が⼤きくなる</p>
+                            </div>
+                            <div class="topicHeader">
+                                <p class="mark"></p><p class="text">⼟地下落による影響⼤</p>
+                            </div>
+                            <div class="topicHeader">
+                                <p class="mark"></p><p class="text">家賃収⼊で利益が出ても、<br>売却益で損失するリスク</p>
+                            </div>
+                        </div>
+                    </div><!--left-->
+
+                    <div class="right posiCase">
+                        <div class="header">
+                            <div class="boxHeader">
+                                <p class="text">SONAE<span class="smaller">の場合</span></p>
+                            </div>
+                            <p class="boxSubHeader">「⼟地」は定期借地</p>
+                            <p class="boxSubHeader">「建物」だけ購⼊</p>
+                        </div>
+                        
+                        <p class="pict illust">
+                            <img src="images/return/point3-posiIllust.png" alt="" width="349" height="266">
+                        </p>
+                        <div class="topic">
+                            <div class="topicHeader">
+                                <p class="mark"></p><p class="text">建物だけだから総投資額は少ない</p>
+                            </div>
+                            <div class="topicHeader">
+                                <p class="mark"></p><p class="text">土地は借地だから下落してもリスクなし</p>
+                            </div>
+                            <div class="topicHeader">
+                                <p class="mark"></p><p class="text">地代を回収できれば残りはすべて利益</p>
+                            </div>
+                            <div class="topicHeader">
+                                <p class="mark"></p><p class="text">地価に左右されず売り時を掴みやすい</p>
+                            </div>
+                        </div>
+                    </div><!--right-->
+                </div>
+
+                <div class="deguchi">
+                    <div class="headBox">
+                        <picture class="pict header">
+                            <source srcset="images/return/point3-deguchiHeader-pc.png" media="(min-width:768px)" />
+                            <img src="images/return/point3-deguchiHeader-sp.png" alt="出口実績DATA" />
+                        </picture>
+
+                        <div class="contBox">
+                            <div class="upper">
+                                <div class="row">
+                                    <div class="sahen daen">平均</div>
+                                    <div class="uhen">7<span class="smaller">年</span>6<span class="smaller">ヶ月</span></div>
+                                </div>
+                                <div class="row">
+                                    <div class="sahen">販売価格</div>
+                                    <div class="uhen">3,851<span class="smaller">万円</span></div>
+                                </div>
+                                <div class="row">
+                                    <div class="sahen">利回り</div>
+                                    <div class="uhen orange">12.<span class="smaller">24%</span></div>
+                                </div>
+                            </div><!--upper-->
+                            <div class="under">
+                                <p class="sahen">利回り10%<span class="smaller">で購入していた場合</span></p>
+                                <div class="ketsuron">
+                                    <p class="ketsuronPaerts">7<span class="smaller">年</span>6<span class="smaller">ヶ月で</span></p>
+                                    <p class="ketsuronPaerts underMarker">2,672<span class="smaller">万円の収益</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="cap">※2025年6月時点</p>
+                    </div><!--headBox-->
+                     
+                    <div class="tableCase data-simplebar">
+                        <table class="dataTable">
+                            <thead>
+                                <tr>
+                                    <th>市町村名</th><th>利回り</th><th>築年数<br class="spOnly"><span class="smaller">（買付当時）</span></th><th>金額<span class="smaller">（税込）</span></th><th>立地条件</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>名古屋市緑区</td><td class="rimawariColmn">12.50<span class="smaller">%</span></td><td>12年</td><td>52,900,000円</td><td>JR東海道本線「南大高」駅／徒歩22分</td>
+                                </tr>
+                                <tr>
+                                    <td>名古屋市西区</td><td class="rimawariColmn">11.78<span class="smaller">%</span></td><td>3年</td><td>45,300,000円</td><td>名古屋市営鶴舞線「浄心」駅／徒歩12分</td>
+                                </tr>
+                                <tr>
+                                    <td>弥富市</td><td class="rimawariColmn">12.56<span class="smaller">%</span></td><td>10年</td><td>28,420,000円</td><td>近鉄名古屋線「佐古木」駅／徒歩5分</td>
+                                </tr>
+                                <tr>
+                                    <td>長久手市</td><td class="rimawariColmn">14.70<span class="smaller">%</span></td><td>10年</td><td>26,800,000円</td><td>リニモ「杁ヶ池公園」駅／徒歩19分</td>
+                                </tr>
+                                <tr>
+                                    <td>江南市</td><td class="rimawariColmn">14.74<span class="smaller">%</span></td><td>12年</td><td>40,030,000円</td><td>名鉄犬山線「布袋」駅／徒歩10分</td>
+                                </tr>
+                                <tr>
+                                    <td>常滑市</td><td class="rimawariColmn">12.59<span class="smaller">%</span></td><td>11年</td><td>31,000,000円</td><td>名鉄常滑線「多屋」駅／徒歩9分</td>
+                                </tr>
+                                <tr>
+                                    <td>一宮市</td><td class="rimawariColmn">13.27<span class="smaller">%</span></td><td>12年</td><td>54,432,000円</td><td>名鉄名古屋本線「妙興寺」駅／徒歩28分</td>
+                                </tr>
+                                <tr>
+                                    <td>豊橋市</td><td class="rimawariColmn">13.68<span class="smaller">%</span></td><td>13年</td><td>21,800,000円</td><td>JR東海道本線「二川」駅／徒歩13分</td>
+                                </tr>
+                                <tr>
+                                    <td>名古屋市東区</td><td class="rimawariColmn">8.88<span class="smaller">%</span></td><td>1年</td><td>24,730,000円</td><td>地下鉄名城線「ナゴヤドーム前矢田」駅／徒歩4分</td>
+                                </tr>
+                                <tr>
+                                    <td>清州市</td><td class="rimawariColmn">10.97<span class="smaller">%</span></td><td>1年</td><td>39,800,000円</td><td>名鉄名古屋本線「丸ノ内」駅／徒歩7分</td>
+                                </tr>
+                                <tr>
+                                    <td>江南市</td><td class="rimawariColmn">7.63<span class="smaller">%</span></td><td>1年</td><td>39,900,000円</td><td>名鉄犬山線「布袋」駅／徒歩18分</td>
+                                </tr>
+                                
+                                <tr class="averageRow">
+                                    <td>平均</td><td class="rimawariColmn">12.12<span class="smaller">%</span></td><td>8年</td><td>36,828,364円</td><td></td>
+                                </tr> 
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="cap">※実績の一部となります</p>
+
+                    <a href="/sonae/images/return/jisseki.pdf" class="btn nega">実績PDFデータはこちら</a>
+
+                    <script>
+                        //オプションを使う時
+                        const simpleBar = new SimpleBar(document.querySelector('.tableCase'), {
+                            autoHide: false, //スクロールバーを常に表示
+                            forceVisible: true | 'x' | 'y' //スクロールバーのツマミ部分を常に表示 デフォルトはfalse
+                        });
+                    </script>
+                </div><!--deguchi-->
+
+                <div class="contBox hasen">
+                    <div class="left">
+                        <p class="boxHeader">⼟地バブルに左右されない新しい不動産投資</p>
+                        <div class="text">
+                            現在、東京都心の地価は上昇を続けていますが、リモートワークの普及で立地の価値観は変化しつつあります。土地の値上がりを前提にした投資はリスクが高く、地価が下がれば収益が想定通りにならない可能性も。土地を持たず建物だけに投資し、家賃収入で利回りを確保する方が安定した運用が可能です。
+                        </div>
+                    </div>
+                    <div class="right">
+                        <p class="pict">
+                            <img src="images/return/tochi_bubble.jpg" alt="">
+                        </p>
+                    </div>
+                </div><!--hasen-->
+            </div><!--whiteBlock-->
+        </section><!--simuSec-->
+
+        <a href="property.html" class="btn bukken">
+            <p class="text">物件情報はこちら</p>
+        </a>
+    </div><!--contentWrapper-->
+    
+    <section class="bottomSec">
+        <a href="/sonae/" class="modoru">TOPページに戻る</a>
+    </section>
+
+    <!--#include file="./common/include/footer.php" -->
+
+
+
+</body>
+</html>

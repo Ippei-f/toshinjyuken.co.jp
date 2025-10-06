@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!--#include virtual="./common/include/gtm-head.php" -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>企業情報｜土地を持たない不動産投資｜SONAE</title>
+    <meta name="description" content="SONAEは土地を持たずにはじめられる新築・築浅メゾネット1棟アパート投資。定期借地を活用し、利回り10％超を実現。低リスク・高収益の新しい不動産投資スタイル。" />
+
+    <link rel="stylesheet" href="common/css/reset.css">
+    <link rel="stylesheet" href="common/css/style.css">
+
+    <!--font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@200;300;400;500;600;700;900&family=Passion+One:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <!--swiper-->
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+
+    <!-- タブレット最適化表示用 -->
+    <script>
+        var d=window.document;
+        if(
+            navigator.userAgent.indexOf('iPhone')>-1||navigator.userAgent.indexOf('iPod')>0||navigator.userAgent.indexOf('Android')>0
+        )
+            d.write('<meta id="vp" name="viewport" content="width=device-width; initial-scale=1;">');
+        else if(
+            navigator.userAgent.indexOf('iPad')>-1||navigator.userAgent.indexOf('macintosh')>-1 && 'ontouchend' in document||navigator.userAgent.indexOf('Android')>0&&navigator.userAgent.indexOf('Mobile')==-1
+        )
+            d.write('<meta name="viewport" content="width=1300, maximum-scale=1, user-scalable=yes"><link rel="stylesheet" type="text/css" href="../common/css/ipad.css" media="all">');
+    </script>
+    
+    <script>
+    if (screen.width > 767){
+        //var Android = document.getElementById('vp');
+        //Android.setAttribute('content','width=1200');
+    
+        var metalist = document.getElementsByTagName('meta');
+        for(var i = 0; i < metalist.length; i++) {
+            var name = metalist[i].getAttribute('name');
+            if(name && name.toLowerCase() === 'viewport') {
+                metalist[i].setAttribute('content', 'width=1300');
+                break;
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+    
+
+    <!--#include file="./common/include/header.php" -->
+
+
+    <script>//bodyに各ページ固有のclassを設定
+        document.addEventListener('DOMContentLoaded', function () {
+            document.body.classList.add('page-company', 'underPage');
+        });
+    </script>
+
+    <div class="contentWrapper">
+
+        <section class="" id="pageHeadSec">
+            <div class="contBlock headerBlock">
+                <div class="innerWrapper">
+                    <h2 class="secHeader">
+                        <p class="sub">企業情報</p>
+                        <p class="main pict"><img src="common/images/title-comprofile.svg" alt="COMPANY_PROFILE"></p>
+                    </h2>
+                </div><!--innerWrapper-->
+            </div><!--contBlock-->
+            <div class="contBlock y50Block">
+                <p class="pict y50">
+                    <img src="images/company/y50.png" alt="50年">
+                </p>
+                <div class="contBox">
+                    <h2 class="header">
+                        成功を支える、住宅総合産業50年の知見と実績
+                    </h2>
+                    <p class="text">
+                        安定した資産価値と高収益を実現するSONAE。<br class="pcOnly">
+                        東新住建は、50年にわたる不動産事業のノウハウを活かし、<br class="pcOnly">
+                        土地のポテンシャルを最大限に引き出します。<br>
+                        住む人とオーナーのニーズを的確にマッチングし、<br class="pcOnly">
+                        不動産価値の向上と長期的な資産形成を支援します。
+                    </p>
+                </div>
+            </div>
+        </section><!--pageHeadSec-->
+
+        <section class="contSec" id="no1Sec">
+            <div class="contBox officeBox">
+                <figure class="pict">
+                    <img src="images/company/building.jpg" alt="">
+                </figure>
+                <p class="cap">【JPオフィス】JPタワー名古屋21F</p>
+            </div><!--officeBox-->
+            
+            <div class="contBlock sqObjBlock">
+                <div class="objBox">
+                    <figure class="pict">
+                        <img src="images/company/no1-01.svg" alt="定期借地事業N0.1">
+                    </figure>
+                </div>
+                <div class="objBox">
+                    <figure class="pict">
+                        <img src="images/company/no1-02.svg" alt="メゾネット賃貸N0.1">
+                    </figure>
+                    <figure class="pict">
+                        <img src="images/company/no1-03.svg" alt="不動産AIマーケティングN0.1">
+                    </figure>
+                </div>
+            </div>
+
+            <div class="contBlock setsumeiBlock"> 
+                <div class="contBox">
+                    <div class="header">
+                        <figure class="icon" id="logo-toshin"><img src="images/company/logo-TOSHIN_JUKEN.svg" alt="TOSHIN_JUKEN"></figure>
+                        <div class="title">
+                            <p>定期借地権付き住宅販売全国<span>No.1</span></p>
+                        </div>
+                    </div>
+                    
+                    <div class="text">
+                        東新住建は定期借地権付き住宅販売全国No.1。32年間で1,000棟の販売・供給実績を誇ります。定期借地権（借地借家法）が施行された平成4年から扱いを開始し、購入者様・地主様の双方をサポートしています。
+                    </div>
+                    <figure class="pict">
+                        <img src="images/company/no1-pic-01.jpg" alt="">
+                    </figure>
+                </div>
+
+                <div class="contBox">
+                    <div class="header">
+                        <figure class="icon" id="logo-bluebox"><img src="images/company/logo-BLUE_BOX.svg" alt="BLUE_BOX"></figure>
+                        <div class="title">
+                            <p>メゾネット賃貸<span>No.1</span></p>
+                        </div>
+                    </div>
+                    
+                    <div class="text">
+                        メゾネット賃貸の管理・運営を引き受けるブルーボックス。97.7%という高い入居率と13,000戸の管理実績を誇るメゾネット賃貸のプロして入居斡旋、建物メンテナンス、トラブル対応、修繕計画まですべて安心してお任せいただけます。
+                    </div>
+                    <figure class="pict">
+                        <img src="images/company/no1-pic-02.jpg" alt="">
+                    </figure>
+                </div>
+
+                <div class="contBox">
+                    <div class="header">
+                        <figure class="icon" id="logo-tson"><img src="images/company/logo-Tson.svg" alt="Tson"></figure>
+                        <div class="title">
+                            <p>勝機を捉える<span>マーケティング</span></p>
+                        </div>
+                    </div>
+                    
+                    <div class="text">
+                        TSONは、ビッグデータを活用した最先端のAIマーケティングで全国の不動産事業を支援しています。官公庁、金融機関、大手住宅メーカーやシンクタンクが採用するソフトウェアを開発。SONAEの事業戦略に活かされています。
+                    </div>
+                    <figure class="pict">
+                        <img src="images/company/no1-pic-03.jpg" alt="">
+                    </figure>
+                </div>
+            </div>
+        </section><!--no1Sec-->
+
+        <section id="summarySec">
+            <div class="detailBlock">
+                <p class="title">【会社概要】</p>
+                <ul class="detailList">
+                    <li class="topic long">
+                        <p class="header">社名</p>
+                        <div class="cont">東新住建株式会社</div>
+                    </li>
+                    <li class="topic long">
+                        <p class="header">所在地</p>
+                        <div class="cont">
+                            <div class="locationBox">
+                                <span class="w700">稲沢本店</span><br>
+                                〒492-8628 愛知県稲沢市高御堂一丁目3-18
+                                <div class="mapCase">
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3258.155583598925!2d136.79816407737607!3d35.25238497272865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6003a038a957254d%3A0x25e7196e490700a9!2z5p2x5paw5L2P5bu644ix!5e0!3m2!1sja!2sjp!4v1745563146483!5m2!1sja!2sjp" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                </div>
+                            </div>
+                            <div class="locationBox">
+                                <span class="w700">JPオフィス</span><br>
+                                〒450-6321　愛知県名古屋市中村区名駅1-1-1 JPタワー名古屋21階（名古屋駅前支店）
+                            </div>
+                            <div class="locationBox">
+                                <span class="w700">名駅オフィス</span><br>
+                                〒453-0014　愛知県名古屋市中村区則武1-10-6 ノリタケ第一ビル6階 
+                            </div>
+                        </div>
+                    </li>
+                    <li class="topic long">
+                        <p class="header">設立</p>
+                        <div class="cont">1976年(昭和51年)7月20日</div>
+                    </li>
+                    <li class="topic long">
+                        <p class="header">資本金</p>
+                        <div class="cont">8,000万円</div>
+                    </li>
+                    <li class="topic long">
+                        <p class="header">関連取引会社</p>
+                        <div class="cont">株式会社TSON<br>
+                            株式会社ブルーボックス</div>
+                    </li>
+                    <li class="topic long">
+                        <p class="header">登録</p>
+                        <div class="cont">
+                            宅地建物取引業免許:国土交通大臣(4)第7873号<br>
+                            特定建設業許可:愛知県知事許可(特-4)第61271号<br>
+                            (公社)愛知県宅地建物取引業協会会員<br>
+                            東海不動産公正取引協議会加盟
+                        </div>
+                    </li>
+                </ul>
+            </div><!--detailBlock-->
+        </section><!--summarySec-->
+    </div><!--contentWrapper-->
+    
+
+    <!--#include file="./common/include/footer.php" -->
+
+    <script>//swiper
+        const thumb = document.querySelectorAll('.pictBlock .thumbnail');
+        
+        const switchThumb = (index) => {
+            document.querySelector('.pictBlock .thumbnail-active').classList.remove('thumbnail-active');
+            thumb[index].classList.add('thumbnail-active');
+        }
+        
+        const mySwiper = new Swiper('.pictBlock .swiper', {
+            on: {
+                afterInit: (swiper) => {
+                thumb[swiper.realIndex].classList.add('thumbnail-active');
+                for (let i = 0; i < thumb.length; i++) {
+                    thumb[i].onclick = () => {
+                    swiper.slideTo(i);
+                    };
+                }
+                },
+                slideChange: (swiper) => {
+                switchThumb(swiper.realIndex);
+                },
+            }
+        });
+    </script>
+
+    
+    <script>
+        const bukkenDataOpen = document.getElementById('detailOpen');
+        const subData = document.getElementById('subData');
+
+        bukkenDataOpen.addEventListener('click',()=>{
+            subData.classList.toggle('disclosure');
+        });
+    </script>
+
+
+</body>
+</html>

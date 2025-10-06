@@ -1,0 +1,294 @@
+@use 'common';
+
+.page-company{
+
+    @media screen and (min-width:768px){
+        .secHeader{
+            .main{ width:383px; }
+        }
+        .coverPic{
+            width:100%; height:100%; object-fit: cover; object-position:center;
+        }
+        .central-pc{
+            display:flex; align-items: center; align-content: center; justify-content: center;
+        }
+
+        .contentWrapper{
+            min-width: 1400px;
+        }
+        #pageHeadSec{
+            padding-bottom:111px;
+
+            .y50Block{
+                color:#707070; text-align: center;
+                
+                .y50{
+                    width:880px; margin:0 auto 55px; 
+                }
+                .header{
+                    font-size:41px; font-weight:900; margin-bottom: 40px;
+                }
+                .text{
+                    font-size:19px; font-weight:200; line-height: 2.25;
+                }
+
+            }
+        }/*pageHeadSec*/
+
+        #no1Sec{
+            margin-bottom: 160px;
+
+            .officeBox{
+                width:1121px;  margin:0 auto;
+
+                .pict{
+                    height:478px; overflow: hidden;
+
+                    img{
+                        width:100%; height:100%; object-fit:cover; object-position: center 28%; 
+                    }
+                }
+                .cap{ font-size:13px; margin-top: .3em; }
+            }
+            .sqObjBlock{
+                padding:125px 0 200px;
+
+                .objBox{
+                    display:flex; justify-content: center; gap:220px; 
+
+                    figure{
+                        width:317px; box-shadow: 15px 0 0 #a2a2a2; transform:rotate(45deg);
+                    }
+
+                    &:nth-of-type(2){
+                        margin-top: -50px;
+                    }
+                }
+            }/*sqObjBlock*/
+
+            .setsumeiBlock{
+                display:flex; justify-content: center; gap:56px;
+
+                .contBox{
+                    width:429px;
+
+                    .header{
+                         border-top:2px solid #414141; border-bottom:2px solid #414141; margin-bottom: 30px;
+
+                        .icon{
+                            border-bottom:1px solid #B7B7B7; @extend .central-pc; width:100%; height:94px;
+
+                            &#logo-toshin img{ width:135px; }
+                            &#logo-bluebox img{ width:160px; }
+                            &#logo-tson img{ width:116px; }
+                        }
+
+                        .title{
+                            font-size:22px; font-weight:700; height:122px; line-height: 1;vertical-align:baseline;
+                            @extend .central-pc; 
+
+                            span{
+                                font-size:180%; color:var(--karashiText);  line-height: 1;
+                            }
+                        }
+                    }
+                    .text{
+                        font-size:19px; font-weight:200; height:215px; line-height: 1.75;
+                    }
+                    .pict{
+                        height:286px;
+                    }
+                }
+            }/*setsumeiBlock*/
+        }/*no1Sec*/
+
+        #summarySec{
+            .detailBlock{
+                background:#fff; padding:74px 144px; border-radius: 30px; 
+                width:1400px; margin:0 auto;
+            }
+            .title{
+                font-size:24px; text-align: center; margin-bottom: 45px;
+            }
+            .detailList{
+                display:flex; flex-wrap:wrap; justify-content: space-between;
+
+                .topic{
+                    width:100%; display:flex; justify-content: space-between; font-size: 19px; line-height: 1.75;
+
+                    .header{
+                        width:230px; padding:40px 0; border-bottom:2px solid #707070; font-weight:600;
+                        text-align: center;
+                    }
+                    .cont{
+                        width:calc(100% - 250px); padding:40px 2em;  border-bottom:1px solid #707070; font-weight:300;
+
+                        .locationBox{
+                            margin-bottom: 48px;
+                            &:last-of-type{ margin-bottom: 0; }
+
+                            .mapCase{
+                                padding:48px 48px 0;
+
+                                iframe{
+                                    width:100%; aspect-ratio: 706 / 470; display:block;
+                                }
+                            }
+                        }
+                    }
+                }
+
+            }/*detailList*/
+        }/*summarySec*/
+    }/* PC */
+        
+
+
+
+
+
+    @media screen and (max-width:767px){
+        .secHeader{
+            margin-bottom: 7.46vw;
+
+            .main{ width:67.4vw; }
+        }
+        .coverPic-sp{
+            width:100%; height:100%; object-fit: cover; object-position:center;
+        }
+        .central-sp{
+            display:flex; align-items: center; align-content: center; justify-content: center;
+        }
+
+        .contentWrapper{
+            padding:0 6.4vw;
+        }
+
+        #pageHeadSec{
+            padding-bottom:10.66vw;
+
+            .y50Block{
+                color:#707070;
+                
+                .y50{
+                    width:100%; margin:0 auto; 
+                }
+                .header{
+                    font-size:8.533vw; font-weight:900; margin-bottom: 6.66vw; letter-spacing: .1em;
+                }
+                .text{
+                    font-size:4.53vw; font-weight:200; line-height: 1.75;
+                }
+
+            }
+        }/*pageHeadSec*/
+
+        #no1Sec{
+            margin-bottom: 24vw;
+
+            .officeBox{
+                width:100%;  margin:0 auto;
+
+                .pict{
+                    width:100%; aspect-ratio: 4 / 3; 
+
+                    img{ width:100%; height:100%; object-fit: cover; object-position: center;}
+                }
+                .cap{ font-size:3.46vw; margin-top: .3em; }
+            }
+            .sqObjBlock{
+                padding:25vw 0;
+
+                .objBox{
+                    display:block;
+
+                    figure{
+                        width:56.53vw; box-shadow: 10px 0 0 #a2a2a2; transform:rotate(45deg);
+                        margin:0 auto 28vw;
+
+                        &:last-of-type{ margin-bottom: 20%; }
+                    }
+                    &:first-of-type{
+                        margin-bottom: 28vw;
+                    }
+                }
+            }/*sqObjBlock*/
+
+            .setsumeiBlock{
+
+                .contBox{
+                    width:100%;
+
+                    .header{
+                         border-top:2px solid #414141; border-bottom:2px solid #414141; margin-bottom: 30px;
+
+                        .icon{
+                            border-bottom:1px solid #B7B7B7; @extend .central-sp; width:100%; height:18.81vw;
+
+                            &#logo-toshin img{ width:27.14vw; }
+                            &#logo-bluebox img{ width:32.48vw; }
+                            &#logo-tson img{ width:23.76vw; }
+                        }
+
+                        .title{
+                            font-size:5.3vw; font-weight:700; height:32.53vw; line-height: 1;vertical-align:baseline;
+                            @extend .central-sp; 
+
+                            span{
+                                font-size:145%; color:var(--karashiText);  line-height: 1;
+                                display:block; text-align: center; margin-top: 5px;
+                            }
+                        }
+                    }
+                    .text{
+                        font-size:4.53vw; font-weight:200; line-height: 1.75; margin-bottom: 1.75em;
+                    }
+                    .pict{
+                        
+                    }
+                }
+            }/*setsumeiBlock*/
+        }/*no1Sec*/
+
+        #summarySec{
+            .detailBlock{
+                background:#fff; padding:8.26vw 4.8vw; border-radius: 10px; 
+                width:100%; margin:0 auto;
+            }
+            .title{
+                font-size:24px; text-align: center; margin-bottom: 45px;
+            }
+            .detailList{
+                display:flex; flex-wrap:wrap; justify-content: space-between;
+
+                .topic{
+                    width:100%; font-size: 4vw; line-height: 1.75; margin-bottom: 11.2vw;
+                    &:last-of-type{margin-bottom: 0;}
+
+                    .header{
+                        width:100%; padding-bottom:2vw; border-bottom:2px solid #707070; font-weight:600;
+                    }
+                    .cont{
+                        width:100%; padding:5.3vw .75em;  border-bottom:1px solid #707070; font-weight:300;
+
+                        .locationBox{
+                            margin-bottom: 8vw;
+                            &:last-of-type{ margin-bottom: 0; }
+
+                            .mapCase{
+                                
+
+                                iframe{
+                                    width:100%; aspect-ratio: 1 / 1.05; display:block;
+                                }
+                            }
+                        }
+                    }
+                }
+
+            }/*detailList*/
+        }/*summarySec*/
+        
+    }/* SP */
+
+}

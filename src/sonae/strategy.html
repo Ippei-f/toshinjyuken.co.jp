@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!--#include virtual="./common/include/gtm-head.php" -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>相続税対策|土地を持たない不動産投資｜SONAE</title>
+    <meta name="description" content="SONAEは土地を持たずにはじめられる新築・築浅メゾネット1棟アパート投資。定期借地を活用し、利回り10％超を実現。低リスク・高収益の新しい不動産投資スタイル。" />
+
+    <link rel="stylesheet" href="common/css/reset.css">
+    <link rel="stylesheet" href="common/css/style.css">
+
+    <!--font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@200;300;400;500;600;700;900&family=Passion+One:wght@400;700;900&display=swap" rel="stylesheet">
+    
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <!-- タブレット最適化表示用 -->
+    <script>
+        var d=window.document;
+        if(
+            navigator.userAgent.indexOf('iPhone')>-1||navigator.userAgent.indexOf('iPod')>0||navigator.userAgent.indexOf('Android')>0
+        )
+            d.write('<meta id="vp" name="viewport" content="width=device-width; initial-scale=1;">');
+        else if(
+            navigator.userAgent.indexOf('iPad')>-1||navigator.userAgent.indexOf('macintosh')>-1 && 'ontouchend' in document||navigator.userAgent.indexOf('Android')>0&&navigator.userAgent.indexOf('Mobile')==-1
+        )
+            d.write('<meta name="viewport" content="width=1300, maximum-scale=1, user-scalable=yes"><link rel="stylesheet" type="text/css" href="../common/css/ipad.css" media="all">');
+    </script>
+    
+    <script>
+    if (screen.width > 767){
+        //var Android = document.getElementById('vp');
+        //Android.setAttribute('content','width=1200');
+    
+        var metalist = document.getElementsByTagName('meta');
+        for(var i = 0; i < metalist.length; i++) {
+            var name = metalist[i].getAttribute('name');
+            if(name && name.toLowerCase() === 'viewport') {
+                metalist[i].setAttribute('content', 'width=1300');
+                break;
+            }
+        }
+    }
+    </script>
+
+    <!--スクロールバー-->
+    <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css"/>
+    <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
+    <noscript>
+        <style>
+        .simplebar-content-wrapper {
+            scrollbar-width: auto;
+            -ms-overflow-style: auto;
+        }
+    
+        .simplebar-content-wrapper::-webkit-scrollbar,
+        .simplebar-hide-scrollbar::-webkit-scrollbar {
+            display: initial;
+            width: initial;
+            height: initial;
+        }
+        </style>
+    </noscript>
+</head>
+<body>
+    
+
+    <!--#include file="./common/include/header.php" -->
+
+
+    <script>//bodyに各ページ固有のclassを設定
+        document.addEventListener('DOMContentLoaded', function () {
+            document.body.classList.add('page-strategy', 'underPage');
+        });
+    </script>
+
+    <div class="contentWrapper">
+
+        <section class="" id="pageHeadSec">
+            <div class="contBlock headerBlock">
+                <div class="innerWrapper">
+                    <h2 class="secHeader">
+                        <p class="sub">相続税対策</p>
+                        <p class="main pict" id="pageTitleImage">
+                            <img src="common/images/title-strategy.svg" alt="STRATEGY" width="218.86"></p>
+                    </h2>
+                </div><!--innerWrapper-->
+            </div><!--contBlock-->
+            <div class="contBlock leadBlock">
+                <p class="pict per60">
+                    <img src="images/strategy/illust-strategy-mail.svg" alt="相続税評価60%" width="860" height="499.8">
+                </p>
+                <div class="contBox">
+                    <h2 class="header">
+                        <p class="sub">業界のプロがこっそり買っている。<br class="spOnly">リピーター率73.3%</p>
+                        <p class="main" id="pageTitleImage">資産をつくり、大幅に節税する</p>
+                    </h2>
+                    <p class="text">
+                        定期借地権物件は、土地を所有しない分、相続税評価額が約60％オフに。<br>
+                        土地の評価が圧縮されることで、相続税を大きく節税できます。<br>
+                        さらに、高利回りの賃貸収益も期待できるため、節税と資産形成の両立が可能。<br>
+                        業界のプロもこっそり買っている、新しい不動産投資の選択肢です。
+                    </p>
+                </div>
+                <div class="contBox sectionalBox">
+                    <div class="boxHeader">
+                        <p class="text">SONAEは、相続税評価を<span class="orange">最大60%オフ。</span><br class="pcOnly">
+                            しかも収入まで増やす画期的な投資術です</p>
+                    </div>
+                </div><!--sectionalBox-->
+            </div><!--leadBlockBlock-->
+        </section><!--pageHeadSec-->
+
+        <section class="contSec" id="prologueSec">
+            <div class="whiteBlock">
+                <div class="headerBox">
+                    <div class="warn">
+                        <p>現預金のままにしておくのはもったいない！</p>
+                    </div>
+                    <div class="header">
+                        資産のかたちで、相続の負担は大きく変わります
+                    </div>
+                    <p class="text">
+                        現預金は相続時に100％課税対象となり、最大55％の税負担が発生することも。<br>
+                        株や土地付き不動産も評価が高く、管理や処分に手間がかかるため、<br>
+                        次世代への負担になりかねません。
+                    </p>
+                    <div class="flexBox">
+                        <div class="left inBox">
+                            <p class="pict"><img src="images/strategy/prologue-illust-1.png" alt="よかれと思って残したのに..."></p>
+                            <p class="jitsuha">→ 現金は<span class="orange">100%</span>課税</p>
+                        </div>
+                        <div class="right inBox">
+                            <p class="pict"><img src="images/strategy/prologue-illust-2.png" alt="景気も不安定だし不安ね。"></p>
+                            <p class="jitsuha">→ 株や不動産も<span class="orange">先行きが不透明</span></p>
+                        </div>
+                    </div>
+                </div><!--headerBox-->
+                
+                <div class="meritBlock">
+                    <div class="contBox">
+                        <div class="boxHeader">
+                            <p class="mark"><img src="images/strategy/mark-merit-1.svg" alt="メリットその1"></p>
+                            <div class="text">
+                                土地を持たないSONAEなら、<span class="upperSize underMarker">大幅節税！</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contBox conbi">
+                        <div class="textBox">
+                            <p class="text">
+                                SONAEは、建物だけを購入する不動産投資。定期借地の活用により、土地付き物件と比べて相続税評価額が約60％オフ。高い節税効果と低コストを両立します。
+                            </p>
+                            <div class="feturesMidashiBox unBalance">
+                                <p class="mark pict"><img src="images/features/features-midashi-mark.svg" alt=""></p>
+                                <div class="text">
+                                    土地付き賃貸物件よりも優れた節税効果を発揮する画期的な不動産投資です。
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pictBox">
+                            <p class="pict">
+                                <img src="images/strategy/prologue-illust-3.png" width="437" height="246" alt="">
+                            </p>
+                            <p class="footnote">
+                                限られた投資で、大幅な節税効果と毎年の家賃収入を確保
+                            </p>
+                        </div>
+                    </div><!--conbi-->
+                </div><!--メリットその1-->
+
+                <div class="meritBlock">
+                    <div class="contBox">
+                        <div class="boxHeader">
+                            <p class="mark"><img src="images/strategy/mark-merit-2.svg" alt="メリットその2"></p>
+                            <div class="text">
+                                土地を持たないSONAEなら、<span class="upperSize underMarker">高収益！</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contBox conbi">
+                        <div class="textBox">
+                            <p class="text">
+                                合理的な投資効果で利回り10％以上を実現する『SONAE』なら、現金5,000万円の不動産投資で年間約500万円の不動産収入を得ることができます。
+                            </p>
+                            <div class="feturesMidashiBox unBalance">
+                                <p class="mark pict"><img src="images/features/features-midashi-mark.svg" alt=""></p>
+                                <div class="text">
+                                    数年の収益で相続税支払い分をカバー。節税と利回りを高次元で両立するかしこい投資です。
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pictBox">
+                            <p class="pict">
+                                <img src="images/strategy/prologue-illust-4.png" width="445" height="207" alt="">
+                            </p>
+                        </div>
+                    </div><!--conbi-->
+                </div><!--メリットその2-->
+                
+                <div class="contBox tsumari">
+                    <div class="copy">
+                        SONAEは、<br class="spOnly"><span class="strong"><font class="underMarker">ローリスク、<br class="spOnly">ミドルリターン</font>の<br>画期的な資産運用</span>です。
+                    </div>
+                    <p class="text">
+                        土地を所有しないから評価額は大幅にダウン。しかも借地権の評価額は年々減少します。
+                    </p>
+                </div>
+            </div><!--whiteBlock-->
+
+            <a href="/sonae/inquiry/contact.php" class="sozokuInquiryBtn">
+                相続税評価 & 収支シミュレーションの<br>お申込みはこちらから
+            </a>
+            
+            <div class="contBox catch">
+                <div class="header">
+                    <p class="logo pict namariBGlogo">
+                        <img src="common/images/logo-white.svg" alt="SONAE">
+                    </p>
+                    は、<br class="spOnly">自己資金がある方にこそ、選ばれる投資
+                </div>
+                <p class="text">
+                    SONAEは<span class="bold">土地を所有しない設計上、銀行融資が利用しづらい</span>ケースがあります。<br>
+                    そのため、一定の現金資産や担保資産をお持ちの方に適した投資モデルです。<br>
+                    大幅な節税効果と高い収益性（キャッシュ）を評価され、業界のプロの方にも選ばれています。
+                </p>
+            </div>
+        </section><!--prologueSec-->
+
+        <section class="contSec" id="meritSec">
+            <div class="secHeader">
+                <p class="illust pict">
+                    <img src="images/home/yokin-illust-good.svg" alt="Good!">
+                </p>
+                <p class="atama">土地を<span class="ten">あえて</span>持たない</p>
+                <p class="namariBGlogo pict"><img src="common/images/logo-white.svg" alt="SONAE"></p>
+                <p class="upperSize">メリット<span class="smaller">を</span>詳しく解説！</p>
+                
+            </div>
+
+            <!--point1-->
+            <div class="contBlock whiteBlock" id="point1">
+                <h3 class="blockHeader">
+                    <div class="atama">
+                        <p>解説</p><p class="passion hoso">1</p>
+                        <img src="images/strategy/point-marker-deco.svg">
+                    </div>
+                    <p class="text"><font class="underMarker">余分な出費を減らし</font>相続税評価を大きく下げる</p>
+                </h3>
+
+                <div class="contBox">
+                    <p class="text">
+                        相続税対策に従来のように土地と建物を購入する必要はありません。<br>
+                        SONAEは定期借地を活用することで、土地の取得や所有に伴う負担を減らしつつ、相続税評価を最大60%オフまで可能。<br>
+                        10％以上の高利回りに加え、相続税対策としても即時に効果を発揮する新しい相続税対策として注目されています。
+                    </p>
+                </div>
+
+                <div class="contBox sageBox">
+                    <div class="boxHeader">相続税評価を下げる一覧</div>
+                    <div class="graphCase">
+                        <div class="flexBox cardList">
+                            <div class="card">
+                                <p class="pict">
+                                    <img src="images/strategy/geraku-illist-1.png" alt="現金">
+                                </p>
+                                <p class="title">現金</p>
+                                <div class="cont">
+                                    <p class="header">減額なし</p>
+                                    <div class="num">
+                                        <span class="passion">0</span>%
+                                    </div>
+                                </div>
+                            </div><!--card-->
+                            <div class="card">
+                                <p class="pict">
+                                    <img src="images/strategy/geraku-illist-2.png" alt="上場株">
+                                </p>
+                                <p class="title">上場株</p>
+                                <div class="cont">
+                                    <p class="header">減額なし</p>
+                                    <div class="num">
+                                        <span class="passion">0</span>%
+                                    </div>
+                                </div>
+                            </div><!--card-->
+                            <div class="card">
+                                <p class="pict">
+                                    <img src="images/strategy/geraku-illist-3.png" alt="土地">
+                                </p>
+                                <p class="title">土地</p>
+                                <div class="cont">
+                                    <p class="header">公示価格の</p>
+                                    <div class="num">
+                                        <span class="passion">20</span>%<br><span class="smaller">オフ</span> 
+                                    </div>
+                                </div>
+                            </div><!--card-->
+                            <div class="card build">
+                                <p class="pict">
+                                    <img src="images/strategy/geraku-illist-4.png" alt="一棟売の賃貸">
+                                </p>
+                                <p class="title">一棟売の賃貸<span>（土地 + 建物）</span></p>
+                                <div class="cont">
+                                    <p class="header">現金に比べ</p>
+                                    <div class="num">
+                                        <span class="passion">35</span>%〜<br>
+                                        <span class="passion">40</span>%<br>
+                                        <span class="smaller">オフ</span> 
+                                    </div>
+                                </div>
+                            </div><!--card-->
+                            <div class="card sonaeCard">
+                                <p class="pict">
+                                    <img src="images/strategy/geraku-illist-5.png" alt="SONAE">
+                                </p>
+                                <p class="namariBGlogo title"><img src="common/images/logo-white.svg" alt="SONAE"></p>
+                                <div class="cont">
+                                    <p class="header">現金に比べ</p>
+                                    <div class="num">
+                                        <span class="passion">60</span>%<br><span class="smaller">オフ</span> 
+                                    </div>
+                                </div>
+                            </div><!--card-->
+                        </div>
+                    </div><!--graphCase-->
+                    <p class="copy">
+                        <span class="orange strong">相続税評価が60%オフに！</span>もう相続税対策に土地を買う必要ありません
+                    </p>
+                </div><!--contBox-->
+                
+                <div class="contBox conbi exception">
+                    <div class="textBox">
+                        <p class="boxHeader">
+                            相続税対策は、相続税評価額の引き下げが大きなカギ
+                        </p>
+                        <p class="text">
+                            現金だと100％課税となりますので相続税の節税効果はまったくありません。しかし土地を持たない不動産投資SONAEなら、<br>
+                            現金と比べて相続税評価が40～45％に削減されますので相続税も大幅に減額することができます。
+                        </p>
+                    </div>
+                </div>
+                <div class="contBox sozokuzeiBox">
+                    <p class="cap">■相続税額の比較</p>
+                    <div class="graphCase">
+                        <p class="pict">
+                            <img src="images/strategy/geraku-graph.svg" alt="相続税額の比較">
+                        </p>
+                    </div><!--graphCase-->
+                    <p class="footnote">（※相続人1人、基礎控除後とする）</p>
+
+
+                </div><!--sozokuzeiBox-->
+            </div><!--whiteBlock-->
+
+            <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                // ページ内のすべての .graphCase 要素を取得
+                const graphCaseElements = document.querySelectorAll('.graphCase');
+
+                // 各 .graphCase 要素に対して SimpleBar を初期化
+                graphCaseElements.forEach(function(element) {
+                    const simpleBar = new SimpleBar(element, {
+                        autoHide: false,
+                        forceVisible: 'x', // ここは 'x' または 'y' に特定の軸を指定するか、true で両方にする
+                        // forceVisible: true // 両方の軸のツマミを常に表示する場合
+                    });
+                });
+            });
+            </script>
+
+
+            <a href="/sonae/inquiry/contact.php" class="sozokuInquiryBtn">
+                相続税評価 & 収支シミュレーションの<br>お申込みはこちらから
+            </a>
+
+            <!--point2-->
+            <div class="contBlock whiteBlock" id="point2">
+                <h3 class="blockHeader">
+                    <div class="atama">
+                        <p>解説</p><p class="passion hoso">2</p>
+                        <img src="images/strategy/point-marker-deco.svg">
+                    </div>
+                    <p class="text">土地の<font class="underMarker">固定資産税や不動産取得税は不要</font></p>
+                </h3>
+
+                <div class="contBox">
+                    <p class="text">
+                        土地付き不動産では固定資産税や不動産取得税が発生しますが、SONAEは土地を持たない定期借地型のため、これらの税負担が不要です。<br>
+                        さらに地代は経費計上が可能で、税金・コスト両面でキャッシュフローにゆとりが生まれます。
+                    </p>
+                </div>
+
+                <div class="contBox sayuu">
+                    <div class="left negaCase">
+                        <div class="header">
+                            <div class="boxHeader">
+                                <p class="text">⼟地付き不動産投資<span class="smaller">の場合</span></p>
+                            </div>
+                        </div>
+                        
+                        <p class="pict illust">
+                            <img src="images/strategy/kaisetu2-illust1.svg" alt="" width="366" height="202">
+                        </p>
+                    </div><!--left-->
+
+                    <div class="right posiCase">
+                        <div class="header">
+                            <div class="boxHeader">
+                                <p class="text">SONAE<span class="smaller">の場合</span></p>
+                            </div>
+                        </div>
+                        
+                        <p class="pict illust">
+                            <img src="images/strategy/kaisetu2-illust2.svg" alt="" width="430" height="250">
+                        </p>
+                    </div><!--right-->
+                </div><!--sayuu-->
+                <p class="copy">
+                    土地を所有しないから<span class="orange strong">評価額は大幅にダウン。</span><br class="pcOnly">
+                    しかも借地権の評価額は年々減少します。
+                </p>
+
+                <div class="contBox graphBox">
+                    <p class="cap">■一般的な不動産投資との税負担の比較</p>
+                    <div class="graphCase">
+                        <p class="pict">
+                            <img src="images/strategy/kaisetu2-graph.png" alt="" width="357" height="492">
+                        </p>
+                    </div>
+                    <p class="copy">
+                         土地を購入しないため、支払う税金が抑えられ、<span class="orange">キャッシュフローに余裕が生まれます。</span>
+                    </p>
+                </div>
+            </div><!--whiteBlock-->
+
+            <a href="/sonae/inquiry/contact.php" class="sozokuInquiryBtn">
+                相続税評価 & 収支シミュレーションの<br>お申込みはこちらから
+            </a>
+
+            <!--point3-->
+            <div class="contBlock whiteBlock" id="point3">
+                <h3 class="blockHeader">
+                    <div class="atama">
+                        <p>解説</p><p class="passion hoso">3</p>
+                        <img src="images/strategy/point-marker-deco.svg">
+                    </div>
+                    <p class="text">数年で<font class="underMarker">相続税支払い分の利益を確保</font></p>
+                </h3>
+
+                <div class="contBox">
+                    <p class="text">
+                        SONAEは、利回り10％以上を実現できる設計で、現金5,000万円の投資なら年間約500万円の収入が見込めます。<br>
+                        相続発生時にもこの不動産収入を納税資金に充てることで、実質的な資産を一切減らすことなく相続税対策が可能になる画期的な不動産投資です。
+                    </p>
+                </div>
+
+                <div class="contBox hikaku">
+                    <p class="cap">■預金とのシミュレーション比較</p>
+                    <p class="pict" id="simuHikaku">
+                        <img src="images/strategy/kaisetu3-graph.png" alt="" width="805" height="1053">
+                    </p>
+
+                    <div class="pict spOnly" id="zoomingBtn">
+                        <button onclick="document.body.classList.toggle('inview');">
+                            <img src="images/strategy/icon-zooming.svg" alt="画像を拡大">
+                        </button>
+                    </div>
+                </div>
+                <div class="copy">
+                    <span class="orange">初動に現金が必要</span>ですが、数年で納税額を取り戻しさらに資産を増やすことが可能。
+                </div>
+
+            </div><!--whiteBlock-->
+        </section><!--simuSec-->
+
+        <a href="property.html" class="btn bukken">
+            <p class="text">物件情報はこちら</p>
+        </a>
+    </div><!--contentWrapper-->
+    
+    <section class="bottomSec">
+        <a href="/sonae/" class="modoru">TOPページに戻る</a>
+    </section>
+
+    <!--#include file="./common/include/footer.php" -->
+
+
+    <div id="yokinhikakuImg" class="spOnly">
+        <p class="closeBtn">
+            <button onclick="document.body.classList.remove('inview');">
+                <img src="common/images/closeBtn.svg" alt="閉じる">
+            </button>
+        </p>
+        <div id="kakudaiGraph">
+            <img src="images/strategy/kaisetu3-graph.png" alt="">
+        </div>  
+        <p id="anmaku"></p>
+    </div>
+    
+
+    <script>
+        const anmaku = document.getElementById('anmaku');
+
+        anmaku.addEventListener('click',()=>{
+            document.body.classList.toggle('inview');
+        });
+    </script>
+
+    <!-- <script>//画像拡大
+        // 要素の取得
+        const element = document.getElementById('kakudaiGraph');
+
+        // ピンチアウトのジェスチャーを検出
+        let startDistance = 0;
+        let currentDistance = 0;
+        let initialZoom = 1;
+        let currentZoom = 1;
+
+        element.addEventListener('touchstart', function(event) {
+        // 2本指でタッチされている場合のみ処理
+        if (event.touches.length === 2) {
+            startDistance = getDistance(event.touches[0], event.touches[1]);
+            initialZoom = currentZoom;
+        }
+        }, false);
+
+        element.addEventListener('touchmove', function(event) {
+        // 2本指でタッチされている場合のみ処理
+        if (event.touches.length === 2) {
+            currentDistance = getDistance(event.touches[0], event.touches[1]);
+            currentZoom = initialZoom * (currentDistance / startDistance);
+            setZoom(currentZoom);
+        }
+        }, false);
+
+        // 2点間の距離を計算する関数
+        function getDistance(touch1, touch2) {
+        const dx = touch1.clientX - touch2.clientX;
+        const dy = touch1.clientY - touch2.clientY;
+        return Math.sqrt(dx * dx + dy * dy);
+        }
+
+        // 要素の拡大率を設定する関数
+        function setZoom(zoom) {
+        element.style.zoom = zoom;
+        }
+    </script> -->
+
+</body>
+</html>

@@ -1,0 +1,11 @@
+<Files ~ "^\.(htaccess|htpasswd)$">
+deny from all
+</Files>
+AuthUserFile /var/www/html/toshinjyuken.co.jp/sonae/summary/.htpasswd
+AuthGroupFile /dev/null
+AuthName "Input ID and Password."
+AuthType Basic
+order deny,allow
+<Files ~ (ownership018.html|ownership017.html|ownership016.html|ownership015.html|ownership014.html|ownership013.html)>
+require valid-user
+</Files>

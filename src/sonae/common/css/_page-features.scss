@@ -1,0 +1,1014 @@
+@use 'common' as common;
+
+.page-features{
+
+    .karashi{
+        color:var(--karashiText);
+    }
+    .text{
+        line-height: 1.75; 
+    }
+    .orange{
+        font-weight:900; color:#F38900;
+    }
+    .footnote{
+        font-size:81.5%; margin-top: 1.75em;
+    }
+
+    @media screen and (min-width:768px){
+        .secHeader{
+            margin-bottom: 20px;
+
+            .main{
+                height:45.3px; text-align: center;
+
+                img{ width:auto; height:100%; }
+            }
+        }
+        .coverPic{
+            width:100%; height:100%; object-fit: cover; object-position:center;
+        }
+        .central-pc{
+            display:flex; align-items: center; align-content: center; justify-content: center;
+        }
+
+        .text{
+            font-size:19px; font-weight:200; 
+        }
+        .cap{
+            font-size:15px;
+        }
+        .contentWrapper{
+            width:clamp(1240px, 100%, 1440px); margin:0 auto; 
+            padding-left: 20px; padding-right: 20px;
+
+            .contSec{
+                padding:0;
+            }
+        }
+        #pageHeadSec{
+            padding-bottom:111px;
+
+            
+
+            .leadBlock{
+                .per97{
+                    width:100%; margin:100px auto;  
+                    display:flex; align-items: center; justify-content: center; height:465px;
+
+                    img{
+                        width:860px; height:auto;
+                    }
+                }
+
+                .contBox{
+                    width:fit-content; margin:0 auto; text-align: center;
+
+                    .header{
+                        .sub{ font-size:28px; font-weight: 900; color:var(--namari); margin-bottom: 10px; }
+                       .main{color:#707070; margin-bottom: 42px; font-size:41px;}
+                    }
+                    .text{
+                        font-size:19px; font-weight:200; line-height: 2;
+                    }
+                }
+            }/*leadBlock*/
+            .sectionalBox.contBox{
+                margin-top: 106px; position:relative; width:1120px;
+
+                .boxHeader{
+                    font-size:31px; font-weight:600; margin-bottom: 25px;
+
+                    .text{
+                        font-weight: 600; font-size:31px; line-height: 1.5;
+                    }
+                    .orange{
+                        font-weight:900; color:#F38900;
+                    }
+                } 
+                .orange-maru{
+                    width:275px; position:absolute; top:-22px; right:-128px;
+                }
+            }
+        }/*pageHeadSec*/
+
+        #maisonetteSec{
+            margin-bottom: 160px;
+
+            .secHeader{
+                text-align: center; font-size:31px;
+
+                .cap{
+                    font-size:16px; font-weight:500;
+                }
+            }
+
+            .contBlock{
+                width:100%;
+
+                &.whiteBlock{
+                    padding:66px 86px; border-radius:30px; background:#fff;
+                }
+            }/*contBlock*/
+
+            .whiteBlock{
+                margin-bottom: 50px;
+
+                .blockHeader{
+                    margin-bottom: 55px; display:flex; align-items: center;
+
+                    .atama{width:177px; margin-right: 15px;}
+                    .text{
+                        color:#707070; font-weight:700; font-size:35px; letter-spacing: .075em;
+                    }
+                }/*blockHeader*/
+
+                .conbi{
+                    display:flex; justify-content: space-between; margin-bottom: 105px;
+
+                    .textBox{
+                        width:607px;
+                        .boxHeader{
+                            font-size:30px; font-weight:700; color:var(--namari);
+                            line-height: 1.4; margin-bottom: 20px;
+                        }
+                    }
+                    .pictBox{
+                        width:522px; 
+                        .cap{
+                            margin-bottom: 12px; font-size:16px;
+                        }
+                    }
+                }
+
+                .sayuu{
+                    display:flex; justify-content: center; margin-bottom: 50px;
+
+                    & > .left,
+                    & > .right{width:470px; margin:0 37px;}
+
+                    .boxHeader{
+                        margin-bottom: 25px;  height:69px;
+                        display:flex; align-items: center; justify-content: center;
+
+                        .text{
+                            font-weight:600; font-size:28px; letter-spacing: .05em;
+                        }
+                        span{ color:inherit; font-size:75%; }
+                    }
+                    .boxSubHeader{
+                        color:var(--namariDeep); font-weight:600; width:fit-content;
+                        margin:0 auto;
+                    }
+
+                }/*sayuu*/
+
+                .feturesMidashiBox{
+                    display:flex; justify-content: space-between;
+                    background:#F0EFEC; padding:20px; margin-top: 35px;
+
+                    &:has(.strong){
+                        align-items: center;  padding-bottom:15px;
+
+                        .text{ padding-bottom:6px; }
+                    }
+
+                    .mark{
+                        width:29px;
+                    }
+                    .text{
+                        width:calc(100% - 40px); font-size:20px; font-weight:600;
+
+                        & *{
+                            font-size:inherit; font-weight:inherit;
+                        }
+                        .orange{
+                            font-size:25px;
+
+                            .strong{
+                                font-size:42px; line-height: 0;
+                            }
+                        }
+                    }
+                }
+
+                &#point1{
+                    margin-top: 60px;
+
+                    .conbi{
+                        .pictBox{
+                            width:483px;
+                        }
+
+                        &.antei{
+                            .pictBox{
+                                display:flex; flex-wrap:wrap; justify-content: space-between;
+
+                                .cap{
+                                    margin-bottom: 30px;
+                                }
+                                .pict{
+                                    &.gakusei{width:240px;}
+                                    &.family{width:202px;}
+                                }
+                            }
+                        }/*antei*/
+                    }
+                    .gerakuBox{
+                        width:965px; margin:0 auto 92px;
+
+                        .graphCase{
+                            margin-bottom: 32px;
+                        }
+                        .copy{
+                            font-size:20px; text-align: center; font-weight:900;
+
+                            .orange{
+                                font-size:28px; color:#F38900;
+                            }
+                        }
+                    }/*gerakuBox*/
+
+                    .hasen{
+                        display:grid;
+                        grid-template-rows: 1fr;
+                        grid-template-columns: 1fr;
+
+                        .left{
+                            width:570px; 
+
+                            &.cont{
+                                grid-row:1; grid-column:1;
+                            }
+                            &.ex{
+                                grid-row:2; grid-column:1;
+                            }
+                        }
+                        .right{
+                            width:417px; grid-row:1/3; grid-column:2;
+
+                            .cap{
+                                margin-bottom: 20px;
+                            }
+                            .pict{
+                                width:367px; margin-left: auto;
+                            }
+                        }
+                    }
+                }/*point1*/
+                &#point2{
+                    .sayuu{
+                        justify-content: center; margin:65px 0 94px;
+
+                        .cap{
+                            margin-bottom: 30px;
+                        }
+                        .left{
+                            width:412px; margin-right: 120px;
+
+                            .pict{
+                                width:361px; margin-left:auto;
+                            }
+                        }
+                        .right{
+                            width:490px;
+
+                            .troubleCont{
+                                background:#F0EFEC; padding:25px 15px 15px; border-radius:5px;
+
+                                .topic{
+                                    font-size:19px; margin-bottom: 5px;
+                                    display:flex; align-items: flex-end; justify-content: space-between;
+
+                                    .cont{
+                                        padding-bottom:2px; font-weight:600;
+
+                                        .upperSize{
+                                            font-size:125%;
+                                        }
+                                    }
+                                    .per{
+                                        font-family: 'Passion One', 'Noto Sans JP', sans-serif;
+                                        text-align: right; font-size:24px;
+
+                                        & *{
+                                            font-family: 'Passion One', 'Noto Sans JP', sans-serif;
+                                            line-height: .5;
+                                        }
+                                        .strong{
+                                            font-size:225%;
+                                        }
+                                        .upperSize{
+                                            font-size:140%;
+                                        }
+                                    }
+                                }
+
+                                & + .footnote{
+                                    margin-top: 10px;
+                                }
+                            }
+                        }
+                    }
+                    .conbi{
+                        .marB30{
+                            margin-bottom: 30px;
+                        }
+
+                        &:last-of-type{
+                            margin-bottom: 0;
+                        }
+                    }
+                }/*point2*/
+                &#point3{
+                    .jisseki{
+                        margin-bottom: 85px;
+
+                        .flexBox{
+                            display: flex; justify-content: center; margin:80px 0 55px;
+
+                            .pict{
+                                width:537px; margin:0 15px;
+                            }
+                        }
+                        .no1Box{
+                            width:716px; margin:0 auto;
+
+                            .pict{ margin-bottom: 5px; }
+                            .text{
+                                text-align: center; color:var(--namari); font-size:20px; font-weight:400;
+                            }
+                        }
+                    }
+                    .conbi{
+                        .pictBox{
+                            .pict{
+                                background:#414141; margin-bottom: 10px;
+                            }
+                        }
+                    }
+                }/*point3*/
+
+                &#point4{
+                    .support{
+                        width:1093px; margin:0 auto 122px;
+
+                        .header{
+                            background:var(--namari); height:73px; padding:0 27px; margin-bottom: 30px;
+                            display: flex; align-items: center;
+
+                            .title{
+                                font-size:28px; font-weight:900; color:#fff;
+
+                                &::before{
+                                    content:''; width:20px; height:23px; margin-right:18px; display:inline-block;
+                                    clip-path: polygon(0 0, 100% 50%, 0 100%); background:#E8DD58;
+                                }
+                            }
+                        }
+                        .supportList{
+                            display:flex; flex-wrap:wrap; 
+                            .topic{
+                                width:258px; height:120px; background:#F0EFEC;
+                                display:flex; align-items: center; justify-content: center;
+                                color:var(--namari); font-weight:600; font-size:22px; text-align: center;
+                                line-height:1.2; margin:0 20px 20px 0; 
+
+                                &:nth-of-type(4n){
+                                    margin-right: 0;
+                                }
+                                &:nth-last-of-type(-n+4){
+                                    margin-bottom: 0;
+                                }
+                            }
+                        }
+                    }
+                    .conbi{
+                        margin-bottom: 54px;
+
+                        &:first-of-type{ margin-bottom: 85px;}
+                    }
+                    .conbi:last-of-type{ margin-bottom: 0; }
+                }/*point4*/
+                &#point5{
+                    .feturesMidashiBox{
+                        .text{ line-height: 1.4; }
+                    }
+                    .bunseki{
+                        width:868px; margin:0 auto 90px;
+                        .cap{margin-bottom: 30px;}
+                    }
+                    .analysisList{
+                        display:flex; justify-content: space-between;
+
+                        .topic{
+                            align-self: flex-start; padding-left: 16px;
+                            border-left:1px solid var(--namari);
+
+                            .header{
+                                font-size:27px; font-weight:700; color:var(--namari); margin-bottom: 15px;
+                            }
+                            .cont{
+                                font-size:15px; font-weight:500;
+                            }
+                        }
+                    }
+                    .conbi.exception{
+                        display:block; margin-bottom: 50px;
+
+                        .textBox{
+                            width:100%;
+                        }
+                    }
+                    .aidounyu{
+                        width:1034px; margin:0 auto;
+
+                        .cap{
+                            margin-bottom: 12px;
+                        }
+
+                        .jissekiList{
+                            border:1px solid var(--namari); padding:40px 50px; height:260px;
+                            display:flex; flex-wrap: wrap; flex-direction: column;
+
+                            .topic{
+                                display:flex; margin-bottom: 10px;
+
+                                &:nth-of-type(5n){
+                                    margin-bottom: 0;
+                                }
+
+                                p{
+                                    font-size:17px; font-weight:500; 
+                                }
+                                &::before{
+                                    content:''; display:inline-block; width:1em; height:1em;
+                                    background:var(--namari); margin-right: 5px;border-radius: 50%;
+                                    margin-top: .35em;
+                                }
+                            }
+                        }
+                    }
+                }/*point5*/
+            }/*whiteBlock*/
+        }/*maisonetteSec*/
+
+        .underMarker{
+            border-bottom:6px solid var(--yellowMarker); 
+        }
+        .hasen.contBox{
+            border:2px dashed var(--namari); border-radius: 10px; padding:33px; 
+            display:flex; justify-content: space-between;
+
+            .boxHeader{
+                color:var(--namari); font-weight:900; font-size:22px; display:flex; align-items: center;
+                margin-bottom: 18px;
+
+                &::before{
+                    content:''; display:inline-block;  width:32px; height:32px; margin-right:5px;
+                    background-image:url(../../images/return/marker-ex.svg);
+                    background-size:cover; background-repeat: no-repeat;
+                }
+            }
+
+            .hasenExbox{
+                background:#E9EEF7; border-radius: 5px; padding:22px; margin-top: 30px;
+                display:flex; 
+
+                .mark{ width:21px; margin-right: 10px; padding-top:5px}
+                .text{
+                    font-size:20px; font-weight:600; width:calc(100% - 31px);
+
+                    .orange{
+                        color:#F38900; font-weight:900;
+                    }
+                    .strong{
+                        font-size:40px; line-height: 0;
+                    }
+                }
+            }
+        }
+
+        a.bukken{
+            width:715px; height:124px; display:flex; align-items: center; justify-content: center;
+            background:#414141; border-radius: 6px; margin:0 auto;
+
+            .text{
+                color:#fff; font-weight:600; position:relative; font-size:26px; margin:0 17px;
+            }
+            &::before,
+            &::after{
+                content:''; display:inline-block; width:47px; height:26px;
+                background-image:url(../images/triple_arrow.svg); background-size:cover;
+            }
+            &::after{ transform: rotate(180deg); }
+        }
+    }/* PC */
+        
+
+
+
+
+
+    @media screen and (max-width:767px){
+        .secHeader{
+            margin-bottom: 7.46vw;
+
+            .main{
+                height:8.346vw; width:auto; text-align: center;
+
+                img{ height:100%; width:auto; }
+            }
+        }
+        .coverPic-sp{
+            width:100%; height:100%; object-fit: cover; object-position:center;
+        }
+        .central-sp{
+            display:flex; align-items: center; align-content: center; justify-content: center;
+        }
+
+        .cap{
+            font-size:4vw;
+        }
+
+        .contentWrapper{
+            padding:0 6.4vw;
+        }
+
+        #pageHeadSec{
+            padding-bottom:10.66vw;
+
+            .headerBlock{
+                .secHeader{
+                    .main{
+                        width:36.896vw;
+                    }
+                }/*secHeader*/
+            }/*headerBlock*/
+
+            .leadBlock{
+                position:relative; width:100vw; top:0; left:-6.4vw; padding-top:65vw;
+                overflow: hidden;
+
+                .per97{
+                    position:absolute; top:0; left:50%; transform: translateX(-48%);
+                    width:98vw; 
+                    
+                    img{
+                        height:auto;
+                    }
+                }/*per97*/
+                .contBox{
+                    padding:0 6.4vw;
+
+                    .header{
+                        margin-bottom: 6.66vw;
+
+                        .sub{
+                            font-size:5.06vw; color:var(--namari); text-align: center; margin-bottom: 12px; letter-spacing: .05em;
+                        } 
+                        .main{
+                            font-size:8.533vw; line-height: 1.35; color:#707070;
+                        }
+                    }
+                }
+            }
+            .sectionalBox{
+                margin:13.3vw 0 3.73vw;
+
+                .boxHeader{
+                    display:flex; justify-content: space-between; align-items: center;
+
+                    .text{
+                        font-size:5.3vw; font-weight: 600; line-height: 1.4;
+                    }
+                    .orange-maru{
+                        width:40.8vw;
+                    }
+                }
+            }/*sectionalBox*/
+        }/*pageHeadSec*/
+
+        .text{
+            font-size:4.53vw; font-weight:200; line-height: 1.75;
+        }
+        .hasen{
+            .text{
+                font-size:4vw;
+            }
+        }
+
+        #maisonetteSec{
+            margin-bottom: 16.26vw;
+
+            .secHeader{
+                text-align: center;
+            }
+
+            .contBlock{
+                width:100%;
+
+                &.whiteBlock{
+                    padding:6.2vw; border-radius:10px; background:#fff;
+                }
+            }/*contBlock*/
+
+            .whiteBlock{
+                margin-bottom: 8vw;
+
+                .blockHeader{
+                    margin-bottom: 5.3vw; 
+                    .atama{
+                        width:30.133vw; margin: 0 auto 20px;
+                        img{
+                            width:100%;
+                        }
+                    }
+                    .text{
+                        color:#707070; font-weight:700; font-size:6.4vw; letter-spacing: .025em;
+                    }
+                }/*blockHeader*/
+
+                .conbi{
+                    margin-bottom: 11.73vw;
+
+                    .textBox{
+                        margin-bottom: 10.93vw; width:100%;
+
+                        .boxHeader{
+                            font-size:5.86vw; font-weight:700; color:var(--namari);
+                            line-height: 1.4; margin-bottom: 3vw;
+                        }
+                    }
+                    .pictBox{
+                        width:100%;
+
+                        .cap{
+                            margin-bottom: 20px; font-size:15px;
+                        }
+                        .pict{
+                            width:100%;
+
+                            img{height:auto;}
+                        }
+                    }
+                }
+
+                .sayuu{
+                    margin-bottom: 50px;
+
+                    .left{
+                        margin-bottom: 10vw;
+                    }
+
+                    .boxHeader{
+                        margin-bottom: 25px;  height:69px;
+                        display:flex; align-items: center; justify-content: center;
+
+                        .text{
+                            font-weight:600; font-size:28px; letter-spacing: .05em;
+                        }
+                        span{ color:inherit; font-size:75%; }
+                    }
+                    .boxSubHeader{
+                        color:var(--namariDeep); font-weight:600; width:fit-content;
+                        margin:0 auto;
+                    }
+
+                }/*sayuu*/
+
+                .feturesMidashiBox{
+                    display:flex; justify-content: space-between;
+                    background:#F0EFEC; padding:3vw 3.73vw; margin-top: 6.4vw;
+
+                    // &:has(.strong){
+                    //     .text{ padding-bottom:2px; }
+                    // }
+
+                    .mark{
+                        width:5vw; padding-top:.25em;
+                    }
+                    .text{
+                        width:calc(100% - 6vw); font-size:4.8vw; font-weight:600;
+
+                        & *{
+                            font-size:inherit; font-weight:inherit;
+                        }
+                        .orange{
+                            font-size:110%;
+
+                            .strong{
+                                font-size:150%; line-height: 0; font-weight:900;
+                            }
+                        }
+                    }
+                }
+
+                &#point1{
+                    margin-top: 60px;
+
+                    .conbi{
+                        &.antei{
+                            .pictBox{
+                                display:flex; flex-wrap:wrap; justify-content: space-between;
+
+                                .cap{
+                                    margin-bottom: 30px;
+                                }
+                                .pict{
+                                    margin:0 auto;
+                                    &.gakusei{width:240px; margin-bottom: 10vw;}
+                                    &.family{width:202px;}
+                                }
+                            }
+                        }/*antei*/
+                    }
+                    .gerakuBox{
+                        width:100%; 
+
+                        .graphCase{
+                            padding-top:5vw;
+                            overflow-x: scroll; 
+                            overflow: auto;
+                            &::-webkit-scrollbar{
+                                height: 6px;
+                            }
+                            &::-webkit-scrollbar-track {
+                                background-color: #d0d0d0;  border-radius: 3px;
+                            }
+                            &::-webkit-scrollbar-thumb {
+                                background:#959595; border-radius: 3px;
+                            }
+                            padding-bottom:7vw; margin-bottom: 7vw;
+
+                            .pict{
+                                width:205vw;
+                            }
+                        }
+
+
+                        .copy{
+                            font-size:4.53vw; text-align: left; font-weight:900; line-height: 7vw;
+                            margin-bottom: 10vw;
+
+                            .orange{
+                                font-size:125%; color:#F38900;
+                            }
+                        }
+                    }/*gerakuBox*/
+
+                    .hasen{
+                        .right{
+                            .cap{
+                                margin-bottom: 8vw;;
+                            }
+                        }
+                    }/*hasen*/
+                }/*point1*/
+                &#point2{
+                    .sayuu{
+                        justify-content: center; margin:65px 0 94px;
+
+                        .cap{
+                            margin-bottom: 20px;
+                        }
+                        .right{
+                            .troubleCont{
+                                background:#F0EFEC; padding:12px 8px 8px; border-radius:5px;
+
+                                .topic{
+                                    font-size:3.2vw; margin-bottom: 1px;
+                                    display:flex; align-items: flex-end; justify-content: space-between;
+
+                                    .cont{
+                                        padding-bottom:2px; font-weight:600;
+
+                                        .upperSize{
+                                            font-size:125%;
+                                        }
+                                    }
+                                    .per{
+                                        font-family: 'Passion One', 'Noto Sans JP', sans-serif;
+                                        text-align: right; font-size:3.5vw;
+
+                                        & *{
+                                            font-family: 'Passion One', 'Noto Sans JP', sans-serif;
+                                            line-height: .5;
+                                        }
+                                        .strong{
+                                            font-size:225%;
+                                        }
+                                        .upperSize{
+                                            font-size:140%;
+                                        }
+                                    }
+                                }
+                            }
+                            .footnote{
+                                margin-top: 5px;
+                            }
+                        }
+                    }
+                    .conbi{
+                        .marB30{
+                            margin-bottom: 15px;
+                        }
+
+                        &:last-of-type{
+                            margin-bottom: 0;
+                        }
+                    }
+                }/*point2*/
+                &#point3{
+                    .jisseki{
+                        margin-bottom: 85px; margin-top: 10vw;
+
+                        .flexBox{
+                            display:block; margin-bottom: 10vw;
+                            .pict{
+                                width:100%; height:50.4vw;
+                                img{ height:100%; }
+
+                                &:first-of-type{
+                                    margin-bottom: 15px;
+                                }
+                            }
+                        }
+                        .no1Box{
+                            width:100%; margin:0 auto;
+
+                            .pict{ margin-bottom: 15px; }
+                            .text{
+                                color:var(--namari); font-size:4vw; font-weight:400;
+                            }
+                        }
+                    }
+                    .conbi{
+                        .pictBox{
+                            .pict{
+                                background:#414141; margin-bottom: 10px;
+                            }
+                        }
+                        &:last-of-type{
+                            margin-bottom: 0;
+
+                            .cap{
+                                font-size:3.2vw;
+                            }
+                        }
+                    }
+                }/*point3*/
+
+                &#point4{
+                    .support{
+                        width:100%; margin-bottom: 10vw;
+
+                        .header{
+                            background:var(--namari); padding:2vw 4vw; padding-left:10vw;
+                            margin-bottom: 10px; display: flex; align-items: center; position:relative;
+
+                            .title{
+                                font-size:4.53vw; font-weight:900; color:#fff;
+
+                                &::before{
+                                    position:absolute; top:4vw; left:4vw;
+                                    content:''; width:3.5vw; height:4.2vw; margin-right:18px; display:inline-block;
+                                    clip-path: polygon(0 0, 100% 50%, 0 100%); background:#E8DD58;
+                                }
+                            }
+                        }
+                        .supportList{
+                            display:flex; flex-wrap:wrap; 
+                            .topic{
+                                width:48%; height:22vw; background:#F0EFEC;
+                                display:flex; align-items: center; justify-content: center;
+                                color:var(--namari); font-weight:600; font-size:4vw; text-align: center;
+                                line-height:1.2; margin:0 8px 8px 0; 
+
+                                &:nth-of-type(2n){
+                                    margin-right: 0;
+                                }
+                                &:nth-last-of-type(-n+2){
+                                    margin-bottom: 0;
+                                }
+                            }
+                        }
+                    }
+                    .conbi:last-of-type{ margin-bottom: 0; }
+                }/*point4*/
+                &#point5{
+                    .feturesMidashiBox{
+                        .text{ line-height: 1.4; }
+                    }
+                    .bunseki{
+                        width:100%; margin-bottom:12vw;
+                        .cap{margin-bottom: 25px;}
+                    }
+                    .analysisList{
+                        width:75%; margin:0 auto;
+
+                        .topic{    
+                            padding-left: 16px; border-left:1px solid var(--namari); margin-bottom: 7vw;
+
+                            &:last-of-type{ margin-bottom: 0;}
+
+                            .header{
+                                font-size:6.13vw; font-weight:700; color:var(--namari); margin-bottom: 8px;
+                                line-height: 1;
+                            }
+                            .cont{
+                                font-size:4vw; font-weight:500;
+                            }
+                        }
+                    }
+                    .conbi.exception{
+                        display:block;
+
+                        .textBox{
+                            width:100%;
+                        }
+                    }
+                    .aidounyu{
+                        width:100%;
+
+                        .cap{
+                            margin-bottom: 10px;
+                        }
+
+                        .jissekiList{
+                            border:1px solid var(--namari); padding:5.3vw 6.66vw;
+                            
+                            .topic{
+                                display:flex; margin-bottom: 10px; 
+
+                                p{
+                                    font-size:4vw; font-weight:500; 
+                                    width:calc(100% - 1.5em);
+                                }
+                                &::before{
+                                    content:''; display:inline-block; width:1em; height:1em;
+                                    background:var(--namari); margin-right: 5px;border-radius: 50%;
+                                    margin-top: .35em;
+                                }
+                            }
+                        }
+                    }
+                }/*point5*/
+            }/*whiteBlock*/
+        }/*maisonetteSec*/
+
+        .underMarker{
+            border-bottom:3px solid var(--yellowMarker); 
+        }
+        .hasen.contBox{
+            border:2px dashed var(--namari); border-radius: 10px; padding:7.5vw 4.4vw; 
+
+            .boxHeader{
+                color:var(--namari); font-weight:900; font-size:4.53vw; display:flex; align-items: center;
+                margin-bottom: 14px; padding-left:7vw;
+        
+                background-image:url(../../images/return/marker-ex.svg);
+                background-size:6.4vw; background-repeat: no-repeat;
+                background-position:top 2px left;
+            }
+            .right{
+                margin-top: 9.3vw;
+            }
+            // .left .text{ font-size:4vw; font-weight:200; margin-bottom:13.3vw; }
+        }
+
+        .hasenExbox{
+            background:#E9EEF7; border-radius: 5px; padding:22px; margin-top: 30px;
+            display:flex; 
+
+            .mark{ width:4.53vw; height:4vw; margin-right: 6px; padding-top:2px}
+            .text{
+                font-size:4vw; font-weight:600 !important; width:calc(100% - 31px);
+                margin-bottom: 0;
+
+                .orange{
+                    color:#F38900; font-weight:900;
+                }
+                .strong{
+                    font-size:190%; line-height: 0;
+                }
+            }
+        }
+
+        a.bukken{
+            width:87.466vw; height:21.33vw; display:flex; align-items: center; justify-content: center;
+            background:#414141; border-radius: 6px; margin:0 auto;
+
+            .text{
+                color:#fff; font-weight:600; position:relative; font-size:4.27vw; margin:0 17px;
+            }
+            &::before,
+            &::after{
+                content:''; display:inline-block; width:8vw; height:4.46vw;
+                background-image:url(../images/triple_arrow.svg); background-size:cover;
+            }
+            &::after{ transform: rotate(180deg); }
+        }
+    }/* SP */
+
+}

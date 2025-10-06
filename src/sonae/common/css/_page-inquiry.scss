@@ -1,0 +1,515 @@
+@use 'common';
+
+.page-inquiry{
+
+    .cardColumn{
+        display:none;
+    }
+
+    .cardList{
+        .card{
+            .front{ display:none; }
+            .back{
+                transform:rotateY(0); background:#414141; border:none;
+                position:static; transform-style:flat; backface-visibility: hidden; transition:none;
+                background-image:none !important; border-radius: 10px;
+
+                &::after{
+                    display:none; content:none !important;
+                }
+                &::before{
+                    content:'SUMMARY'; font-family: 'Passion One', 'Noto Sans JP', sans-serif;
+                    color:#fff; font-size:35px; line-height: 1; margin-bottom: .25em; display:inline-block;
+                }
+            }/*back*/
+        }/*card*/
+    }/*cardList*/
+
+
+    &.sendendPage{
+        .contentWrapper{ flex-wrap: wrap; width:100%; }
+        header,
+        footer{
+            min-width: initial;  width:100%;
+        }
+
+        #sendEndMessage{
+            width:100%; margin:0 auto; height:min(200px, 35vh);
+            display:flex; align-items: center; justify-content: center; flex-wrap: wrap;
+    
+            .title{
+                font-size:160%; text-align: center; width:100%;
+            }
+        }
+    }/*sendendPage*/
+    
+    .g-recaptcha{
+        width:min(304px, 100%); margin:80px auto 0;
+    }
+
+    .formColumn .confirmCap{
+        margin-bottom: 1.5em; color:var(--usukuro);
+    }
+
+    @media screen and (min-width:768px){
+        header,
+        footer{ min-width: 1400px; }
+        .secHeader{
+            min-width:1400px;
+            .main{ width:183px; }
+        }
+        &.sendendPage{
+            header,
+            footer,
+            #pageHeadSec,
+            .secHeader,
+            .contentWrapper{ width:100%; min-width: 1400px; }
+        }
+        .coverPic{
+            width:100%; height:100%; object-fit: cover; object-position:center;
+        }
+        .central-pc{
+            display:flex; align-items: center; align-content: center; justify-content: center;
+        }
+
+        .contentWrapper{
+            width:1400px; margin:0 auto; display:flex; justify-content: center;
+            flex-wrap: wrap;
+
+            .cardColumn{
+                width:454px;
+                .card{
+                    transform:scale(1.33); transform-origin: 0 0; height:initial; height:auto;
+                }
+            }/*cardColumn*/
+            .formColumn{
+                width:977px;
+
+                .inputBlock{
+                    background:#fff; border-radius: 10px; padding:55px 60px; margin-bottom: 50px;
+                }
+                .agreeBlock{
+                    background:#fff; border-radius: 10px; padding:55px 130px;
+                }
+                .reCapcha{
+                    width: 304px; height: 78px; margin:83px auto 96px; background:#ccc;
+                }
+                .shisan{
+                    font-size:19px; text-align: center;
+                    text-decoration: underline;
+                }
+                .sendBtnBox{
+                    width:100%; margin-top:50px; display:flex; align-items: center; justify-content: center;
+
+                    .modoru{ margin-right:1em; }
+                }
+                #contact_submit,
+                input[type="submit"]{
+                    width:315px; height:70px; background:#BEBEBE; border:1px solid #414141; color:#fff; font-size:20px;
+                    display:flex; align-items: center; justify-content: center;
+                }
+            }/*formColumn*/
+        }/*contentWrapper*/
+
+        .formRow{
+            margin-bottom: 35px;
+            
+            .formTopicHeader{
+                font-weight:500; margin-bottom: 10px; line-height: 1;
+            }
+            &.need .formTopicHeader::after{
+                content:'必須'; display:inline-block; font-size:60%; color:#BD0307; line-height: 1.1;
+                margin-left:15px; border:1px solid #BD0307; padding:2px 5px 3px; border-radius: 3px;
+                transform:translateY(-1px);
+            }
+
+            .cont{
+                input[type="text"]{
+                    width:366px;
+
+                    &.short{
+                        width:230px;
+                    }
+                }
+                textarea{
+                    width:100%; height:330px;
+                }
+                .selectBoxCase{
+                    width:366px; height:58px; display:block;
+
+                    select{
+                        width:100%; height:100%; color:#414141; 
+                        &::picker(select){
+                            color:#414141;
+                        }
+                    }
+                }
+                .cap{ margin-top:8px; }
+            }/*cont*/
+
+            &#emailRow,
+            &#email-chkRow{
+                input{ width:100%;}
+            }
+            &#puposeRow{
+                .cont{
+                    flex-wrap:wrap; padding-top:25px;
+
+                    label{ margin-bottom: 25px; width:248px; }
+                }
+            }
+            .confirmPage .formRow#puposeRow{
+                    .cont{padding-top: 0;}
+                }
+        
+            
+            &#addressRow{
+                .cont:first-of-type{ margin-bottom: 20px; }
+                input{ width:100%; }
+                .zip{
+                    input{ width: 230px; margin-left:10px;}
+                }
+            }
+
+            &.agreeBlock{
+                .text{
+                    font-weight:200; font-size:19px;
+                }
+                .linkText{
+                    color:#00A7FF;
+                }
+                .agreechk{
+                    align-items: center; justify-content: center; margin-top: 30px;
+
+                    input[type="checkbox"]{ 
+                        position:relative; width:26px; height:26px; aspect-ratio: 1 / 1; border:1px solid #414141; margin-right:15px; border-radius: 0;
+                        -webkit-appearance: none;
+                        -moz-appearance: none;
+                        appearance: none;
+
+                        &:checked::before{
+                            content:''; position:absolute; top:42%; left:50%; width:15px; height:11px;
+                            clip-path:polygon(0 0, 2px 0, 2px 9px, 15px 9px, 15px 15px, 0 15px, ); background:#414141;
+                            transform: translate(-50%,-50%) rotate(-40deg); 
+                        }
+                    }
+                    .formTopicHeader{ margin-bottom: 0; font-size:19px; }
+                }
+            }
+        }/*formRow*/
+
+        &.confirmPage .formRow{
+            .formTopicHeader{
+                color:var(--namari);
+            }
+            .cont{
+                padding-left:1em; font-size:19px;
+            }
+            &#puposeRow{
+                .cont{
+                    padding-top: 0;
+                }
+            }/*puposeRow*/
+        }
+
+        .noticeBlock{
+            border:1px solid #707070; border-radius: 10px; padding:42px 64px;
+
+            p{
+                font-weight:200; 
+                
+                &.header{ font-weight:500; }
+                .strong{ font-weight:500; }
+            }
+            & > p{ margin-bottom: 20px; }
+            .deciList{
+                padding-left:2em;
+
+                li{
+                    display:flex; margin-bottom: 20px;
+
+                    .num{
+                        font-weight:500; margin-right: 1em;
+                    }
+                }
+                
+            }
+
+        }/*noticeBlock*/
+
+        .cardList{
+            .card{
+                .back{
+                    padding:30px 40px;
+
+                    .pict{
+                        width:100%; height:initial; aspect-ratio: 3 / 2; margin-bottom: 32px;
+
+                        img{
+                            width:100%; height:100%; object-fit: cover; object-position: center;
+                        }
+                    }/*pict*/
+
+                    .data{
+                        .dataList{
+                            .topic{
+                                margin-bottom: 18px; 
+
+                                .header{
+                                    font-size:12px; height:auto; padding:1px 0 2px;
+                                }
+                                &.rimawari{
+                                    .cont{
+                                        font-family: "Noto Sans JP", YuGothic, "Yu Gothic", Meiryo, sans-serif;
+                                        font-weight:500;
+                                    }
+                                }
+                                &:nth-of-type(4){
+                                    margin-bottom: 25px;
+
+                                    .cont{ font-size:19px; }
+                                }
+                            }
+                        }
+                        .bar{
+                            margin-bottom: 25px; 
+
+                            &::before,
+                            &::after{
+                                content:none;
+                            }
+                        }
+                    }/*data*/
+                }/*back*/
+            }/*card*/
+        }
+        .btn{ display:none; }
+    }/* PC */
+
+    
+
+
+
+
+
+    @media screen and (max-width:767px){
+        .secHeader{
+            .main{ width:35.36vw; }
+        }
+        .coverPic-sp{
+            width:100%; height:100%; object-fit: cover; object-position:center;
+        }
+        .central-sp{
+            display:flex; align-items: center; align-content: center; justify-content: center;
+        }
+
+        .contentWrapper{
+            width:87.2vw; margin:0 auto;
+        }
+
+
+        .contentWrapper{
+            width:87.2vw; margin:0 auto;
+
+            .cardColumn{
+                width:100%;
+            }/*cardColumn*/
+            .formColumn{
+                width:100%;
+
+                .inputBlock{
+                    width:100%; background:#fff; border-radius: 10px; padding:9.6vw 5.6vw;
+                    font-size:4.27vw; margin-bottom: 7.2vw;
+                }
+                .agreeBlock{
+                    background:#fff; border-radius: 10px; padding:8.8vw 7.46vw;
+                }
+                .reCapcha{
+                    width: 304px; height: 78px; margin:17vw auto; background:#ccc;
+                }
+                .shisan{
+                    font-size:5.06vw; text-decoration: underline;
+                }
+                .sendBtnBox{
+                    margin-top:6.93vw;
+
+                    .modoru{ margin-bottom: 4vw; display:block; }
+                }
+                #contact_submit,
+                input[type="submit"]{
+                    width:315px; height:70px; background:#BEBEBE; border:1px solid #414141; color:#fff; font-size:20px;
+                    display:flex; align-items: center; justify-content: center;
+                }
+            }/*formColumn*/
+        }/*contentWrapper*/
+
+        .formRow{
+            margin-bottom: 35px;
+            &:last-of-type{margin-bottom: 0;}
+            
+            .formTopicHeader{
+                font-weight:500; margin-bottom: 10px; line-height: 1;
+            }
+            &.need .formTopicHeader::after{
+                content:'必須'; display:inline-block; font-size:60%; color:#BD0307; line-height: 1.1;
+                margin-left:10px; border:1px solid #BD0307; padding:2px 5px 3px; border-radius: 3px;
+                transform:translateY(-1px);
+            }
+
+            .cont{
+                input[type="text"]{
+                    width:100%;
+                }
+                textarea{
+                    width:100%; height:12em; line-height: 1.4;
+                }
+                .selectBoxCase{
+                    width:100%; height:14vw; display:block;
+
+                    select{
+                        width:100%; height:100%; color:#414141; 
+                        &::picker(select){
+                            color:#414141;
+                        }
+                    }
+                }
+                .cap{ margin-top:8px; }
+            }/*cont*/
+
+            &#emailRow,
+            &#email-chkRow{
+                input{ width:100%;}
+            }
+            &#puposeRow{
+                .cont{
+                    flex-wrap:wrap; padding-top:5.3vw;
+
+                    label{ margin-bottom: 25px; width:248px; }
+                }
+            }
+            &#addressRow{
+                .cont:first-of-type{ margin-bottom: 20px; }
+                input{ width:100%; }
+                .zip{
+                    input{ width: 40vw; margin-left:10px;}
+                }
+            }
+
+            &.agreeBlock{
+                .text{
+                    font-weight:200; font-size:4.27vw;
+                }
+                .linkText{
+                    color:#00A7FF;
+                }
+                .agreechk{
+                    align-items: flex-start; justify-content: center; margin-top: 30px;
+
+                    input[type="checkbox"]{ 
+                        position:relative; width:26px; height:26px; aspect-ratio: 1 / 1; border:1px solid #414141; margin-right:15px; margin-bottom:4px; border-radius: 0;
+                        -webkit-appearance: none;
+                        -moz-appearance: none;
+                        appearance: none;
+
+                        &:checked::before{
+                            content:''; position:absolute; top:42%; left:50%; width:15px; height:11px;
+                            clip-path:polygon(0 0, 2px 0, 2px 9px, 15px 9px, 15px 15px, 0 15px, ); background:#414141;
+                            transform: translate(-50%,-50%) rotate(-40deg); 
+                        }
+                    }
+                    .formTopicHeader{ margin-bottom: 0; font-size:4.27vw; line-height: 1.4; }
+                }
+            }
+        }/*formRow*/
+
+        &.confirmPage .formRow{
+            .formTopicHeader{
+                color:var(--namari);
+            }
+            .cont{
+                padding-left:1em;
+            }
+            &#puposeRow{
+                .cont{
+                    padding-top: 0;
+                }
+            }/*puposeRow*/
+        }
+
+        .noticeBlock{
+            border:1px solid #707070; border-radius: 10px; padding:7.73vw 5.86vw;
+
+            p{
+                font-weight:200; font-size:4.27vw;
+                
+                &.header{ font-weight:500; }
+                .strong{ font-weight:500; }
+            }
+            & > p{ margin-bottom: 20px; }
+            .deciList{
+
+                li{
+                    display:flex; margin-bottom: 20px;
+
+                    .num{
+                        font-weight:500; margin-right: 1em;
+                    }
+                }
+                
+            }
+
+        }/*noticeBlock*/
+
+        .cardList{
+            padding:0;
+
+            .card{
+                .back{
+                    padding:30px 40px;
+
+                    .pict{
+                        width:100%; height:initial; aspect-ratio: 3 / 2; margin-bottom: 32px;
+
+                        img{
+                            width:100%; height:100%; object-fit: cover; object-position: center;
+                        }
+                    }/*pict*/
+
+                    .data{
+                        .dataList{
+                            .topic{
+                                margin-bottom: 18px; 
+
+                                .header{
+                                    font-size:12px; height:auto; padding:1px 0 2px;
+                                }
+                                &.rimawari{
+                                    .cont{
+                                        font-family: "Noto Sans JP", YuGothic, "Yu Gothic", Meiryo, sans-serif;
+                                        font-weight:500;
+                                    }
+                                }
+                                &:nth-of-type(4){
+                                    margin-bottom: 25px;
+
+                                    .cont{ font-size:19px; }
+                                }
+                            }
+                        }
+                        .bar{
+                            margin-bottom: 25px; 
+
+                            &::before,
+                            &::after{
+                                content:none;
+                            }
+                        }
+                    }/*data*/
+                }/*back*/
+            }/*card*/
+        }
+        .btn{ display:none; }
+        
+        .g-recaptcha{ margin-top:18.13vw }
+    }/* SP */
+}

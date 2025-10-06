@@ -1,0 +1,262 @@
+@charset "utf-8";
+@media screen and (max-width: 1000px) {
+	#-----1000px----- {}
+}
+@media screen and (max-width: 480px) {
+	#-----480px----- {}
+	body {
+		min-width: inherit;
+	}
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+	.inner, .innerWide, .innerNarrow {
+		width: auto;
+		padding-right: 20px;
+		padding-left: 20px;
+	}
+	section.sectionBox {
+		padding-top: 40px;
+		padding-bottom: 40px;
+		background-color: #FFF;
+	}
+	#responsiveMenu, #btnPC {
+		display: block;
+	}
+	#header {
+		position: inherit;
+		z-index: inherit;
+		overflow: auto;
+		padding-bottom: 10px;
+	}
+	#logo {
+		float: none;
+	}
+	#bnr_contact {
+		float: none;
+		position: fixed;
+		z-index: 2;
+		bottom: 0px;
+		left: 0px;
+		width: 100%;
+		background-color: #FFF;
+	}
+	#bnr_contact ul {
+		padding: 2px;
+	}
+	#bnr_contact ul li {
+		width: 33.3333%;
+	}
+	#bnr_contact ul li img {
+		width: 100%;
+		/* [disabled]border-radius: 0px; */
+		margin: 0px;
+		border: solid 1px #FFF;
+		height: auto;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+	#globalNav {
+		display: none;
+	}
+	#pageTitle {
+		margin-top: 0px;
+	}
+	#pageTitle h1 {
+		padding-top: 40px;
+		padding-bottom: 40px;
+		text-align: center;
+	}
+	#pageTitle h1, h2 {
+		font-size: 150%;
+		line-height: 1.5em;
+	}
+	#secondNav ul li {
+		width: auto;
+		float: none;
+	}
+	#secondNav ul li a {
+		padding: 10px;
+	}
+	#footerLink ul li {
+		float: none;
+		width: auto;
+	}
+	#topMainVisual {
+		margin-top: 0px;
+		height: auto;
+	}
+	#topMainVisual .photo img {
+		height: auto;
+		width: auto;
+	}
+	#topMainVisual2 h1 {
+		font-size: 90%;
+		line-height: 2em;
+		padding: 20px;
+		width: auto;
+	}
+	#topForYouBox {
+		padding-left: 0px;
+		background-position: center bottom;
+		padding-bottom: 260px;
+		background-size: 160px 240px;
+		margin-bottom: -100px;
+	}
+	#topForYouBox .inBox {
+		width: auto;
+		float: none;
+	}
+	#topMeritBox {
+		background-position: center bottom;
+		padding-bottom: 260px;
+		background-size: 160px 240px;
+		padding-right: 0px;
+		margin-bottom: -100px;
+	}
+	#topMeritBox .inBox .linkButton {
+		display: block;
+		width: 110px;
+		text-align: center;
+		margin-top: 5px;
+		margin-right: auto;
+		margin-left: auto;
+		position: static;
+		right: inherit;
+		bottom: inherit;
+	}
+	#bukkenListTopBox .title, #bukkenListTopBox ul li {
+		font-size: 70%;
+		line-height: 1.5em;
+		padding-top: 3px;
+		padding-bottom: 3px;
+	}
+	#bukkenListTopBox .text_small {
+		font-size: 70%;
+		line-height: 1.5em;
+	}
+	#bukkenListBox {
+		overflow: auto;
+	}
+	#bukkenListBox .inBox {
+		float: none;
+		width: auto;
+	}
+	#bukkenLogOutBox .inBox2 {
+		float: none;
+		width: auto;
+	}
+	#bukkenLogOutBox .inBox2 img {
+		margin-right: auto;
+		margin-left: auto;
+	}
+	#bukkenLogOutBox .inBox {
+		float: none;
+		margin: 0px;
+		width: auto;
+		padding: 10px;
+	}
+	#bukkenLogOutBox .inBox br {
+		display: none;
+	}
+	#osusumeBox {
+		padding: 10px;
+	}
+	#osusumeBox .photo {
+		float: none;
+		margin-bottom: 10px;
+	}
+	#osusumeBox .photo img {
+		margin-right: auto;
+		margin-left: auto;
+	}
+	#bukkenLogOutBox .inBox {
+		width: auto;
+	}
+	table.waku {
+		margin-top: 0px;
+	}
+	table.waku tr {
+		display: block;
+		margin-top: 10px;
+		border: 1px solid #CCC;
+		padding-bottom: 2%;
+	}
+	table.waku th {
+		display: block;
+		text-align: left;
+		margin-bottom: 10px;
+		white-space: normal;
+		border-top-style: none;
+		border-right-style: none;
+		border-left-style: none;
+		width: auto;
+	}
+	table.waku th br {
+		display: none;
+	}
+	table.waku td {
+		display: block;
+		text-align: left;
+		white-space: normal;
+		width: auto;
+		padding-top: 0px;
+		padding-bottom: 0px;
+		border-top-style: none;
+		border-right-style: none;
+		border-bottom-style: none;
+		border-left-style: none;
+	}
+	.formBox dt {
+		float: none;
+		width: auto;
+		clear: both;
+		text-align: left;
+	}
+	.formBox dd {
+		padding: 0.5%;
+		float: none;
+		width: auto;
+		margin-bottom: 15px;
+	}
+	.button {
+		width: auto;
+	}
+	.only_pc {
+		display: none;
+	}
+	.only_sp {
+		display: block;
+	}
+	.imgLeft, .imgRight {
+		float: none;
+		margin: 0px;
+	}
+	.imgLeft img, .imgRight img {
+		margin-right: auto;
+		margin-left: auto;
+	}
+	.align_center-justify {
+		text-align: justify;
+		text-justify: inter-ideograph;
+	}
+	.align_center-justify br {
+		display: none;
+	}
+	.c21, .c31, .c41 {
+		width: auto;
+		float: none !important;
+	}
+	.c32, .c42 {
+		width: 48%;
+	}
+	.c32:nth-child(3n+1), .c42:nth-child(4n+1) {
+		clear: none;
+	}
+	.c32:nth-child(2n+1), .c42:nth-child(2n+1) {
+		clear: left;
+	}
+	.last {}
+}

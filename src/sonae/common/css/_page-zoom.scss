@@ -1,0 +1,140 @@
+@use 'common';
+
+.page-zoom{
+
+    @media screen and (min-width:768px){
+        header,
+        footer{ min-width: 1400px; }
+
+        .secHeader{
+            min-width:1400px;
+
+            .main{ width:158px; }
+        }
+        .coverPic{
+            width:100%; height:100%; object-fit: cover; object-position:center;
+        }
+        .central-pc{
+            display:flex; align-items: center; align-content: center; justify-content: center;
+        }
+
+        .contentWrapper{
+            min-width: 1400px; display:block;
+
+            .formColumn{
+                width:980px; margin:0 auto;
+            }
+        }
+
+        #sodanSec{
+            width:1400px; margin:0 auto 90px;
+
+            .wrapper{
+                width:980px; margin:0 auto; border-radius: 20px; overflow: hidden;
+            }
+            .headerBlock{
+                width:100%; background:#0338FF;
+
+                .pict{
+                    width:720px; margin:0 auto; padding-top:18px;
+
+                    img{ vertical-align: bottom; }
+                }
+            }
+            .contBlock{
+                padding:60px 80px; background:#fff;
+
+                .header{
+                    font-size:22px; font-weight:700; line-height: 1.75; 
+                    margin:0; margin-bottom: 34px;
+                }
+                .text{
+                    font-size:19px; line-height: 1.75; margin-bottom: 40px;
+                }
+                ul{
+                    list-style-type: none; padding-inline-start: 0; margin:0;
+
+                    li{
+                        line-height: 2; margin-bottom:12px;
+
+                        &:last-of-type{ 
+                            margin-bottom:0;
+                        }
+                    }
+                }
+                
+            }/*contBlock*/
+        }/*sodanSec*/
+
+        .preText{
+            width:980px; margin:0 auto 35px;
+        }
+    }/* PC */
+        
+
+
+
+
+
+    @media screen and (max-width:767px){
+        .secHeader{
+            margin-bottom: 7.46vw;
+
+            .main{ width:30.13vw; }
+        }
+        .coverPic-sp{
+            width:100%; height:100%; object-fit: cover; object-position:center;
+        }
+        .central-sp{
+            display:flex; align-items: center; align-content: center; justify-content: center;
+        }
+
+        .contentWrapper{
+            .preText{
+                margin-bottom: 10px;
+            }
+        }
+
+        #pageHeadSec{
+            margin-bottom:19.73vw;
+        }
+
+        #sodanSec{
+            width:87.2vw; margin:0 auto 12.53vw; border-radius: 10px; overflow: hidden;
+
+            .headerBlock{
+                width:100%; background:#0338FF;
+
+                .pict{
+                    width:94%; margin:0 3px 0 auto; padding-top:12px;
+
+                    img{ vertical-align: bottom; }
+                }
+            }
+            .contBlock{
+                padding:9.6vw 6.13vw; background:#fff;
+
+                .header{
+                    font-size:4.53vw; font-weight:600; line-height: 1.75; margin-bottom: 4.27vw;
+                }
+                .text{
+                    font-size:4.53vw; line-height: 1.75; margin-bottom: 9.86vw;
+                }
+                ul{
+                    list-style-type: none; padding-inline-start: 0; margin:0;
+
+                    li{
+                        line-height: 2; margin-bottom:12px; font-size:4vw;
+
+                        &:last-of-type{ 
+                            margin-bottom:0;
+                        }
+                    }
+                }
+                
+            }/*contBlock*/
+        }/*sodanSec*/
+
+    }/* SP */
+
+}

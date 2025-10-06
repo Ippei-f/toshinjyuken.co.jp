@@ -1,0 +1,291 @@
+@charset "UTF-8";
+#topMainVisual {
+	margin-top: 100px;
+	/* [disabled]height: calc(100% - 100px); */
+	/* [disabled]max-height: 760px; */
+	background-image: url(bg06.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	/*background-blend-mode: color-burn;*/
+	background-color: #999;
+}
+#topMainVisual .photo {
+	/* [disabled]height: 100%; */
+}
+#topMainVisual .photo img {
+	margin-left: auto;
+	margin-right: auto;
+	/* [disabled]height: 100%; */
+	/* [disabled]width: auto; */
+}
+#topMainVisual2 {
+	/* [disabled]background-color: #F3F6F9; */
+}
+#topMainVisual2 img {
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 60px;
+	/* [disabled]padding-bottom: 60px; */
+}
+#topMainVisual2 h1 {
+	font-size: 120%;
+	font-weight: normal;
+	bottom: 0px;
+	color: #FFF;
+	width: 100%;
+	padding-top: 60px;
+	padding-bottom: 60px;
+	line-height: 2em;
+	background-color: #6BE;
+}
+#aboutSONAE p {
+	color: #FF0;
+	text-align: center;
+	font-size: 110%;
+	font-weight: bold;
+	line-height: 1.5em;
+	margin-top: 10px;
+}
+#slick_bnr .inBox {
+	margin: 5px;
+	border: solid 1px #EEE;
+}
+#sakidoriListTopBox {
+}
+#sakidoriListTopBox a {
+	text-decoration: none;
+	display: block;
+	overflow: hidden;
+}
+#sakidoriListTopBox h3 {
+	text-align: center;
+	font-weight: bold;
+	font-size: 150%;
+	line-height: 1.5em;
+}
+#sakidoriListTopBox h3 span {
+	display: block;
+	font-size: 80%;
+	line-height: 1.5em;
+	color: #369;
+	font-weight: normal;
+}
+#sakidoriListTopBox .address {
+	font-size: 110%;
+	line-height: 1.5em;
+	padding: 5px;
+	text-align: center;
+	background-color: #369;
+	color: #FFF;
+	margin-top: 5px;
+}
+#sakidoriListTopBox .inBox {
+	overflow: hidden;
+}
+#sakidoriListTopBox .photo {
+	float: left;
+	width: 49%;
+	margin-top: 10px;
+}
+#sakidoriListTopBox .photo.soon {
+	position: relative;
+}
+#sakidoriListTopBox .photo.soon::after {
+	content: "建築準備中";
+	position: absolute;
+	left: 1px;
+	top: 1px;
+	width: calc(100% - 2px);
+	height: calc(100% - 2px);
+	background-color: rgba(255,255,255,0.7);
+	-webkit-backdrop-filter: blur(2px);
+	backdrop-filter: blur(2px);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: rgba(0,0,0,0.6);
+	letter-spacing: 0.2em;
+}
+#sakidoriListTopBox .summary {
+	width: 49%;
+	float: right;
+	margin-top: 5px;
+}
+#sakidoriListTopBox .price {
+	text-align: center;
+	margin-top: 5px;
+	line-height: 1.5em;
+}
+#sakidoriListTopBox .price span {
+	background-color: rgba(51,102,153,0.50);
+	color: #FFF;
+	border-radius: 50%;
+	display: block;
+	margin-bottom: 5px;
+	line-height: 2.3em;
+	position: relative;
+	font-size: 80%;
+}
+#sakidoriListTopBox .price span::after {
+	content: "";
+	display: block;
+	position: absolute;
+	bottom: -10px;
+	left: 50%;
+	margin-left: -5px;
+  border: 5px solid transparent;
+  border-top: 5px solid rgba(51,102,153,0.50);
+}
+#sakidoriListTopBox .price strong {
+	font-size: 120%;
+}
+#sakidoriListTopBox .inBox dl dt {
+	float: left;
+	width: 25%;
+}
+#sakidoriListTopBox .inBox dl dd {
+	float: left;
+	width: 25%;
+}
+#sakidoriListTopBox .soldout {
+	opacity: 0.3;
+	filter: grayscale(100%);
+}
+#topForYouBox {
+	padding-left: 340px;
+	margin-bottom: -80px;
+	padding-bottom: 80px;
+	background-image: url(char02.png);
+	background-repeat: no-repeat;
+	background-position: left bottom;
+	overflow: hidden;
+}
+#topForYouBox .inBox {
+	float: left;
+	width: 33.333%;
+}
+#topForYouBox .inBox p {
+	margin: 5px;
+	background-image: url(../common/images/bg_box01.png);
+	background-position: right bottom;
+	border-top-width: 5px;
+	border-left-width: 5px;
+	border-top-style: solid;
+	border-left-style: solid;
+	border-top-color: #999;
+	border-left-color: #999;
+	padding-top: 20px;
+	padding-right: 25px;
+	padding-bottom: 25px;
+	padding-left: 20px;
+	background-repeat: no-repeat;
+	font-size: 110%;
+	line-height: 2em;
+	color: #000;
+}
+#topMeritBox {
+	margin-bottom: -80px;
+	padding-bottom: 80px;
+	background-image: url(char01.png);
+	background-repeat: no-repeat;
+	background-position: right bottom;
+	padding-right: 340px;
+	overflow: hidden;
+}
+#topMeritBox .inBox {
+	margin-top: 10px;
+}
+#topMeritBox .inBox h3 {
+	padding: 0px;
+	margin-top: 0px;
+}
+#topMeritBox .inBox h3 .noList {
+	display: block;
+	height: 20px;
+	width: 20px;
+	float: left;
+	text-align: center;
+	line-height: 20px;
+	font-weight: bold;
+	background-color: #369;
+	color: #FFF;
+	font-family: "Arial Black", Gadget, sans-serif;
+	border-radius: 999px;
+	font-size: 11px;
+}
+#topMeritBox .inBox h3 .sub {
+	line-height: 14px;
+	border-bottom: 1px solid #999;
+	padding-left: 5px;
+	display: block;
+	float: left;
+	padding-bottom: 5px;
+	color: #999;
+	font-size: 12px;
+	padding-right: 5px;
+}
+#topMeritBox .inBox h3 .title {
+	font-size: 26px;
+	line-height: 30px;
+	font-weight: bold;
+	display: block;
+	clear: both;
+	padding-top: 5px;
+}
+#topMeritBox .inBox h3 .title strong {
+	color: #D11;
+}
+#topMeritBox .inBox .linkButton {
+	background-color: #0B9;
+	line-height: 16px;
+	font-size: 11px;
+	color: #FFF;
+	display: inline-block;
+	padding: 5px 10px 5px 10px;
+	position: absolute;
+	right: 15px;
+	bottom: 15px;
+}
+#topMeritBox .inBox a {
+	position: relative;
+	padding-top: 15px;
+	padding-right: 15px;
+	padding-left: 20px;
+	padding-bottom: 15px;
+	border-left: 1px solid #D11;
+	border-right: 1px solid #EEE;
+	border-bottom: 1px solid #EEE;
+	border-top: 1px solid #EEE;
+	display: block;
+	background-color: #FFF;
+	text-decoration: none;
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-image: url(../common/images/arrow_right2.png);
+	background-size: 10px 20px;
+}
+#topVoiceBox ul {
+	padding: 40px;
+	margin-top: 40px;
+	background-color: #FFF;
+}
+#topVoiceBox ul li {
+	margin: 0px;
+	list-style: none;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	border-top: dotted 1px #CCC;
+	font-size: 110%;
+	line-height: 2em;
+	letter-spacing: 0.1em;
+}
+#topVoiceBox ul li:last-child {
+	border-bottom: dotted 1px #CCC;
+}
+@media screen and (max-width: 480px) {
+	#-----480px----- {}
+#sakidoriListTopBox h3 {
+	font-size: 110%;
+}
+}

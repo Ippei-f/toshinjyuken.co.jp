@@ -1,0 +1,59 @@
+<footer>
+    <div class="innerWrap">
+        <div class="left">
+            <div class="upper">
+                <a href="/sonae/" class="logo pict"> <img src="/sonae/common/images/logo-white.svg" alt="SONAE"></a>
+                <a href="tel:05055364545" class="fleeDial pict"><img src="/sonae/common/images/footer-phoneNum.svg" alt="0120-01-4898"></a>
+                <p class="text">受付／9:30-18:30（水曜定休）</p>
+                <a href="/sonae/inquiry/contact.php" class="footInquiryBtn">フォームお問い合わせ</a>
+            </div><!--upper-->
+            <div class="under">
+                <p class="comName">東新住建株式会社 SONAE事業部</p>
+                <p class="text">〒492-8628 <br class="spOnly">愛知県稲沢市高御堂一丁目3-18(稲沢本店)</p>
+            </div>
+        </div><!--left-->
+        <div class="right">
+            <ul class="navList">
+                <li class="nav"><a href="/sonae/property.php" >収益物件一覧</a></li>
+                <li class="nav"><a href="/sonae/return.html" class="">高利回りの理由</a></li>
+                <li class="nav"><a href="/sonae/strategy.html" class="">相続税対策</a></li>
+                <li class="nav"><a href="/sonae/features.html" class="">物件の特徴</a></li>
+                <li class="nav"><a href="/sonae/company.html">企業情報</a></li>
+                <li class="nav"><a href="/sonae/info.php">INFORMATION</a></li>
+                <li class="nav"><a href="#" class="discon">Q & A</a></li>
+                <li class="nav"><a href="#" class="discon">お客様の声</a></li>
+            </ul>
+        </div>
+    </div><!--innerWrap-->
+    <div class="under">
+        <a href="/sonae/ " class="logo pict"><img src="/sonae/common/images/logo-toshin-white.svg" alt="TOSHIN JYUKEN"></a>
+        <p class="copylight">
+            © TOSHIN JYUKEN Co.,Ltd. All Rights Reserved. 
+        </p>
+    </div><!--under-->
+</footer>
+
+<div id="spBottomBtns" class="spOnly">
+    <div class="atokaraBtns">
+        <a href="/sonae/zoom/contact.php" class="ueBtn">
+            <img src="/sonae/common/images/spBottom_btn-zoom.svg" alt="オンライン面談受付">
+        </a>
+        <a href="/sonae/inquiry/contact.php" class="ueBtn">
+            <img src="/sonae/common/images/spBottom_btn-inquiry.svg" alt="フォームお問い合わせ">
+        </a>
+        <a href="tel:05055364545" class="ueBtn">
+            <img src="/sonae/common/images/spBottom_btn-phone.svg" alt="電話お問い合わせ">
+        </a>
+    </div>
+    <div class="motokaraBtns">
+        <a href="/sonae/property.php" class="btn" id="spBttom-bukken">
+            <img src="/sonae/common/images/spBottomBtn-bukken.svg" alt="収益物件一覧">
+        </a>
+        <a href="/sonae/membership/contact.php" class="btn" id="spBttom-member">
+            <img src="/sonae/common/images/spBottomBtn-membership.svg" alt="メンバーシップ登録">
+        </a>
+    </div>
+    
+</div><!--spBottomBtns-->
+
+<script src="/sonae/common/js/common.js"></script>
