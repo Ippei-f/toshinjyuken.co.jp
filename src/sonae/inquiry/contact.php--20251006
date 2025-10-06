@@ -1,0 +1,290 @@
+<?php
+//do not touch area start
+require_once("./always_include.php");
+//do not touch area end
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="ja">
+	<head>
+<?php
+/*
+<!--#include virtual="../common/include/gtm-head.php" -->
+*/
+include '../common/include/gtm-head.php';
+?>	
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>お問い合わせ|土地を持たない不動産投資｜SONAE</title>
+		<meta name="description" content="SONAEは土地を持たずにはじめられる新築・築浅メゾネット1棟アパート投資。定期借地を活用し、利回り10％超を実現。低リスク・高収益の新しい不動産投資スタイル。" />
+		<!-- do not touch area start -->
+		<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+		<script type="text/javascript" src="https://ajaxzip3.github.io/ajaxzip3.js" charset="UTF-8"></script>
+		<script src='https://www.google.com/recaptcha/api.js'></script>
+		<script type="text/javascript" src="js/always_include.js"></script>
+		<script type="text/javascript" src="js/bfcontact.js"></script>
+		<script type="text/javascript" src="./setup.js"></script>
+		<!-- do not touch area end -->
+
+		<link rel="stylesheet" href="/sonae/common/css/reset.css">
+		<link rel="stylesheet" href="/sonae/common/css/style.css">
+
+		<!-- タブレット最適化表示用 -->
+		<script>
+			var d=window.document;
+			if(
+				navigator.userAgent.indexOf('iPhone')>-1||navigator.userAgent.indexOf('iPod')>0||navigator.userAgent.indexOf('Android')>0
+			)
+				d.write('<meta id="vp" name="viewport" content="width=device-width; initial-scale=1;">');
+			else if(
+				navigator.userAgent.indexOf('iPad')>-1||navigator.userAgent.indexOf('macintosh')>-1 && 'ontouchend' in document||navigator.userAgent.indexOf('Android')>0&&navigator.userAgent.indexOf('Mobile')==-1
+			)
+				d.write('<meta name="viewport" content="width=1300, maximum-scale=1, user-scalable=yes"><link rel="stylesheet" type="text/css" href="../common/css/ipad.css" media="all">');
+		</script>
+		
+		<script>
+		if (screen.width > 767){
+			//var Android = document.getElementById('vp');
+			//Android.setAttribute('content','width=1200');
+		
+			var metalist = document.getElementsByTagName('meta');
+			for(var i = 0; i < metalist.length; i++) {
+				var name = metalist[i].getAttribute('name');
+				if(name && name.toLowerCase() === 'viewport') {
+					metalist[i].setAttribute('content', 'width=1300');
+					break;
+				}
+			}
+		}
+		</script>
+	</head>
+	<body>
+
+		<?php include('../common/include/header.php'); ?>
+
+		<script>//bodyに各ページ固有のclassを設定
+			document.addEventListener('DOMContentLoaded', function () {
+				document.body.classList.add('page-inquiry', 'underPage');
+			});
+		</script>
+
+		
+
+		<div class="contentWrapper">
+			<section class="" id="pageHeadSec">
+				<div class="contBlock headerBlock">
+					<div class="innerWrapper">
+						<h2 class="secHeader">
+							<p class="sub">お問い合わせ</p>
+							<p class="main pict"><img src="../common/images/title-inquiry.svg" alt="INQUIRY" with="183px"></p>
+						</h2>
+					</div><!--innerWrapper-->
+				</div><!--contBlock-->
+			</section><!--pageHeadSec-->
+
+			<div class="formColumn">
+
+				<form action="contact_confirm<?=PUB_SYSTEM_EXTENSION?>" method="post" enctype="multipart/form-data">
+				<!-- 確認画面が不要な場合 -->
+				<!-- <form action="contact_send.php" method="post"> -->
+
+					<div class="inputBlock">
+						<div class="formRow need" id="puposeRow">
+							<p class="formTopicHeader">
+								<!--お問い合わせ内容-->
+								<?= $arrBfContactForm["radio"]["title"]?>
+							</p>
+							<div class="cont flexBox">
+								<label for="purpose-1">
+									<input type="radio" class="<?= $arrBfContactForm["radio"]["check"]?>" name="<?= $arrBfContactForm["radio"]["name"]?>" value="物件を見学したい"<?= ($arrBfContactForm["radio"]["value"] == "物件を見学したい" ? " checked=\"checked\"" : "")?> id="purpose-1">
+									<span>物件を見学したい</span>
+								</label>
+								<label for="purpose-2">
+									<input type="radio" class="<?= $arrBfContactForm["radio"]["check"]?>" name="<?= $arrBfContactForm["radio"]["name"]?>" value="物件資料が欲しい"<?= ($arrBfContactForm["radio"]["value"] == "物件資料が欲しい" ? " checked=\"checked\"" : "")?> id="purpose-2">
+									<span>物件資料が欲しい</span>
+								</label>
+								<label for="purpose-3">
+									<input type="radio" class="<?= $arrBfContactForm["radio"]["check"]?>" name="<?= $arrBfContactForm["radio"]["name"]?>" value="購入の相談がしたい"<?= ($arrBfContactForm["radio"]["value"] == "購入の相談がしたい" ? " checked=\"checked\"" : "")?> id="purpose-3">
+									<span>購入の相談がしたい</span>
+								</label>
+								<label for="purpose-4">
+									<input type="radio" class="<?= $arrBfContactForm["radio"]["check"]?>" name="<?= $arrBfContactForm["radio"]["name"]?>" value="その他"<?= ($arrBfContactForm["radio"]["value"] == "その他" ? " checked=\"checked\"" : "")?> id="purpose-4">
+									<span>その他</span>
+								</label>
+									<div id="<?= $arrBfContactForm["radio"]["name"]?>_er" style="color:red;"></div>
+							</div>
+						</div>
+
+						<div class="formRow need" id="namaeRow">
+							<p class="formTopicHeader">
+								<!--名前-->
+								<?= $arrBfContactForm["name"]["title"]?>
+							</p>
+							<div class="cont">
+								<input type="text" class="<?= $arrBfContactForm["name"]["check"]?>" name="<?= $arrBfContactForm["name"]["name"]?>" value="<?= $pubview->encode_input($arrBfContactForm["name"]["value"])?>" placeholder="例）東新　太郎" />
+									<div id="<?= $arrBfContactForm["name"]["name"]?>_er" style="color:red;"></div>
+							</div>
+						</div>
+
+						<div class="formRow"  id="name-chkRow">
+							<p class="formTopicHeader">ふりがな</p>
+							<div class="cont">
+								<input type="text" class="<?= $arrBfContactForm["name-kana"]["check"]?>" name="<?= $arrBfContactForm["name-kana"]["name"]?>" value="<?= $pubview->encode_input($arrBfContactForm["name-kana"]["value"])?>" placeholder="例）とうしん　たろう" />
+									<div id="<?= $arrBfContactForm["name-kana"]["name"]?>_er" style="color:red;"></div>
+							</div>
+						</div>
+
+						<div class="formRow need" id="emailRow">
+							<p class="formTopicHeader">
+								<!--メールアドレス-->
+								<?= $arrBfContactForm["email"]["title"]?>
+							</p>
+							<div class="cont">
+								<input type="text" class="<?= $arrBfContactForm["email"]["check"]?>" name="<?= $arrBfContactForm["email"]["name"]?>" value="<?= $pubview->encode_input($arrBfContactForm["email"]["value"])?>" placeholder="例）sample@co.jp"/>
+								<div id="<?= $arrBfContactForm["email"]["name"]?>_er" style="color:red;"></div>
+							</div>
+						</div>
+
+						<div class="formRow need" id="email-chkRow">
+							<p class="formTopicHeader">
+								<!--メールアドレス確認用-->
+								<?= $arrBfContactForm["email_check"]["title"]?>
+							</p>
+							<div class="cont">
+								<input type="text" class="<?= $arrBfContactForm["email_check"]["check"]?>" name="<?= $arrBfContactForm["email_check"]["name"]?>" value="<?= $pubview->encode_input($arrBfContactForm["email_check"]["value"])?>" placeholder="例）sample@co.jp" />
+									<div id="<?= $arrBfContactForm["email_check"]["name"]?>_er" style="color:red;"></div>
+								<p class="cap">確認のためにもう一度メールアドレスをご入力ください。</p>
+							</div>
+						</div>
+
+						<div class="formRow need" id="phoneRow">
+							<p class="formTopicHeader">
+								<!--電話番号-->
+								<?= $arrBfContactForm["tel"]["title"]?>
+							</p>
+							<div class="cont">
+								<input type="text" class="<?= $arrBfContactForm["tel"]["check"]?>" name="<?= $arrBfContactForm["tel"]["name"]?>" value="<?= $pubview->encode_input($arrBfContactForm["tel"]["value"])?>" placeholder="例）09000110011" />
+									<div id="<?= $arrBfContactForm["tel"]["name"]?>_er" style="color:red;"></div>
+								<p class="cap">ハイフンなしで入力してください</p>
+							</div>
+						</div>
+
+						<div class="formRow need" id="addressRow">
+							<p class="formTopicHeader">
+								<!--住所-->
+								<?= $arrBfContactForm["address"]["title"]?>
+							</p>
+							<div class="cont zip">
+								<div class="flex">
+									〒
+									<input type="text" class="<?= $arrBfContactForm["postal"]["check"]?>" maxlength="8" name="<?= $arrBfContactForm["postal"]["name"]?>" value="<?= $pubview->encode_input($arrBfContactForm["postal"]["value"])?>" onKeyUp="AjaxZip3.zip2addr(this, '', '<?= $arrBfContactForm["address"]["name"]?>', '<?= $arrBfContactForm["address"]["name"]?>', '', '', false);" placeholder="例）1010001" />
+									<div id="<?= $arrBfContactForm["postal"]["name"]?>_er" style="color:red;"></div>
+								</div>
+								<p class="cap">ハイフンなしで入力してください</p>
+							</div>
+							<div class="cont">
+								<input type="text" class="<?= $arrBfContactForm["address"]["check"]?>" name="<?= $arrBfContactForm["address"]["name"]?>" value="<?= $pubview->encode_input($arrBfContactForm["address"]["value"])?>"  placeholder="例）東京都〇〇〇区"/>
+									<div id="<?= $arrBfContactForm["address"]["name"]?>_er" style="color:red;"></div>
+							</div>
+						</div>
+
+						<div class="formRow" id="remarkRow">
+							<p class="formTopicHeader">
+								<!--備考欄-->
+								<?= $arrBfContactForm["comment"]["title"]?>
+							</p>
+							<div class="cont">
+								<textarea class="<?= $arrBfContactForm["comment"]["check"]?>" cols="30" rows="5" name="<?= $arrBfContactForm["comment"]["name"]?>" placeholder="例）〇月〇日〇時頃、現地見学希望です。"><?php
+								//物件詳細からのお問い合わせの時に物件名を読み込む（2025/05/14追加
+								if(isset($_GET['summary'])){
+									echo '物件名：'.$_GET['summary'].PHP_EOL;
+									echo '〇月〇日〇時頃、現地見学希望です。'.PHP_EOL;
+								}
+								?><?= $pubview->encode_input($arrBfContactForm["comment"]["value"])?></textarea>
+									<!--div id="<?= $arrBfContactForm["comment"]["name"]?>_er" style="color:red;"></div-->
+							</div>
+						</div>
+					</div><!--inputBlock-->
+
+					<div class="formRow agreeBlock need">
+						<p class="text">
+							予め<a href="https://www.toshinjyuken.co.jp/corporate/privacy.html" target="_blank" class="linkText">個人情報保護方針</a>をお読みいただき、同意の上、お申込みください。
+						</p>
+						<div class="agreechk flexBox">
+							<input type="checkbox" class="<?= $arrBfContactForm["agreechk"]["check"]?>" name="<?= $arrBfContactForm["agreechk"]["name"]?>" bchk="agreechk" value="個人情報保護方針について同意する">
+							<p class="formTopicHeader">
+								<!--個人情報保護方針について同意する-->
+								<?= $arrBfContactForm["agreechk"]["title"]?>
+							</p>
+							<div id="<?= $arrBfContactForm["agreechk"]["name"]?>_er" style="color:red;"></div>
+						</div>
+					</div><!--agreeBlock-->
+
+					<div class="noticeBlock">
+						<p class="text">
+							<span class="strong">フォーム送信後、自動返信メールを送信しています。</span>メールが届かない場合は以下の点をご確認ください。
+						</p>
+						<dl class="deciList">
+							<li>
+								<p class="num">1.</p>
+								<div class="cont">
+									<p class="header">迷惑メール（スパム）フォルダのほうもご確認ください。</p>
+								</div>
+							</li>
+							<li>
+								<p class="num">2.</p>
+								<div class="cont">
+									<p class="header">メールアドレスに間違いがないかご確認ください。</p>
+								</div>
+							</li>
+							<li>
+								<p class="num">3.</p>
+								<div class="cont">
+									<p class="header">迷惑メール設定をご確認ください。</p>
+									<p class="text">
+										docomo、au、softbankなど各キャリアのセキュリティ設定のためユーザー受信拒否と認識されているか、お客様が迷惑メール対策等でドメイン指定受信を設定されている場合、メールが届かないことがございます。<span class="strong">「toshinjyuken.co.jp」のドメインを受信できるように設定</span>をお願いいたします。
+									</p>
+								</div>
+							</li>
+						</dl>
+						<p class="text pcOnly">上記、ご確認後なお自動返信メールが届かない場合は、お手数ですが <span class="strong">tel.0120-01-4898</span> までご連絡ください。</p>
+
+					</div><!--noticeBlock-->
+
+
+					<div id="error_message" style="text-align: center; color:red;"></div>
+					<div style="text-align: center;">
+
+						<!-- reCPATCHA only when used area start -->
+						<div class="g-recaptcha" data-callback="clickReCaptcha" data-expired-callback="initReCaptcha" data-sitekey="<?= PUB_RE_CAPTCHA_KEY?>"></div>
+						<input type="hidden" id="hid_recaptcha_flg" value="<?= PUB_RE_CAPTCHA?>" />
+						<input type="hidden" id="hid_recaptcha_confirm" value="0" />
+						<div id="recaptcha_er" style="color:red;"></div>
+						<!-- reCPATCHA only when used area end -->
+
+						<br />
+						<br />
+						
+						<div class="sendBtnBox">
+							<!-- 入力が完了していない状態に表示される（ID値は変更不可） -->
+							<div id="required_confirm">必須項目が <span id="required_msg"></span> 件残っています</div>
+							<!-- 入力が完了している状態に表示される（ID値は変更不可） -->
+							<a href="javascript:void(0)" id="contact_submit" style="display:none;">入力内容を確認する</a>
+						</div><!--sendBtnBox-->
+					</div>
+
+					<div id="url_er" style="color:red;"></div>
+					
+					<!-- do not touch area start -->
+					<input type="hidden" id="hid_input_check_flg" value="<?= PUB_INPUT_CHECK?>" />
+					<input type="hidden" id="hid_upfile_extension" value="<?= PUB_UPFILE_EXTENSION?>" />
+					<input type="hidden" id="hid_upfile_size" value="<?= PUB_UPFILE_SIZE?>" />
+					<input type="hidden" id="hid_upfile_size_name" value="<?= PUB_UPFILE_SIZE_NAME?>" />
+					<input type="hidden" id="hid_avaliable_url_num" value="<?= PUB_AVALIABLE_URL_NUM?>" />
+					<!-- do not touch area end -->
+				</form>
+
+			</div><!--formColumn-->
+		</div><!--contentWrapper-->
+
+		<?php include('../common/include/footer.php'); ?>
+	</body>
+</html>
