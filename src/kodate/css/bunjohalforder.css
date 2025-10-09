@@ -124,12 +124,12 @@ KV
 	background: url(../images/bunjohalforder/kv.jpg) no-repeat center bottom / 100% auto;
 	width: 100%;
 	height: auto;
-	aspect-ratio: 3000 / 2527;
+	aspect-ratio: 1500 / 1046;
 	padding: 4vw 0 0;
 
 	@media screen and (max-width: 999px) {
 		padding: 10vw 20px 0;
-		aspect-ratio: 415 / 712;
+		aspect-ratio: 415 / 462;
 	}
 }
 .BHO-kv__badge {
@@ -323,6 +323,15 @@ KV
 	color: #525a70;
 	font-size: 14px;
 	text-align: left;
+}
+.BHO-intro__item .txt .btn {
+	margin: 30px 0;
+}
+.BHO-intro__item .txt .btn a {
+	border: 1px solid #525a70;
+	display: inline-block;
+	padding: 5px 45px;
+	color: #525a70;
 }
 .BHO-intro__note {
 	font-size: 12px;
@@ -929,7 +938,6 @@ KV
 	}
 }
 .BHO-voice-inner {
-	max-width: 860px;
 	margin: 0 auto;
 }
 .BHO-voice__ttl {
@@ -943,21 +951,73 @@ KV
 	}
 }
 .BHO-voice__list {
-	display: flex;
-	gap: 100px;
-
 	@media screen and (max-width: 999px) {
 		flex-direction: column;
 		padding: 0 10px;
 		gap: 60px;
 	}
+
+	.slick-prev,
+	.slick-next {
+		width: 96px;
+		height: 96px;
+		top: calc(50% - 85px);
+		bottom: auto;
+		border-radius: 0;
+		transform: translate(0, -50%);
+		z-index: 1;
+
+		@media screen and (max-width: 999px) {
+			width: 64px;
+			height: 64px;
+			top: calc(50% - 104px);
+		}
+	}
+	.slick-prev:before,
+	.slick-prev:after,
+	.slick-next:before,
+	.slick-next:after {
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: contain;
+		content: "";
+		display: block;
+		opacity: 1;
+		width: 100%;
+		height: 100%;
+	}
+
+	.slick-prev {
+		left: 15px;
+	}
+	@media screen and (max-width: 999px) {
+		.slick-prev {
+			left: -8px;
+		}
+	}
+	.slick-prev:before {
+		background-image: url(../images/bunjohalforder/slick-left.png);
+	}
+
+	.slick-next {
+		right: 15px;
+	}
+	@media screen and (max-width: 999px) {
+		.slick-next {
+			right: -8px;
+		}
+	}
+	.slick-next:before {
+		background-image: url(../images/bunjohalforder/slick-right.png);
+	}
 }
 .BHO-voice__item {
-	width: calc((100% - 100px) / 2);
+	margin: 0 30px;
 	text-align: left;
 
 	@media screen and (max-width: 999px) {
 		width: 100%;
+		margin: 0 10px;
 	}
 
 	.img {
