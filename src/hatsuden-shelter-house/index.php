@@ -59,6 +59,12 @@ require $kaisou . "system/function/cms-load.php";
 			echo TOUSHIN_COMMON_BNR_2023('発電/TOP');
 			?>
 
+			<div class="top_bnr_campaign">
+				<a href="https://www.toshinjyuken.co.jp/kodate/news.php?id=185" target="_blank">
+					<img src="images/top/bnr-sumaihaku-2025.JPG" alt="秋の住まい博2025" />
+				</a>
+			</div>
+
 
 
 			<h3 class="fontS1" style="margin-bottom: 0.25em;">次世代PV住宅<br>発電シェルターハウスとは？</h3>

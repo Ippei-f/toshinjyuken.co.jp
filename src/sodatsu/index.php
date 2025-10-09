@@ -90,6 +90,12 @@ echo MAINPIC($dir,array('mainpic'=>'mainpic-chara.svg','class'=>'chara'));
 
 				<?php echo CONTENT_PAD(50, 'sp/2'); ?>
 
+				<div class="top_bnr_campaign">
+					<a href="https://www.toshinjyuken.co.jp/kodate/news.php?id=185" target="_blank">
+						<img src="images/top/bnr-sumaihaku-2025.JPG" alt="秋の住まい博2025" />
+					</a>
+				</div>
+
 				<?php
 				//バナーシステム2023ver
 				echo TOUSHIN_COMMON_BNR_2023('そだつ/TOP');
