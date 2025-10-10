@@ -369,11 +369,29 @@ KV
 
 .BHO-interiorselect {
 	line-height: 2;
-	padding: 60px 0 80px;
+	padding: 60px 0 110px;
 	background: #ecece3;
 
 	@media screen and (max-width: 999px) {
 		padding: 50px 20px 60px;
+	}
+
+	.bukken-btn {
+		text-align: center;
+		margin-top: 70px;
+
+		@media screen and (max-width: 999px) {
+			margin-top: 50px;
+		}
+
+		a {
+			border: 1px solid #525a70;
+			display: inline-flex;
+			justify-content: center;
+			align-items: center;
+			color: #525a70;
+			padding: 5px 15px;
+		}
 	}
 }
 .BHO-interiorselect__ttl {
@@ -861,7 +879,7 @@ KV
 
 .BHO-halforder {
 	line-height: 2;
-	padding: 60px 0 80px;
+	padding: 60px 0 100px;
 	background: #525a70;
 
 	@media screen and (max-width: 999px) {
@@ -879,6 +897,24 @@ KV
 					border-color: transparent transparent #688097 transparent;
 				}
 			}
+		}
+	}
+
+	.bukken-btn {
+		text-align: center;
+		margin-top: 70px;
+
+		@media screen and (max-width: 999px) {
+			margin-top: 50px;
+		}
+
+		a {
+			border: 1px solid #fff;
+			display: inline-flex;
+			justify-content: center;
+			align-items: center;
+			color: #fff;
+			padding: 5px 15px;
 		}
 	}
 }
