@@ -1560,6 +1560,61 @@ footer .copy {
 .brand_concept2025 > .halforder {
 	background-color: #fff;
 }
+.brand_concept2025 > .halforder .halforder__btn {
+	margin-top: 40px;
+	gap: 10px;
+	display: flex;
+	justify-content: center;
+	a {
+		border: 1px solid #000;
+		display: inline-block;
+		font-size: 16px;
+		font-weight: bold;
+
+		> div {
+			overflow: hidden;
+			position: relative;
+			display: block;
+			transition: 0.2s;
+
+			&:before {
+				content: "";
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: -100%;
+				background-color: #ccc;
+				transition: 0.2s;
+			}
+
+			span {
+				min-width: 220px;
+				height: 50px;
+				font-size: 13px;
+				line-height: 1em;
+				padding: 0 20px;
+				gap: 0 10px;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				position: relative;
+
+				img {
+					width: 16px;
+					margin-bottom: 4px;
+				}
+			}
+		}
+		&:hover {
+			> div {
+				&:before {
+					left: 0;
+				}
+			}
+		}
+	}
+}
 .brand_concept2025 > .halforder .brand_list dd .text style_br {
 	flex-grow: 3;
 }

@@ -415,7 +415,7 @@ foreach($sysdata_proto as $key => $sysdata){
 							'ハーフオーダー'		=> array(
 								'bnr' => 'ie-ho',
 								'text' => 'お好みの「内観」と「外観」デザインをセレクト。注文住宅のような自由度と、分譲住宅のパフォーマンスの高さ。両方を兼ね備えた「いいとこどり」の住まいを、手の届きやすい価格でお届けします。今はまだ真っ白な空間だからこそ、間取りや外観も、あなたの理想に合わせてプランニング可能。“こんな暮らしがしたい”というあなたの夢を、ゼロからカタチにできます。',
-								'pagelink' => array('https://www.toshinjyuken.co.jp/hiraya/lp-harforder/', '「ハーフオーダー平屋」特設サイト'),
+
 								'phase' => 3
 							)
 						);
@@ -436,7 +436,11 @@ foreach($sysdata_proto as $key => $sysdata){
 						}
 						?>
 					</dl>
-
+					<div class="halforder__btn">
+						<a href="./bunjo-halforder.php">
+							<div><span>詳しくはこちら<img src="images/common/arrow-btn-black.svg"></span></div>
+						</a>
+					</div>
 				</div>
 			</div>
 			<!-- brand_concept -->
