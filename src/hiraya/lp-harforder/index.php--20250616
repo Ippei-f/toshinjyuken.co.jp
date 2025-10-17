@@ -1,0 +1,720 @@
+<?php
+$p_type='content';
+$kaisou='../';
+$p_title='';
+$temp_footer_option=array
+('movie'=>false
+,'bnr'=>false
+);
+//$dir=$kaisou.'images/content/'.$nowpage_name.'/';
+
+//LP用パラメータ
+include '../../teishaku-portal/lp-zeroyen/parts/data-param.php';
+
+$dir='img/';
+$dir_teishaku=$data_param_lp_zeroyen['dir'].$dir;
+require $kaisou."temp_php/basic.php";
+
+$dir_sys= $kaisou.'system/';
+require $dir_sys.'function/cms-load.php';//軽量版
+require $kaisou."system/function/func-price.php";//物件情報の分解用
+
+$recaptcha_url='../recaptcha/';
+require_once $kaisou.$recaptcha_url.'form/common_select_arr.php';//共通配列読み込み
+
+//フォームセットアップ
+require_once 'parts/form/setup.php';
+
+//メール定型文
+$sendtext_arr=array
+('送信タイトル'=>'---'.$comp_data['HP名'].' ハーフオーダー平屋---'
+,'返信タイトル'=>'お問い合わせありがとうございます ---'.$comp_data['HP名'].' ハーフオーダー平屋---'
+,'返信下追加文'=>''
+,'サンクスURL' =>'thanks.php'
+);
+
+require $kaisou.$recaptcha_url."form/form.php";//2023ver
+require_once 'parts/form/parts.php';//小分け関数
+
+$mode_conf=($step>=3);//確認モードフラグ
+
+if(!$mode_conf){//確認モード
+
+//CMS読み込み
+
+require $kaisou."temp_php/data-area.php";//エリア情報読み込み
+$local_bukken_def=array('── 物件名 ──'=>'');
+$local_bukken_arr=array();
+$local_bukken_arr['エリア']=array('── 全体エリア ──'=>'');
+$local_bukken_id=array();
+foreach($area_list as $k => $v){
+	$local_bukken_arr['エリア'][]=$k;
+}
+$sysdata_proto=CMS_SETUP('search');
+
+foreach($sysdata_proto as $key => $sysdata){
+	if(CMS_OPEN($sysdata)){continue;}
+	if($sysdata[3]==999){continue;}//完売物件も除外
+	CMS_DATA_REPLACE();
+	$k2=$local_bukken_arr['エリア'][$sysdata[18]-1];	
+	$local_bukken_arr[$k2][]=$sysdata[2];
+	if(isset($_GET['id'])&&$_GET['id']==$sysdata[0]){
+		$local_bukken_id[0]=$k2;
+		$local_bukken_id[1]=$sysdata[2];
+		$a=$form_arr_2023['お問い合わせの項目'];
+		$_REQUEST[$a[1]]=$a['select'][0];
+	}
+}
+foreach($local_bukken_arr as $k => $v){
+	if($k=='エリア'){continue;}
+	asort($local_bukken_arr[$k]);//昇順
+	$local_bukken_arr[$k]=$local_bukken_def+$local_bukken_arr[$k];
+}
+$form_arr['ご希望のエリア']['select1']=$local_bukken_arr['エリア'];
+$form_arr['ご希望のエリア']['select2']=$local_bukken_def;
+
+/*
+$lp_db_kumi=array
+('L'=>array
+ ('mainpic-L1'=>array('カリフォルニア','真っ白な外観に青い窓枠がアクセントになる外観')
+ ,'kumi-L4a'	=>array('和モダン','和の風情とモダンなデザインが調和した外観')
+ ,'mainpic-L4'=>array('ナチュラルブラック','シックな黒とナチュラルな木目が融合した外観')
+ ,'kumi-L4b'	=>array('シンプル','白を基調にしたシンプルで上品な外観')
+ ,'kumi-L4c'	=>array('モノトーン','白と黒のコントラストが際立つスタイリッシュな外観')
+ )
+,'R'=>array
+ ('kumi-R1'		=>array('ホテルライク','ホテルのような優雅さと快適さを備えた心地の良い空間')
+ ,'mainpic-R1'=>array('モダン','深みと重厚感が醸し出す上質な空間')
+ ,'mainpic-R3'=>array('グレイッシュ','穏やかなグレージュが織りなす柔らかさと温もりを感じる空間')
+ ,'mainpic-L2'=>array('ナチュラルボタニカル','緑が映える自然と調和した爽やかで安らぎの空間')
+ ,'kumi-R2'		=>array('カリフォルニア','明るい白にカリフォルニアブルーをアクセント開放的で心地よい空間')
+ //,'kumi-R3'		=>array('カリフォルニアブラック','白を基調にした空間に黒のアクセントが引き立つシックで落ち着いた空間')
+ )
+);
+*/
+$lp_db_kumi=array
+('L'=>array
+ ('kumi-L1'		=>array('カリフォルニア','青い空に映える爽やかなブルーの外観')
+ //,'mainpic-L1'=>array('カリフォルニアホワイト','真っ白な外観に青い窓枠がアクセントになる外観')
+ ,'kumi-L4a'	=>array('和モダン','和の風情とモダンなデザインが調和した外観')
+ ,'mainpic-L4'=>array('ナチュラルブラック','シックな黒とナチュラルな木目が融合した外観')
+ ,'kumi-L4b'	=>array('シンプル','白を基調にしたシンプルで上品な外観')
+ ,'kumi-L4c'	=>array('モノトーン','白と黒のコントラストが際立つスタイリッシュな外観')
+ )
+,'R'=>array
+ ('kumi-R1'		=>array('ホテルライク','ホテルのような優雅さと快適さを備えた心地の良い空間')
+ ,'mainpic-R1'=>array('モダン','深みと重厚感が醸し出す上質な空間')
+ ,'mainpic-R3'=>array('グレイッシュ','穏やかなグレージュが織りなす柔らかさと温もりを感じる空間')
+ ,'mainpic-L2'=>array('ナチュラルボタニカル','緑が映える自然と調和した爽やかで安らぎの空間')
+ //,'kumi-R2'		=>array('カリフォルニア','明るい白にカリフォルニアブルーをアクセント開放的で心地よい空間')
+ ,'kumi-R3'		=>array('カリフォルニア','白を基調にした空間に黒のアクセントが引き立つシックで落ち着いた空間')
+ )
+);
+$lp_db_oxo=count($lp_db_kumi['L'])*count($lp_db_kumi['R']);
+
+}//if(!$mode_conf)
+?>
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<?php echo $temp_meta; ?>
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "q9jko9zyqi");
+</script>
+<title><?php echo $temp_title; ?></title>
+<link href="../css/common.css" rel="stylesheet" type="text/css">
+<link href="../css/top.css" rel="stylesheet" type="text/css">
+<link href="../css/search.css" rel="stylesheet" type="text/css">
+<link href="../css/contact.css" rel="stylesheet" type="text/css">
+<link href="style.css<?php echo '?'.rand(); ?>" rel="stylesheet" type="text/css">
+<link href="halforder-common.css<?php echo '?'.rand(); ?>" rel="stylesheet" type="text/css">
+<?php echo $temp_java; ?>
+<link href="../js/slick/slick.css" rel="stylesheet" type="text/css">
+<script src="../js/slick/slick.js" type="text/javascript"></script>
+<script>
+$(window).load(function(){
+	<?php
+	$v=$form_arr['ご希望のエリア'][1];
+	?>
+	$('select[name="<?php echo $v; ?>1"]').change(function(){
+		v=$(this).val();
+		FORM_BUKKEN_CHANGE('select[name="<?php echo $v; ?>2"]',v);
+	});
+});
+function FORM_BUKKEN_CHANGE(obj,v){
+	$(obj).empty();
+	str='<option value="">── 物件名 ──</option>';
+	switch(v){
+		<?php
+		foreach($local_bukken_arr['エリア'] as $k => $v){
+			if(!is_numeric($k)){continue;}
+			$str='';
+			echo "case '".$v."':".chr(10);
+			foreach($local_bukken_arr[$v] as $vk => $vv){
+				if(!is_numeric($vk)){continue;}
+				$str.='<option>'.$vv.'</option>';
+			}
+			echo "str+='".$str."';";
+			echo "break;".chr(10);
+		}
+		?>
+		default:
+	}
+	$(obj).prepend(str);
+}
+</script>
+</head>
+
+<body class="borderbox">
+<?php echo $temp_pagetop; ?>
+<div align="center">
+<!-- * -->
+<?php echo $temp_header; ?>
+<!-- ** -->
+<main class="LP LH100">
+
+<!-- YUMENOHIRAYA 単独部分 -->
+<section id="fv" class="">
+		<div class="innerBlock">
+
+			<div id="yumeBox">
+				<p class="pict" id="yume"><img src="img/yume.png" alt="夢"></p>
+				<p class="pict" id="ymenohiraya"><img src="img/yumeno-hiraya.svg" alt="YUMENO HIRAYA"></p>
+			</div><!--yumeBox-->
+
+			<div class="mainImage">
+				<p class="pict">
+					<img src="img/mainImage.webp" alt="イメージ">
+				</p> 
+			</div><!--mainImage-->
+
+
+		</div><!--innerBlock-->
+</section><!--fv-->
+<!-- YUMENOHIRAYA 単独部分 -->
+<?php
+//TOP画像（テイシャク・平屋共通）
+include 'parts/temp_mainpic.php';
+/*
+<section class="sec01 bg_ami">
+	<div class="lp_slide">
+		<script>
+		$(window).load(function(){
+			$('.lp_slide .slick').slick({
+				autoplay:true,
+				autoplaySpeed: 0,
+				speed: 10000,
+				easing: 'linear',
+				cssEase: 'linear',
+				arrows:false,
+				dots:false,
+				slidesToShow:4,
+				centerMode:true,
+				centerPadding:'50px',
+				infinite:true,
+				swipeToSlide:false,
+				touchMove: false,
+				pauseOnFocus:false,
+				responsive:[
+				{breakpoint:1299,settings:{slidesToShow:4,}},
+			{breakpoint: 999,settings:{slidesToShow:3,}},
+			{breakpoint: 749,settings:{slidesToShow:2,}},
+			{breakpoint: 499,settings:{slidesToShow:1,}},
+				]
+			});
+		});
+		</script>
+		<ul class="slick">
+		<li><img src="img/mainpic-R3.jpg" /></li>
+		<li><img src="img/mainpic-L1.jpg" /></li>
+		<li><img src="img/kumi-R2.jpg" /></li>
+		<li><img src="img/mainpic-L4.jpg" /></li>
+		<li><img src="img/mainpic-L2.jpg" /></li>
+		</ul>
+	</div>
+</section>
+*/
+?>
+<?php
+if(!$mode_conf){//確認モード
+?>
+<section class="pickup font_reset picUpSec">
+<?php
+/*
+<h2 class="lp-subt bg_LP_R secHeader mincho"><span>こだわりを詰め込んだ夢の平屋で、</span><span>自分らしい暮らしを始めよう！</span></h2>
+*/
+//ピックアップ
+include 'parts/temp_pickup.php';
+?>
+</section>
+<!-- *** -->
+<section class="contSec" id="catchSec"><div class="innerBlock">
+<?php
+/*
+		<h1>
+			<p class="main">ハーフオーダー平屋</p>
+			<p class="sub">手に届きやすい価格で実現！</p>
+		</h1>
+		<div class="urineBox">
+			<p class="gaku">3,780</p>
+			<div class="fuzoku">
+				<div class="tanni">万円</div>
+				<div class="kara"><span class="tax">(税込)</span>〜</div>
+			</div><!--fuzoku-->
+		</div><!--urineBox-->
+
+		<div class="urineComment">
+			<p class="text">外構費用・ライフライン引込工事費など全て含みます！</p>
+		</div><!--urineComment-->
+*/
+?>
+	<div class="lp_movie">
+		<?php /* <div class="t">テイシャクについて動画でカンタン解説！</div> */ ?>
+		<div class="m"><iframe src="//www.youtube.com/embed/9UJrtOiI2ug?si=v8sNDXTv21LUz-2J&rel=0" frameborder="0" allowfullscreen=""></iframe></div>
+	</div>
+</div></section>
+<!-- *** -->
+<style>
+/* .box_shikourei{background: var(--beige);} */
+.box_shikourei h2{
+	display: flex;
+	justify-content: center;
+}
+.box_shikourei h2 div{
+	padding-bottom: 0.25em;
+	border-bottom: solid 2px #525a70;
+}
+</style>
+<?php
+//施工例
+include $data_param_lp_zeroyen['dir'].'parts/temp_shikourei.php';
+?>
+<?php
+function LOCAL_BTN($link,$text,$prm=array()){
+	$wrap=array('','');
+	if(isset($prm['wrap'])){
+		$wrap=array('<div class="'.$prm['wrap'].'">','</div>');
+	}
+	echo $wrap[0].'<div class="linkBtn"><a href="'.$link.'">
+<span class="font_yugo font_bold">'.$text.'</span>
+<svg class="arrow_btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21.45 10.79"><polyline points="0 5.39 20 5.39 13.63 0.39"></polyline></svg>
+</a></div>'.$wrap[1].PHP_EOL;
+}
+//LOCAL_BTN('','実際に購入されたお客様の声を<br class="pc_vanish">ご紹介しています',array('wrap'=>'linkBtn_wrap content_box'));
+?>
+<div style="height:min(150px,20vw);"></div>
+<!-- *** -->
+<section class="contSec" id="kankyoSec">
+	<h2 class="secHeader">
+		環境にもやさしい<br class="spOnly">住まいづくり
+		<p class="pict fukidashi">
+			<img src="img/fukidashi.svg" alt="選べてecoな">
+		</p>
+	</h2>
+	<?php echo CONTENT_PAD(60,40); ?>
+	<div class="innerBlock">
+		<div class="rowBlock">
+			<p class="pict">
+				<img src="img/kankyo-hayashi.jpg" alt="イメージ">
+			</p>
+			<p class="text">
+				東新住建独自の4.3倍2×4パネルの一部に、国産材を利用しています。元々、2×4工法は北米で発達した工法であるため、輸入材の使用量がほぼ100％となっています。その中に国産材を採り入れる事で、日本の森を守る活動を積極的に行っています。
+			</p>
+			<div><div class="header free" style="text-align: justify;">
+				<p class="tate">国産材の<br>４．３倍<br>２×４住宅</p>
+				<p class="add">標準装備</p>
+			</div></div>
+		</div><!--rowBlock-->
+
+		<div class="rowBlock">
+			<div class="header">
+				<p class="tate">太陽光パネル</p>
+				<p class="add">オプション</p>
+			</div>
+
+			<p class="text">
+				太陽光発電は発電時にCO2を排出しない、環境にやさしい発電方法です。太陽光発電の導入はCO2の削減につながるだけでなく、限られた地球の資源の節約にも貢献できます。
+			</p>
+			
+			<p class="pict">
+				<img src="img/kankyo-sorapanel.jpg" alt="イメージ">
+			</p>
+		</div><!--rowBlock-->
+
+		<?php
+		/*
+		<div class="rowBlock" id="chichunetsu">
+			<div class="junkan">
+				<p class="pict"><img src="img/chinetsu-summer.png" alt="夏"></p>
+				<p class="pict"><img src="img/chinetsu-winter.png" alt="冬"></p>
+				<p class="cap spOnly">※土地の形状によりできない場合があります。</p>
+			</div><!--junkan-->		   
+			<div class="textBox">
+				<div class="header">
+					<p class="tate">地中熱利用</p>
+					<p class="add">標準装備</p>
+				</div>
+				<p class="text">
+					東新住建の2×4パネルの一部に、国産材を利用しています。元々、2×4工法は北米で発達した工法であるため、輸入材の使用量がほぼ100％となっています。その中に国産材を採り入れる事で、日本の森を守る活動を積極的に行っています。<br><br>
+					<span class="pcOnly">※土地の形状によりできない場合があります。</span>
+				</p>
+			</div>			
+		</div><!--rowBlock-->
+		*/
+		?>
+		<style>
+		#kankyoSec .rowBlock .header.free{
+			width: auto;
+			height:auto!important;
+			padding: 1em;
+		}
+		</style>
+		<?php
+		/*
+		<style>
+		
+		#kankyoSec .rowBlock:nth-of-type(3) .text {text-align: left;}
+		#kankyoSec .rowBlock#mono .cap{
+			font-size: 0.8em;
+			margin-top: 1em;
+			line-height: 1.5em;
+		}
+		@media screen and (min-width: 1000px) {
+			#kankyoSec .rowBlock:nth-of-type(3) .text {width: 400px;}
+			#kankyoSec .rowBlock#mono .junkan .pict{width: 526px;max-width: 100%;}
+		}
+		@media screen and (max-width: 999px) {
+			#kankyoSec .rowBlock#mono{flex-direction: column-reverse;}
+		}
+		</style>
+		<div class="rowBlock" id="mono">
+			<div class="junkan">
+				<p class="pict"><img src="img/20250219/kankyo-p3.webp"></p>
+				<p class="cap spOnly">※radとはradianの略。柱の傾き度合いを表し、分母が大きいほど傾きが少ないことを示しています。※掲載数値は、起振実験による1階の柱（3m）の震度7シミュレーション平均値です。</p>
+			</div><!--junkan-->		   
+			<div class="textBox">
+				<div class="header free" style="text-align: justify;">
+					<p class="tate">強固な<br>モノコック構造</p>
+					<p class="add">工法</p>
+				</div>
+				<p class="text">
+「2×4工法」の特色は6面体構造の強さ。<br>
+「面構造」を基本にしたツーバイフォー住宅は、6面体ができあがると、家全体が強いモノコック構造（一体構造）となります。地震や台風などの力を建物全体で受け止め、荷重を一点に集中させることなく全体に分散させることで、外力に対して抜群の強さを発揮します。<span class="cap pcOnly">※radとはradianの略。柱の傾き度合いを表し、分母が大きいほど傾きが少ないことを示しています。※掲載数値は、起振実験による1階の柱（3m）の震度7シミュレーション平均値です。</span>
+				</p>
+			</div>			
+		</div><!--rowBlock-->
+		*/
+		?>		
+
+<?php
+LOCAL_BTN('/hiraya/contact.php','ご相談はこちら',array('wrap'=>'linkBtn_wrap content_box'));
+?>
+
+	</div><!--innerBlock-->
+</section><!--kankyoSec-->
+
+<!-- *** -->
+<h2 class="lp-subt bg_LP_2 secHeader">注文住宅を購入した場合と<br class="spOnly">比べてみました！</h2>
+<section class="sec03 bg_ami content_box">
+<?php echo CONTENT_PAD(60,40); ?>
+	<div class="hikaku vanish_branch">
+	<img src="img/20250227/hikaku-pc.svg">
+	<img src="img/20250227/hikaku-sp.svg">
+	</div>
+	<div class="title01 font_yugo font_bold col_111">ハーフオーダー平屋なら、<br class="spOnly">こんなにスピーディー！</div>
+	<div class="overflow01"><img src="img/speedy.svg"></div>
+</section>
+<!-- *** -->
+
+<section class="sec04 bg_ami font_yugo col_111">
+	<div class="title01">追加費用なしで</div>
+	<div class="title01">
+		<div>
+			<span class="bg_LP_1">外観</span>と<span class="bg_LP_2">インテリア</span>を<img src="img/t-select.svg">
+		</div>
+	</div><!--title01-->
+	
+	<div class="circle-5x5">
+		<p class="pict">
+			<img src="img/5X5.svg">
+		</p>
+	</div><!--circle-5x5-->
+	<div class="text01"><span class="col_LP_R"><?php echo $lp_db_oxo; ?>通りの組み合わせ</span>から、<br>好みのスタイルをお選びいただけます。</div>
+
+	<div class="title_kumi">組み合わせ参考例</div>
+		<ul class="kumiawase">
+<?php
+function LOCAL_KUMI_L($L,$R,$t=''){
+	global $lp_db_kumi;
+	if($t!=''){
+		$t='<div class="t">'.$t.'</div>';
+	}
+	echo '<li>
+<div class="p">
+<div class="set"><img src="img/'.$L.'.jpg"><div class="bg_LP_1"><div>'.$lp_db_kumi['L'][$L][0].'<span>STYLE</span></div></div></div>
+<div class="set"><img src="img/'.$R.'.jpg"><div class="bg_LP_2"><div>'.$lp_db_kumi['R'][$R][0].'<span>STYLE</span></div></div></div>
+<img src="img/x.svg">
+</div>
+'.$t.'
+</li>'.chr(10);
+}
+
+/*
+LOCAL_KUMI_L('mainpic-L1','kumi-R2','');
+LOCAL_KUMI_L('mainpic-L4','mainpic-R1','');
+LOCAL_KUMI_L('mainpic-L1','mainpic-L2','');
+*/
+LOCAL_KUMI_L('kumi-L1','kumi-R3','');
+LOCAL_KUMI_L('mainpic-L4','mainpic-R1','');
+LOCAL_KUMI_L('kumi-L4b','mainpic-L2','');
+?>
+</ul>
+</section>
+<!-- *** -->
+<section class="box_kumiawase font_yugo col_111">
+<?php
+function LOCAL_FUKI($n,$t){
+	$n=sprintf('%02d',$n);
+	echo '<div class="fuki fuki'.$n.' vanish_branch">
+<img src="img/fuki-'.$n.'-pc.svg">
+<img src="img/fuki-'.$n.'-sp.svg">
+<div>'.$t.'</div>
+</div>'.chr(10);
+}
+LOCAL_FUKI(1,'さあ！好きな組み合わせを選んでみよう');
+
+//データベース再設計
+$lp_db_kumi2=array();
+foreach($lp_db_kumi as $k => $v){
+	$cnt=1;
+	foreach($v as $k2 => $v2){
+		$form_arr['希望スタイル'.$k]['select'][]=sprintf('%02d',$cnt).'.'.$v2[0].' STYLE';
+		$lp_db_kumi2[$k][$cnt++]=array($k2,$v2[0],$v2[1]);
+	}
+}
+$lp_max_kumi=count(max($lp_db_kumi2['L'],$lp_db_kumi2['R']));//配列の多い方をカウントする
+?>
+<div class="flex">
+<?php
+$lp_title_kumi=array('L'=>array(1,'外観'),'R'=>array(2,'インテリア'));
+foreach($lp_db_kumi2 as $k => $v){
+	echo '<div class="bg_LP_'.$lp_title_kumi[$k][0].'"><div>
+<h3>'.$lp_title_kumi[$k][1].' STYLE</h3>
+<div><div class="p"><img src="img/'.$v[1][0].'.jpg"></div></div>
+<div class="pad"><div class="text_set">
+<img src="img/arrowL-sp.svg">
+<div>
+<div class="n"><div class="nt">STYLE</div><div class="f">'.chr(10);
+	for($i=1;$i<=$lp_max_kumi;$i++){
+		echo file_get_contents('img/num/'.sprintf('%02d',$i).'.svg');
+	}
+	echo '</div></div>
+<div class="t"><h4><span>'.$v[1][1].'</span>STYLE</h4><div>'.$v[1][2].'</div></div>
+</div>
+<img src="img/arrowR-sp.svg">
+</div></div>
+</div>
+<div><div class="pad">
+<ul class="menu">'.chr(10);
+	foreach($v as $k2 => $v2){
+		$add=($k2==1)?' class="current"':'';
+		echo '<li'.$add.'><img src="img/'.$v2[0].'.jpg"><div>'.file_get_contents('img/num/'.sprintf('%02d',$k2).'.svg').'</div>
+<input type="hidden" name="d1" value="'.$v2[1].'">
+<input type="hidden" name="d2" value="'.$v2[2].'">
+</li>';
+	}
+	$amari=count($v)%3;
+	$amari=3-$amari;
+	echo str_repeat('<li class="none"></li>',$amari);
+	echo '</ul>
+</div></div>
+</div>'.chr(10);
+}
+?>
+</div>
+<img src="img/x.svg">
+</section>
+<script>
+$(document).ready(function(){
+	LOCAL_LUMIAWASE_X();
+	
+	<?php
+	if(strpos($_REQUEST['kibouB'],'あり')===false){
+	?>
+	$('form select[name*="kibouA_"]').removeClass('required validate[required] err_bg');
+	<?php
+	}
+	?>
+	$('form input[name="kibouB"]').on('click', function(){
+		if($(this).prop('value').indexOf('ある')>=0){
+			$('form select[name*="kibouA_"]').addClass('required validate[required] err_bg');
+		}
+		else{
+			$('form select[name*="kibouA_"]').removeClass('required validate[required] err_bg');
+			$('form select[name*="kibouA_"]').prev().remove();
+		}
+	});
+});
+$(window).load(function(){
+	$(window).bind("resize load",function(){
+		LOCAL_LUMIAWASE_X();
+	});
+	$('.box_kumiawase .text_set img[src*="arrow"]').on('click', function(){
+		n = len = $(this).parents('*[class*="bg_LP"]').find('.menu li:not(.none)').length;//メニュー総数
+		n += $(this).parents('*[class*="bg_LP"]').find('.menu .current').index();//選択中のメニューの番号
+		n += $(this).index()-1;//矢印の方向(L=-1,R=+1)
+		n = (n%len)+1;//切替
+		LOCAL_KUMIAWASE($(this),n);
+	});
+	$('.box_kumiawase .menu li:not(.none)').on('click', function(){
+		n = $(this).index()+1;//選択位置
+		LOCAL_KUMIAWASE($(this),n);
+	});
+});
+function LOCAL_LUMIAWASE_X(){
+	o = $('.box_kumiawase .bg_LP_1');
+	if($('.box_kumiawase').innerHeight()*0.9 < o.innerHeight()){
+		n = parseInt(o.css('padding-top'));
+		n += o.find('h3').height();
+		n += parseInt(o.find('h3').css('margin-bottom'));
+		n += o.find('.p img').height()/2;
+	}
+	else{
+		n = parseInt(o.innerHeight());
+	}	
+	n -= $('.box_kumiawase img[src*="x."]').height()/2;
+	$('.box_kumiawase img[src*="x."]').css('top',n);
+}
+function LOCAL_KUMIAWASE(o,n){
+	o = o.parents('*[class*="bg_LP"]');
+	o.find('.text_set .n .f svg').hide();
+	o.find('.text_set .n .f svg[data-name="'+n+'"]').show();
+	o.find('.menu li').removeClass('current');
+	o.find('.menu li:nth-child('+n+')').addClass('current');
+	d = o.find('.menu .current img').prop('src');
+	o.find('.p img').prop('src',d);
+	d = o.find('.menu .current input[name="d1"]').val();
+	o.find('.text_set .t h4 span').html(d);
+	d = o.find('.menu .current input[name="d2"]').val();
+	o.find('.text_set .t > div').html(d);	
+}
+</script>
+<!-- *** -->
+<section class="pickup font_reset picUpSec" style="background: transparent;">
+<?php echo CONTENT_PAD(60,40); ?>
+		<div class="linkBtn">
+			<a href="https://www.toshinjyuken.co.jp/hiraya/contact.php">
+				<span class="font_yugo font_bold">ご相談はこちら</span>
+				<svg class="arrow_btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21.45 10.79">
+					<defs><style>
+					.arrow_btn polyline{fill:none;stroke-miterlimit:10;}
+					</style></defs>
+					<polyline points="0 5.39 20 5.39 13.63 0.39"></polyline>
+				</svg>
+			</a>
+		</div>
+<?php
+//LOCAL_RECOMMEND_SET(true);//物件スライダー表示
+echo CONTENT_PAD(60,40);
+?>
+</section>
+
+<?php
+}//if(!$mode_conf)
+?>
+<!-- *** -->
+<?php echo ANCHOR('contact'); ?>
+<form action="<?php echo $_SERVER["SCRIPT_NAME"]; ?>#contact" method="post" class="<?php echo ($step==3)?'conf':''; ?>">
+<section class="lp_form content_box"><div class="Wbase W1200">
+<?php
+//print_r($_REQUEST);
+//print_r($_SESSION);
+switch($step){
+	case 4://送信完了
+	//echo FORM_STEP(3);
+	echo '<div class="textC LH175 fontP150 sp_fontP140" style="padding-top:90px; padding-bottom:100px;">'.WORD_BR('お問い合わせ内容を送信しました。
+ありがとうございました。').'</div>
+<div class="textC">'.EFFECT_BTN('TOP','トップに戻る').'</div>'.chr(10);
+	break;
+	case 3://送信確認
+	echo '<div class="contact_box">'.chr(10);
+	//echo FORM_STEP(2);
+	echo '<div class="LH175">'.WORD_BR('以下の内容で送信します。').'</div>'.chr(10);
+	//echo FORM_CAUTION();
+	echo FORM_HIDDEN();
+	echo FORM_SET_MAKE();
+	echo FORM_HIDDEN_ADD('page_back',$_SERVER["SCRIPT_NAME"],'');
+	echo SUBMIT_SET(SUBMIT_BTN('sm_send','送信する').SUBMIT_BTN('sm_back','戻る'));
+	echo '</div>'.chr(10);
+	break;
+	default://入力
+	$_REQUEST+=$_SESSION;
+?>
+<div class="vanish_branch">
+<img src="img/contact-ribbon-pc.svg">
+<img src="img/contact-ribbon-sp.svg">
+</div>
+<div class="photo_set">
+<div>ご希望の物件の間取りに合わせて、<br>
+プロのカラーコーディネーターが<br>
+外観、インテリアスタイルをご提案。<br>
+イメージパースを<br>
+後日メールで<br class="pc_vanish">お送りいたします。</div>
+<div><img src="img/contact-photo.png"></div>
+</div>
+<div class="contact_box font_reset">
+<div class="contact_caution sp_br_del LH175">※お問い合わせの際には、個人情報に関する取扱いへの同意が必要です。<br>文字化けやエラーの原因となりますので、ローマ数字・丸付き数字などの機種依存文字、半角カタカナ（半角文字）は使用しないでください。<br>住所にローマ数字が含まれる場合、アラビア数字や漢数字に置換えて入力してください。<div><span class="col_F00">＊</span>印は必須項目です。</div></div>
+
+<?php
+//echo FORM_SET_MAKE();
+echo FORM_SET_MAKE_KOWAKE('名前漢字');
+echo FORM_SET_MAKE_KOWAKE('メール');
+?>
+<hr>
+<div class="contact_title big"><font>どちらかをお選びください</font><span class="col_F00">＊</span></div>
+<div class="contact_inputarea box_kibouB" style="margin-bottom: -0.25em;">
+<?php echo FORM_RADIO_KOWAKE('ご希望の物件',0); ?>
+</div>
+<?php echo FORM_PARTS($form_arr['ご希望のエリア'],'select',array('area-cnt'=>true)); ?>
+<div class="contact_inputarea box_kibouB" style="margin-top: 2.25em;">
+<?php echo FORM_RADIO_KOWAKE('ご希望の物件',1); ?>
+</div>
+<hr>
+<div class="contact_title big"><font>【外観】ご希望のスタイル</font><span class="col_F00">＊</span></div>
+<div class="contact_inputarea box_kibou1 type_flex">
+<?php echo FORM_RADIO($form_arr['希望スタイルL']['select'],$form_arr['希望スタイルL'][1]); ?>
+</div>
+<hr>
+<div class="contact_title big"><font>【インテリア】ご希望のスタイル</font><span class="col_F00">＊</span></div>
+<div class="contact_inputarea box_kibou2 type_flex">
+<?php echo FORM_RADIO($form_arr['希望スタイルR']['select'],$form_arr['希望スタイルR'][1]); ?>
+</div>
+<hr>
+<?php
+echo FORM_SET_MAKE_KOWAKE('同意');
+?>
+<div class="LH175" style="margin-top: 2em;">東新住建株式会社（以下、弊社）は個人情報保護に関連する法令を遵守し、お客様からご提供頂く個人情報を、細心の注意を払って取り扱っています。このプライバシーポリシーでは、弊社におけるお客様の個人情報の取り扱いについてご説明しております。</div>
+<?php
+require_once $kaisou.$recaptcha_url.'form/set/temp_privacy.php';//2023ver
+RECAPTCHA_CHECK();//recaptchaチェック表示
+echo SUBMIT_SET(SUBMIT_BTN('sm_conf','入力内容確認').SUBMIT_BTN('reset'));
+?>
+</div>
+<?php
+}
+?>
+</div></section>
+</form>
+<?php echo CONTENT_PAD(60,40); ?>
+</main>
+<!-- ** -->
+<?php echo $temp_footer; ?>
+<!-- * -->
+</div>
+<?php echo $temp_bodyend; ?></body>
+</html>
