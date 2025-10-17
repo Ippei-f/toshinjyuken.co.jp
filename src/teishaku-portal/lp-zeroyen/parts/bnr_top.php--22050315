@@ -1,0 +1,93 @@
+<?php
+//<meta charset="utf-8">
+?>
+<style>
+.top_bnr_zeroyen_set{
+	max-width: 1200px;
+	margin-top: min(50px,5%);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.top_sharing + .top_bnr_zeroyen_set{margin-top: min(80px,8%);}
+.fontP150 + .top_bnr_zeroyen_set{margin-top: min(70px,7%);}
+.top_bnr_zeroyen_set img[src*="sarani."]{
+	width:232px;
+	max-width: 29%;
+}
+.top_bnr_zeroyen_set a{
+	margin-top: 20px;
+	width: 100%;
+	background-color: #E6F6F3;
+	position: relative;
+	display: flex;
+}
+.bg_DEF .top_bnr_zeroyen_set a{background-color: #FFF;}
+.top_bnr_zeroyen_set a > *{
+	flex-grow: 1;
+	display: flex;
+}
+.top_bnr_zeroyen_set a img{width:100%;}
+.top_bnr_zeroyen_set a .p{
+	position: absolute;
+	top:0;
+	width:calc(1% * 196 / 12);
+	height:100%;
+	gap:3px;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.top_bnr_zeroyen_set a .p:first-child{left:0;}
+.top_bnr_zeroyen_set a .p:last-child{right:0;}
+.top_bnr_zeroyen_set a .p > *{
+	height:118px;
+	flex-grow: 1;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.top_bnr_zeroyen_set a .p img{
+	height:100%;
+	object-fit: cover;
+}
+.top_bnr_zeroyen_set a .p img[src*="-L1."]{height:170%;}
+.top_bnr_zeroyen_set a .p img[src*="-L3."]{height:160%;}
+.top_bnr_zeroyen_set a .p img[src*="-R2."]{height: 190%; margin-top: -25%;}
+.top_bnr_zeroyen_set a .c{width:100%;}
+@media screen and (min-width: 1000px) {
+	.top_bnr_zeroyen_set a{padding: 0 calc(1% * 196 / 12);}
+}
+@media screen and (max-width: 999px) {
+	.top_bnr_zeroyen_set{max-width: 800px;}
+	.top_bnr_zeroyen_set a{margin-top: 2.5%;}
+	.top_bnr_zeroyen_set a .p{display: none;}
+}
+</style>
+<?php
+function LOCAL_BNR_ZEROYEN(){
+	global $link_list;
+	return '<div class="top_bnr_zeroyen_set Wbase">
+<img src="lp-zeroyen/bnr/top/sarani.svg">
+<a href="'.$link_list['LP-￥0'][0].'">
+<div class="p">
+<div><img src="lp-zeroyen/img/mainpic-L1.jpg"></div>
+<div><img src="lp-zeroyen/img/mainpic-L2.jpg"></div>
+<div><img src="lp-zeroyen/img/mainpic-L3.jpg"></div>
+</div>
+<div class="c vanish_branch">
+<img src="lp-zeroyen/bnr/top/bnr-zeroyen-pc.svg">
+<img src="lp-zeroyen/bnr/top/bnr-zeroyen-sp.svg">
+</div>
+<div class="p">
+<div><img src="lp-zeroyen/img/mainpic-R1.jpg"></div>
+<div><img src="lp-zeroyen/img/mainpic-R2.jpg"></div>
+<div><img src="lp-zeroyen/img/mainpic-R3.jpg"></div>
+</div>
+</a>
+</div>'.chr(10);
+}
+?>
+<div class="content_box">
+<?php echo LOCAL_BNR_ZEROYEN(); ?>
+</div>
