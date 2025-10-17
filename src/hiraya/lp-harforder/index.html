@@ -61,6 +61,7 @@
 		<script src="../js/jquery.validationEngine-ja.js" charset="UTF-8"></script>
 		<script src="../js/form.js" charset="UTF-8"></script>
 		<link href="../js/slick/slick.css" rel="stylesheet" type="text/css" />
+		<link href="../js/slick/slick-theme.css" rel="stylesheet" type="text/css" />
 		<script src="../js/slick/slick.js" type="text/javascript"></script>
 		<script>
 			$(window).load(function () {
@@ -191,6 +192,107 @@
 					</div>
 				</div>
 				<!-- *** -->
+
+				<section class="contSec PU" id="PU">
+					<div class="innerBlock">
+						<div class="PU-header">
+							<div class="en">PICK UP!</div>
+							<h2 class="jp">おすすめ物件</h2>
+						</div>
+						<ul class="PU__list">
+							<li class="PU__item">
+								<div class="img">
+									<img src="img/pickup-1.jpg" alt="" />
+								</div>
+								<div class="txt">
+									<h3 class="ttl">守山下志段味【平屋の暮らし】</h3>
+									<dl>
+										<dt>交通</dt>
+										<dd>ＪＲ東海道本線 岡崎駅 徒歩17分</dd>
+										<dt>所在地</dt>
+										<dd>名古屋市守山区下志段味特定土地区画整理…</dd>
+									</dl>
+									<div class="price">2,430<small>万円（税込）</small></div>
+								</div>
+							</li>
+							<li class="PU__item">
+								<div class="img">
+									<img src="img/pickup-2.jpg" alt="" />
+								</div>
+								<div class="txt">
+									<h3 class="ttl">守山下志段味【平屋の暮らし】</h3>
+									<dl>
+										<dt>交通</dt>
+										<dd>ＪＲ東海道本線 岡崎駅 徒歩17分</dd>
+										<dt>所在地</dt>
+										<dd>名古屋市守山区下志段味特定土地区画整理…</dd>
+									</dl>
+									<div class="price">2,430<small>万円（税込）</small></div>
+								</div>
+							</li>
+							<li class="PU__item">
+								<div class="img">
+									<img src="img/pickup-3.jpg" alt="" />
+								</div>
+								<div class="txt">
+									<h3 class="ttl">守山下志段味【平屋の暮らし】</h3>
+									<dl>
+										<dt>交通</dt>
+										<dd>ＪＲ東海道本線 岡崎駅 徒歩17分</dd>
+										<dt>所在地</dt>
+										<dd>名古屋市守山区下志段味特定土地区画整理…</dd>
+									</dl>
+									<div class="price">2,430<small>万円（税込）</small></div>
+								</div>
+							</li>
+							<li class="PU__item">
+								<div class="img">
+									<img src="img/pickup-4.jpg" alt="" />
+								</div>
+								<div class="txt">
+									<h3 class="ttl">守山下志段味【平屋の暮らし】</h3>
+									<dl>
+										<dt>交通</dt>
+										<dd>ＪＲ東海道本線 岡崎駅 徒歩17分</dd>
+										<dt>所在地</dt>
+										<dd>名古屋市守山区下志段味特定土地区画整理…</dd>
+									</dl>
+									<div class="price">2,430<small>万円（税込）</small></div>
+								</div>
+							</li>
+						</ul>
+						<div class="btn">
+							<a href="https://www.toshinjyuken.co.jp/kodate/search.php?search=ブランド,平屋回帰｜フェーズ,ハーフオーダー" target="_blank" class="btn_bgLtoR colB border2"
+								><div class="border"></div>
+								<div>
+									<span>すべての物件を見る</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24.306 11.657"><polyline class="cls-1" points="0 6.157 22.868 6.157 15.585 0.392"></polyline></svg></div
+							></a>
+						</div>
+					</div>
+				</section>
+
+				<script>
+					function checkBreakPoint() {
+						w = $(window).width();
+						if (w <= 999) {
+							// スマホ向け（999px以下のとき）
+							$(".PU__list").not(".slick-initialized").slick({
+								autoplay: true,
+							});
+						} else {
+							// PC向け
+							$(".PU__list.slick-initialized").slick("unslick");
+						}
+					}
+					// ウインドウがリサイズする度にチェック
+					$(window).resize(function () {
+						checkBreakPoint();
+					});
+					// 初回チェック
+					checkBreakPoint();
+				</script>
+
+				<!-- *** -->
 				<section class="contSec" id="catchSec">
 					<div class="innerBlock">
 						<div class="lp_movie">
@@ -280,8 +382,20 @@
 						</a>
 					</div>
 				</div>
-				<div style="height: min(150px, 20vw)"></div>
+				<div style="height: min(100px, 20vw)"></div>
 				<!-- *** -->
+
+				<div class="bnr-harforder">
+					<a href="https://www.toshinjyuken.co.jp/kodate/bunjo-halforder.php">
+						<span class="bnr-harforder__logo">
+							<img src="img/bnr-harforder-logo.svg" alt="インテリアセレクト／ハーフオーダー" />
+						</span>
+						<span class="bnr-harforder__txt"
+							>ハーフオーダーについて詳しくはこちら<span class="arrow"
+								><svg class="arrow_btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21.45 10.79"><polyline points="0 5.39 20 5.39 13.63 0.39"></polyline></svg></span
+						></span>
+					</a>
+				</div>
 			</main>
 			<!-- ** -->
 			<div id="pagetop_btn"><a href="#pt" class="bg_cover bright"></a></div>
