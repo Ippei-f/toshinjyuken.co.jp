@@ -313,12 +313,14 @@ echo CONTENT_PAD(70,40);
 		</div>
 
 
-		<?php
-		//LPバナー
-		include '../teishaku-portal/lp-zeroyen/parts/data-param.php'; //パラメータ
-		$data_param_lp_zeroyen['type_hiraya'] = true;
-		include $data_param_lp_zeroyen['dir'] . 'parts/bnr_top.php'; //バナー
-		?>
+		<div class="top_lp_box_202503">
+			<div class="top_movie content_box">
+				<div class="set">
+					<div class="movie"><iframe src="//www.youtube.com/embed/9UJrtOiI2ug?si=v8sNDXTv21LUz-2J&amp;rel=0" frameborder="0" allowfullscreen=""></iframe></div>
+				</div>
+			</div>
+		</div>
+
 		<style>
 			.top_lp_box_202503 .content_box {
 				background-color: transparent;
