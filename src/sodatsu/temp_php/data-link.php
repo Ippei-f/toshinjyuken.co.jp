@@ -14,7 +14,7 @@ $link_list = array(
 	'物件詳細'			=> array($kaisou . 'search-detail.php', '')
 	//,'会員登録'			=>array($kaisou.'member.php'	,'')
 	,
-	'会員登録' => array('https://www.toshinjyuken.co.jp/kodate/member.php' . $t_blank, 'HIRAYA会員登録', 'rmenu' => 'HIRAYA//会員登録'),
+	'会員登録' => array('https://www.toshinjyuken.co.jp/kodate/member.php' . $t_blank, '会員登録', 'rmenu' => 'HIRAYA//会員登録'),
 	'ギャラリー'	 => array($kaisou . 'gallery.php', ''),
 	'お客様の声'	 => array($kaisou . 'voice.php', '') //,'en'=>'VOICE'
 	,

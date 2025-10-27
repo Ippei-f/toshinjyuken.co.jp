@@ -311,11 +311,7 @@ $arr = array(
 	//,'ALC'
 	//,array('url'=>$kaisou.'news.php?id=65','bnr'=>'/recaptcha/bnr/bnr-20230113-C.jpg')
 );
-$temp_bottom_bnr = '<div class="content_box bottom_bnr2025">
-<h3 class="pc_br_del">土地は持たずに平屋を買う<br>“テイシャク”という第3の選択肢</h3>
-<a href="' . $link_list['東新住建-テイシャク'][0] . '"><img src="' . $kaisou . 'images/bnr/2025/bnr-teishaku.png"></a>
-</div>
-<div class="bottom_bnr2025_2 bg_FFF">
+$temp_bottom_bnr = '<div class="bottom_bnr2025_2 bg_FFF">
 ' . CONTENT_PAD(60) . '
 <div class="Wbase sodatsu_bottom_bnr">' . chr(10);
 foreach ($arr as $v) {

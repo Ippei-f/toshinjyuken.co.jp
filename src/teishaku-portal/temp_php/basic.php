@@ -210,7 +210,7 @@ $temp_header = '<div class="H_head"></div>
 </ul>
 <a href="' . $link_list['物件一覧'][0] . '" class="btn_search">' . file_get_contents($kaisou . 'images/common/icon-search.svg') . '<span>物件を探す</span></a>
 <a href="' . $link_list['問合'][0] . '" class="btn_contact"><img src="' . $kaisou . 'images/common/icon-contact.svg"><span>来場予約<span>・</span><br>お問合せ</span></a>
-<a href="https://www.toshinjyuken.co.jp/kodate/member.php" class="btn_member" target="_blank">会員登録</a>
+<a href="https://www.toshinjyuken.co.jp/teishaku-portal/member.php" class="btn_member">会員登録</a>
 <div class="menubtn"><div>
 <span></span>
 <span></span>
