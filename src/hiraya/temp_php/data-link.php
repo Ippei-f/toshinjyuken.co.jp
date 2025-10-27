@@ -1,0 +1,89 @@
+<?php
+//<meta charset="utf-8">
+/*
+		[0]:リンク先
+		[1]:フルネーム
+*/
+$url=array();
+$link_list=array
+($k='TOP'		=>array($url[$k]=$kaisou.'index.php','')
+//---------------------------------------------------------------
+,'NEWS'			=>array($kaisou.'news.php'					,'')//,'jp'=>'ニュース'
+,'コラム'	 =>array($kaisou.'column.php'				 ,'')
+,'物件情報'	=>array($kaisou.'search.php'				,'')
+,'物件詳細'	=>array($kaisou.'search-detail.php'	,'')
+,'会員登録'	=>array($kaisou.'member.php'				,'HIRAYA会員登録','rmenu'=>'HIRAYA//会員登録')
+//---------------------------------------------------------------
+,$k='問合'	=>array($url[$k]='https://www.toshinjyuken.co.jp/kodate/contact.php'.$t_blank,'お問い合わせ')//2025/07/24変更
+//,$k='問合'	=>array($url[$k]=$kaisou.'contact.php','お問い合わせ')
+,'見学資料'	=>array($url[$k]											,'見学予約／資料請求','rmenu'=>'見学予約//資料請求')
+//---------------------------------------------------------------
+//,'新住まい'	=>array($url[$k]			 ,'「新しい住まい方」とは？')//$kaisou.'whats.php'
+,'定期借地'	=>array($kaisou.'teishaku.php','定期借地とは','bnrmenu'=>array(1,'定期借地とは？'))
+,'工法構造'	=>array($kaisou.'kouhou.php'	,'工法・構造'	,'bnrmenu'=>array(3))
+//,'QA'				=>array($url[$k]				 ,'よくある質問','bnrmenu'=>array(2))//$kaisou.'qa.php'
+/*
+,'特長'					=>array($kaisou.'merit.php'				,'スケルトンオーダーとは','en'=>'MERIT')
+,'特長-災害'		=>array($kaisou.'merit-saigai.php','災害に強い家'	,'en'=>'MERIT')
+,'特長-不変'		=>array($kaisou.'merit-kawaranai.php','変わらない価値','menu'=>'地盤改良 / 耐震工法'	,'en'=>'STRUCTURE')
+,'コンセプト'	 =>array($kaisou.'concept.php' ,'','en'=>'CONCEPT')
+,'お客様の声'	 =>array($kaisou.'voice.php'	 ,'','en'=>'VOICE')
+,'施工事例'			=>array($kaisou.'work.php'		,'','en'=>'WORKS')
+,'インテリア'	 =>array($kaisou.'interior.php','インテリアセレクト','en'=>'INTERIOR')
+,'ギャラリー'	 =>array($kaisou.'gallery.php' ,'')
+*/
+//---------------------------------------------------------------
+//,'insta'=>array('https://www.instagram.com/skeleton_order/?igshid=whfik72riucs'.$t_blank,'')
+//---------------------------------------------------------------
+,'東新住建'						=>array(($url['東新']='https://www.toshinjyuken.co.jp').$t_blank,'')
+,'東新住建-DUP'				=>array('https://www.dup-m.jp'.$t_blank,'','bnr'=>'dup')
+,'東新住建-家'				 =>array($url['東新'].'/kodate/'.$t_blank,'','bnr'=>'ie')
+,'東新住建-そだつ'		 =>array($url['東新'].'/sodatsu/'.$t_blank,'','bnr'=>'sodatsu')
+,'東新住建-DUPHILLS'	=>array($url['東新'].'/dup-hills/'.$t_blank,'','bnr'=>'duphills')
+,'東新住建-テイシャク'=>array($url['東新'].'/teishaku-portal/'.$t_blank,'','bnr'=>'teishaku')
+,'東新住建-平屋'			=>array($url['東新'].'/hiraya/'.$t_blank,'','bnr'=>'hiraya')
+,'東新住建-発電SH'		=>array($url['東新'].'/hatsuden-shelter-house/'.$t_blank,'','bnr'=>'hatsuden')
+,'東新住建-ALC'		=>array($url['東新'].'/new-concrete-log-house/'.$t_blank,'','bnr'=>'alc')
+//---------------------------------------------------------------
+,'お客様の声'				 =>array($url['東新'].'/kodate/voice.php?brand=1'.$t_blank,'')
+//---------------------------------------------------------------
+,'外部-無人で物件見学'=>array('https://www.toshinjyuken.co.jp/taptogolp/'.$t_blank,'')
+/*
+,'DUP-ギャラリー北名古屋'		=>array('https://www.dup-m.jp/showroom.php'.$t_blank,'')
+,'DUP-ギャラリー北名古屋-PDF'=>array($kaisou.'images/pdf/gallery_kitanagoya.pdf'.$t_blank,'')
+*/
+//---------------------------------------------------------------
+//,''=>array('#','')
+);
+
+//2025/06/05…東新住建の家の物件一覧に移動
+$link_list['物件情報'][0]=$url['東新'].'/kodate/search.php?search=ブランド,平屋回帰'.$t_blank;
+
+//新着カテゴリ追加
+/*
+$arr=COMMON_PARAM('news_cate');
+foreach($arr as $k => $v){
+	$n='新着-'.sprintf('%02d',$k);
+	$link_list[$n]=array($url['新着'].'?c='.$k,$v);
+}
+*/
+
+//現在ページ
+/*
+$nowpage			「abc.php」
+$nowpage_name	「abc」
+*/
+$nowpage=$_SERVER['SCRIPT_NAME'];
+$nowpage=explode('/',$nowpage);
+$nowpage=end($nowpage);
+$nowpage_name=explode('.',$nowpage);
+$nowpage_name=$nowpage_name[0];
+
+//[1]が空白の時はkeyと同じ
+foreach($link_list as $key => $val){
+	if($val[1]==''){
+		$link_list[$key][1]=$key;
+		//$link_list[$key][1]=str_replace('&',' & ',$link_list[$key][1]);
+	}
+}
+?>
