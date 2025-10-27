@@ -210,6 +210,7 @@ $temp_header = '<div class="H_head"></div>
 </ul>
 <a href="' . $link_list['物件一覧'][0] . '" class="btn_search">' . file_get_contents($kaisou . 'images/common/icon-search.svg') . '<span>物件を探す</span></a>
 <a href="' . $link_list['問合'][0] . '" class="btn_contact"><img src="' . $kaisou . 'images/common/icon-contact.svg"><span>来場予約<span>・</span><br>お問合せ</span></a>
+<a href="https://www.toshinjyuken.co.jp/kodate/member.php" class="btn_member" target="_blank">会員登録</a>
 <div class="menubtn"><div>
 <span></span>
 <span></span>
@@ -306,16 +307,15 @@ $temp_bottom_bnr = '<div class="content_box bottom_bnr2025">
 <a href="' . $link_list['東新住建-平屋'][0] . '"><img src="' . $kaisou . 'images/bnr/toushin2025/bnr-hiraya.png"></a>
 </div>
 <div class="bottom_bnr2"><div class="W1000 Wmax100per mgnAuto">
-<h3>その他の商品ラインナップ</h3>
+
 <div class="flex bg_cover">
 ' . BOTTOMBNR_MENU_SODATSU(array(
-	'発電SH'
+	//'発電SH'
 	//,'平屋'
-	,
-	'そだつ',
-	'DUP',
+	//'そだつ',
+	//'DUP',
 	'家',
-	'ALC'
+	//'ALC'
 )) ./*
 BOTTOMBNR_MENU(array
 (1=>array('東新住建-DUP',40)

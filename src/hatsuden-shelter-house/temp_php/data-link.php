@@ -1,0 +1,61 @@
+<?php
+//<meta charset="utf-8">
+/*
+		[0]:リンク先
+		[1]:フルネーム
+*/
+$url=array();
+$link_list=array
+('TOP'		=>array($kaisou.'index.php','')
+//---------------------------------------------------------------
+,'物件'=>array($kaisou.'search.php','物件一覧')
+,'客声'=>array($kaisou.'voice.php','お客様の声')
+,'安さ'=>array($kaisou.'index.php#yasusa','安さの秘密')
+,'問合'=>array('https://www.toshinjyuken.co.jp/kodate/contact.php'.$t_blank,'お問い合わせ')
+//---------------------------------------------------------------
+,'東新住建'						=>array(($url['東新']='https://www.toshinjyuken.co.jp').$t_blank,'')
+,'東新住建-DUP'				=>array('https://www.dup-m.jp'.$t_blank,'','bnr'=>'dup')
+,'東新住建-家'				 =>array($url['東新'].'/kodate/'.$t_blank,'','bnr'=>'ie')
+,'東新住建-そだつ'		 =>array($url['東新'].'/sodatsu/'.$t_blank,'','bnr'=>'sodatsu')
+,'東新住建-DUPHILLS'	=>array($url['東新'].'/dup-hills/'.$t_blank,'','bnr'=>'duphills')
+,'東新住建-テイシャク'=>array($url['東新'].'/teishaku-portal/'.$t_blank,'','bnr'=>'teishaku')
+,'東新住建-平屋'			=>array($url['東新'].'/hiraya/'.$t_blank,'','bnr'=>'hiraya')
+,'東新住建-ALC'		=>array($url['東新'].'/new-concrete-log-house/'.$t_blank,'','bnr'=>'alc')
+//---------------------------------------------------------------
+,'外部-無人で物件見学'=>array($url['東新'].'/taptogolp/'.$t_blank,'')
+,'外部-液状化'				 =>array($url['東新'].'/life/safety.html#anchor'.$t_blank,'')
+//---------------------------------------------------------------
+//,''=>array('#','')
+);
+
+//2025/06/05…東新住建の家の物件一覧に移動
+$link_list['物件'][0]=$url['東新'].'/kodate/search.php?search=ブランド,発電シェルターハウス'.$t_blank;
+
+//新着カテゴリ追加
+/*
+$arr=COMMON_PARAM('news_cate');
+foreach($arr as $k => $v){
+	$n='新着-'.sprintf('%02d',$k);
+	$link_list[$n]=array($url['新着'].'?c='.$k,$v);
+}
+*/
+
+//現在ページ
+/*
+$nowpage			「abc.php」
+$nowpage_name	「abc」
+*/
+$nowpage=$_SERVER['SCRIPT_NAME'];
+$nowpage=explode('/',$nowpage);
+$nowpage=end($nowpage);
+$nowpage_name=explode('.',$nowpage);
+$nowpage_name=$nowpage_name[0];
+
+//[1]が空白の時はkeyと同じ
+foreach($link_list as $key => $val){
+	if($val[1]==''){
+		$link_list[$key][1]=$key;
+		//$link_list[$key][1]=str_replace('&',' & ',$link_list[$key][1]);
+	}
+}
+?>
