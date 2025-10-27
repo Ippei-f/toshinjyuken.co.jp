@@ -1,0 +1,184 @@
+<?php
+//<meta charset="utf-8">
+
+//物件スライドのONOFF
+$temp_bukkenslide_flag=true;
+
+//個数制限（0で制限なし）
+$max=6;
+//$max=0;
+
+if($temp_bukkenslide_flag){//上パーツ
+?>
+<div class="sp_slide_set">
+<div class="arrow L"><img src="images/content/search/arrow-L.svg"></div>
+<div class="sp_slide_mode">
+<?php
+}
+?>
+<ul class="search_list bg_cover">
+<?php
+$cnt=0;
+foreach(CMS_SETUP('search') as $key => $sysdata){
+	if(CMS_OPEN($sysdata)){continue;}
+	CMS_DATA_REPLACE();
+	CMS_IMGSET($sysdata[0]);
+	//print_r($sysdata['main']);
+	
+	$href=$link_list['物件詳細'][0].'?id='.$sysdata[0].'&name='.$sysdata[2];
+	
+	$login_window='';
+	$add=array('','','');
+	if($sysdata[3]==1){
+		$add[0]=' class="kaiin"';
+		$login_window=' login_window" onclick="return false;';
+	}
+	if(file_exists($sysdata['main'][0])){
+		$add[1]=' style="background-image: url('.$sysdata['main'][0].');"';
+	}
+	if($sysdata[10]==1){
+		$add[2]='<div class="newmark"></div>';
+	}
+	$str='<li>
+<a class="pos_rel bg_cover pic'.$login_window.'"'.$add[1].' href="'.$href.'"><img src="images/common/clear-W316H208.png"'.$add[0].'>'.$add[2].'</a>
+<div class="text1">
+'./*<span class="chiku">'.$sysdata[19].'学区</span>*/'<span class="title">'.$sysdata[2].'</span>
+<div class="addr">'.$sysdata[6][0].'</div>
+</div>
+'/*<hr>*/.chr(10);
+	$add=array('','','');
+	if($sysdata[6][2]!=''){
+		if($sysdata[3]!=1){
+			//会員限定以外の時に価格表示
+			if(is_numeric($sysdata[6][2])){$sysdata[6][2]=number_format($sysdata[6][2]);}
+			$add[0]='<div class="sub1"><div>販売価格（税込）：</div><div>'.$sysdata[6][2].'</div></div>'.chr(10);
+		}
+	}
+	//$num=array_search('敷地面積',$sysdata[8]);
+	/*
+	for($i=0;$i<count($sysdata[8]);$i+=2){
+		if($sysdata[8][$i]!='敷地面積'){continue;}
+		$add[1]='<div class="sub2">敷地面積：'.$sysdata[8][$i+1].'</div>'.chr(10);
+		break;
+	}
+	*/
+	if($sysdata[6][1]!=''){
+		$add[2]='<div class="sub3">'/*最寄駅：*/.$sysdata[6][1].'</div>'.chr(10);
+	}
+	$str.='<div class="text2">
+'.$add[2].$add[0].$add[1].'</div>
+<a class="btn LH100 '.$login_window.'" href="'.$href.'"><span class="sp_vanish">&#9654;</span>物件詳細</a>
+</li>'.chr(10);
+	echo $str;
+	$cnt++;
+	if(($max!=0)&&($cnt>=$max)){break;}
+}
+?>
+<div class="clear"></div>
+</ul>
+<?php
+if($temp_bukkenslide_flag){//下パーツ
+?>
+</div>
+<div class="arrow R"><img src="images/content/search/arrow-R.svg"></div>
+</div>
+<script>
+$(window).load(function(){
+	scr=false;
+	cnt=0;
+	len=$('.sp_slide_mode ul li').length;
+	SEARCH_SLIDE_SCR();
+	/*
+	$('.sp_slide_mode').on('mousedown', function(){
+	});
+	*/
+	$('.sp_slide_mode').on('mouseup', function(){
+		SEARCH_SLIDE_BTN(0);
+	});
+	$('.sp_slide_mode').on('touchstart mousedown', function(){
+		cnt=0;
+	});
+	$('.sp_slide_mode').on('touchend mouseup', function(){
+		cnt=1;
+	});
+	$('.sp_slide_mode').scroll(function(){
+		scr=true;
+		SEARCH_SLIDE_SCR();
+	});
+	$(".sp_slide_set .arrow.L img").click(function(){
+		SEARCH_SLIDE_BTN(-1);
+	});
+	$(".sp_slide_set .arrow.R img").click(function(){
+		SEARCH_SLIDE_BTN(1);
+	});
+	var loop= function(){
+		if(!scr){
+			if(cnt>0){
+				cnt--;
+				//$('.test').html(cnt);
+				if(cnt==0){
+					SEARCH_SLIDE_BTN(0);
+				}
+			}
+		}
+		scr=false;
+		setTimeout(loop,50);
+	};
+	loop();
+});
+function SEARCH_SLIDE_WIDTH(){
+	return $('.sp_slide_mode').width();//横幅リセット
+}
+function SEARCH_SLIDE_BTN(add){
+	var w=SEARCH_SLIDE_WIDTH();
+	var p1=Math.floor($('.sp_slide_mode ul').position().left);
+	if(add!=0){
+		num=(Math.floor(-p1/w)+add+len)%len;
+	}
+	else{
+		num=(Math.round(-p1/w)+len)%len;
+	}
+	//$('.test').html(num+'/'+(-p1)+'/'+w+'/'+(-p1/w)+'/'+len);
+	//$('.sp_slide_mode').scrollLeft(num*w);
+	$('.sp_slide_mode').animate({scrollLeft:num*w},250,"swing",function(){
+		//$(this).dequeue();
+	});
+}
+function SEARCH_SLIDE_SCR(){
+	var w=SEARCH_SLIDE_WIDTH();
+	var p2=Math.floor($('.sp_slide_mode ul').position().left);
+	len=$('.sp_slide_mode ul li').length;//個数再読み込み
+	num=Math.round(-p2/w)%len;
+	//$('.test').html(num+'/'+(-p2/w)+'/'+len);
+	$(".sp_slide_set .arrow").removeClass('off');
+	if(num<=0){
+		$(".sp_slide_set .arrow.L").addClass('off');
+	}
+	if(num>=(len-1)){
+		$(".sp_slide_set .arrow.R").addClass('off');
+	}
+}
+</script>
+<style>
+.search_list_bottom{}
+.search_list_bottom .top_bukken_back .btn_bgLtoR > * > span{width: 15em;}
+@media screen and (min-width: 1000px) {
+	.search_list_bottom{margin-bottom: 90px;}
+}
+@media screen and (max-width: 999px) {
+	.sp_slide_mode > .search_list{<?php echo 'width:'.($cnt*100).'%;'; ?>}
+	.search_list_bottom{margin-top: 50px;}
+}
+</style>
+<?php
+}
+
+//無制限でなければボタンを表示
+if($max!=0){
+?>
+<div class="search_list_bottom">
+<img src="<?php echo $kaisou; ?>images/common/text-zokuzoku.svg" class="mgnAuto" style="width: 572px; margin-bottom: 12px;">
+<div class="top_bukken_back"><?php echo EFFECT_BTN('物件情報','すべての物件を見る',array('arrow'=>true)); ?></div></div>
+<?php
+}
+?>

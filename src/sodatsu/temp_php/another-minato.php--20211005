@@ -1,0 +1,304 @@
+<?php
+//<meta charset="utf-8">
+
+$temp_title='港区プロジェクト by そだつプロジェクト';
+
+$url_minato='https://www.toshinjyuken.co.jp/townproject-minato/';
+//$link_list['TOP'][0]=$url_minato;
+$link_list['港区プロジェクト']=array($url_minato,'');//.$t_blank
+
+function ANOTHER_MINATO($type){
+	global $url_minato;
+	switch($type){
+		case 'css':
+?>
+<style>
+body{color:#232323;}
+.bg_FFF_y{background-color: #F6F5F1;}
+@media screen and (min-width: 1000px) {
+	.p_title{
+		font-size: 200%;
+		padding: 2.5em 0;
+	}
+}
+.contact_step.step1{
+	background-image: url(images/content/contact/step/y/step1-y.svg)
+									, url(images/content/contact/step/step2-off.svg)
+									, url(images/content/contact/step/step3-off.svg)
+}
+.contact_step.step2{
+	background-image: url(images/content/contact/step/step1-off.svg)
+									, url(images/content/contact/step/y/step2-y.svg)
+									, url(images/content/contact/step/step3-off.svg)
+}
+.contact_step.step3{
+	background-image: url(images/content/contact/step/step1-off.svg)
+									, url(images/content/contact/step/step2-off.svg)
+									, url(images/content/contact/step/y/step3-y.svg)
+}
+@media screen and (max-width: 999px) {
+	.contact_step.step1{
+		background-image: url(images/content/contact/step/y/step1-y-sp.svg)
+										, url(images/content/contact/step/step2-off-sp.svg)
+										, url(images/content/contact/step/step3-off-sp.svg)
+	}
+	.contact_step.step2{
+		background-image: url(images/content/contact/step/step1-off-sp.svg)
+										, url(images/content/contact/step/y/step2-y-sp.svg)
+										, url(images/content/contact/step/step3-off-sp.svg)
+	}
+	.contact_step.step3{
+		background-image: url(images/content/contact/step/step1-off-sp.svg)
+										, url(images/content/contact/step/step2-off-sp.svg)
+										, url(images/content/contact/step/y/step3-y-sp.svg)
+	}
+}
+.contact_box .contact_inputarea .pos_addr_btn{
+	background-color: #F1FF00;
+	color: #000;
+}
+.contact_box table th,
+.contact_box input,
+.contact_box select,
+.contact_box textarea,
+.contact_box .privacy_box{
+	background-color: #FFF;
+}
+/*
+.top_bnrbox_2021,
+.top_bnrbox_2021 + .bottom_bnr{display: none;}
+*/
+</style>
+<?php
+		break;
+		case 'header':
+?>
+<style>
+.css_minato > .H_head{
+	 height: 200px;
+	 display: none;
+}
+.css_minato header{position: relative;}
+.css_minato header > div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1240px;
+    width: 95%;
+    margin: 0 auto;
+    height: 130px;
+}
+.css_minato header h1 img {
+    width: 610px;
+    height: auto;
+}
+.css_minato .head-right {
+    margin-left: 30px;
+}
+.css_minato header .tel img {
+    width: 275px;
+    height: auto;
+}
+.css_minato header .contact {
+    margin-top: 10px;
+}
+.css_minato nav {
+    background: #232323;
+		/*
+		position: fixed;
+    top: 130px;
+    left: 0;
+    right: 0;
+		*/
+    width: 100%;
+    margin: auto;
+    z-index: 1000;
+		font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", "sans-serif";
+}
+.css_minato nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+}
+.css_minato nav ul li {
+    max-width: 150px;
+    width: 20%;
+    margin: 0 2.5%;
+}
+.css_minato nav ul li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.375rem;
+    font-weight: bold;
+    color: #FFF;
+    text-decoration: none;
+    height: 70px;
+}
+@media screen and (max-width: 768px){
+.css_minato > .H_head{
+	 height: 88px;
+}
+.css_minato header > div{
+    height: 44px;
+    width: 100%;
+}
+.css_minato header h1 {
+    margin-left: 2.5%;
+}
+.css_minato header h1 img {
+    width: 235px;
+    height: auto;
+}
+.css_minato header .tel img {
+    width: 275px;
+    height: auto;
+    display: none;
+}
+.css_minato header .contact {
+    margin-top: 0;
+}
+.css_minato header .contact a {
+    display: block;
+    width: 44px;
+    height: 44px;
+    background: url(<?php echo $url_minato; ?>images/ic_contact.svg) #ff64a5;
+    background-size: 19px auto;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.css_minato header .contact img {
+    display: none;
+}
+.css_minato nav{
+	top: 44px;
+}
+.css_minato nav ul {
+    height: 44px;
+}
+.css_minato nav ul li {
+    width: 33%;
+    margin: 0 auto;
+}
+.css_minato nav ul li:last-child {
+    display: none;
+}
+.css_minato nav ul li a {
+    font-size: 0.938rem;
+    height: 44px;
+}
+}
+</style>
+<div class="css_minato">
+<div class="H_head"></div>
+<header><div>
+  <h1><img src="<?php echo $url_minato; ?>images/logo.svg" alt=""></h1>
+  <div class="head-right">
+  <div class="tel"><img src="<?php echo $url_minato; ?>images/tel.svg" alt=""></div>
+  <div class="contact"><?php /*<a href="https://www.toshinjyuken.co.jp/sodatsu/contact-minato.php" target="_blank"></a>*/ ?><img src="<?php echo $url_minato; ?>images/btn_contct.svg" alt=""></div>
+  </div>
+</div></header>
+<?php
+/*
+<nav>
+  <ul>
+    <li><a href="<?php echo $url_minato; ?>">TOP</a></li>
+    <li><a href="<?php echo $url_minato; ?>kogasu/">港区小賀須</a></li>
+    <li><a href="<?php echo $url_minato; ?>sendouba/">港区船頭場</a></li>
+    <li><a href="https://www.toshinjyuken.co.jp/sodatsu/contact-minato.php" target="_blank">お問い合わせ</a></li>
+  </ul>  
+</nav>
+*/
+?>
+</div>
+<?php
+		break;
+		case 'footer':
+?>
+<style>
+.css_minato footer {
+    background: #231815;
+		font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", "sans-serif";
+}
+.css_minato footer .inner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 420px;
+    width: 95%;
+    margin: 0 auto;
+    padding: 30px 0 45px 0;
+		text-align: left;
+}
+.css_minato footer .logo img {
+    width: 143px;
+    height: auto;
+}
+.css_minato footer .add {
+    color: #FFF;
+    font-size: 0.625em;
+    line-height: 1.3em;
+}
+.css_minato footer .tel {
+    width: 345px;
+    margin: 30px auto 0 auto;
+}
+.css_minato .copy {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #FFF;
+    font-size: 0.625em;
+    height: 60px;
+		line-height: 100%;
+    padding: 0;
+    margin-top: 0;
+    text-align: center;
+}
+@media screen and (max-width: 768px){
+.css_minato footer .inner {
+    flex-direction: column;
+    padding: 24px 0 35px 0;
+    max-width: 370px;
+}
+.css_minato footer .logo {
+    width: 175px;
+    margin: 0 auto;
+}
+.css_minato footer .logo img {
+    width: 100%;
+    height: auto;
+}
+.css_minato footer .add {
+    margin-top: 20px;
+    order: 10;
+}
+.css_minato footer .tel {
+    width: 372px;
+    margin: 20px auto 0 auto;
+}
+.css_minato footer .tel img {
+    width: 372px;
+    height: auto;
+}
+}
+</style>
+<div class="css_minato">
+<footer>
+    <div class="inner">
+      <div class="logo"><img src="<?php echo $url_minato; ?>images/foot_logo.svg" alt="東新住建"></div>
+      <div class="add">〒492-8628<br>
+愛知県稲沢市高御堂1-3-18<br>
+宅地建物取引業免許：国土交通大臣（2）第7873号<br>
+建設業許可：愛知県知事許可（特-29）第61271号<br>
+（社）愛知県宅地建物取引業協会会員</div>
+      <div class="tel"><img src="<?php echo $url_minato; ?>images/foot_tel.svg" alt=""></div>
+    </div>
+  <div class="copy">Copyright TOSHIN JYUKEN. All rights reserved.</div>  
+</footer></div>
+<?php
+		break;
+	}
+}
+?>

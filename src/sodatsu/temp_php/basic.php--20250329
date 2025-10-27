@@ -1,0 +1,572 @@
+<?php
+//<meta charset="utf-8">
+
+//◆ PC・スマホ分岐 ◆
+/*
+$HUA=$_SERVER['HTTP_USER_AGENT'];
+//iPhone Android 等 スマートフォン
+if (preg_match("/iPhone/",$HUA) ||
+    preg_match("/iPod/",$HUA) ||    preg_match("/Android/",$HUA)) {
+		$PCbrowser=false;//スマホ仕様
+}
+else{$PCbrowser=true;//PC仕様
+}
+*/
+$SPbrowser='';
+$HUA=$_SERVER['HTTP_USER_AGENT'];
+switch(true){
+	case (preg_match("/iPhone/",$HUA)):
+	$SPbrowser='iPhone';//アイフォン
+	break;
+	case (preg_match("/Android/",$HUA)):
+	$SPbrowser='Android';//アンドロイド
+	break;
+}
+
+//◆エラー表示設定
+error_reporting(E_ERROR | E_PARSE);
+
+
+//◆共通変数・配列
+
+$dir_c=		$kaisou.'images/common/';
+$dir_t=		$kaisou.'images/top/';
+$dir_sns=	$kaisou.'system/';
+
+$t_blank='" target="_blank';
+
+$comp_data=array
+('HP名'	=>'そだつプロジェクト'
+//-----
+,'本社名'=>'東新住建'
+,'〒'		=>'492-8628'
+,'住所'	 =>'愛知県稲沢市高御堂一丁目3-18(稲沢本店)'
+,'TEL'	 =>'0800-170-5104'
+//-----
+//,'MAIL'=>'mirror'//test
+
+,'MAIL'=>array
+('info@toshinjyuken.co.jp'
+,'dup@toshinjyuken.co.jp'
+//,'customersupport@toshinjyuken.co.jp'
+)
+,'MAIL-noreply'=>'info@toshinjyuken.co.jp'
+,'MAIL-sender'=>'info@toshinjyuken.co.jp'//送信者固定
+
+//-----
+,'copy'	 =>'Copyright (C) TOSHIN JYUKEN All Rights Reserved.'
+);
+
+$democheck=$_SERVER['SCRIPT_FILENAME'];
+switch(true){
+	case (strpos($democheck,'showa')!==false):
+	$democheck='showa';
+	$comp_data['MAIL']='mirror';//送信先ミラー化
+	break;
+	case (strpos($democheck,'formdemo')!==false):
+	$democheck='formdemo';
+	break;
+	/*
+	//20201125に本サーバー化するため、デモではなくなる。
+	case ($_SERVER['SERVER_ADDR']=='160.251.9.220'):
+	$democheck='demoserver';
+	$comp_data['MAIL']='mirror';//送信先ミラー化
+	break;
+	*/
+	default:
+	$democheck='';
+}
+
+//建築許可番号読み込み
+$comp_data['建築許可番号']=file_get_contents($kaisou."../recaptcha/common-kyoka.txt");
+if($comp_data['建築許可番号']==''){
+	//読み込み失敗時の保険
+	$comp_data['建築許可番号']=file_get_contents("https://www.toshinjyuken.co.jp/recaptcha/common-kyoka.txt");//絶対参照
+}
+$comp_data['建築許可番号']=str_replace(array("\r\n","\n","\r",'
+'),chr(10),$comp_data['建築許可番号']);
+$comp_data['建築許可番号']=str_replace(chr(10).chr(10),chr(10),$comp_data['建築許可番号']);
+$comp_data['建築許可番号']=explode(chr(10),$comp_data['建築許可番号']);
+//$comp_data['建築許可番号']=array_filter($comp_data['建築許可番号']);//空白削除
+//$comp_data['建築許可番号']=array_values($comp_data['建築許可番号']);//キー連番
+//print_r($comp_data['建築許可番号']);
+/*
+$comp_data['建築許可番号']=array
+('宅地建物取引業免許：国土交通大臣（3）7873号'
+,'特定建設業許可：愛知県知事許可（特-4）第61271号'
+,'（公社）愛知県宅地建物取引業協会会員'
+,'東海不動産取引協議会加盟'
+);
+*/
+
+require $kaisou."temp_php/data-link.php";//リンク先の情報は別ファイルにまとめ
+
+//require $kaisou."temp_php/data-area.php";//エリア情報は別ファイルにまとめ
+
+$temp_meta=$temp_gtm='';
+//グーグルタグマネージャー
+$str="<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WG4NLRH');</script>
+<!-- End Google Tag Manager -->
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PRRJRDR');</script>
+<!-- End Google Tag Manager -->".chr(10);
+$temp_meta.=$str;
+$temp_gtm.=$str;
+//IMタグ
+$str="<script type=\"text/javascript\">
+ (function(w,d,s){
+  var f=d.getElementsByTagName(s)[0],j=d.createElement(s);
+  j.async=true;j.src='https://dmp.im-apps.net/js/1013764/0001/itm.js';
+  f.parentNode.insertBefore(j, f);
+ })(window,document,'script');
+</script>".chr(10);
+$temp_meta.=$str;
+$temp_gtm.=$str;
+//キーワード
+$temp_meta.='<meta name="keywords" content="">
+<meta name="description" content="「そだつ」は、2人くらいにちょうどいい住まい。従来のファミリー層はもちろん、定年後のご夫婦、結婚前のカップル、シングルマザー、LGBT、友人同士、兄弟姉妹、ペットとの暮らしなど、これから育まれる「新・かぞく」にぴったりな住まいです。">'.chr(10);
+/*
+~20220819
+<meta name="description" content="「そだつ」は、従来のファミリー層はもちろん、定年後のご夫婦、結婚前のカップル、シングルマザー、LGBT、友人同士、兄弟姉妹、ペットとの暮らしなど、これから育まれる「新・かぞく」にぴったりな住まいです。">'.chr(10);
+*/
+if($democheck!=''){
+	$temp_meta.='<!-- DEMOTYPE:'.$democheck.' -->'.chr(10);
+	if(!is_array($comp_data['MAIL'])){
+		$temp_meta.='<!-- MAIL:'.$comp_data['MAIL'].' -->'.chr(10);
+	}
+	$temp_meta.='<meta name="robots" content="noindex,nofollow">'.chr(10);//◆◆◆デモページのみ検索拒否◆◆◆
+}
+
+
+//viewport
+$HUA=$_SERVER['HTTP_USER_AGENT'];
+switch(true){
+case preg_match("/iPad/",$HUA):
+	$temp_meta.='<!-- viewport=iPad -->
+	<meta name="viewport" content="width=1300px">'.chr(10);
+break;
+default:
+	
+	$temp_meta.='<!-- viewport=normal -->
+<meta name="viewport" content="width=device-width" />'.chr(10);
+	/* $temp_meta.='<!-- viewport=normal -->
+<meta name="viewport" content="width=device-width,user-scalable=no,maximum-scale=1" />
+<meta name="viewport" content="width=414px,initial-scale=0.48" />'.chr(10); */
+}
+
+//◆タイトル
+//$temp_title='｜'.$comp_data['HP名'];
+$temp_title='【公式】'.$comp_data['HP名'].'‐東新住建';
+
+
+//◆JAVA
+$temp_java='<script src="'.$kaisou.'js/jquery.v1.11.1.min.js" type="text/javascript"></script>
+<script src="'.$kaisou.'js/common.js" type="text/javascript"></script>'.chr(10);
+/*
+$temp_java.="<!-- Begin Mieruca Embed Code -->
+<script type=\"text/javascript\" id=\"mierucajs\">
+window.__fid = window.__fid || [];__fid.push([461642181]);
+(function() {
+function mieruca(){if(typeof window.__fjsld != \"undefined\") return; window.__fjsld = 1; var fjs = document.createElement('script'); fjs.type = 'text/javascript'; fjs.async = true; fjs.id = \"fjssync\"; var timestamp = new Date;fjs.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://hm.mieru-ca.com/service/js/mieruca-hm.js?v='+ timestamp.getTime(); var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(fjs, x); };
+setTimeout(mieruca, 500); document.readyState != \"complete\" ? (window.attachEvent ? window.attachEvent(\"onload\", mieruca) : window.addEventListener(\"load\", mieruca, false)) : mieruca();
+})();
+</script>
+<!-- End Mieruca Embed Code -->".chr(10);
+*/
+//start Promolayer JS code
+//~20230602差し替え
+$temp_java.='<!-- start Promolayer JS code--><script type="module" src="https://modules.promolayer.io/index.js" data-pluid="z8hsh4Gf3jZDTv5WX9uyqn1JdvO2" data-workspace="aDuOQM5TfZJUmgcFeYKR" crossorigin async></script><!-- end Promolayer JS code-->'.chr(10);
+/*
+$temp_java.='<!-- start Promolayer JS code-->
+<script type="module" src="https://modules.promolayer.io/index.js" data-pluid="x599nGnQoUTcKWykmww9oz5Agj13" crossorigin async></script>
+<!-- end Promolayer JS code-->'.chr(10);
+*/
+
+
+//◆グーグルマップJSファイル読み込み
+$key='AIzaSyBlfj2BEkfH0hODugXPK9BLWDA1h857Ayg';
+$temp_googlemap_js='<script src="'.$kaisou.'js/map.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key='.$key.'&callback=initMap"></script>'.chr(10);
+
+
+//◆ページトップ
+$temp_pagetop='<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WG4NLRH"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PRRJRDR"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<a name="pt" id="pt"></a><div id="pagetop_btn"><a href="#pt" class="bg_cover bright"></a></div>'.chr(10);
+
+
+//◆ヘッダ
+function HEADER_SUBMENU($arr=array()){
+	global $dir_c,$link_list;
+	$str='';
+	foreach($arr as $k => $v){
+		if(empty($v[1])){$v[1]=$k;}
+		$add=(strpos($v[1],'<span>')!==false)?' col2':'';
+		//<div class="icon"><img src="'.$dir_c.$v[0].'.svg"></div>
+		$str.='<td><a href="'.$link_list[$k][0].'"><div class="text'.$add.'">'.$v[1].'</div></a></td>'.chr(10);
+	}
+	return $str;
+}
+function HEADER_SPMENU($arr=array()){
+	global $link_list;
+	$str='';
+	foreach($arr as $v){
+		$a=$link_list[$v];
+		$text=isset($a['jp'])?$a['jp']:$a[1];
+		$str.='<a href="'.$a[0].'">'.$text.'</a>'.chr(10);
+	}
+	return $str;
+}
+$logo=file_get_contents($dir_c.'logo-h.svg');
+$logo=str_replace($str='<svg',$str.' class="logo" title="'.$comp_data['HP名'].'"',$logo);
+$logo='<a href="'.$link_list['TOP'][0].'">'.$logo.'</a>';
+/*
+switch($p_type){
+	case 'news':
+	$logo.='<a href="'.$link_list['TOP'][0].'"><img src="'.$dir_c.'logo-w.svg" class="logo w" title="'.$comp_data['HP名'].'"></a>';
+	break;
+}
+*/
+$temp_header='<div class="H_head"></div><header><div class="pos_rel H_head">
+'.$logo.'
+<div class="accbox"><div><div class="m">
+'.HEADER_SPMENU(array
+('TOP'
+,'NEWS'
+,'物件情報'
+,'安さの秘密'
+,'お客様の声'
+,'コラム'
+,'会員登録'
+,'お問い合わせ'
+)).'
+</div></div></div>
+<div class="menubtn"><div>
+<span></span>
+<span></span>
+<span></span>
+</div></div>
+</div>
+<div class="submenu"><table border="0" cellpadding="0" cellspacing="0" class="pc_tblbreak fontP080 LH125 sp_LH100"><tr>
+'.HEADER_SUBMENU(array
+('物件情報'			=>array('icon-search')
+,'お問い合わせ'	=>array('icon-contact','来場予約<span>・</span><br>お問合せ')
+,'会員登録'			=>array('icon-member')
+)).'
+<td class="sp_vanish"><a href="#pt"><img src="'.$dir_c.'btn-submenu-pagetop.svg"></a></td>
+</tr></table></div>
+</header>';
+unset($logo);
+
+
+//◆フッタ
+/*
+$temp_bottom_bnr2='<ul class="top_bnrbox_2021">
+<li><a href="news.php?id=12"><img src="images/top/so/bnr-weekday_2.jpg"></a></li>
+</ul>'.chr(10);
+*/
+$arr=array
+('発電SH'
+,'平屋'
+,'テイシャク'
+,'DUP'
+,'家'
+//,'DUPHILLS'
+//,array('url'=>$kaisou.'news.php?id=65','bnr'=>'/recaptcha/bnr/bnr-20230113-C.jpg')
+);
+$temp_bottom_bnr='<div class="W1000 Wmax100per mgnAuto bottom_bnr">'.chr(10);
+foreach($arr as $v){
+	if(is_array($v)){
+		$a=$v;
+	}
+	else{
+		$a=$link_list['東新住建-'.$v];
+		$a['url']=$a[0];
+		$a['bnr']=$kaisou.'images/common/bottom/bnr-'.$a['bnr'].'.jpg';
+	}	
+	$temp_bottom_bnr.='<a href="'.$a['url'].'"><img src="'.$a['bnr'].'"></a>'.chr(10);
+}
+$temp_bottom_bnr.='</div>'.chr(10);
+
+$temp_footer='<footer><div class="Wbase W625">
+<table border="0" cellpadding="0" cellspacing="0" class="sp_tblbreak logoset"><tr>
+<td><a href="'.$link_list['TOP'][0].'"><img src="'.$dir_c.'logo-f.svg"></a></td>
+<td></td>
+<td class="tel_box">
+<div>お問合せ・資料請求はこちら</div>
+<a href="tel:'.$comp_data['TEL'].'" class="tel"><img src="'.$dir_c.'foot-tel.svg"></a>
+<div>【営業時間】10：00～18：00　【定休日】水曜日</div>
+</td>
+</tr></table>
+<table border="0" cellpadding="0" cellspacing="0" class="sp_tblbreak logoset"><tr>
+<td><a href="'.$link_list['東新住建'][0].'"><img src="'.$dir_c.'logo-toushin.svg"></a></td>
+<td></td>
+<td class="addr_box LH150">
+'.WORD_BR('〒'.$comp_data['〒'].'
+'./*str_replace('(','(',)*/$comp_data['住所'].'
+TEL.'.$comp_data['TEL']).'
+</td>
+</tr></table>
+<div class="kyoka LH175">'.WORD_BR('<span>'.$comp_data['建築許可番号'][0].'</span><span>'.$comp_data['建築許可番号'][1].'</span>
+<span>'.$comp_data['建築許可番号'][2].'</span><span>'.$comp_data['建築許可番号'][3].'</span>').'</div>
+<div class="copy">'.$comp_data['copy'].'</div>
+</div></footer>
+<div id="pagebottom_btn"><a href="#pt"><img src="'.$dir_c.'btn-submenu-pagetop.svg"></a></div>'.chr(10);
+switch($p_title){
+		case 'お問い合わせ':
+		case '会員登録':
+		case '開発の想い':
+		case '派生-LGBTQ':
+		case '派生-中古比較':
+		//case 'TOP':
+		break;
+		default:
+		require $kaisou."temp_php/bottom-slide.php";
+		$temp_footer=$temp_bottom_slide.$temp_bottom_bnr.$temp_footer;
+}
+
+
+//◆body末尾
+$temp_bodyend='';
+//SATORIタグ
+$temp_bodyend.='<script type="text/javascript" id="_-s-js-_" src="//satori.segs.jp/s.js?c=65abdfb0"></script>'.chr(10);//DUPと同じ
+
+//require $kaisou."temp_php/temp-html.php";//その他テンプレは別ファイルにまとめ
+
+
+//◆関数
+function WORD_BR($str,$flag=true){
+	$rep=$flag?'<br>':'';
+	return str_replace(array("\r\n","\n","\r"),$rep,$str);
+}
+function WORD_SPACEDEL($str){
+	//全角スペース・半角スペース・タブ削除
+	return str_replace(array("　"," ","	"),'',$str);
+}
+function ANCHOR($name,$prm=array()){
+	$anc='';
+	if(!empty($prm['anc'])){//PHP7.0対応
+		if($prm['anc']!=''){
+			$anc=$prm['anc'];
+		}
+	}
+	if(is_numeric($name)){$name='sec'.sprintf('%02d',$name);}//数値のみなら2ケタにする
+	return '<div class="pos_rel"><a class="anchor" id="'.$anc.$name.'" name="'.$anc.$name.'"></a></div>'.chr(10);
+}
+function PAN($data,$prm=array()){
+	global $link_list;	
+	$link='<a href="'.$link_list['TOP'][0].'">'.$link_list['TOP'][1].'</a>';//最初はホーム
+	$arrow='<span class="arrow">&gt;</span>';	
+	foreach($data as $k => $v){
+		$v=strip_tags($v);//余計なタグはすべて削除
+		$a=array();
+		if(!empty($link_list[$v])){//PHP7.0対応
+			$a=$link_list[$v];
+		}		
+		//一部のキーワードに専用の記述
+		switch(true){
+			case (empty($a[1]))://リストに存在しない場合は普通の文字
+			$v=str_replace(array("＞"),$arrow,$v);
+			$link.=$arrow.$v;
+			break;
+			default://リンクあり
+			$text=(!empty($a['p-title']))?$a['p-title']:$a[1];//p-title（ページタイトル専用テキスト）があればそれを優先
+			if($k<count($data)-1){
+				$link.=$arrow.'<a'.((!empty($a[0]))?' href="'.$a[0].'"':'').'>'.$text.'</a>';
+			}
+			else{
+				$link.=$arrow.$text;
+			}
+		}
+	}
+	$str='<div class="content_box pan LH100"><div>'.$link.'</div></div>'.chr(10);
+	return $str;
+}
+function PAGE_TITLE($t,$add='',$prm=array()){
+	global $link_list,$kaisou;
+	if(empty($link_list[$t])){
+		$link_list[$t]=array();
+	}
+	$a=$link_list[$t];
+	if(empty($a[1])){
+		$text=$t;
+	}
+	else{
+		$text=(!empty($a['p-title']))?$a['p-title']:$a[1];
+	}
+	if($add!=''){
+		$add='<div>'.$add.'</div>';
+	}
+	$class="textJ";
+	if(!empty($prm['class'])){//PHP7.0対応
+		if($prm['class']!=''){
+			$class=$prm['class'];
+		}
+	}
+	$str='<div class="p_title"><h2>'.$add.'<span class="'.$class.'">'.WORD_BR($text).'</span></h2></div>'.chr(10);
+	return $str;
+}
+function EFFECT_BTN($k,$text='',$prm=array()){
+	global $link_list,$t_blank;
+	if($text==''){
+		$text=$link_list[$k][1];
+	}
+	$class=(!empty($prm['class']))?' '.$prm['class']:'';
+	$style=(!empty($prm['style']))?' style="'.$prm['style'].'"':'';
+	$arrow=(!empty($prm['arrow']))?COMMON_SVG('arrow-btn'):'';
+	$getprm=(!empty($prm['getparam']))?'?'.$prm['getparam']:'';
+	$getprm.=(!empty($prm['jump']))?'#'.$prm['jump']:'';
+	$getprm.=(!empty($prm['blank']))?$t_blank:'';
+	
+	$href=($k!='x')?' href="'.$link_list[$k][0].$getprm.'"':'';
+	
+	$res='';
+	if(!isset($prm['ver'])){$prm['ver']='';}//未設定（デフォルト）
+	switch($prm['ver']){
+		case 2023:
+		$res='<div class="btn_bgLtoR_2023'.$class.'"><a'.$href.$style.'><div class="bg"></div><div class="text"><span>'.$text.'</span></div>'.$arrow.'</a></div>';
+		break;
+		default:
+		$res='<a'.$href.' class="btn_bgLtoR'.$class.'"'.$style.'><div class="border"></div><div><span>'.$text.'</span>'.$arrow.'</div></a>';
+	}
+	return $res;
+}
+function COMMON_SVG($svg){
+	global $kaisou;
+	return file_get_contents($kaisou.'images/common/'.$svg.'.svg');
+}
+function MAINPIC($dir,$prm=array()){
+	global $kaisou,$dir_c;
+	$res='';
+	$imgarr=array();
+	if(!empty($prm['mainpic'])){
+		$imgarr=explode('.',$prm['mainpic']);
+	}
+	else{
+		$imgarr[0]='mainpic';
+		$imgarr[1]='jpg';
+	}
+	if(!empty($prm['class'])){
+		$class=$prm['class'];
+	}
+	else{$class='W100per';}
+	$mainpic	=$dir.$imgarr[0].'.'.$imgarr[1];
+	$clearpic	=$kaisou.''.$dir_c.'clear';
+	if(empty($prm['alt'])){$prm['alt']='';}
+	$alt=($prm['alt']!='')?' alt="'.$prm['alt'].'"':'';
+	
+	if(!empty($prm['clear'])){//透明画像によるトリミング
+		$img='url('.$mainpic.')';
+		if(file_exists($url=($dir.$imgarr[0].'-t.png'))){$img='url('.$url.'),'.$img;}
+		if(file_exists($url=($clearpic.'-'.$prm['clear'].'.png'))){$clearpic=$url;}
+		else{$clearpic.='.png';}
+		$res='<img src="'.$clearpic.'" class="'.$class.'" style="background-image:'.$img.'"'.$alt.'>';
+	}
+	else{//静止画（２倍サイズの画像を半分に縮小可能
+		$style=array('pc'=>'','sp'=>'');
+		list($w,$h)=getimagesize($mainpic);
+		switch(true){
+			case !empty($prm['w_x1']):
+			case !empty($prm['w_x1_pc']):
+			$style['pc']=' style="width:'.$w.'px;"';
+			break;
+			case !empty($prm['w_half']):
+			case !empty($prm['w_half_pc']):
+			$style['pc']=' style="width:'.($w/2).'px;"';
+			break;
+			case !empty($prm['h_half']):
+			case !empty($prm['h_half_pc']):
+			$style['pc']=' style="height:'.($h/2).'px;"';
+			break;
+			case !empty($prm['wh_half']):
+			case !empty($prm['wh_half_pc']):
+			$style['pc']=' style="width:'.($w/2).'px;height:'.($h/2).'px;"';
+			break;
+		}
+		if(file_exists($url=($dir.$imgarr[0].'-sp.'.$imgarr[1]))){
+			list($w,$h)=getimagesize($url);
+			switch(true){
+				case !empty($prm['w_half']):
+				case !empty($prm['w_half_sp']):
+				$style['sp']=' style="width:'.($w/2).'px;"';
+				break;
+				case !empty($prm['h_half']):
+				case !empty($prm['h_half_sp']):
+				$style['sp']=' style="height:'.($h/2).'px;"';
+				break;
+				case !empty($prm['wh_half']):
+				case !empty($prm['wh_half_sp']):
+				$style['sp']=' style="width:'.($w/2).'px;height:'.($h/2).'px;"';
+				break;
+			}
+			$res='<img src="'.$mainpic.'" class="'.$class.' sp_vanish"'.$style['pc'].$alt.'>
+<img src="'.$url.'" class="'.$class.' pc_vanish"'.$style['sp'].$alt.'>';
+		}
+		else{			
+			$res='<img src="'.$mainpic.'" class="'.$class.'"'.$style['pc'].$alt.'>';
+		}
+	}
+	return $res.chr(10);
+}
+function CONTENT_MAINTITLE($t1,$t2,$t3){
+	$t1=($t1!='')?'<h3>'.$t1.'</h3>':'';
+	return '<div class="con_maint">
+'.$t1.'
+<div class="catch">'.WORD_BR($t2).'</div>
+<div class="text">'.WORD_BR($t3).'</div>
+</div>'.chr(10);
+}
+function CONTENT_READMORE($data){
+	global $link_list,$kaisou;
+	$res='<div class="con_readmorebox">'.chr(10);
+	foreach($data as $k => $v){
+		$link=($link_list[$v['link']][0]!='')?$link_list[$v['link']][0]:$v['link'];
+		$cate=($v['cate']!='')?'<span>'.$v['cate'].'</span>':'';
+		$res.='<a href="'.$link.'"><span class="kado"></span>
+<div class="cate">'.$cate.'</div>
+<div class="title">'.$k.'</div>
+<div class="text">'.$v['text'].'</div>
+<img src="images/common/readmore-w.svg" class="readmore">
+</a>'.chr(10);
+	}
+	$res.='<div class="clear"></div>
+</div>'.chr(10);
+	return $res;
+}
+function CONTENT_PAD($pad,$pad_sp=''){
+	$res='';
+	switch(true){
+		case ($pad_sp=='sp/2'):
+		$res='<div class="sp_vanish" style="height:'.$pad.'px"></div><div class="pc_vanish" style="height:'.($pad/2).'px"></div>';
+		break;
+		case (is_numeric($pad_sp)):
+		$res='<div class="sp_vanish" style="height:'.$pad.'px"></div><div class="pc_vanish" style="height:'.$pad_sp.'px"></div>';
+		break;
+		default:
+		$res='<div style="height:'.$pad.'px"></div>';
+	}
+	return $res;
+}
+
+//PHP7.0対応関数
+function ARR_EMPTY_CHECK($a=array(),$k='',$def=''){
+	//配列が空（未定義）の時、指定の変数（配列）を格納
+	if(empty($a[$k])){$a[$k]=$def;}
+	return $a[$k];
+}
+?>

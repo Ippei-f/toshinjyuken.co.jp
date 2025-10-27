@@ -1,0 +1,54 @@
+<?php
+//<meta charset="utf-8">
+/*
+		[0]:リンク先
+		[1]:フルネーム
+*/
+$url=array();
+$link_list=array
+('TOP'	=>array($kaisou.'index.php','ホーム')
+//---------------------------------------------------------------
+,'NEWS'					=>array($kaisou.'news.php'		,'','jp'=>'ニュース')
+,'物件情報'			=>array($kaisou.'search.php'	,'')
+,'物件詳細'			=>array($kaisou.'search-detail.php'	,'')
+,'会員登録'			=>array($kaisou.'member.php'	,'')
+,'ギャラリー'	 =>array($kaisou.'gallery.php' ,'')
+,'お客様の声'	 =>array($kaisou.'voice.php'	 ,'')//,'en'=>'VOICE'
+,'コラム'			 =>array($kaisou.'column.php','','en'=>'COLUMN')
+,'安さの秘密'	 =>array($kaisou.'index.php#yasusa','安さのヒミツ')
+//---------------------------------------------------------------
+//,'開発の想い'	 =>array($kaisou.'omoi.php','')
+,'開発の想い'	 =>array($kaisou.'developers-voice/','')
+//---------------------------------------------------------------
+,'お問い合わせ'	=>array($kaisou.'contact.php','資料請求・お問合せ','fmenu'=>'来場予約 / お問い合わせ','p-title'=>'ご来場予約・お問い合わせ・資料請求')
+//---------------------------------------------------------------
+,'派生-LGBTQ'		=>array($kaisou.'lgbtq/'.$t_blank,'')
+,'派生-中古比較'=>array($kaisou.'chuuko-hikaku/'.$t_blank,'')
+//---------------------------------------------------------------
+,'insta'=>array('https://www.instagram.com/skeleton_order/?igshid=whfik72riucs'.$t_blank,'')
+//---------------------------------------------------------------
+,'東新住建'				 =>array(($url['東新']='https://www.toshinjyuken.co.jp').$t_blank,'')
+,'東新住建-外壁材' =>array($url['東新'].'/chumon/feature/quality.html'.$t_blank,'')
+,'東新住建-歴史'	 =>array($url['東新'].'/corporate/history.html'.$t_blank,'')
+,'東新住建-暮らしを支える7つの安心'=>array($url['東新'].'/life/'.$t_blank,'')
+//---------------------------------------------------------------
+,'東新住建-DUP'				=>array(($url['DUP']='https://www.dup-m.jp').$t_blank,'','bnr'=>'dup')
+,'東新住建-DUPHILLS'	=>array($url['東新'].'/dup-hills/'.$t_blank,'','bnr'=>'duphills')
+,'東新住建-テイシャク'=>array($url['東新'].'/teishaku-portal/'.$t_blank,'','bnr'=>'teishaku')
+,'東新住建-平屋'			=>array($url['東新'].'/hiraya/'.$t_blank,'','bnr'=>'hiraya')
+,'東新住建-家'				 =>array($url['東新'].'/kodate/'.$t_blank,'','bnr'=>'ie')
+,'東新住建-発電SH'		=>array($url['東新'].'/hatsuden-shelter-house/'.$t_blank,'','bnr'=>'hatsuden')
+//---------------------------------------------------------------
+,'DUP-ギャラリー北名古屋'		=>array($url['DUP'].'/showroom.php'.$t_blank,'')
+,'DUP-ギャラリー北名古屋-PDF'=>array($kaisou.'images/pdf/gallery_kitanagoya.pdf'.$t_blank,'')
+//---------------------------------------------------------------
+//,''=>array('#','')
+);
+//[1]が空白の時はkeyと同じ
+foreach($link_list as $key => $val){
+	if($val[1]==''){
+		$link_list[$key][1]=$key;
+		//$link_list[$key][1]=str_replace('&',' & ',$link_list[$key][1]);
+	}
+}
+?>

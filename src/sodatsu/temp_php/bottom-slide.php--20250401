@@ -1,0 +1,73 @@
+<?php
+//<meta charset="utf-8">
+
+$temp_bottom_slide='';
+
+//スライドバナー～～～～～～～～～～～～～～～～～～～～～～～
+$arr=array
+(''//空白
+//,'ギャラリー'	=>array($kaisou.'images/top/so/bnr-gallery.jpg')
+//,array('/recaptcha/bnr/bnr-20230113-C.jpg','link'=>$kaisou.'news.php?id=65','end'=>20230201)
+//,'ギャラリー#'	=>array($kaisou.'images/top/so/bnr-simu.jpg' 							 ,'link'=>($p_type!='index'?'index.php':'').'#gallery_2021')
+,'安さの秘密'	=>array($kaisou.'images/top/so/bnr-yasusa_W500H225.png'		 ,'link'=>($p_type!='index'?'index.php':'').'#yasusa')
+//,'week'				 =>array($kaisou.'../recaptcha/bnr/bnr-weekday-Tue-Fri.png' ,'link'=>'news.php?id=12')
+);
+
+//～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～
+$str='';
+$cnt=0;
+$nowdate=date('Ymd');
+$nowdate_YMDH=date('YmdH');
+
+$temp_bottom_slide.='<!-- NOWDATE:'.date('Ymd H:i').' -->'.chr(10);
+
+foreach($arr as $k => $v){
+	if($v==''){continue;}//空白は無視
+	if(!empty($v['end'])){
+		//$str.='<!-- CHECK:YMD -->';
+		if($nowdate>=$v['end']){continue;}
+	}
+	if(!empty($v['end_HMDH'])){
+		//$str.='<!-- CHECK:YMDH -->';
+		if($nowdate_YMDH>=$v['end_HMDH']){continue;}
+	}
+	$url=(!empty($v['link']))?$v['link']:$link_list[$k][0];
+	$str.='<li><a href="'.$url.'"><img src="'.$v[0].'"></a></li>';
+	$cnt++;
+}
+switch(true){
+	case ($cnt>=3):
+	$res=$str.$str.$str;
+	$loop=' class="loop"';
+	$noloop='';
+	break;
+	/*
+	case ($cnt<4):
+	$res=$str.$str;
+	break;
+	*/
+	default:
+	$res=$str;
+	$loop='';
+	$noloop=' noloop';
+}
+//<div class="test2">xxx</div>
+
+$temp_bottom_slide.='<link href="'.$kaisou.'css/bottom-slide.css" rel="stylesheet" type="text/css">
+<script src="'.$kaisou.'js/bottom-slide.js" type="text/javascript"></script>
+<div class="bottom_slide setup'.$noloop.'">'.chr(10);
+
+if($loop!=''){
+	$temp_bottom_slide.='<div class="arrow L"><img src="'.$kaisou.'images/content/search/arrow-L.svg"></div>'.chr(10);
+}
+
+$temp_bottom_slide.='<div class="menu"><ul'.$loop.'>
+'.$res.'
+</ul></div>'.chr(10);
+
+if($loop!=''){
+	$temp_bottom_slide.='<div class="arrow R"><img src="'.$kaisou.'images/content/search/arrow-R.svg"></div>'.chr(10);
+}
+
+$temp_bottom_slide.='</div>'.chr(10);
+?>
