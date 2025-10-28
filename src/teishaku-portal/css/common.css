@@ -264,9 +264,10 @@ header .H_head .btn_contact {
 	*/
 }
 header .H_head .btn_member {
-	background-color: #000;
-	color: #fff;
-	font-size: 14px;
+	background-color: #e0e1e1;
+}
+header .H_head .btn_member .icon img {
+	width: 19px;
 }
 header .H_head .btn_search > *:nth-child(1) {
 	width: 24px;
@@ -403,15 +404,12 @@ header .accbox ul li a {
 	}
 	header .pc_btn_flex .H_head .btn_search {
 		right: 160px;
-		z-index: 1;
 	}
 	header .pc_btn_flex .H_head .btn_contact {
 		right: 80px;
-		z-index: 1;
 	}
 	header .pc_btn_flex .H_head .btn_member {
 		right: 0;
-		z-index: 0;
 	}
 }
 @media screen and (max-width: 999px) {
@@ -431,16 +429,18 @@ header .accbox ul li a {
 		*/
 		position: fixed;
 		bottom: 0;
-		width: 50%;
-		height: 38px;
+		width: 33.33%;
+		height: 68px;
 		flex-direction: row;
 		font-size: 87.5%;
+	}
+	header .H_head > a span span {
+		display: none;
 	}
 	header .H_head > a > *:nth-child(1) {
 		margin-right: 1em;
 	}
 	header .H_head > a span br {
-		display: none;
 	}
 	header .H_head .btn_search {
 		left: 0;
@@ -448,15 +448,12 @@ header .accbox ul li a {
 		background-color: #595757;
 		color:#FFF;
 		*/
-		z-index: 1;
 	}
 	header .H_head .btn_contact {
-		right: 0;
-		z-index: 1;
+		left: 33.33%;
 	}
 	header .H_head .btn_member {
 		right: 0;
-		z-index: 0;
 	}
 }
 
