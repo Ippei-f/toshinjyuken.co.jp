@@ -145,7 +145,7 @@ KV
 		width: 382px;
 
 		@media screen and (max-width: 999px) {
-			width: 95%;
+			width: 285px;
 		}
 	}
 }
@@ -177,16 +177,16 @@ KV
 ------------------------ */
 
 .HO-intro {
-	line-height: 2;
+	line-height: 1.68;
 	margin: 60px 0 90px;
 
 	@media screen and (max-width: 999px) {
-		margin: 0px 0 90px;
+		margin: 0px 0 70px;
 		padding: 0 20px;
 	}
 }
 .HO-intro-header {
-	background: url(../images/halforder/intro-yume.png) no-repeat center / 403px auto;
+	background: url(../images/halforder/intro-yume.png) no-repeat top center / 403px auto;
 	min-height: 521px;
 	padding: 100px 0;
 
@@ -204,6 +204,7 @@ KV
 
 	@media screen and (max-width: 999px) {
 		font-size: 24px;
+		line-height: 2;
 	}
 
 	strong {
@@ -224,8 +225,14 @@ KV
 				background: #f5b32d;
 				position: absolute;
 				left: 50%;
-				top: -20px;
+				top: -10px;
 				transform: translate(-50%, 0);
+
+				@media screen and (max-width: 999px) {
+					top: 0px;
+					height: 9px;
+					width: 9px;
+				}
 			}
 		}
 	}
@@ -341,6 +348,8 @@ KV
 	@media screen and (max-width: 999px) {
 		padding: 0;
 		display: block;
+		font-size: 18px;
+		padding: 8px;
 	}
 }
 .HO-intro__note {
@@ -360,8 +369,18 @@ KV
 	margin: 30px 0 50px;
 
 	@media screen and (max-width: 999px) {
-		margin: 0px 0 90px;
+		margin: 0px 0 30px;
 		padding: 0 20px;
+	}
+
+	.HO-movie__movie {
+		iframe {
+			@media screen and (max-width: 999px) {
+				width: 100%;
+				height: auto;
+				aspect-ratio: 16/9;
+			}
+		}
 	}
 }
 
@@ -1224,7 +1243,6 @@ KV
 .HO-eco {
 	line-height: 2;
 	padding: 60px 0 90px;
-	margin-bottom: 80px;
 	background: url(../images/halforder/eco-bg.jpg) no-repeat center top / cover;
 
 	@media screen and (max-width: 999px) {
@@ -1308,27 +1326,21 @@ KV
 ------------------------ */
 
 .HO-pickup {
-	line-height: 2;
+	padding: 50px 20px 70px;
 
-	.HO-pickup__ttl {
-		background-color: #f5695a;
-		color: #fff;
-		font-size: min(30px, max(22px, 3vw));
-		margin-bottom: 50px;
+	@media screen and (max-width: 999px) {
+		padding: 30px 0 50px;
 	}
-	.HO-pickup__ttl-2 {
-		line-height: 1.3;
-		.en {
-			font-size: 20px;
-			font-family: "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "ＭＳ Ｐ明朝", "MS PMincho", serif;
-		}
-		.jp {
-			font-size: 15px;
-			font-weight: 400;
+
+	.s_list_bukken {
+		li {
+			.flex1 {
+				line-height: 100%;
+			}
 		}
 	}
-	.HO-pickup__list {
-		display: flex;
+	.btn_bgLtoR {
+		padding: 10px 0;
 	}
 }
 

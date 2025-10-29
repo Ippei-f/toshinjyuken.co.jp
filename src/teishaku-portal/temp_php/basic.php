@@ -314,7 +314,10 @@ $temp_bottom_bnr = '<div class="content_box bottom_bnr2025">
 	//,'平屋'
 	//'そだつ',
 	//'DUP',
-	'家',
+	array(
+		'url' => $link_list['東新住建-家'][0],
+		'bnr' => $kaisou . 'images/common/bnr-ie.webp' // ← 任意の新パス
+	),
 	//'ALC'
 )) ./*
 BOTTOMBNR_MENU(array
