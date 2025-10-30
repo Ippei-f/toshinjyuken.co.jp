@@ -356,6 +356,8 @@ $temp_bottom_bnr='<div class="bottom_bnr"><div class="W1000 Wmax100per mgnAuto">
 </div>
 </div></div>'.chr(10);
 */
+
+/*　フッター各サイトへのリンクバナー
 $temp_bottom_bnr = '<section class="brand_concept2025">
 <div class="type_bottom"><div class="Wbase">
 <h2><span>BRAND CONCEPT</span></h2>
@@ -366,7 +368,7 @@ foreach ($link_list_brand_concept as $k => $v) {
 $temp_bottom_bnr .= '</dl>
 </div></div>
 </section>' . PHP_EOL;
-
+*/
 
 
 //◆フッタ
@@ -449,7 +451,7 @@ switch ($p_title) {
 	case '会員登録':
 		break;
 	default:
-		$temp_footer = $temp_bottom_bnr . $temp_footer;
+		// $temp_footer = $temp_bottom_bnr . $temp_footer;
 }
 
 

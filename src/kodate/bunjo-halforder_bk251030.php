@@ -52,9 +52,6 @@ require $kaisou . "temp_php/basic.php";
                         外観や間取りまで叶う<strong>「ハーフオーダー」。</strong>
                     </div>
                     <div class="BHO-intro__txt-2">理想の住まいを、<br class="sp-only" />自分らしくデザインしましょう！</div>
-                    <div class="BHO-intro__btn">
-                        <a href="#BHO-birthhistory">誕生ヒストリーはこちら</a>
-                    </div>
                 </div>
                 <ul class="BHO-intro__list">
                     <li class="BHO-intro__item">
@@ -69,7 +66,7 @@ require $kaisou . "temp_php/basic.php";
                         <div class="txt">
                             <h3 class="ttl">“内観デザイン”をセレクト</h3>
                             <div class="body">
-                                <p>分譲住宅では選べない壁・床・設備・建具などのカラーや仕様、間取りを変えることができます。お好みに合うプランをご用意していますので、安心して理想の家づくりが楽しめます。</p>
+                                <p>お好みの内観スタイルから自由にセレクト可能。建物の外側（外観や構造部分）は完成済みのため、ご入居スムーズに進められます。注文住宅のような時間や手間をかけずに、”自分らしい暮らし”をかなえられます。</p>
                             </div>
                             <div class="btn">
                                 <a
@@ -127,16 +124,6 @@ require $kaisou . "temp_php/basic.php";
                     <div class="badge"><img src="images/bunjohalforder/interiorselect-ttl-badge.svg" alt="インテリアセレクト" /></div>
                     <div class="txt">※ハーフオーダーにはインテリアセレクトが含まれます</div>
                 </h2>
-                <div class="BHO-interiorselect-header">
-                    <div class="ttl">内装デザインや間取りが選べる</div>
-                    <ul>
-                        <li>壁</li>
-                        <li>床</li>
-                        <li>設備</li>
-                        <li>建具</li>
-                        <li>間取り</li>
-                    </ul>
-                </div>
                 <div class="BHO-interiorselect__ttl-2">
                     <h3 class="jp"><span>基本プラン</span></h3>
                     <div class="en manrope"><strong>Basic</strong> Style</div>
@@ -440,19 +427,6 @@ require $kaisou . "temp_php/basic.php";
                 <h2 class="BHO-interiorselect__ttl">
                     <div class="badge"><img src="images/bunjohalforder/halforder-ttl-badge.svg" alt="ハーフオーダー" /></div>
                 </h2>
-                <div class="BHO-halforder-header">
-                    <div class="ttl">外観と内装が選べる</div>
-                    <ul>
-                        <li class="col3">外壁</li>
-                        <li class="col3">玄関ドア</li>
-                        <li class="col3">外構</li>
-                        <li class="col5">壁</li>
-                        <li class="col5">床</li>
-                        <li class="col5">設備</li>
-                        <li class="col5">建具</li>
-                        <li class="col5">間取り</li>
-                    </ul>
-                </div>
                 <div class="BHO-halforder__ttl-2">
                     <h3 class="jp">
                         <span>内観と組み合わせて<br class="sp-only" />オーダーできる外観Style</span>
@@ -571,41 +545,6 @@ require $kaisou . "temp_php/basic.php";
             </div>
         </section>
 
-        <section class="BHO-memberregistration">
-            <div class="BHO-memberregistration-inner">
-                <h2 class="BHO-memberregistration__ttl"><span>最新情報をいち早くお届け</span></h2>
-                <div class="c-btn">
-                    <a href="member.php">会員登録<span class="arrow"><img src="images/bunjohalforder/arrow-right.svg" alt="" /></span></a>
-                </div>
-            </div>
-        </section>
-
-        <section id="BHO-birthhistory" class="BHO-birthhistory">
-            <div class="BHO-birthhistory-bg">
-                <img src="images/bunjohalforder/birthhistory-bg.jpg" class="parallax-img" data-rellax-speed="-2" alt="" />
-            </div>
-            <div class="BHO-birthhistory-inner">
-                <h2 class="BHO-birthhistory__ttl">誕生ヒストリー</h2>
-                <div class="BHO-birthhistory__body">
-                    <p>
-                        分譲住宅と聞くと、“決まったものを買うだけ”と思われがちです。<br />
-                        しかし実際には、「壁紙を選びたい」「間取りにこだわりたい」というお客様の声を多くいただきます。
-                    </p>
-
-                    <p>
-                        そこで私たちは、24,000棟に及ぶ実績と自社工場による高い生産力を生かし、<br />
-                        建売の安心価格やスピードはそのままに、“自分らしさ”を叶える新しい家づくりを実現しました。
-                    </p>
-
-                    <p>
-                        <strong>内装を選べる「インテリアセレクト」、外観と内装を選べる「ハーフオーダー」</strong>。<br />
-                        分譲住宅でも、暮らしに合わせて自分らしい家をつくる。<br />
-                        それが、私たちの“選べる分譲住宅”です。
-                    </p>
-                </div>
-            </div>
-        </section>
-
         <section class="BHO-voice">
             <div class="BHO-voice-inner">
                 <h2 class="BHO-voice__ttl">インテリアセレクト・ハーフオーダーで購入されたお客様</h2>
@@ -699,54 +638,6 @@ require $kaisou . "temp_php/basic.php";
         <div class="c-btn">
             <a href="<?php echo $link_list['お問い合わせ'][0]; ?>">資料請求・お問い合わせ<span class="arrow"><img src="images/bunjohalforder/arrow-right.svg" alt="" /></span></a>
         </div>
-
-        <!-- parallax -->
-        <script>
-            (function() {
-                const el = document.querySelector(".BHO-birthhistory-bg .parallax-img");
-                if (!el) return;
-
-                const speed = 0.35; // 動きの強さ（0.1〜0.4くらいで調整）
-                let rectTop = 0,
-                    height = 0; // セクション位置キャッシュ
-
-                function measure() {
-                    const wrap = el.parentElement;
-                    const r = wrap.getBoundingClientRect();
-                    // ページ基準の top を得る
-                    rectTop = window.pageYOffset + r.top;
-                    height = r.height;
-                }
-
-                function render() {
-                    const scrollY = window.pageYOffset;
-                    // セクションに入った量に応じて移動
-                    const progress = scrollY - rectTop;
-                    const translate = progress * speed; // 下方向にゆっくり
-                    el.style.transform = "translate3d(0," + translate + "px,0)";
-                }
-
-                function onScroll() {
-                    render();
-                }
-
-                function onResize() {
-                    measure();
-                    render();
-                }
-
-                window.addEventListener("load", () => {
-                    measure();
-                    render();
-                });
-                window.addEventListener("resize", onResize, {
-                    passive: true
-                });
-                window.addEventListener("scroll", onScroll, {
-                    passive: true
-                });
-            })();
-        </script>
 
         <link rel="stylesheet" type="text/css" href="css/slick.css" />
         <link rel="stylesheet" type="text/css" href="css/slick-theme.css" />
