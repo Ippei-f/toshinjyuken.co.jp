@@ -303,12 +303,9 @@ function BOTTOMBNR_MENU_SODATSU($arr = array())
 	$temp_bottom_bnr .= '' . chr(10);
 	return $temp_bottom_bnr;
 }
-$temp_bottom_bnr = '<div class="content_box bottom_bnr2025">
-<a href="' . $link_list['東新住建-平屋'][0] . '"><img src="' . $kaisou . 'images/bnr/toushin2025/bnr-hiraya.png"></a>
-</div>
-<div class="bottom_bnr2"><div class="W1000 Wmax100per mgnAuto">
 
-<div class="flex bg_cover">
+$temp_bottom_bnr_2025 = '<div class="content_box bottom_bnr2025"><a href="' . $link_list['東新住建-平屋'][0] . '"><img src="' . $kaisou . 'images/bnr/toushin2025/bnr-hiraya.png"></a></div>' . chr(10);
+$temp_bottom_bnr2     = '<div class="bottom_bnr2"><div class="W1000 Wmax100per mgnAuto"><div class="flex bg_cover">
 ' . BOTTOMBNR_MENU_SODATSU(array(
 	//'発電SH'
 	//,'平屋'
@@ -329,6 +326,11 @@ BOTTOMBNR_MENU(array
 */ '
 </div>
 </div></div>' . chr(10);
+$temp_bottom_bnr      = $temp_bottom_bnr_2025 . $temp_bottom_bnr2;
+
+
+
+
 switch (true) {
 	case $p_title == '問合':
 	case $p_title == '会員登録':
