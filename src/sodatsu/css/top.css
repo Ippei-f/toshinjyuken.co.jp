@@ -949,3 +949,47 @@ h4.sodatsu_top_subt.sec01_pink {
 		width: 100%;
 	}
 }
+
+/* 追加2025.11.08 */
+
+.top_bnr {
+	max-width: 640px;
+	margin: 60px auto;
+	line-height: 1.6;
+
+	.top_bnr-upper {
+		border-bottom: 1px solid #d9dada;
+		padding-bottom: 60px;
+
+		.btn_bgLtoR_2023 {
+			margin-bottom: 60px;
+
+			a .text {
+				width: 400px;
+				height: 70px;
+			}
+		}
+	}
+	.top_bnr-lower {
+		padding-top: 60px;
+
+		.top_bnrbox_2023 > li {
+			margin-bottom: 40px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+		.top_bnr_hikaku {
+			img {
+				width: 441px;
+			}
+		}
+	}
+}
+.index-bnr-lgbtq {
+	margin-top: 70px;
+	img {
+		width: 438px;
+	}
+}

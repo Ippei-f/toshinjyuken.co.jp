@@ -315,7 +315,7 @@ $temp_footer = '<footer><div class="Wbase W625">
 <td><a href="' . $link_list['TOP'][0] . '"><img src="' . $dir_c . 'logo-f.svg"></a></td>
 <td></td>
 <td class="tel_box">
-<div>お問合せ・資料請求はこちら</div>
+<div><a href="https://www.toshinjyuken.co.jp/kodate/contact.php" target="_blank">お問合せ・資料請求はこちら</a></div>
 <a href="tel:' . $comp_data['TEL'] . '" class="tel"><img src="' . $dir_c . 'foot-tel.svg"></a>
 <div>【営業時間】10：00～18：00　【定休日】水曜日</div>
 </td>

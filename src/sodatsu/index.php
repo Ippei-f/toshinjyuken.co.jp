@@ -90,30 +90,56 @@ echo MAINPIC($dir,array('mainpic'=>'mainpic-chara.svg','class'=>'chara'));
 
 				<?php echo CONTENT_PAD(50, 'sp/2'); ?>
 
-				<div class="top_bnr_campaign">
-					<a href="https://www.toshinjyuken.co.jp/kodate/news.php?id=185" target="_blank">
-						<img src="images/top/bnr-sumaihaku-2025.JPG" alt="秋の住まい博2025" />
-					</a>
+				<div class="top_bnr">
+					<div class="top_bnr-upper">
+						<div style="font-size: min(32px, max(22px, 3.2vw)); font-weight: 700; color: #e61f19">キャンペーン開催中！！</div>
+						<div class="btn_bgLtoR_2023">
+							<a href="https://www.toshinjyuken.co.jp/kodate/search.php?search=ブランド,そだつプロジェクト" target="_blank">
+								<div class="bg"></div>
+								<div class="text"><span>物件一覧はこちら</span></div>
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26">
+									<circle cx="13" cy="13" r="13" />
+									<polyline points="11.902 8.837 16.181 13.116 11.902 17.395" />
+								</svg>
+							</a>
+						</div>
+						<div class="top_bnr_campaign">
+							<a href="https://www.toshinjyuken.co.jp/kodate/news.php?id=185" target="_blank">
+								<img src="images/top/bnr-sumaihaku-2025.JPG" alt="秋の住まい博2025" />
+							</a>
+						</div>
+					</div>
+					<div class="top_bnr-lower">
+						<ul class="top_bnrbox_2023">
+							<li>
+								<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/modal-video@2.4.6/css/modal-video.min.css" />
+								<script type="text/javascript" src="//cdn.jsdelivr.net/npm/modal-video@2.4.6/js/jquery-modal-video.min.js"></script>
+								<div class="top_moviebox_2023">
+									<img src="../recaptcha/bnr/bnr-20220613movie-text1.svg" class="text1" style="width: 208px; margin-bottom: 10px" />
+									<a href="javascript:void(0);" data-video-id="QnJLQKL2Jdk" class="js-modal-video">
+										<img src="../recaptcha/bnr/bnr-20230417movie.png" />
+									</a>
+								</div>
+								<script>
+									$(window).load(function() {
+										if ($(".js-modal-video").length) {
+											$(".js-modal-video").modalVideo({
+												channel: "youtube",
+												youtube: {
+													controls: 1,
+												},
+											});
+										}
+									});
+								</script>
+							</li>
+							<div></div>
+							<li class="top_bnr_hikaku">
+								<a href="chuuko-hikaku/"><img src="images/top/bnr-chuuko-hikaku.jpg" alt="シングルママの2人を応援！そだつプロジェクト VS 中古戸建て 徹底比較" /></a>
+							</li>
+						</ul>
+					</div>
 				</div>
-
-				<?php
-				//バナーシステム2023ver
-				echo TOUSHIN_COMMON_BNR_2023('そだつ/TOP');
-				?>
-				<?php echo CONTENT_PAD(50, 'sp/2'); ?>
-
-				<?php
-				//「 キャンペーン開催中！！ 」物件ボタン
-				function TOP_BTN_BUKKEN_CAMPAIGN()
-				{
-					global $kaisou;
-					//echo '<img src="'.$kaisou.'images/common/text-campaign.svg" class="mgnAuto" style="width: 572px; margin-bottom: 12px;">'.PHP_EOL;
-					echo '<div style="font-size:min(32px,max(22px,3.2vw));font-weight:700;color:#e61f19;margin-bottom:24px;">キャンペーン開催中！！</div>' . PHP_EOL;
-					echo EFFECT_BTN('物件情報', '物件一覧はこちら', array('ver' => 2023, 'arrow' => true));
-				}
-				TOP_BTN_BUKKEN_CAMPAIGN();
-				?>
-				<?php echo CONTENT_PAD(90, 'sp/2'); ?>
 
 
 			</div>
@@ -631,11 +657,18 @@ foreach($arr as $k => $v){
 			?>
 			<?php //TOP_BTN_BUKKEN_ZOKUZOKU(); 
 			?>
+			<div class="index-bnr-lgbtq">
+				<a href="lgbtq/">
+					<img src="images/top/bnr-lgbtq.jpg" alt="LGBTQ+ の2人を応援！" />
+				</a>
+			</div>
+
 			<?php echo CONTENT_PAD(90, 'sp/2'); ?>
 			<?php
 			//バナーシステム2023ver
 			echo TOUSHIN_COMMON_BNR_2023('そだつ/TOP・お客様の声下');
 			?>
+
 			<?php echo CONTENT_PAD(90, 'sp/2'); ?>
 		</div>
 		<!-- *** -->
@@ -881,7 +914,7 @@ foreach($arr as $k => $v){
 					</tr>
 					<tr>
 						<td class="t3">
-							<div class="textL sp_br_del LH200 fontP090"><?php echo WORD_BR('長引くコロナ禍の暮らしのなかで、住まいに求められるニーズも大きく変化。多額の借り入れを行なうリスクの再認識だったり、テレワーク需要の拡大により必ずしも駅近の物件である必要がなくなったり、ストレスなく自宅で仕事ができたり庭でリフレッシュできる環境だったり。『そだつ』はこうしたニーズを確実にキャッチした、これからの生活に対応できる一戸建てです。'); ?></div>
+							<div class="textL sp_br_del LH200 fontP090"><?php echo WORD_BR('コロナ禍をきっかけに、私たちの「住まい」に対する考え方は大きく変わりました。多額の借り入れを行なうリスクの再認識だったり、テレワーク需要の拡大により必ずしも駅近の物件である必要がなくなったり、ストレスなく自宅で仕事ができたり庭でリフレッシュできる環境だったり。『そだつ』はこうしたニーズを確実にキャッチした、これからの生活に対応できる一戸建てです。'); ?></div>
 						</td>
 						<td class="p2"></td>
 						<td class="t4"><img src="images/top/so/sec07-p1.jpg"></td>
