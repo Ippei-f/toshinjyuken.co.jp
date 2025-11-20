@@ -819,6 +819,30 @@ img[src*="sec04-kandou"] {
 		margin-top: 25px;
 	}
 }
+@media screen and (min-width: 1000px) {
+	.top_qa .btn_box .c_ovalbtn a {
+		width: 550px;
+	}
+}
+@media screen and (max-width: 999px) {
+	.top_qa .btn_box {
+		margin-top: 30px;
+	}
+	.top_qa .btn_box .c_ovalbtn a {
+		line-height: 125%;
+		text-align: justify;
+		padding: 1em;
+		width: 340px;
+		height: auto;
+		border-radius: 4em;
+		-webkit-border-radius: 4em;
+		-moz-border-radius: 4em;
+	}
+	.top_qa .btn_box .c_ovalbtn a span,
+	.top_qa .btn_box .c_ovalbtn a img {
+		display: inline-block;
+	}
+}
 
 .top_sec05 {
 	padding-top: 100px;

@@ -1,0 +1,23 @@
+<?php
+//<meta charset="utf-8">
+?>
+<div class="Wbase W720 sp_W330"><div class="voice_list">
+<?php
+//配列を逆順にする
+//$voice_data=array_reverse($voice_data,true);
+
+foreach($voice_data as $k => $v){
+	$add=($v['家族構成']!='')?'／ご家族構成：':'';
+	$n=is_numeric($k)?sprintf('%02d',$k):$k;
+	$case_num=isset($v['仮番号'])?$v['仮番号']:$n;
+	echo '<div class="frame_nocut">
+<div class="LRbox">
+<div class="t1"><div class="font_yugo"><div>CASE</div>'.$case_num.'</div><div>'.WORD_BR($v['タイトル']).'</div></div>
+<img src="images/common/clear-W278H194.png" style="background-image: url('.$kaisou.'voice/img/'.$k.'/mainpic.jpg);">
+<div class="t2"><div>'.$v['住所名前'].'</div><div>'.$v['家族構成'].'</div><div>（'.$v['入居日'].'）</div></div>
+</div>
+<div class="c_ovalbtn"><a href="'.$link_list['客声'][0].'?v='.sprintf('%01d',$n).'" title="CASE'.$case_num.'：'.WORD_BR($v['タイトル'],false).'">インタビューをよむ</a></div>
+</div>'.chr(10);
+}
+?>
+</div></div>

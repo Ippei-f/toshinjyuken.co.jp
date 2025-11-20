@@ -1,0 +1,205 @@
+/* CSS Document */
+
+/* 一覧 */
+.voice_list{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.voice_list > *{
+	display: flex;
+	flex-direction: column;
+	width: 330px;
+	padding: 20px 25px 25px;
+}
+.voice_list > *:nth-child(n+3){margin-top: 48px;}
+@media screen and (min-width: 1000px) {
+	.voice_list > *{width: 100%;}
+	.voice_list > *:nth-child(n+2){margin-top: 40px;}
+}
+@media screen and (max-width: 999px) {
+	.voice_list{
+		flex-direction: column;
+		justify-content: center;
+	}
+	.voice_list > *:nth-child(n+2){margin-top: 48px;}
+}
+.voice_list > * .LRbox{margin-bottom: 20px;}
+.voice_list > * .t1{
+	display: flex;
+	align-items: flex-start;
+	flex-grow: 1;
+	color:#DF1614;
+	margin-bottom: auto;
+}
+.voice_list > * .t1 > *:nth-child(1){
+	font-size: 24px;
+	line-height: 100%;
+	font-weight: bold;
+	border-right:solid 1px #DF1614;
+	width:48px;
+	min-width: 48px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 5px 0;
+	padding-right: 8px;
+}
+.voice_list > * .t1 > *:nth-child(1) > *{
+	font-size: 12px;
+	line-height: 125%;
+}
+.voice_list > * .t1 > *:nth-child(2){
+	text-align: justify;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding-left: 10px;
+	font-size: 20px;
+	font-weight: 900;
+	line-height: 150%;
+}
+.voice_list > * img{
+	width: 100%;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin-top:10px;
+}
+.voice_list > * .t2{text-align: left;}
+.voice_list > * .t2 > *:nth-child(1){
+	font-size: 17px;
+	font-weight: 700;
+	line-height: 100%;
+	padding: 0.5em 0;
+	margin-bottom: 0.25em;
+	border-bottom: solid 1px #DF1614;
+}
+.voice_list > * .t2 > *:nth-child(n+2){line-height: 150%;}
+@media screen and (min-width: 1000px) {
+	.voice_list > * .LRbox{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		margin-bottom: 30px;
+	}
+	.voice_list > * .LRbox > *{
+		width:49%;
+		max-width: 320px;
+		flex-grow: unset;
+	}
+	.voice_list > * .LRbox img{margin-top: 0;}
+	.voice_list > * .LRbox .t2{margin-top: -81.25px;}
+}
+.voice_list .c_ovalbtn{margin-top: 20px;}
+.voice_list .LRbox + .c_ovalbtn{margin-top: auto;}
+.voice_list .c_ovalbtn a{
+	font-size: 19px;
+	max-width: 100%;
+}
+
+/* 詳細 */
+.voice_title{
+	background-color: #FFF;
+	color:#DF1614;
+	display: flex;
+	align-items: flex-start;
+	padding: 6px 0 12px;
+	font-size: 100%;
+	border-top:solid 1px #DF1614;
+}
+.voice_title *{line-height: 100%;}
+.voice_title > *{
+	display: flex;
+	align-items: center;
+}
+.voice_title > *:nth-child(1){
+	width:64px;
+	flex-direction: column;
+	font-size: 24px;
+	line-height: 100%;
+	text-align: center;
+	border-right:solid 1px #DF1614;
+	padding: 6px 0;
+}
+.voice_title > *:nth-child(1) > div{font-size: 50%;margin-bottom: 0.25em;}
+.voice_title > *:nth-child(2){
+	font-size: 20px;
+	font-weight: 900;
+	line-height: 150%;
+	padding-left: 1em;
+	padding-right: 1em;
+	text-align: left;
+}
+.voice_mainpic{
+	display: flex;
+	align-items: center;
+}
+.voice_mainpic > *{width:50%;}
+.voice_mainpic > div{text-align: left;}
+.voice_mainpic > div > h3{
+	font-size: 20px;
+	font-weight: 900!important;
+	line-height: 100%;
+	font-weight: normal;
+	border-bottom: solid 1px #DF1614;
+	padding-bottom: 0.75em;
+	margin-bottom: 0.75em;
+}
+.voice_box{
+	margin-top: 95px;
+	text-align: justify;
+}
+.voice_box h4{
+	color:#DF1614;
+	font-size: 20px;
+	font-weight: 900!important;
+	line-height: 150%;
+	margin-bottom: 0.5em;
+}
+.voice_box .text{
+	font-size: 16px;
+	line-height: 200%;
+}
+.voice_box .text .name{color:#DF1614;}
+.voice_box .text font{
+	text-decoration: underline 5px #FFD900;
+}
+.voice_box .pic_flex{
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+}
+@media screen and (min-width: 1000px) {
+	.voice_mainpic + .voice_box{}
+	.voice_mainpic > div{padding-left: 4%;}
+	.voice_box img.floatR_pc{margin-left: 20px;}
+	.voice_box img.floatL_pc{margin-right: 20px;}
+	.voice_box .text + .pic_flex{margin-top: 20px;}
+}
+@media screen and (max-width: 999px) {
+	.voice_title > *:nth-child(1){min-width: 2.5em;}
+	.voice_mainpic{flex-direction: column;}
+	.voice_mainpic > *{width:100%;}
+	.voice_mainpic > div{
+		display: flex;
+		flex-direction: column;
+		margin-top: 30px;
+	}
+	.voice_mainpic + .voice_box{margin-top: 55px;}
+	.voice_box{
+		display: flex;
+		flex-direction: column;
+	}
+	.voice_box h4{order:1;}
+	.voice_box .text{order:2;}
+	.voice_box img,
+	.voice_box .pic_flex{order:3;}
+	.voice_box img,
+	.voice_box .pic_flex img{
+		margin: 20px auto 0;
+		max-width: 100%!important;
+	}
+	.voice_box .pic_flex{flex-direction: column;}
+	.voice_box .clear{order: 4;}
+}

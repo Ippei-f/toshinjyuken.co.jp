@@ -33,7 +33,7 @@ $dir_c =		$kaisou . 'images/common/';
 $dir_t =		$kaisou . 'images/top/';
 $dir_sns =	$kaisou . 'system/';
 
-$t_blank = '" target="_blank';
+$t_blank = '" target="_blank"';
 
 $comp_data = array(
 	'HP名'	=> '東新住建・発電シェルターハウス'
@@ -198,7 +198,7 @@ $temp_header = '<div class="H_head"></div>
 </div>
 </div></header>
 <div class="rmenu">
-<a href="' . $link_list['物件'][0] . '"><div><img src="images/common/icon-house.svg">物件一覧</div></a>
+<a href="' . $link_list['物件'][0] . '" target="_blank"><div><img src="images/common/icon-house.svg">物件一覧</div></a>
 <a href="' . $link_list['問合'][0] . '"><div><img src="images/common/icon-mail.svg">お問い合わせ</div></a>
 <a href="#pt"><img src="images/common/pagetop.svg"></a>
 </div>' . chr(10);
@@ -268,13 +268,13 @@ foreach ($area_list as $k => $v) {
 	if ((isset($v[2]) && $v[2] == 'half')) {
 		$a_class[] = 'half';
 	}
-	$temp_area_set .= '<a href="' . $jump . $v[0] . '" class="' . implode(' ', $a_class) . '"><b' . $class . '>' . $k . '</b>' . $t . '</a>' . chr(10);
+	$temp_area_set .= '<a href="' . $jump . $v[0] . '" target="_blank" class="' . implode(' ', $a_class) . '"><b' . $class . '>' . $k . '</b>' . $t . '</a>' . chr(10);
 }
 $temp_area_set .= '</div>' . chr(10);
 $temp_box_search = '<div class="box_search">
 <h2><img src="images/common/icon-search.svg"><span>物件検索</span></h2>
 ' . $temp_area_set . '
-<div class="c_ovalbtn"><a href="' . $link_list['物件'][0] . '"><span>すべての物件はこちら<img src="images/common/arrow-btn-oval.svg"></span></a></div>
+<div class="c_ovalbtn"><a href="' . $link_list['物件'][0] . '" target="_blank"><span>すべての物件はこちら<img src="images/common/arrow-btn-oval.svg"></span></a></div>
 </div>' . chr(10);
 
 //◆六角フレーム(中身を[0]と[1]で囲う)
