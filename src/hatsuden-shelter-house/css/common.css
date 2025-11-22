@@ -506,12 +506,16 @@ header .accbox > * {
 .area_set {
 	display: flex;
 	justify-content: space-between;
+	gap: 13px;
 }
 .area_set a {
-	background-color: #505050;
-	color: #fff;
+	width: calc((100% - 78px) / 7);
+	background-color: #fff;
+	border: 4px solid #505050;
+	color: #505050;
+	border-radius: 10px;
 	width: 155px;
-	height: 82px;
+	height: 100px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -528,14 +532,13 @@ header .accbox > * {
 }
 .area_set a:hover {
 	background-color: #df1614;
+	color: #fff;
 }
 .area_set a b {
-	font-size: 22px;
+	font-size: 19px;
 	line-height: 24px;
 	display: block;
-	margin-bottom: 6px;
 	letter-spacing: 0.25em;
-	margin-right: -0.25em;
 }
 .area_set a b.ls {
 	letter-spacing: 0.5em;
@@ -552,10 +555,12 @@ header .accbox > * {
 	}
 	.area_set {
 		flex-wrap: wrap;
+		gap: 13px;
+		padding: 0 10px;
 	}
 	.area_set a {
-		width: 160px;
-		height: 70px;
+		width: calc((100% - 13px) / 2);
+		height: 80px;
 		font-size: 12px;
 		line-height: 16px;
 	}
@@ -565,13 +570,9 @@ header .accbox > * {
 	.area_set a.half + a.half {
 		margin-left: -4px;
 	}
-	.area_set a:nth-of-type(n + 3) {
-		margin-top: 10px;
-	}
 	.area_set a b {
-		font-size: 18px;
-		line-height: 20px;
-		margin-bottom: 4px;
+		font-size: 19px;
+		line-height: 24px;
 	}
 }
 .c_ovalbtn {

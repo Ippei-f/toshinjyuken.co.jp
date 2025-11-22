@@ -492,7 +492,7 @@ require $kaisou . "system/function/cms-load.php";
 				</div>
 				<!-- qa -->
 				<div class="btn_box">
-					<div class="c_ovalbtn yellow"><a href=""><span class="col_Dgray pc_br_del">そのほか、<br>よくあるご質問はこちら<img src="images/common/arrow-btn-oval-R.svg"></span></a></div>
+					<div class="c_ovalbtn yellow"><a href="https://www.toshinjyuken.co.jp/kodate/qa.php" target="_blank"><span class="col_Dgray pc_br_del">そのほか、<br>よくあるご質問はこちら<img src="images/common/arrow-btn-oval-R.svg"></span></a></div>
 				</div>
 			</div>
 		</div>
