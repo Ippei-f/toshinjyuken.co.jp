@@ -1,1 +1,4 @@
 node_modules
+system/**/*.png
+system/**/*.jpg
+system/**/*.mp4
