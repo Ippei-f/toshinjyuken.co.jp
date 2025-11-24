@@ -54,20 +54,67 @@ $rand = '?' . rand();
 		<!-- * -->
 		<?php echo $temp_header; ?>
 		<!-- ** -->
-		<div class="top_mainpic ver2024">
-			<img src="images/top/bg-mainpic-2024.jpg">
-			<img src="images/top/bg-mainpic-catch-2023.svg" class="sp_vanish">
-			<img src="images/top/bg-mainpic-catch-2023-sp.svg" class="pc_vanish">
+
+		<div class="fix-nav">
+			<ul>
+				<li class="search">
+					<a href="search.php">
+						<div class="icon"><img src="images/common/icon-search.svg" /></div>
+						<div class="text">物件情報</div>
+					</a>
+				</li>
+				<li class="member">
+					<a href="member.php">
+						<div class="icon"><img src="images/common/icon-member.svg" /></div>
+						<div class="text">会員登録</div>
+					</a>
+				</li>
+				<li class="pagetop sp_vanish">
+					<a href="#pt"><img src="images/common/btn-submenu-pagetop2.svg" /></a>
+				</li>
+			</ul>
 		</div>
-		<?php
-		/*
-<div class="top_sdgs"><div>
-<div><a href="<?php echo $link_list['SDGs'][0]; ?>"><img src="images/top/bnr/bnr-sdgs.svg" style="width:350px;"></a></div>
-</div></div>
-*/
-		?>
-		<!-- *** -->
-		<section class="top_catch bg_FFF_gray">
+
+		<div class="index-kv">
+			<ul class="index-kv__list">
+				<li class="index-kv__item">
+					<img class="sp_vanish" src="images/top/kv-slider-1.jpg" alt="" />
+					<img class="pc_vanish" src="images/top/sp/kv-slider-1.jpg" alt="" />
+				</li>
+				<li class="index-kv__item">
+					<a href="">
+						<img class="sp_vanish" src="images/top/kv-slider-2.jpg" alt="" />
+						<img class="pc_vanish" src="images/top/sp/kv-slider-2.jpg" alt="" />
+					</a>
+				</li>
+				<li class="index-kv__item">
+					<a href="">
+						<img class="sp_vanish" src="images/top/kv-slider-3.jpg" alt="" />
+						<img class="pc_vanish" src="images/top/sp/kv-slider-3.jpg" alt="" />
+					</a>
+				</li>
+				<li class="index-kv__item">
+					<img class="sp_vanish" src="images/top/kv-slider-4.jpg" alt="" />
+					<img class="pc_vanish" src="images/top/sp/kv-slider-4.jpg" alt="" />
+				</li>
+			</ul>
+		</div>
+
+		<link rel="stylesheet" type="text/css" href="css/slick.css" />
+		<link rel="stylesheet" type="text/css" href="css/slick-theme.css" />
+		<script type="text/javascript" src="js/slick.min.js"></script>
+
+		<script>
+			$(function() {
+				$(".index-kv__list").slick({
+					autoplay: true,
+					dots: true,
+					arrows: false, // 矢印
+				});
+			});
+		</script>
+
+		<section class="top_catch">
 			<?php
 			/*
 <h3 class="fontP175 LH150 pc_br_del" style="margin-bottom: 1em;"><?php echo WORD_BR('理想のカタチ、
@@ -91,12 +138,13 @@ $rand = '?' . rand();
 			?>
 		</section>
 
+		<!--
 		<div class="top_bnr_campaign">
 			<a href="https://www.toshinjyuken.co.jp/kodate/news.php?id=185" target="_blank">
 				<img src="images/top/bnr-sumaihaku-2025.JPG" alt="秋の住まい博2025" />
 			</a>
 		</div>
-
+	-->
 
 
 		<!-- *** -->
@@ -193,7 +241,12 @@ require $kaisou."temp_php/temp_map.php";
 				$(e).addClass('on');
 			}
 		</script>
+
 		<section class="top_search">
+			<h2 class="top_search__ttl">
+				<span class="icon"><img src="images/common/icon-search2.svg" alt="" /></span>
+				<span class="label">物件を探す</span>
+			</h2>
 			<div class="search_btn2025 Wbase">
 				<?php
 				$local_text = array();
@@ -347,250 +400,424 @@ foreach($sysdata_proto as $key => $sysdata){
 			<div>
 				<div class="Wbase">
 					<h2><span>BRAND CONCEPT</span></h2>
-					<div class="LH200 style_br">東新住建は1976年の創業以来、累計<?php echo $top_catch_num['累計']; ?>棟を超える豊富な実績から得た企業力をもとに、<br>従来のファミリー層向け住宅だけではなく<br> 多様化するライフスタイルや家族構成に寄り添うさまざまな商品ラインナップをご用意。<br>私たちは、他の住宅メーカーが取り組んだことのない、戸建住宅の常識を超えたオンリーワン事業を展開しています。</div>
-					<dl class="brand_list">
-						<?php
-						$arr = array(
-							'家' => array(
-								'bnr' => 'ie',
-								'text' => '「木の家のプロフェッショナル」として累計' . $top_catch_num['累計'] . '棟の住まいを手がける東新住建。自然が持つ無限大の可能性を引き出し、強さと心地よさを両立させた永住品質にこだわり、地震に強い木造2×4住宅をお届けするとともに、豊かな自然を未来へ引き継ぐ環境共生住宅の普及を行っています。',
-								'pagelink' => array($link_list['家づくり'][0], '東新住建の家づくり'),
-								'brand' => 99
-							)
-						);
-						$arr += $link_list_brand_concept;
-						$k = 'テイシャク';
-						$arr2 = $arr[$k];
-						$arr2['name'] = $k;
-						unset($arr[$k]);
-						foreach ($arr as $k => $v) {
-							$url = array();
-							$url[] = isset($link_list['東新住建-' . $k]) ? $link_list['東新住建-' . $k][0] : '';
-							switch (true) {
-								case isset($v['search']):
-									$url[] = str_replace($t_blank, $v['search'] . $t_blank, $url[0]) . '" rel="noopener noreferrer';
-									break;
-								case isset($v['brand']):
-									//$url[]='search.php?brand='.$v['brand'];
-									$url[] = 'search.php?search=ブランド,' . $area_list_2025['ブランド'][$v['brand']][0];
-									break;
-								default:
-									$url[] = '';
-							}
-							if ($url[1] != '') {
-								$url[1] = '<a href="' . $url[1] . '" class="btn_bgLtoR"><div><span>物件一覧<img src="images/common/arrow-btn.svg"></span></div></a>';
-							}
-							if (isset($v['pagelink'])) {
-								$url[2] = '<a href="' . $v['pagelink'][0] . '" class="btn_bgLtoR"><div><span>' . $v['pagelink'][1] . '<img src="images/common/arrow-btn.svg"></span></div></a>';
-							} else {
-								$url[2] = '<a href="' . $url[0] . '" rel="noopener noreferrer" class="btn_bgLtoR"><div><span>ブランドサイト<img src="images/common/arrow-btn.svg"></span></div></a>';
-							}
-							echo '<dd>
-<a href="' . $url[0] . '" rel="noopener noreferrer" class="photo"><img src="images/common/bottom/2025/bnr-' . $v['bnr'] . '.png"></a>
-<div class="text style_br">' . $v['text'] . '</div>
-<div class="link">
-' . $url[2] . '
-' . $url[1] . '
-</div>
-</dd>' . PHP_EOL;
-						}
-						?>
-					</dl>
-				</div>
-			</div>
-			<!-- brand_concept -->
-			<div class="halforder">
-				<div class="Wbase">
-					<h2>分譲住宅に、選ぶ自由を。</h2>
-					<div class="catch">東新住建の「インテリアセレクト」&amp;「ハーフオーダー」</div>
-					<dl class="brand_list">
-						<?php
-						$arr = array(
-							'インテリアセレクト' => array(
-								'bnr' => 'ie-is',
-								'text' => '毎日の暮らしを彩る「内観」デザインを、自分らしくセレクト。建物の外側（外観や構造部分）はすでに完成済み。プロにお任せなので安心です。あとはお好みの内装を選ぶだけで、ご入居までスムーズに進められます。注文住宅のような時間や手間をかけずに、“自分らしい暮らし”を叶えられます。
-								',
-								'phase' => 4
-							),
-							'ハーフオーダー'		=> array(
-								'bnr' => 'ie-ho',
-								'text' => 'お好みの「内観」と「外観」デザインをセレクト。注文住宅のような自由度と、分譲住宅のパフォーマンスの高さ。両方を兼ね備えた「いいとこどり」の住まいを、手の届きやすい価格でお届けします。今はまだ真っ白な空間だからこそ、間取りや外観も、あなたの理想に合わせてプランニング可能。“こんな暮らしがしたい”というあなたの夢を、ゼロからカタチにできます。',
+					<div class="LH200 style_br">1976年創業以来、<?php echo $top_catch_num['累計']; ?>棟超の実績を持つ東新住建。<br>多様なライフスタイルに寄り添う豊富な商品ラインナップを展開し、<br>戸建住宅の常識を超えたオンリーワンの家づくりを追求しています。</div>
+					<ul class="brand_concept2025__list">
+						<li>
+							<div class="img">
+								<img src="images/common/bottom/2025/bnr-ie.png" />
+							</div>
+							<div class="txt">
+								<h3 class="ttl">東新住建のベーシックライン</h3>
+								<div class="body">
+									<p>「木の家のプロフェッショナル」として<?php echo $top_catch_num['累計']; ?>棟の実績を誇る東新住建。強さと心地よさを兼ね備えた永住品質の2×4住宅をお届けします。</p>
+								</div>
+								<div class="btn">
+									<ul>
+										<li class="brand">
+											<a href="">
+												<span class="label">ブランドサイト</span>
+												<span class="arrow">
+													<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16.683 4.552">
+														<g>
+															<polyline class="cls-1" points="0 4.152 15.269 4.152 9.07 .341" />
+														</g>
+													</svg>
+												</span>
+											</a>
+										</li>
+										<li class="bukken">
+											<a href="https://www.toshinjyuken.co.jp/kodate/search.php?search=%E3%83%96%E3%83%A9%E3%83%B3%E3%83%89,%E6%9D%B1%E6%96%B0%E4%BD%8F%E5%BB%BA%E3%81%AE%E5%AE%B6" target="_blank">
+												<span class="label">物件一覧</span>
+												<span class="arrow">
+													<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16.683 4.552">
+														<g>
+															<polyline class="cls-1" points="0 4.152 15.269 4.152 9.07 .341" />
+														</g>
+													</svg>
+												</span>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="img">
+								<img src="images/common/bottom/2025/bnr-hiraya.png" />
+							</div>
+							<div class="txt">
+								<h3 class="ttl">懐かしさに包まれる、心地よい平屋</h3>
+								<div class="body">
+									<p>東新住建の土地力が叶えた、ゆとりある平屋。手の届く価格で、心の奥にある“懐かしさという安心”を暮らしに。人も暮らしも平屋に帰ろう。</p>
+								</div>
+								<div class="btn">
+									<ul>
+										<li class="brand">
+											<a href="https://www.toshinjyuken.co.jp/hiraya/" target="_blank">
+												<span class="label">ブランドサイト</span>
+												<span class="arrow">
+													<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16.683 4.552">
+														<g>
+															<polyline class="cls-1" points="0 4.152 15.269 4.152 9.07 .341" />
+														</g>
+													</svg>
+												</span>
+											</a>
+										</li>
+										<li class="bukken">
+											<a href="https://www.toshinjyuken.co.jp/kodate/search.php?search=%E3%83%96%E3%83%A9%E3%83%B3%E3%83%89,%E5%B9%B3%E5%B1%8B%E5%9B%9E%E5%B8%B0" target="_blank">
+												<span class="label">物件一覧</span>
+												<span class="arrow">
+													<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16.683 4.552">
+														<g>
+															<polyline class="cls-1" points="0 4.152 15.269 4.152 9.07 .341" />
+														</g>
+													</svg>
+												</span>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="img">
+								<img src="images/common/bottom/2025/bnr-hatsuden.png" />
+							</div>
+							<div class="txt">
+								<h3 class="ttl">太陽光パネル標準搭載の省エネ住宅</h3>
+								<div class="body">
+									<p>再生可能エネルギーを活用する次世代のPV住宅。独自の4.3倍2×4工法による高い耐震性と売電収入で、家族の安心と家計のゆとりを支えます。</p>
+								</div>
+								<div class="btn">
+									<ul>
+										<li class="brand">
+											<a href="https://www.toshinjyuken.co.jp/hatsuden-shelter-house/" target="_blank">
+												<span class="label">ブランドサイト</span>
+												<span class="arrow">
+													<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16.683 4.552">
+														<g>
+															<polyline class="cls-1" points="0 4.152 15.269 4.152 9.07 .341" />
+														</g>
+													</svg>
+												</span>
+											</a>
+										</li>
+										<li class="bukken">
+											<a href="https://www.toshinjyuken.co.jp/kodate/search.php?search=%E3%83%96%E3%83%A9%E3%83%B3%E3%83%89,%E7%99%BA%E9%9B%BB%E3%82%B7%E3%82%A7%E3%83%AB%E3%82%BF%E3%83%BC%E3%83%8F%E3%82%A6%E3%82%B9" target="_blank">
+												<span class="label">物件一覧</span>
+												<span class="arrow">
+													<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16.683 4.552">
+														<g>
+															<polyline class="cls-1" points="0 4.152 15.269 4.152 9.07 .341" />
+														</g>
+													</svg>
+												</span>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="img">
+								<img src="images/common/bottom/2025/bnr-sodatsu.png" />
+							</div>
+							<div class="txt">
+								<h3 class="ttl">2人くらいにちょうどいいコンパクトタイプ</h3>
+								<div class="body">
+									<p>誰もが気軽に「自分の家」を持てる、コンパクトな一戸建て。
+										一生に一度という常識を超え、多様な暮らしに合わせて柔軟に購入・住み替えができる新しい住まいのしくみ。</p>
+								</div>
+								<div class="btn">
+									<ul>
+										<li class="brand">
+											<a href="https://www.toshinjyuken.co.jp/sodatsu/" target="_blank">
+												<span class="label">ブランドサイト</span>
+												<span class="arrow">
+													<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16.683 4.552">
+														<g>
+															<polyline class="cls-1" points="0 4.152 15.269 4.152 9.07 .341" />
+														</g>
+													</svg>
+												</span>
+											</a>
+										</li>
+										<li class="bukken">
+											<a href="https://www.toshinjyuken.co.jp/kodate/search.php?search=%E3%83%96%E3%83%A9%E3%83%B3%E3%83%89,%E3%81%9D%E3%81%A0%E3%81%A4%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88" target="_blank">
+												<span class="label">物件一覧</span>
+												<span class="arrow">
+													<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16.683 4.552">
+														<g>
+															<polyline class="cls-1" points="0 4.152 15.269 4.152 9.07 .341" />
+														</g>
+													</svg>
+												</span>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="img">
+								<img src="images/common/bottom/2025/bnr-dup.png" />
+							</div>
+							<div class="txt">
+								<h3 class="ttl">管理費0円。駅近戸建てマンション</h3>
+								<div class="body">
+									<p>たった2家族のためのプライベートな1棟2戸メゾネット。駅近のコンパクトな住まいが、手の届く価格と低コストで上質な都市生活を叶えます。</p>
+								</div>
+								<div class="btn">
+									<ul>
+										<li class="brand">
+											<a href="https://www.dup-m.jp/index.php" target="_blank">
+												<span class="label">ブランドサイト</span>
+												<span class="arrow">
+													<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16.683 4.552">
+														<g>
+															<polyline class="cls-1" points="0 4.152 15.269 4.152 9.07 .341" />
+														</g>
+													</svg>
+												</span>
+											</a>
+										</li>
+										<li class="bukken">
+											<a href="https://www.toshinjyuken.co.jp/kodate/search.php?search=%E3%83%96%E3%83%A9%E3%83%B3%E3%83%89,DUP%E3%83%AC%E3%82%B8%E3%83%87%E3%83%B3%E3%82%B9" target="_blank">
+												<span class="label">物件一覧</span>
+												<span class="arrow">
+													<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16.683 4.552">
+														<g>
+															<polyline class="cls-1" points="0 4.152 15.269 4.152 9.07 .341" />
+														</g>
+													</svg>
+												</span>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="img">
+								<img src="images/common/bottom/2025/bnr-alc.png" />
+							</div>
+							<div class="txt">
+								<h3 class="ttl">ALCコンクリート外壁と木地仕上げの家</h3>
+								<div class="body">
+									<p>力強い外壁に、やさしい木のぬくもり。暮らしに合わせて自由にカスタマイズしながら、いつまでも住み続けられる木の家が誕生しました。 </p>
+								</div>
+								<div class="btn">
+									<ul>
+										<li class="brand">
+											<a href="https://www.toshinjyuken.co.jp/new-concrete-log-house/" target="_blank">
+												<span class="label">ブランドサイト</span>
+												<span class="arrow">
+													<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16.683 4.552">
+														<g>
+															<polyline class="cls-1" points="0 4.152 15.269 4.152 9.07 .341" />
+														</g>
+													</svg>
+												</span>
+											</a>
+										</li>
+										<li class="bukken">
+											<a href="https://www.toshinjyuken.co.jp/kodate/search.php?search=%E3%83%96%E3%83%A9%E3%83%B3%E3%83%89,New%E3%82%B3%E3%83%B3%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%88%E3%83%AD%E3%82%B0%E3%83%8F%E3%82%A6%E3%82%B9" target="_blank">
+												<span class="label">物件一覧</span>
+												<span class="arrow">
+													<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16.683 4.552">
+														<g>
+															<polyline class="cls-1" points="0 4.152 15.269 4.152 9.07 .341" />
+														</g>
+													</svg>
+												</span>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</li>
+					</ul>
 
-								'phase' => 3
-							)
-						);
-						foreach ($arr as $k => $v) {
-							$url = array();
-							$url[] = 'search.php?search=フェーズ,' . $area_list_2025['フェーズ'][$v['phase']];
-							$url[1] = '<a href="' . $url[0] . '" class="btn_bgLtoR"><div><span>物件一覧<img src="images/common/arrow-btn.svg"></span></div></a>';
-							$url[2] = isset($v['pagelink']) ? '<a href="' . $v['pagelink'][0] . $t_blank . '" rel="noopener noreferrer" class="btn_bgLtoR"><div><span>' . $v['pagelink'][1] . '<img src="images/common/arrow-btn.svg"></span></div></a>' : '';
-							echo '<dd>
-<a href="' . $url[0] . '" class="photo"><img src="images/common/bottom/2025/bnr-' . $v['bnr'] . '.jpg"></a>
-<h3 class="text">' . $k . '</h3>
-<div class="text style_br">' . $v['text'] . '</div>
-<div class="link">
-' . $url[2] . '
-' . $url[1] . '
-</div>
-</dd>' . PHP_EOL;
-						}
-						?>
-					</dl>
-					<div class="halforder__btn">
-						<a href="./bunjo-halforder.php">
-							<div><span>詳しくはこちら<img src="images/common/arrow-btn-black.svg"></span></div>
-						</a>
+					<!-- teishaku -->
+					<div class="teishaku">
+						<div class="zonkoku1">
+							<img src="images/top/zenkoku1.svg" />
+							<div><span>「土地は借りて、建物だけ買う」、そんなご提案も得意です</span></div>
+						</div>
+						<div class="teishaku-bnr">
+							<div class="img">
+								<img src="images/common/bottom/2025/bnr-teishaku.png" />
+							</div>
+							<div class="txt">
+								<h3 class="ttl">東新住建のベーシックライン</h3>
+								<div class="body">
+									<p>「木の家のプロフェッショナル」として24,000棟の実績を誇る東新住建。強さと心地よさを兼ね備えた永住品質の2×4住宅をお届けします。</p>
+								</div>
+								<div class="btn">
+									<ul>
+										<li class="brand">
+											<a href="https://www.toshinjyuken.co.jp/teishaku-portal/" target="_blank">
+												<span class="label">ブランドサイト</span>
+												<span class="arrow">
+													<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16.683 4.552">
+														<g>
+															<polyline class="cls-1" points="0 4.152 15.269 4.152 9.07 .341" />
+														</g>
+													</svg>
+												</span>
+											</a>
+										</li>
+										<li class="bukken">
+											<a href="https://www.toshinjyuken.co.jp/teishaku-portal/search.php" target="_blank">
+												<span class="label">物件一覧</span>
+												<span class="arrow">
+													<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16.683 4.552">
+														<g>
+															<polyline class="cls-1" points="0 4.152 15.269 4.152 9.07 .341" />
+														</g>
+													</svg>
+												</span>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
 					</div>
+					<!-- teishaku -->
+
 				</div>
 			</div>
 			<!-- brand_concept -->
-			<div class="teishaku">
-				<div class="Wbase">
-					<div class="zonkoku1"><img src="images/top/zenkoku1.svg">
-						<div><span>土地は持たずに平屋を買う</span><span>“テイシャク”という第3の選択肢</span></div>
-					</div>
-					<dl class="brand_list">
-						<?php
-						$v = $arr2;
-						$url = array();
-						$url[] = $link_list['東新住建-' . $v['name']][0];
-						$url[] = isset($v['search'])
-							? '<a href="' . str_replace($t_blank, $v['search'] . $t_blank, $url[0]) . '" rel="noopener noreferrer" class="btn_bgLtoR"><div><span>物件一覧<img src="images/common/arrow-btn.svg"></span></div></a>'
-							: '';
-						echo '<dd><a href="' . $url[0] . '" class="photo"><img src="images/common/bottom/2025/bnr-' . $v['bnr'] . '.png"></a></dd>
-<dd class="w510">
-<div class="text style_br">' . $v['text'] . '</div>
-<div class="link">
-<a href="' . $url[0] . '" rel="noopener noreferrer" class="btn_bgLtoR"><div><span>ブランドサイト<img src="images/common/arrow-btn.svg"></span></div></a>
-' . $url[1] . '
-</div>
-</dd>' . PHP_EOL;
-						?>
-					</dl>
-				</div>
-			</div>
-			<!-- brand_concept -->
+
+
 		</section>
 		<!-- *** -->
-		<div class="top_menu">
-			<div class="dark">
-				<div class="pad bnr1">
-					<?php
-					$arr = array(
-						'家づくり'
-						//'コンセプト'
-						//,'施工事例'
-						//,'お客様の声'
-						,
-						'SDGs',
-						'Q&A'
-					);
-					foreach ($arr as $v) {
-						$a = $link_list[$v];
-						if (empty($a['en'])) {
-							$a['en'] = $a[1];
-						}
-						if (empty($a['jp'])) {
-							$a['jp'] = $a[1];
-						}
-						$first = substr($a['en'], 0, 1);
-						$second = substr($a['en'], 1);
-						$a['en'] = '<b>' . $first . '</b>' . $second;
-						echo '<a href="' . $a[0] . '" class="btn_textLtoC"><div>
-<div><span class="font_DINOT_L first_' . $first . '">' . $a['en'] . '</span></div>
-<div><span>' . $a['jp'] . '</span></div>
-</div><div class="arrow"><img src="images/top/arrow-topbnr.svg"></div></a>' . chr(10);
-					}
-					?>
+
+		<section class="index-halforder">
+			<div class="Wbase">
+				<h2 class="index-halforder__ttl">分譲住宅に、選ぶ自由を。</h2>
+				<div class="index-halforder__catch">
+					東新住建の<br class="sp-only" />
+					<span class="is">インテリアセレクト</span> & <br class="sp-only" /><span class="ho">ハーフオーダー</span>
 				</div>
-				<div class="pad bnr2"><a href="<?php echo $link_list['お客様の声'][0]; ?>" alt="お客様の声" class="vanish_branch">
-						<img src="images/top/bnr/bnr-voice2025-pc.svg">
-						<div class="bnr_photo sp_vanish">
-							<img src="images/top/bnr/bnr-voice2025-p1-pc.jpg">
-							<img src="images/top/bnr/bnr-voice2025-p2-pc.jpg">
-							<img src="images/top/bnr/bnr-voice2025-p3-pc.jpg">
-							<img src="images/top/bnr/bnr-voice2025-p4-pc.jpg">
-							<img src="images/top/bnr/bnr-voice2025-p5-pc.jpg">
-							<img src="images/top/bnr/bnr-voice2025-p6-pc.jpg">
+				<div class="index-halforder__body">
+					<p>
+						東新住建の分譲住宅では、内装や間取りが選べる「インテリアセレクト」、<br />
+						さらに外観まで選べる「ハーフオーダー」で、まるで注文住宅のような仕上がりを実現。<br />
+						建売の手軽さと、注文住宅のこだわりを兼ね備えた新しい選択肢で、“自分らしさ”を叶える家づくりがここにあります。
+					</p>
+				</div>
+				<ul class="index-halforder__list">
+					<li class="is">
+						<div class="img">
+							<img src="images/common/bottom/2025/bnr-ie-is.jpg" />
 						</div>
-						<img src="images/top/bnr/bnr-voice2025-sp.jpg">
-					</a></div>
+						<div class="txt">
+							<div class="btn">
+								<a href="https://www.toshinjyuken.co.jp/kodate/search.php?search=%E3%83%95%E3%82%A7%E3%83%BC%E3%82%BA,%E3%82%A4%E3%83%B3%E3%83%86%E3%83%AA%E3%82%A2%E3%82%BB%E3%83%AC%E3%82%AF%E3%83%88" target="_blank">
+									<span class="label">内装デザインや間取りが選べる<br />物件はこちら</span>
+									<span class="arrow">
+										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16.683 4.552">
+											<g>
+												<polyline class="cls-1" points="0 4.152 15.269 4.152 9.07 .341" />
+											</g>
+										</svg> </span></a>
+							</div>
+						</div>
+					</li>
+					<li class="ho">
+						<div class="img">
+							<img src="images/common/bottom/2025/bnr-ie-ho.jpg" />
+						</div>
+						<div class="txt">
+							<div class="btn">
+								<a href="https://www.toshinjyuken.co.jp/kodate/search.php?search=%E3%83%95%E3%82%A7%E3%83%BC%E3%82%BA,%E3%83%8F%E3%83%BC%E3%83%95%E3%82%AA%E3%83%BC%E3%83%80%E3%83%BC" target="_blank">
+									<span class="label">外観と内装の両方が選べる<br />物件はこちら</span>
+									<span class="arrow">
+										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16.683 4.552">
+											<g>
+												<polyline class="cls-1" points="0 4.152 15.269 4.152 9.07 .341" />
+											</g>
+										</svg> </span></a>
+							</div>
+						</div>
+					</li>
+				</ul>
+				<div class="index-halforder__bnr">
+					<a href="./bunjo-halforder.php" target="_blank">
+						<div class="img">
+							<img class="pc-only" src="images/common/bottom/2025/bnr-ie-isho-img.jpg" />
+							<img class="sp-only" src="images/common/bottom/2025/sp/bnr-ie-isho-img.jpg" />
+						</div>
+						<div class="pos-a">
+							<div class="badge">
+								<img src="images/common/bottom/2025/bnr-ie-isho-badge.svg" alt="" />
+							</div>
+							<div class="txt">
+								<img class="pc-only" src="images/common/bottom/2025/bnr-ie-isho-txt.svg" alt="インテリアセレクト、ハーフオーダーについて詳しくはこちら" />
+								<img class="sp-only" src="images/common/bottom/2025/sp/bnr-ie-isho-txt.svg" alt="インテリアセレクト、ハーフオーダーについて詳しくはこちら" />
+							</div>
+						</div>
+					</a>
+				</div>
 			</div>
-		</div>
-		<!-- *** -->
-		<div class="top_search" style="padding-bottom: 5em;">
-			<div class="btnbox num1">
-				<?php
-				echo EFFECT_BTN('物件検索', $top_bukken_btn['t'], $top_bukken_btn['a']);
-				?>
-			</div>
-		</div>
-		<!-- *** -->
+		</section>
 
-
-		<!--
-		<div class="bg_FFF_gray" style="padding-bottom: 2.5em;"></div>
-		<div class="top_slide bg_FFF_gray">
-			<div class="wideslider borderbox">
-				<ul class="ws">
-					<?php
-					$str = '';
-					$cnt = 0;
-					foreach ($top_slide_arr as $k => $v) {
-						$flag = true;
-						if (isset($v['date'])) {
-							$now = date($v['date']);
-							//開始日判定
-							if (isset($v['s'])) {
-								if ($now < $v['s']) {
-									$flag = false;
-								}
-							}
-							//終了日判定
-							if (isset($v['e'])) {
-								if ($now >= $v['e']) {
-									$flag = false;
-								}
-							}
-						}
-						if ($flag) {
-							if ($v['url'] != '') {
-								if (strpos($v['url'], '@') !== false) {
-									$v['url'] = str_replace('@', $kaisou, $v['url']);
-								}
-								if (strpos($v['url'], '://') !== false) {
-									$v['url'] .= '" target="_blank';
-								}
-								$v['url'] = ' href="' . $v['url'] . '"';
-							}
-							if (strpos($v['bnr'], '@') !== false) {
-								$v['bnr'] = str_replace('@', $kaisou, $v['bnr']);
-							} else {
-								$v['bnr'] = $toushin_bnr_url . 'bnr/' . $v['bnr'];
-							}
-							$str .= '<li class="ws"><img src="images/common/clear.png" class="base"/><a' . $v['url'] . ' class="box"><img src="' . $v['bnr'] . '"></a></li>' . chr(10);
-							$cnt++;
-						}
-					}
-					switch (true) {
-						case ($cnt < 2):
-							$res = $str . $str . $str . $str;
-							break;
-						case ($cnt < 3):
-							$res = $str . $str;
-							break;
-						default:
-							$res = $str;
-					}
-					echo $res;
-					?>
+		<div class="index-bottombnr">
+			<div class="Wbase">
+				<ul class="index-bottombnr__list">
+					<li class="index-bottombnr__item">
+						<a href="structure.php">
+							<div class="img">
+								<img src="images/top/bnr/bnr-structure.jpg" alt="" />
+							</div>
+							<div class="txt">
+								<span class="line-1">耐震性能と環境性能に優れた木造住宅</span>
+								<span class="line-2"><span>東新住建の家づくり</span></span>
+							</div>
+						</a>
+					</li>
+					<li class="index-bottombnr__item">
+						<a href="qa.php">
+							<div class="img">
+								<img src="images/top/bnr/bnr-qa.jpg" alt="" />
+							</div>
+							<div class="txt">
+								<span class="line-1">購入にあたってのよくあるご質問</span>
+								<span class="line-2"><span>Q & A</span></span>
+							</div>
+						</a>
+					</li>
+					<li class="index-bottombnr__item">
+						<a href="voice.php">
+							<div class="img">
+								<img src="images/top/bnr/bnr-voice.jpg" alt="" />
+							</div>
+							<div class="txt">
+								<span class="line-1">実際にお住まいのオーナー様の喜びの声</span>
+								<span class="line-2"><span>お客様の声</span></span>
+							</div>
+						</a>
+					</li>
+					<li class="index-bottombnr__item">
+						<a href="sdgs.php">
+							<div class="img">
+								<img src="images/top/bnr/bnr-sdgs.jpg" alt="" />
+							</div>
+							<div class="txt">
+								<span class="line-1">省エネルギーの循環型社会の実現に向けて</span>
+								<span class="line-2"><span>SDGsへの取り組み</span></span>
+							</div>
+						</a>
+					</li>
 				</ul>
 			</div>
 		</div>
-				-->
 
 		<!-- *** -->
-		<div class="top_catch">
+		<div class="top_catch top_lifestyletips">
 			<h3 class="fontP200 sp_fontP170 LH150 font_thin col_F30" style="letter-spacing: 0.1em; margin-left: 0.1em;">LIFESTYLE TIPS</h3>
 			<div class="LH200 pc_div_del" style="margin-bottom: 3em;">新生活に向けての物件選びや暮らしに役立つ情報をお届けします</div>
 			<?php
@@ -650,78 +877,53 @@ foreach($sysdata_proto as $key => $sysdata){
 			<div class="Wmax100per" style="width: 16em; padding-top:4em;"><?php echo EFFECT_BTN('ライフスタイル', 'すべての記事', array('class' => 'W100per textL', 'arrow' => true, 'blank' => true)); ?></div>
 		</div>
 		<!-- *** -->
-		<style>
-			.top_bnr_tel_line {
-				padding: 30px 50px;
-				background-color: #E9EDF0;
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-			}
 
-			.top_bnr_tel_line>* {
-				max-width: 100%;
-			}
 
-			.top_bnr_tel_line a {
-				display: block;
-			}
-
-			.top_bnr_tel_line a img {
-				width: 100%;
-			}
-
-			.top_bnr_tel_line>.top_search {
-				padding: 0;
-				width: 100%;
-			}
-
-			.top_bnr_tel_line .tt {
-				font-size: min(25px, max(20px, 2.5vw));
-				font-weight: 700;
-				line-height: 1em;
-				margin: 1em 0;
-			}
-
-			.top_bnr_tel_line .tel {
-				width: min(395px, max(351px, calc(1vw * 351 / 3.75)));
-				text-align: right;
-				font-size: min(13px, max(11px, 1.3vw));
-				line-height: 1.5em;
-				margin-bottom: 1em;
-			}
-
-			.top_bnr_tel_line .line {
-				width: min(337px, max(325px, calc(1vw * 325 / 3.75)));
-			}
-
-			@media screen and (max-width: 999px) {
-				.top_bnr_tel_line {
-					padding: 30px 1em;
-				}
-			}
-		</style>
-		<div class="top_bnr_tel_line">
-			<div class="top_search">
-				<div class="btnbox num1">
-					<?php
-					echo EFFECT_BTN('お問い合わせ', '資料請求・お問い合わせ', array('class' => 'colO pc_br_del', 'arrow' => true));
-					/*
-<a href="<?php echo $link_list['会員登録'][0]; ?>"><img src="images/top/bnr/bnr1.png"></a>
-*/
-					?>
+		<div class="footer-contact">
+			<div class="footer-contact-flex">
+				<div class="tel">
+					<div class="txt">お電話でのお問い合わせはこちら</div>
+					<div class="number">
+						<a href="tel:0800-170-5104"><img src="images/top/bnr/bnr-tel-gray.svg" /></a>
+					</div>
+					<div class="time">営業時間／10:00～18:00　定休日／水曜日</div>
+				</div>
+				<div class="line">
+					<div class="txt">LINEでのお問合せはこちら</div>
+					<div class="bnr">
+						<a href="https://lin.ee/v4vz5KD" target="_blank">
+							<img src="images/contact/line-bnr.svg" alt="LINE公式アカウント" />
+						</a>
+					</div>
 				</div>
 			</div>
-			<div class="tt">電話・LINEでの<br class="pc_vanish">資料請求・お問い合わせはこちら</div>
-			<div class="tel"><a href="tel:0800-170-5104"><img src="images/top/bnr/bnr-tel.svg"></a>営業時間／10:00～18:00　定休日／水曜日</div>
 
-			<div class="line">
-				<a href="https://lin.ee/v4vz5KD" target="_blank">
-					<img src="images/contact/line-bnr.svg" alt="LINE公式アカウント">
-				</a>
+			<div class="top_search">
+				<div class="btnbox num1">
+					<a href="contact.php" class="btn_bgLtoR colO pc_br_del">
+						<div>
+							<span>資料請求・お問い合わせ</span><svg xmlns="http://www.w3.org/2000/svg" class="arrow-btn" viewBox="0 0 21.77 11.86">
+								<defs>
+									<style>
+										.arrow-btn_1,
+										.arrow-btn_2 {
+											fill: none;
+										}
+
+										.arrow-btn_1 {
+											stroke-miterlimit: 10;
+										}
+									</style>
+								</defs>
+								<polyline class="arrow-btn_1" points="0 5.43 20 5.43 11.88 0.43" />
+								<rect class="arrow-btn_2" width="21.77" height="11.86" />
+							</svg>
+						</div>
+					</a>
+				</div>
 			</div>
-
 		</div>
+
 		<!-- ** -->
 		<?php echo $temp_footer; ?>
 		<!-- * -->

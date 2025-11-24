@@ -412,9 +412,7 @@ header .menu_sp {
 	background: #59575f;
 	width: 100%;
 	max-width: 100%;
-	height: 100vh;
-	max-height: -webkit-calc(100vh - 60px);
-	max-height: calc(100vh - 60px);
+	height: 110vh;
 	display: none;
 	overflow-y: auto;
 	z-index: 2;
@@ -482,10 +480,13 @@ header .menu_sp .menu_sp__list {
 header .menu_sp .menu_sp__list > li {
 	width: calc((100% - 10px) / 2);
 }
+header .menu_sp .menu_sp__list > li.w-100 {
+	width: 100%;
+	margin-top: 10px;
+}
 
-header .menu_sp li a {
+header .menu_sp .menu_sp__list > li a {
 	border-radius: 7px;
-	border: 2px solid #000;
 	display: block;
 	min-height: 63px;
 	text-align: center;
@@ -497,9 +498,6 @@ header .menu_sp li a {
 	flex-direction: column;
 	gap: 5px;
 	background: #fff;
-}
-header .menu_sp li a[href*="contact"] {
-	background-color: var(--color-orange);
 }
 header .menu_sp li a .en {
 	font-size: 125%;
@@ -519,8 +517,36 @@ header .menu_sp li a .en span b {
 	font-weight: normal;
 	color: var(--color-orange);
 }
-header .menu_sp li a[href*="contact"] .en span b {
-	color: #fff;
+
+header .menu_sp .menu_sp__sns {
+	ul {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 20px;
+		margin: 40px 0;
+
+		li {
+			img {
+				width: 20px;
+			}
+			&.insta {
+				img {
+					width: 31px;
+				}
+			}
+			&.youtube {
+				img {
+					width: 35px;
+				}
+			}
+			&.line {
+				img {
+					width: 28px;
+				}
+			}
+		}
+	}
 }
 
 @media screen and (min-width: 1000px) {

@@ -256,67 +256,141 @@ function HEADER_SNSBTN()
 	$res .= '</div>' . PHP_EOL;
 	return $res;
 }
-$temp_header = '<div class="H_head"></div>
-<div class="H_head2"></div>
-<header><div class="pos_rel H_head">
-<a href="' . $link_list['TOP'][0] . '"><img src="' . $dir_c . 'logo-2021' . (($p_type == 'index') ? '-W' : '') . '.svg" class="logo ver2021 sp_vanish" title="' . $comp_data['HP名'] . '"><img src="' . $dir_c . 'logo-2021.svg" class="logo ver2021 pc_vanish" title="' . $comp_data['HP名'] . '"></a>
-<table border="0" cellpadding="0" cellspacing="0" class="menu_pc H_head sp_vanish"><tr>
-' . HEADER_MENU_PC(array(
-	'物件検索',
-	'家づくり',
-	'TOP-ブランド',
-	'SDGs',
-	'Q&A'
-	//,'ライフスタイル'
-	,
-	'お客様の声'
-)) . '
-</tr></table>
-<!--  -->
-<div class="menubtn H_head pc_vanish"><div>
-<span></span>
-<span></span>
-<span></span>
-</div></div>
-' . HEADER_SNSBTN() . '
-<!-- -->
-<div class="clear"></div>
-<div class="menu_sp font_sizebase"><div class="pad">
+$temp_header = '<header class="l-header">
+				<div class="l-header-inner">
+					<div class="l-header-flex">
+						<div class="l-header__logo">
+							<a href="index.php">
+								<img src="images/common/logo-2021.svg" class="logo ver2021 sp_vanish" title="東新住建の家" />
+								<img src="images/common/logo-2021.svg" class="logo ver2021 pc_vanish" title="東新住建の家"
+							/></a>
+						</div>
+						<div class="l-header__sns">
+							<ul>
+								<li class="insta">
+									<a href="https://www.instagram.com/toshinjyuken_no_ie/" target="_blank">
+										<img src="images/common/icon-insta-gray.svg" />
+									</a>
+								</li>
+								<li class="youtube">
+									<a href="https://www.youtube.com/@toshinjyuken_house" target="_blank">
+										<img src="images/common/icon-youtube-gray.svg" />
+									</a>
+								</li>
+								<li class="line">
+									<a href="https://lin.ee/v4vz5KD" target="_blank">
+										<img src="images/common/icon-LINE-gray.svg" />
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<nav class="gnav sp_vanish">
+						<ul class="gnav__list">
+							<li class="gnav__item">
+								<a href="search.php"><div class="text">物件情報</div></a>
+							</li>
+							<li class="gnav__item">
+								<a href="index.php#brand"><div class="text">ブランドコンセプト</div></a>
+							</li>
+							<li class="gnav__item">
+								<a href="structure.php"><div class="text">東新住建の家づくり</div></a>
+							</li>
+							<li class="gnav__item">
+								<a href="qa.php"><div class="text">Q&A</div></a>
+							</li>
+							<li class="gnav__item">
+								<a href="lifestyle.php"><div class="text">コラム</div></a>
+							</li>
+							<li class="gnav__item">
+								<a href="voice.php"><div class="text">お客様の声</div></a>
+							</li>
+						</ul>
+					</nav>
+					<!--  -->
+					<div class="menubtn pc_vanish">
+						<div>
+							<span></span>
+							<span></span>
+							<span></span>
+						</div>
+					</div>
 
-<table border="0" cellpadding="0" cellspacing="0" class="iconbtn LH125"><tr>
-' . HEADER_SUBMENU(array(
-	'物件検索'			=> array('icon-search-W', 'color' => 'W', 'text' => '物件情報'),
-	'会員登録'			=> array('icon-member', 'color' => 'O') //'icon-member-K'	,'color'=>'K'
-	//,'お問い合わせ'	=>array('icon-contact'	,'color'=>'O','text'=>'来場予約<br>お問合せ')
-)) . '
-</tr></table>
+					<!-- -->
+					<div class="clear"></div>
+					<div class="menu_sp font_sizebase">
+						<div class="pad">
+							<ul class="iconbtn LH125">
+								<li class="W">
+									<a href="search.php"
+										><div class="icon"><img src="images/common/icon-search2.svg" /></div>
+										<div class="text">物件情報</div></a
+									>
+								</li>
+								<li class="O">
+									<a href="member.php"
+										><div class="icon"><img src="images/common/icon-member.svg" /></div>
+										<div class="text">会員登録</div></a
+									>
+								</li>
+							</ul>
 
-<ul class="LH100">
-' . HEADER_MENU_SP2(array(
-	'家づくり',
-	'TOP-ブランド',
-	'SDGs',
-	'Q&A',
-	'NEWS',
-	'ライフスタイル',
-	'お客様の声',
-	'お問い合わせ'
-)) . '
-<div class="clear"></div>
-</ul>
-
-</div></div>
-<!-- -->
-</div>
-<table border="0" cellpadding="0" cellspacing="0" class="submenu pc_tblbreak fontP080 LH125 sp_LH100"><tr>
-' . HEADER_SUBMENU(array(
-	'物件検索'			=> array('icon-search', 'color' => 'W', 'text' => '物件情報'),
-	'会員登録'			=> array('icon-member', 'color' => 'O') //,'color'=>'K'
-	//,'お問い合わせ'	=>array('icon-contact','color'=>'O','text'=>'来場予約<span>・</span><br>お問合せ')
-)) . '
-<td class="sp_vanish"><a href="#pt"><img src="' . $dir_c . 'btn-submenu-pagetop.svg"></a></td>
-</tr></table>
-</header>';
+							<ul class="menu_sp__list">
+								<li>
+									<a href="index.php#brand">ブランドコンセプト</a>
+								</li>
+								<li>
+									<a href="bunjo-halforder.php"
+										>インテリアセレクト<br />
+										ハーフオーダー</a
+									>
+								</li>
+								<li>
+									<a href="structure.php">東新住建の家づくり</a>
+								</li>
+								<li>
+									<a href="qa.php">Q & A</a>
+								</li>
+								<li>
+									<a href="lifestyle.php">コラム</a>
+								</li>
+								<li>
+									<a href="voice.php">お客様の声</a>
+								</li>
+								<li>
+									<a href="news.php">NEWS</a>
+								</li>
+								<li>
+									<a href="sdgs.php">SDGsへの取り組み</a>
+								</li>
+								<li class="w-100">
+									<a href="contact.php">ご来場予約・お問い合わせ・資料請求</a>
+								</li>
+							</ul>
+							<div class="menu_sp__sns">
+								<ul>
+									<li class="insta">
+										<a href="https://www.instagram.com/toshinjyuken_no_ie/" target="_blank">
+											<img src="images/common/icon-insta-gray2.svg" />
+										</a>
+									</li>
+									<li class="youtube">
+										<a href="https://www.youtube.com/@toshinjyuken_house" target="_blank">
+											<img src="images/common/icon-youtube-gray2.svg" />
+										</a>
+									</li>
+									<li class="line">
+										<a href="https://lin.ee/v4vz5KD" target="_blank">
+											<img src="images/common/icon-LINE-gray2.svg" />
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- -->
+				</div>
+			</header>';
 
 
 //◆その他商品ラインナップ
@@ -405,44 +479,63 @@ function FOOTER_MENU($arr = array())
 	}
 	return $str;
 }
-$temp_footer = '<footer>
-<div class="fmenu"><div class="W1000 Wmax100per mgnAuto">
-<table border="0" cellpadding="0" cellspacing="0" class="sp_tblbreak W100per"><tr>
-<td class="logoset">
-<a href="' . $link_list['TOP'][0] . '" class="logo"><img src="' . $dir_c . 'logo-2021-W.svg"></a>
-<a href="' . $link_list['お問い合わせ'][0] . '" class="contact">資料請求・お問い合わせ</a>
-<a href="tel:' . $comp_data['TEL'] . '" class="tel"><img src="' . $dir_c . 'foot-tel.svg"></a>
-</td>
-<td class="menuset">
-<table border="0" cellpadding="0" cellspacing="0" class="sp_tblbreak"><tr>
-' . FOOTER_MENU(array(
-	array(
-		'TOP',
-		'物件検索',
-		'NEWS',
-		'家づくり'
-	),
-	array(
-		'TOP-ブランド',
-		'SDGs',
-		'Q&A'
-		//,'お問い合わせ'
-		,
-		'お客様の声'
-	),
-	array(
-		'会員登録',
-		'ライフスタイル'
-	)
-)) . '
-</tr></table>
-</td>
-</tr></table>
-<hr>
-<a href="' . $link_list['東新住建'][0] . '" class="toushin"><img src="' . $dir_c . 'logo-toushin-2024.svg"></a>
-<div class="toushin_addr">〒' . $comp_data['〒'] . ' ' . $comp_data['住所'] . '</div>
-</div></div>
-<div class="copy">' . $comp_data['copy'] . '</div>
+$temp_footer = '
+<footer class="l-footer">
+	<div class="l-footer-inner">
+		<div class="l-footer-upper">
+			<div class="l-footer-flex">
+
+				<!-- ロゴ -->
+				<div class="l-footer__logo">
+					<a href="' . $link_list['TOP'][0] . '" class="logo"><img src="' . $dir_c . 'logo-2021.svg" /></a>
+				</div>
+
+				<!-- ナビメニュー -->
+				<nav class="fnav">
+					<ul class="fnav__list">
+						<li class="fnav__item"><a href="' . $link_list['TOP'][0] . '">ホーム</a></li>
+						<li class="fnav__item"><a href="' . $link_list['物件検索'][0] . '">物件情報</a></li>
+						<li class="fnav__item"><a href="' . $link_list['NEWS'][0] . '">NEWS</a></li>
+						<li class="fnav__item"><a href="structure.php">東新住建の家づくり</a></li>
+					</ul>
+
+					<ul class="fnav__list">
+						<li class="fnav__item"><a href="' . $link_list['TOP'][0] . '#brand">ブランドコンセプト</a></li>
+						<li class="fnav__item"><a href="bunjo-halforder.php">インテリアセレクト / ハーフオーダー</a></li>
+						<li class="fnav__item"><a href="sdgs.php">SDGsへの取り組み</a></li>
+						<li class="fnav__item"><a href="qa.php">Q&A</a></li>
+					</ul>
+
+					<ul class="fnav__list">
+						<li class="fnav__item"><a href="voice.php">お客様の声</a></li>
+						<li class="fnav__item"><a href="lifestyle.php">コラム</a></li>
+						<li class="fnav__item"><a href="member.php">会員登録</a></li>
+						<li class="fnav__item"><a href="' . $link_list['お問い合わせ'][0] . '">資料請求・お問い合わせ</a></li>
+					</ul>
+				</nav>
+
+			</div>
+
+			<!-- SNS -->
+			<div class="l-footer__sns">
+				<ul>
+					<li class="insta"><a href="https://www.instagram.com/toshinjyuken_no_ie/" target="_blank"><img src="images/common/icon-insta-gray.svg" /></a></li>
+					<li class="youtube"><a href="https://www.youtube.com/@toshinjyuken_house" target="_blank"><img src="images/common/icon-youtube-gray.svg" /></a></li>
+					<li class="line"><a href="https://lin.ee/v4vz5KD" target="_blank"><img src="images/common/icon-LINE-gray.svg" /></a></li>
+				</ul>
+			</div>
+
+		</div>
+
+		<!-- 下段 -->
+		<div class="l-footer-lower">
+			<div class="l-footer__logo2">
+				<a href="' . $link_list['東新住建'][0] . '" target="_blank" class="toushin"><img src="' . $dir_c . 'logo-toushin-2024-K.svg" /></a>
+			</div>
+			<div class="copyright">' . $comp_data['copy'] . '</div>
+		</div>
+
+	</div>
 </footer>
 <div id="pagebottom_btn"><a href="#pt"><img src="' . $dir_c . 'btn-submenu-pagetop.svg"></a></div>' . chr(10);
 switch ($p_title) {
