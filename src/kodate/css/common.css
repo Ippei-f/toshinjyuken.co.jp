@@ -459,6 +459,10 @@ header .menu_sp .iconbtn .O a {
 	color: #fff;
 }
 header .menu_sp .iconbtn a .icon {
+	height: 41px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	img {
 		width: 27px;
 	}
@@ -467,14 +471,15 @@ header .menu_sp .iconbtn a .icon {
 header .menu_sp .iconbtn a .text {
 }
 
-header .menu_sp ul {
+header .menu_sp .menu_sp__list {
 	margin-top: 36px;
 	width: 100%;
 	display: flex;
 	flex-wrap: wrap;
 	gap: 10px;
+	line-height: 1.4;
 }
-header .menu_sp li {
+header .menu_sp .menu_sp__list > li {
 	width: calc((100% - 10px) / 2);
 }
 
