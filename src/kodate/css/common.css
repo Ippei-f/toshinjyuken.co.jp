@@ -425,126 +425,73 @@ header .menu_sp > .pad {
 }
 header .menu_sp .iconbtn {
 	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
 }
 header .menu_sp .iconbtn a {
-	border: solid 5px;
-	border-color: transparent;
+	border-radius: 7px;
+	border: 2px solid #000;
 	display: block;
-	/* height: 90px; */
-	height: 30.62200957vw;
-	min-height: 128px;
+	min-height: 105px;
 	text-align: center;
 	position: relative;
+	font-size: 14px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	gap: 5px;
 }
-header .menu_sp .iconbtn td {
-	width: 33%;
+header .menu_sp .iconbtn > li {
+	width: calc((100% - 10px) / 2);
 }
-header .menu_sp .iconbtn td.W {
-	color: #fff;
-} /* スマホメニュー内のボタンの色は白黒逆転している */
-header .menu_sp .iconbtn td.W a {
-	border-color: #fff;
+
+header .menu_sp .iconbtn .W a {
+	background-color: #fff;
+	color: #000;
 }
-header .menu_sp .iconbtn td.K {
+header .menu_sp .iconbtn .K {
 	background-color: #fff;
 }
-header .menu_sp .iconbtn td.O {
+header .menu_sp .iconbtn .O a {
 	background-color: var(--color-orange);
 	color: #fff;
 }
 header .menu_sp .iconbtn a .icon {
-	position: absolute;
-	top: 0;
-	left: 0;
-	margin: auto;
-	width: 100%;
-	/* height:60px; */
-	height: 21.05263158vw;
-	min-height: 88px;
-	/* height: 88px; */
+	img {
+		width: 27px;
+	}
 }
-header .menu_sp .iconbtn tr > *:nth-child(3) a .icon {
-	/* height:50px; */
-	height: 18.66028708vw;
-	min-height: 78px;
-	/* height: 78px; */
-}
-header .menu_sp .iconbtn a img {
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	margin: auto;
-}
-header .menu_sp .iconbtn tr > *:nth-child(1) a img {
-	/* height:34px; */
-	/*
-	height:10.52631579vw;
-	min-height:44px;
-	*/
-	height: 44px;
-}
-header .menu_sp .iconbtn tr > *:nth-child(2) a img {
-	/* height:36px; */
-	/*
-	height:11.00478469vw;
-	min-height:46px;
-	*/
-	height: 46px;
-}
-header .menu_sp .iconbtn tr > *:nth-child(3) a img {
-	/* height:30px; */
-	/*
-	height:9.56937799vw;
-	min-height:40px;
-	*/
-	height: 40px;
-}
+
 header .menu_sp .iconbtn a .text {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	margin: auto;
-	width: 100%;
-	/* height:20px; */
-	/*
-	height:7.177033493vw;
-	min-height: 30px;
-	*/
-	height: 30px;
 }
-header .menu_sp .iconbtn tr > *:nth-child(3) a .text {
-	/* height:30px; */
-	/*
-	height:9.56937799vw;
-	min-height: 40px;
-	*/
-	height: 40px;
-}
+
 header .menu_sp ul {
 	margin-top: 36px;
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
 }
 header .menu_sp li {
-	width: 50%;
+	width: calc((100% - 10px) / 2);
 }
-header .menu_sp li:nth-child(2n + 1) {
-	float: left;
-	clear: both;
-	padding-right: 5px;
-}
-header .menu_sp li:nth-child(2n + 2) {
-	float: right;
-	padding-left: 5px;
-}
-header .menu_sp li:nth-child(n + 3) {
-	margin-top: 10px;
-}
+
 header .menu_sp li a {
+	border-radius: 7px;
+	border: 2px solid #000;
 	display: block;
-	background-color: #323232;
-	color: #fff;
+	min-height: 63px;
 	text-align: center;
+	position: relative;
+	font-size: 14px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	gap: 5px;
+	background: #fff;
 }
 header .menu_sp li a[href*="contact"] {
 	background-color: var(--color-orange);
@@ -570,10 +517,7 @@ header .menu_sp li a .en span b {
 header .menu_sp li a[href*="contact"] .en span b {
 	color: #fff;
 }
-header .menu_sp li a .text {
-	font-size: 75%;
-	padding: 1.5em 0;
-}
+
 @media screen and (min-width: 1000px) {
 	header .menu_sp {
 		display: none !important;
@@ -1752,8 +1696,13 @@ footer .copy {
 	}
 }
 @media screen and (max-width: 999px) {
+	.brand_concept2025 h2 {
+		font-size: 26px;
+		color: #000000;
+	}
 	.brand_concept2025 h2 span {
 		border-bottom: solid 1px var(--color-orange);
+		color: #000000;
 	}
 	.brand_concept2025 h2 + * {
 		text-align: justify;
