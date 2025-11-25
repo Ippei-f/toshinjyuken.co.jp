@@ -635,7 +635,7 @@ if (!$mode_conf) { //確認モード
 							<div class="img">
 								<img src="../images/halforder/interiorselect-option-4.jpg" alt="" />
 							</div>
-							<div class="txt">幹太くん</div>
+							<div class="txt">乾太くん</div>
 						</li>
 						<li class="option__item">
 							<div class="img">
