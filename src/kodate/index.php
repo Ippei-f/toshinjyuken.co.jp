@@ -887,7 +887,7 @@ foreach($sysdata_proto as $key => $sysdata){
 								$sysdata[6] = array($sysdata[6], '');
 							}
 							$text = ($sysdata[6][1] != '') ? $sysdata[6][1] : $sysdata[6][0];
-							echo '<li><a href="' . $link_list['ライフスタイル'][0] . '?id=' . $sysdata[0] . $t_blank . '"><img src="images/common/clear-W380H170.png" class="W100per bg_cover" style="background-image: url(' . $sysdata['upfile'][0] . ');"><div class="pad">' . $text . '<div class="title">' . $sysdata[2] . '</div></div></a></li>';
+							echo '<li><a href="' . $link_list['ライフスタイル'][0] . '?id=' . $sysdata[0] . $t_blank . '"><img src="images/common/clear-W380H170.png" class="W100per bg_cover" style="background-image: url(' . $sysdata['upfile'][0] . ');"><div class="pad"><div class="body">' . $text . '</div><div class="title">' . $sysdata[2] . '</div></div></a></li>';
 							$cnt++;
 							if ($cnt > 6) {
 								break;

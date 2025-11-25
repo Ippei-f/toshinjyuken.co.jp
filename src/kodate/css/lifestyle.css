@@ -10,7 +10,9 @@
 	background-color: #f4f5f5;
 }
 .LS_list li a {
-	display: block;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
 }
 .LS_list li a:hover {
 	color: #738da0;
@@ -25,6 +27,11 @@
 	line-height: 150%;
 	text-align: left;
 	padding: 1em;
+	flex-shrink: 1;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 .LS_list li .pad .title {
 	color: #738da0;
