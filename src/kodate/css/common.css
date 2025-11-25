@@ -83,6 +83,8 @@ body {
 	font-size: 100%;
 	color: #000;
 	font-family: var(--primary-font);
+	font-feature-settings: "palt";
+	letter-spacing: 0.1em;
 	font-weight: 500;
 	line-height: 100%;
 	overflow-x: hidden;
@@ -1757,9 +1759,11 @@ footer .copy {
 		display: flex;
 		flex-wrap: wrap;
 		gap: 40px 30px;
+		margin-top: 40px;
 
 		@media screen and (max-width: 999px) {
 			gap: 30px;
+			margin-top: 30px;
 		}
 
 		> li {
@@ -2938,6 +2942,7 @@ img.sp-only {
 	.l-header__logo {
 		.logo {
 			position: static;
+			height: 31px;
 		}
 	}
 	.l-header__sns {

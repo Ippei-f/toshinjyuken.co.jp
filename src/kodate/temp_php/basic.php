@@ -261,9 +261,7 @@ $temp_header = '<header class="l-header">
 					<div class="l-header-flex">
 						<div class="l-header__logo">
 							<a href="index.php">
-								<img src="images/common/logo-2021.svg" class="logo ver2021 sp_vanish" title="東新住建の家" />
-								<img src="images/common/logo-2021.svg" class="logo ver2021 pc_vanish" title="東新住建の家"
-							/></a>
+								<img src="images/common/logo-2025.svg" class="logo ver2025" title="東新住建の家" /></a>
 						</div>
 						<div class="l-header__sns">
 							<ul>
@@ -487,7 +485,7 @@ $temp_footer = '
 
 				<!-- ロゴ -->
 				<div class="l-footer__logo">
-					<a href="' . $link_list['TOP'][0] . '" class="logo"><img src="' . $dir_c . 'logo-2021.svg" /></a>
+					<a href="' . $link_list['TOP'][0] . '" class="logo"><img src="' . $dir_c . 'logo-2025.svg" /></a>
 				</div>
 
 				<!-- ナビメニュー -->
@@ -501,7 +499,7 @@ $temp_footer = '
 
 					<ul class="fnav__list">
 						<li class="fnav__item"><a href="' . $link_list['TOP'][0] . '#brand">ブランドコンセプト</a></li>
-						<li class="fnav__item"><a href="bunjo-halforder.php">インテリアセレクト / ハーフオーダー</a></li>
+						<li class="fnav__item"><a href="bunjo-halforder.php" target="_blank">インテリアセレクト / ハーフオーダー</a></li>
 						<li class="fnav__item"><a href="sdgs.php">SDGsへの取り組み</a></li>
 						<li class="fnav__item"><a href="qa.php">Q&A</a></li>
 					</ul>

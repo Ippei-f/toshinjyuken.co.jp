@@ -82,13 +82,13 @@ $rand = '?' . rand();
 					<img class="pc_vanish" src="images/top/sp/kv-slider-1.jpg" alt="" />
 				</li>
 				<li class="index-kv__item">
-					<a href="">
+					<a href="bunjo-halforder.php" target="_blank">
 						<img class="sp_vanish" src="images/top/kv-slider-2.jpg" alt="" />
 						<img class="pc_vanish" src="images/top/sp/kv-slider-2.jpg" alt="" />
 					</a>
 				</li>
 				<li class="index-kv__item">
-					<a href="">
+					<a href="https://www.toshinjyuken.co.jp/hiraya/" target="_blank">
 						<img class="sp_vanish" src="images/top/kv-slider-3.jpg" alt="" />
 						<img class="pc_vanish" src="images/top/sp/kv-slider-3.jpg" alt="" />
 					</a>
@@ -331,6 +331,7 @@ foreach($sysdata_proto as $key => $sysdata){
 						<ul>
 							<?php
 							$arr = array();
+
 							foreach ($sysdata_proto_news as $key => $sysdata) {
 								if (CMS_OPEN()) {
 									continue;
@@ -338,60 +339,75 @@ foreach($sysdata_proto as $key => $sysdata){
 								if ($sysdata[3] != 1) {
 									continue;
 								}
-								//print_r($sysdata[0].'@');
+
 								CMS_DATA_REPLACE();
-								//CMS_IMGSET($sysdata[0]);
-								//print_r($sysdata);
+
+								// 1) ファイルリンク判定
 								$ext = array('jpg', 'gif', 'png', 'pdf', 'xlsx', 'xls', 'doc', 'docx', 'ppt', 'pptx');
 								$upf = '';
 								foreach ($ext as $v) {
 									$url = $img_updir . $sysdata[0] . '-0link_file.' . $v;
-									//print_r($url);
 									if (file_exists($url)) {
 										$upf = $url;
 										break;
 									}
 								}
-								//print_r($upf);
-								//$d=date('Y/n/j',strtotime($sysdata[1]));
+
+								// 2) 日付
 								$d = date('Y.m.d', strtotime($sysdata[1]));
-								$str = ($sysdata[11] == 1) ? '<span class="newmark">NEW!</span>' : '';
-								$str .= '<span>' . $sysdata[2] . '</span>';
-								switch (true) {
-									case ($upf != ''):
-										$str = '<a href="' . $upf . '" target="_blank" class="col_06F">' . $str . '</a>';
-										break;
-									case ($sysdata[4] != ''):
-										$str = '<a href="' . $sysdata[4] . '"' . (($sysdata[5] == 2) ? ' target="_blank"' : '') . ' class="col_06F">' . $str . '</a>';
-										break;
-									case ($link_list['NEWS'][0] != ''):
-										$str = '<a href="' . $link_list['NEWS'][0] . '?id=' . $sysdata[0] . '" class="col_06F">' . $str . '</a>';
-										break;
-									default:
-										$str = '<a>' . $str . '</a>';
+
+								// 3) タイトル
+								$title = $sysdata[2];
+
+								// 4) NEW 判定
+								$newmark = ($sysdata[11] == 1) ? '<span class="newmark">NEW!</span>' : '';
+
+								// 5) リンク決定
+								if ($upf != '') {
+									$href = $upf;
+									$blank = ' target="_blank"';
+								} elseif ($sysdata[4] != '') {
+									$href = $sysdata[4];
+									$blank = ($sysdata[5] == 2) ? ' target="_blank"' : '';
+								} else {
+									$href = $link_list['NEWS'][0] . '?id=' . $sysdata[0];
+									$blank = '';
 								}
-								$arr[] = array($d, $str);
+
+								// ▼ 表示順調整例：タイトル + NEW 後ろ
+								$html_text = '<a href="' . $href . '"' . $blank . '><span>' . $title . '</span>' . $newmark . '</a>';
+
+								// ▼ 逆順（NEW! を先頭にしたい場合） → こちらに変更してください
+								// $html_text = '<a href="'.$href.'"'.$blank.'>' . $newmark . '<span>' . $title . '</span></a>';
+
+								$arr[] = array($d, $html_text);
 							}
 
+							// 出力：最大5件
 							$cnt = 0;
 							foreach ($arr as $v) {
-								//if($v==''){continue;}
-								echo '<li><table border="0" cellpadding="0" cellspacing="0"><tr>
-<td class="date"><div>' . $v[0] . '</div></td>
-<td>' . $v[1] . '</td>
-</tr></table></li>' . chr(10);
+								echo '
+    <li>
+        <table border="0" cellpadding="0" cellspacing="0">
+            <tr>
+                <td class="date"><div>' . $v[0] . '</div></td>
+                <td>' . $v[1] . '</td>
+            </tr>
+        </table>
+    </li>
+    ';
 								$cnt++;
 								if ($cnt >= 5) {
 									break;
 								}
 							}
-							// href="#"
 							?>
 						</ul>
+
 					</td>
 				</tr>
 			</table>
-			<a href="<?php echo $link_list['NEWS'][0]; ?>"><img src="images/common/arrow-bottom.svg"></a>
+			<div class="top_news__btn"><a href="<?php echo $link_list['NEWS'][0]; ?>">すべての記事を見る</a></div>
 		</section>
 		<!-- *** -->
 		<?php echo ANCHOR('brand'); ?>
@@ -650,9 +666,9 @@ foreach($sysdata_proto as $key => $sysdata){
 								<img src="images/common/bottom/2025/bnr-teishaku.png" />
 							</div>
 							<div class="txt">
-								<h3 class="ttl">東新住建のベーシックライン</h3>
+								<h3 class="ttl">定期借地住宅No.1。土地を持たない暮らし</h3>
 								<div class="body">
-									<p>「木の家のプロフェッショナル」として24,000棟の実績を誇る東新住建。強さと心地よさを兼ね備えた永住品質の2×4住宅をお届けします。</p>
+									<p>土地は借りて建物を買う――それが「東新住建のテイシャク」。土地代を抑え、豊かな暮らしに投資できる新しい住まい方です。30年で1,000棟超の実績を誇り、全国No.1のシェアを達成。</p>
 								</div>
 								<div class="btn">
 									<ul>
@@ -818,63 +834,71 @@ foreach($sysdata_proto as $key => $sysdata){
 
 		<!-- *** -->
 		<div class="top_catch top_lifestyletips">
-			<h3 class="fontP200 sp_fontP170 LH150 font_thin col_F30" style="letter-spacing: 0.1em; margin-left: 0.1em;">LIFESTYLE TIPS</h3>
-			<div class="LH200 pc_div_del" style="margin-bottom: 3em;">新生活に向けての物件選びや暮らしに役立つ情報をお届けします</div>
-			<?php
-			//LIFESTYLE読み込み
-			$dir_sys_life = $kaisou . 'system/life/';
-
-			$r1 = file_get_contents($dir_sys_life . 'data/data.dat');
-			$r1 = str_replace(array("\n", "\r"), '
-', $r1);
-			$r2 = explode('
-', $r1);
-			$sysdata_proto_life = $index1 = $index2 = array();
-			foreach ($r2 as $k => $v) {
-				$sysdata_proto_life[$k] = explode(',', $v); //コンマ区切り
-				if (count($sysdata_proto_life[$k]) < 2) { //無効データ削除（PHP7.0対応）
-					unset($sysdata_proto_life[$k]);
-					continue;
-				}
-				$sysdata_proto_life[$k][0] = str_replace(array("　", " ", "	", chr(10)), '', $sysdata_proto_life[$k][0]); //IDの空白撤去
-				$index1[$k] = $sysdata_proto_life[$k][0];
-				$index2[$k] = strtotime($sysdata_proto_life[$k][1]);
-			}
-			//日付＞IDの順にソート
-			//array_multisort($index2,SORT_DESC,SORT_NUMERIC,$index1,SORT_ASC,SORT_NUMERIC,$sysdata_proto_life);
-			array_multisort($index2, SORT_DESC, SORT_NUMERIC, $index1, SORT_DESC, SORT_NUMERIC, $sysdata_proto_life);
-
-			$img_updir = $dir_sys_life . 'upload/';
-
-			//print_r($sysdata_proto_life);
-			?>
-			<div class="Wmax100per mgnAuto fontP075 sp_fontP100" style="width:890px;">
-				<ul class="LS_list">
+			<div class="Wbase">
+				<div class="allbukken">
 					<?php
-					$cnt = 1;
-					foreach ($sysdata_proto_life as $key => $sysdata) {
-						if (CMS_OPEN()) {
-							continue;
-						}
-						//一部データ配列化
-						CMS_DATA_REPLACE();
-						CMS_IMGSET($sysdata[0], array('upfile' => 'life'));
-						//print_r($sysdata);
-						if (!is_array($sysdata[6])) {
-							$sysdata[6] = array($sysdata[6], '');
-						}
-						$text = ($sysdata[6][1] != '') ? $sysdata[6][1] : $sysdata[6][0];
-						echo '<li><a href="' . $link_list['ライフスタイル'][0] . '?id=' . $sysdata[0] . $t_blank . '"><img src="images/common/clear-W380H170.png" class="W100per bg_cover" style="background-image: url(' . $sysdata['upfile'][0] . ');"><div class="pad">' . $text . '<div class="title">' . $sysdata[2] . '</div></div></a></li>';
-						$cnt++;
-						if ($cnt > 6) {
-							break;
-						}
-					}
+					$top_bukken_btn = array(
+						't' => 'すべての物件を見る',
+						'a' => array('class' => 'colO pc_br_del', 'arrow' => true)
+					);
+					echo EFFECT_BTN('物件検索', $top_bukken_btn['t'], $top_bukken_btn['a']);
 					?>
-					<div class="clear"></div>
-				</ul>
+				</div>
+				<h3 class="top_catch__ttl">LIFESTYLE TIPS</h3>
+				<div class="top_catch__lead LH200 pc_div_del" style="margin-bottom: 3em">新生活に向けての物件選びや暮らしに役立つ情報をお届けします</div>
+				<?php
+				//LIFESTYLE読み込み
+				$dir_sys_life = $kaisou . 'system/life/';
+				$r1 = file_get_contents($dir_sys_life . 'data/data.dat');
+				$r1 = str_replace(array("\n", "\r"), '
+				', $r1);
+				$r2 = explode('
+				', $r1);
+				$sysdata_proto_life = $index1 = $index2 = array();
+				foreach ($r2 as $k => $v) {
+					$sysdata_proto_life[$k] = explode(',', $v); //コンマ区切り
+					if (count($sysdata_proto_life[$k]) < 2) { //無効データ削除（PHP7.0対応）
+						unset($sysdata_proto_life[$k]);
+						continue;
+					}
+					$sysdata_proto_life[$k][0] = str_replace(array("　", " ", "	", chr(10)), '', $sysdata_proto_life[$k][0]); //IDの空白撤去
+					$index1[$k] = $sysdata_proto_life[$k][0];
+					$index2[$k] = strtotime($sysdata_proto_life[$k][1]);
+				}
+				//日付＞IDの順にソート
+				//array_multisort($index2,SORT_DESC,SORT_NUMERIC,$index1,SORT_ASC,SORT_NUMERIC,$sysdata_proto_life);
+				array_multisort($index2, SORT_DESC, SORT_NUMERIC, $index1, SORT_DESC, SORT_NUMERIC, $sysdata_proto_life);
+				$img_updir = $dir_sys_life . 'upload/';
+				//print_r($sysdata_proto_life);
+				?>
+				<div class="Wmax100per mgnAuto fontP075 sp_fontP100">
+					<ul class="LS_list">
+						<?php
+						$cnt = 1;
+						foreach ($sysdata_proto_life as $key => $sysdata) {
+							if (CMS_OPEN()) {
+								continue;
+							}
+							//一部データ配列化
+							CMS_DATA_REPLACE();
+							CMS_IMGSET($sysdata[0], array('upfile' => 'life'));
+							//print_r($sysdata);
+							if (!is_array($sysdata[6])) {
+								$sysdata[6] = array($sysdata[6], '');
+							}
+							$text = ($sysdata[6][1] != '') ? $sysdata[6][1] : $sysdata[6][0];
+							echo '<li><a href="' . $link_list['ライフスタイル'][0] . '?id=' . $sysdata[0] . $t_blank . '"><img src="images/common/clear-W380H170.png" class="W100per bg_cover" style="background-image: url(' . $sysdata['upfile'][0] . ');"><div class="pad">' . $text . '<div class="title">' . $sysdata[2] . '</div></div></a></li>';
+							$cnt++;
+							if ($cnt > 6) {
+								break;
+							}
+						}
+						?>
+						<div class="clear"></div>
+					</ul>
+				</div>
+				<div class="Wmax100per" style="width: 16em; padding-top:4em;"><?php echo EFFECT_BTN('ライフスタイル', 'すべての記事', array('class' => 'W100per textL', 'arrow' => true, 'blank' => true)); ?></div>
 			</div>
-			<div class="Wmax100per" style="width: 16em; padding-top:4em;"><?php echo EFFECT_BTN('ライフスタイル', 'すべての記事', array('class' => 'W100per textL', 'arrow' => true, 'blank' => true)); ?></div>
 		</div>
 		<!-- *** -->
 
