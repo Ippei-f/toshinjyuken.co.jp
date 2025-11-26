@@ -486,6 +486,10 @@ header .menu_sp .menu_sp__list > li.w-100 {
 	width: 100%;
 	margin-top: 10px;
 }
+header .menu_sp .menu_sp__list > li.w-100 a {
+	background-color: var(--color-orange);
+	color: #fff;
+}
 
 header .menu_sp .menu_sp__list > li a {
 	border-radius: 7px;
