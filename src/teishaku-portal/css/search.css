@@ -366,9 +366,13 @@
 	display: flex;
 	justify-content: center;
 	text-align: left;
+	max-width: 620px;
+	margin: 0 auto;
 }
 .s_detail_box1 .prof li {
 	display: flex;
+	align-items: flex-start;
+	margin-bottom: 16px;
 }
 .s_detail_box1 .prof li > *:nth-child(1) {
 	width: 10em;
@@ -377,6 +381,24 @@
 }
 .s_detail_box1 .prof li > *:nth-child(2) {
 	flex-grow: 1;
+}
+.s_detail_box1 .prof li .term {
+	background: #edefe5;
+	color: #595757;
+	width: 92px;
+	min-width: auto;
+	text-align: center;
+	font-size: 16px;
+	font-weight: 600;
+	padding: 5px;
+}
+.s_detail_box1 .prof li .desc {
+	width: calc(100% - 92px);
+	padding-left: 15px;
+	font-size: 18px;
+	font-weight: 600;
+	color: #1e1e1e;
+	padding-top: 5px;
 }
 
 .s_detail_box2 {

@@ -1,10 +1,10 @@
-f<?php
-	$p_type = 'content';
-	$kaisou = '';
-	$dir = $kaisou . 'images/content/qa/';
-	$p_title = 'Q&A';
-	require $kaisou . "temp_php/basic.php";
-	?>
+<?php
+$p_type = 'content';
+$kaisou = '';
+$dir = $kaisou . 'images/content/qa/';
+$p_title = 'Q&A';
+require $kaisou . "temp_php/basic.php";
+?>
 <!doctype html>
 <html>
 

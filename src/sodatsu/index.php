@@ -103,11 +103,14 @@ echo MAINPIC($dir,array('mainpic'=>'mainpic-chara.svg','class'=>'chara'));
 								</svg>
 							</a>
 						</div>
+
+						<!--
 						<div class="top_bnr_campaign">
 							<a href="https://www.toshinjyuken.co.jp/kodate/news.php?id=185" target="_blank">
 								<img src="images/top/bnr-sumaihaku-2025.JPG" alt="秋の住まい博2025" />
 							</a>
 						</div>
+	-->
 					</div>
 					<div class="top_bnr-lower">
 						<ul class="top_bnrbox_2023">

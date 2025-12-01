@@ -93,10 +93,6 @@ $rand = '?' . rand();
 						<img class="pc_vanish" src="images/top/sp/kv-slider-3.jpg" alt="" />
 					</a>
 				</li>
-				<li class="index-kv__item">
-					<img class="sp_vanish" src="images/top/kv-slider-4.jpg" alt="" />
-					<img class="pc_vanish" src="images/top/sp/kv-slider-4.jpg" alt="" />
-				</li>
 			</ul>
 		</div>
 
