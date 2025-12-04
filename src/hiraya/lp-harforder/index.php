@@ -225,74 +225,67 @@ $lp_db_kumi=array
 			if (!$mode_conf) { //確認モード
 			?>
 
+				<!--
 				<section class="contSec PU" id="PU">
 					<div class="innerBlock">
 						<div class="PU-header">
 							<div class="en">PICK UP!</div>
 							<h2 class="jp">おすすめ物件</h2>
 						</div>
+
+						<?php
+						// 物件リスト初期化
+						$search_arr = array();
+
+						// CMSデータ取得
+						foreach (CMS_SETUP('search') as $key => $sysdata) {
+
+							// 公開チェック
+							if (CMS_OPEN($sysdata)) continue;
+
+							// 完売除外
+							if ($sysdata[3] == 999) continue;
+
+							CMS_DATA_REPLACE();
+							CMS_IMGSET($sysdata[0]);
+
+							// ▼ ブランド = 平屋回帰（1）
+							if (!is_array($sysdata[23])) $sysdata[23] = array(trim($sysdata[23]));
+							if (!in_array(1, $sysdata[23])) continue;
+
+							// ▼ フェーズ = ハーフオーダー（3）
+							if (!is_array($sysdata[3])) $sysdata[3] = array(trim($sysdata[3]));
+							if (!in_array(3, $sysdata[3])) continue;
+
+							// ▼ 条件を満たした物件だけ格納
+							$search_arr[] = $sysdata;
+						}
+
+						// ▼ 公開日（sysdata[1]）で降順（新しい順）
+						usort($search_arr, function ($a, $b) {
+							return strtotime($b[1]) - strtotime($a[1]);
+						});
+
+						// ▼ 最新4件に絞る
+						$search_arr = array_slice($search_arr, 0, 4);
+						?>
+
 						<ul class="PU__list">
-							<li class="PU__item">
-								<div class="img">
-									<img src="img/pickup-1.jpg" alt="" />
-								</div>
-								<div class="txt">
-									<h3 class="ttl">守山下志段味【平屋の暮らし】</h3>
-									<dl>
-										<dt>交通</dt>
-										<dd>ＪＲ東海道本線 岡崎駅 徒歩17分</dd>
-										<dt>所在地</dt>
-										<dd>名古屋市守山区下志段味特定土地区画整理…</dd>
-									</dl>
-									<div class="price">2,430<small>万円（税込）</small></div>
-								</div>
-							</li>
-							<li class="PU__item">
-								<div class="img">
-									<img src="img/pickup-2.jpg" alt="" />
-								</div>
-								<div class="txt">
-									<h3 class="ttl">守山下志段味【平屋の暮らし】</h3>
-									<dl>
-										<dt>交通</dt>
-										<dd>ＪＲ東海道本線 岡崎駅 徒歩17分</dd>
-										<dt>所在地</dt>
-										<dd>名古屋市守山区下志段味特定土地区画整理…</dd>
-									</dl>
-									<div class="price">2,430<small>万円（税込）</small></div>
-								</div>
-							</li>
-							<li class="PU__item">
-								<div class="img">
-									<img src="img/pickup-3.jpg" alt="" />
-								</div>
-								<div class="txt">
-									<h3 class="ttl">守山下志段味【平屋の暮らし】</h3>
-									<dl>
-										<dt>交通</dt>
-										<dd>ＪＲ東海道本線 岡崎駅 徒歩17分</dd>
-										<dt>所在地</dt>
-										<dd>名古屋市守山区下志段味特定土地区画整理…</dd>
-									</dl>
-									<div class="price">2,430<small>万円（税込）</small></div>
-								</div>
-							</li>
-							<li class="PU__item">
-								<div class="img">
-									<img src="img/pickup-4.jpg" alt="" />
-								</div>
-								<div class="txt">
-									<h3 class="ttl">守山下志段味【平屋の暮らし】</h3>
-									<dl>
-										<dt>交通</dt>
-										<dd>ＪＲ東海道本線 岡崎駅 徒歩17分</dd>
-										<dt>所在地</dt>
-										<dd>名古屋市守山区下志段味特定土地区画整理…</dd>
-									</dl>
-									<div class="price">2,430<small>万円（税込）</small></div>
-								</div>
-							</li>
+							<?php foreach ($flat as $sysdata): ?>
+								<?php
+								// 一覧テンプレ用の価格データ取得
+								$bukken_data = SEARCH_PRICE($sysdata[11][0]);
+
+								// 物件カードテンプレート（画像・タイトル・交通・所在地・価格すべて完成形）
+								require $kaisou . "temp_php/search/temp-bukken-list.php";
+
+								$cnt++;
+								if ($cnt >= $max) break;
+								?>
+							<?php endforeach; ?>
 						</ul>
+
+
 						<div class="btn">
 							<a href="https://www.toshinjyuken.co.jp/kodate/search.php?search=ブランド,平屋回帰｜フェーズ,ハーフオーダー" target="_blank" class="btn_bgLtoR colB border2">
 								<div class="border"></div>
@@ -305,7 +298,7 @@ $lp_db_kumi=array
 						</div>
 					</div>
 				</section>
-
+							-->
 				<script>
 					function checkBreakPoint() {
 						w = $(window).width();

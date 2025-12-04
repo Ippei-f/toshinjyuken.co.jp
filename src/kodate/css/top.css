@@ -131,6 +131,21 @@
 			text-align: left;
 		}
 	}
+	.top_catch__bnr {
+		margin-top: 40px;
+		ul {
+			li {
+				margin-bottom: 30px;
+				a {
+					display: block;
+
+					img {
+						width: 460px;
+					}
+				}
+			}
+		}
+	}
 }
 
 .top_catch .btnbox {

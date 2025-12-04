@@ -132,6 +132,20 @@ $rand = '?' . rand();
 			echo TOUSHIN_COMMON_BNR_2023('家/TOP');
 			echo TOUSHIN_COMMON_BNR_2023('家/TOP-slide'); //スライダーセットアップ
 			?>
+			<div class="top_catch__bnr">
+				<ul>
+					<li>
+						<a href="./search.php?search=%E3%81%9D%E3%81%AE%E4%BB%96,%E3%82%AD%E3%83%A3%E3%83%B3%E3%83%9A%E3%83%BC%E3%83%B3%E5%AF%BE%E8%B1%A1">
+							<img src="images/top/bnr-nenmatsu.png" alt="年末決算フェア" />
+						</a>
+					</li>
+					<li>
+						<a href="./contact.php">
+							<img src="images/top/bnr-online-soudan.png" alt="オンライン相談受付中！" />
+						</a>
+					</li>
+				</ul>
+			</div>
 		</section>
 
 		<!--
