@@ -45,16 +45,45 @@ if ($bukken_data['月額'] === '' || !is_numeric($bukken_data['月額'])) {
 }
 
 
-//階層・ルームオーダー
+//階層・物件タグ
 $add_floor = '';
 if (!isset($pu_limit['floor'])) {
+	// 1. 階層（平屋/2階建て）
 	$add_floor = '<span>' . $search_floor[$sysdata[22]] . '</span>';
+
+	// 2. 敷地面積70坪以上
+	if (!empty($sysdata[25]) && $sysdata[25] == 1) {
+		$add_floor .= '<span>敷地面積70坪以上</span>';
+	}
+
+	// 3. 敷地面積80坪以上
+	if (!empty($sysdata[26]) && $sysdata[26] == 1) {
+		$add_floor .= '<span>敷地面積80坪以上</span>';
+	}
+
+	// 4. 太陽光発電
+	if (!empty($sysdata[27]) && $sysdata[27] == 1) {
+		$add_floor .= '<span>太陽光発電</span>';
+	}
+
+	// 5. 地中熱
+	if (!empty($sysdata[28]) && $sysdata[28] == 1) {
+		$add_floor .= '<span>地中熱</span>';
+	}
+
+	// 6. 駅近
+	if (!empty($sysdata[29]) && $sysdata[29] == 1) {
+		$add_floor .= '<span>駅近</span>';
+	}
+
+	// 7. ハーフオーダー（最後）
 	if (!isset($sysdata[23])) {
 		$sysdata[23] = 0;
 	}
-	if (($sysdata[22] == 1) && ($sysdata[23] == 1)) {
-		$add_floor .= '<span class="ro">ハーフオーダー</span>';
+	if ($sysdata[23] == 1) {
+		$add_floor .= '<span>ハーフオーダー</span>';
 	}
+
 	$add_floor = '<div class="floor">' . $add_floor . '</div>';
 }
 

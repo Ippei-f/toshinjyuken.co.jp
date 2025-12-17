@@ -36,6 +36,11 @@ function COMMON_PARAM($k){
 	,22=>'floor'					//階層
 	,23=>'room_order'			//ルームオーダー
 	,24=>'mainpic_prm'		//コメント下写真関連
+	,25=>'shikichi_70'		//敷地面積70坪以上
+	,26=>'shikichi_80'		//敷地面積80坪以上
+	,27=>'taiyoukou'			//太陽光発電
+	,28=>'chichuunetsu'		//地中熱
+	,29=>'ekichika'				//駅近
 	/*
 	,21=>'movie_url'			//★ルームツアー・動画URL
 	*/

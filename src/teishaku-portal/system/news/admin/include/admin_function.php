@@ -240,9 +240,8 @@ function backup_del($file_path){
 //登録文字のエスケープ
 function strToCommonReplace($str){
 	$str = str_replace(array("\n","\r",","),array("","","__kanma__"),$str);
-	if (get_magic_quotes_gpc()) $str = stripslashes($str);
 	return $str;
-	
+
 }
 //ニュースリストの並び順（日付順）管理画面用
 function listSortAdmin($lines){

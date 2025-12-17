@@ -99,10 +99,9 @@ $(window).load(function() {
 */
 	</script>
 	<style>
-		.bnr_zeroyen {
+		.bnr_halforder {
 			display: block;
-			width: 360px;
-			max-width: 100%;
+			max-width: 900px;
 			margin: auto;
 		}
 
@@ -135,18 +134,14 @@ $(window).load(function() {
 					$sysdata[22] = strpos($sysdata[2], '平屋') !== false ? 1 : 2;
 				}
 
-				function LOCAL_BNR_ZEROYEN()
+				function LOCAL_BNR_HALFORDER()
 				{
 					global $link_list;
-					return '<div class="bnr_box"><a href="' . $link_list['LP-￥0'][0] . '" class="bnr_zeroyen"><img src="lp-zeroyen/bnr/bnr-zeroyen.svg" alt="' . $link_list['LP-￥0'][1] . '"></a></div>';
+					return '<div class="bnr_box"><a href="' . $link_list['LP-￥0'][0] . '" class="bnr_halforder"><img src="lp-zeroyen/bnr/bnr-halforder.webp" alt="' . $link_list['LP-￥0'][1] . '"></a></div>';
 				}
-				//平屋かつルームオーダー可の場合はバナー追加
+				//ルームオーダー可の場合はバナー追加
 				if (!isset($sysdata[23])) {
 					$sysdata[23] = 0;
-				}
-				if (($sysdata[22] == 1) && ($sysdata[23] == 1)) {
-					echo LOCAL_BNR_ZEROYEN();
-					echo CONTENT_PAD(30, 'sp/2');
 				}
 				?>
 				<div class="LH175 fontP115 sp_textL sp_fontP100"><?php
@@ -318,37 +313,40 @@ foreach($sysdata[8] as $k => $v){
 								}
 								foreach ($sysdata[13] as $k => $v) {
 									$cnt = 0;
-									$btn = $btn2 = '';
+									$btn = $btn2 = $madorizu_img = '';
 									if (!empty($arr[$k][8])) {
 										$btn = '<a class="btn">ご成約済み</a>' . chr(10);
 									} else {
+										// 間取り図を画像表示
 										if (file_exists($sysdata['kukaku-num'][$k])) {
-											$btn .= '<a href="' . $sysdata['kukaku-num'][$k] . $t_blank . '" class="btn">間取り図</a>' . chr(10);
+											$madorizu_img = '<div class="madorizu">
+<div class="frame"><img src="' . $sysdata['kukaku-num'][$k] . '"></div>
+</div>' . chr(10);
 										}
 										if ($sysdata[20][$cnt2] != '') {
-											$btn .= '<a href="' . $sysdata[20][$cnt2] . $t_blank . '" class="btn mujin">無人見学の予約</a>' . chr(10);
+											$btn .= '<div class="btn_set"><a href="' . $sysdata[20][$cnt2] . $t_blank . '" class="btn mujin">無人見学の予約</a>' . chr(10) . '</div>';
 											$btn2 = '<div class="btn_bottom"><a href="' . $link_list['外部-無人で物件見学'][0] . $t_blank . '">＞ 無人見学の詳しい内容についてはこちらから</a></div>' . chr(10);
 										}
 									}
 									$cnt2++;
 									echo '<li>
-<h4>' . mb_convert_kana($arr[$k][$cnt++], 'A', 'UTF-8') . '</h4>
+<h4>' . mb_convert_kana($arr[$k][0], 'A', 'UTF-8') . '</h4>
 <ul class="LH175 sp_fontP087">
-<li><div>敷地面積</div><div>' . $arr[$k][$cnt++] . '</div></li>
-<li><div>延床面積</div><div>' . $arr[$k][$cnt++] . '</div></li>
-<li><div>販売価格</div><div>' . $arr[$k][$cnt++] . ' 万円</div></li>
-<li><div>土地代</div><div>' . $arr[$k][$cnt++] . ' 万円</div></li>
-<li><div>敷金</div><div>' . $arr[$k][$cnt++] . ' 万円</div></li>
-<li><div>権利金</div><div>' . $arr[$k][$cnt++] . ' 万円</div></li>
-<li><div>駐車台数</div><div>' . $arr[$k][$cnt++] . ' 台</div></li>
+<li><div>販売価格</div><div><span style="font-size:1.25em">' . $arr[$k][3] . '</span> 万円</div></li>
+<li><div>敷地面積</div><div>' . $arr[$k][1] . '</div></li>
+<li><div>延床面積</div><div>' . $arr[$k][2] . '</div></li>
+<li><div>土地代</div><div>' . $arr[$k][4] . ' 万円</div></li>
+<li><div>敷金</div><div>' . $arr[$k][5] . ' 万円</div></li>
+<li><div>権利金</div><div>' . $arr[$k][6] . ' 万円</div></li>
+<li><div>駐車台数</div><div>' . $arr[$k][7] . ' 台</div></li>
 </ul>
-<div class="btn_set">' . $btn . '</div>' . $btn2 . '
+' . $madorizu_img  . $btn . $btn2 . '
 </li>' . chr(10);
 								}
 
-								//\0セレクト平屋バナー
-								if (($sysdata[22] == 1) && ($sysdata[23] == 1)) {
-									echo LOCAL_BNR_ZEROYEN();
+								//ルームオーダーバナー
+								if ($sysdata[23] == 1) {
+									echo LOCAL_BNR_HALFORDER();
 								}
 								?>
 							</ul>
