@@ -1,0 +1,126 @@
+<?php
+//<meta charset="utf-8">
+
+//共通パラメータ
+function COMMON_PARAM($k){
+	$res='';
+	switch($k){
+		case 'weekArray'://曜日の配列（日本語、英語など自由です。順番は変更不可）
+			$res=array('日','月','火','水','木','金','土');
+		break;
+		case 'upfile'://画像ファイル種別
+			$res=array('order','kukaku','gallery','banner','shiryou');//「-s」をつけるとサムネイルを作らない
+		break;
+		case 'upfile-news'://画像ファイル種別
+			$res=array('upfile','news');//「-s」をつけるとサムネイルを作らない
+		break;
+		case 'upfile-life'://画像ファイル種別
+			$res=array('upfile','naiyou');//「-s」をつけるとサムネイルを作らない
+		break;
+		case 'upfile-voice'://画像ファイル種別
+			$res=array('photo');//「-s」をつけるとサムネイルを作らない
+		break;
+		case 'dbDataStructure'://登録データ（カラム順の変更厳禁。追加の場合は末尾に）
+			$res=array('id','up_ymd','title','category','url','window','comment','public_flag'
+	
+	, 8=>'order_count'		//オーダー・カウントダウン
+	, 9=>'kukaku_text'		//区画・テキスト
+	,10=>'kukaku_vr'			//区画・VR見学ボタン
+	,11=>'gallery_type'		//ギャラリー・項目タイプ
+	,12=>'gallery_text'		//ギャラリー・テキスト	
+	,13=>'access_text'		//アクセス・テキスト
+	,14=>'banner_text'		//バナー・テキスト
+	,15=>'banner_target'	//バナー・外部リンク
+	,16=>'near_text'			//周辺・テキスト
+	,17=>'area1'					//エリア・大区分
+	,18=>'area2'					//エリア・小区分
+	,19=>'title_sub'			//サブタイトル・別表記
+	,20=>'kukaku_outlet'	//区画・アウトレットボタン
+	,21=>'movie_url'			//ルームツアー・動画URL
+	,22=>'shiryou_fn'			//資料DL・ファイル名指定
+	,23=>'brand'					//ブランド
+	,24=>'other_cate'			//その他カテゴリ
+			);
+		break;
+		case 'dbDataStructure-news'://登録データ（カラム順の変更厳禁。追加の場合は末尾に）
+			$res=array('id','up_ymd','title','category','url','window','comment','public_flag'
+	
+	, 8=>'news_cate'		//ニュースカテゴリ
+	, 9=>'news_text'		//記事内容・文章全般
+	,10=>'news_type'		//記事内容・タイプ
+	,11=>'news_newmark'	//NEWマーク
+			);
+		break;
+		case 'dbDataStructure-life'://登録データ（カラム順の変更厳禁。追加の場合は末尾に）
+			$res=array('id','up_ymd','title','category','url','window','comment','public_flag'
+	
+	, 8=>'naiyou_text'		//記事内容・文章全般
+	, 9=>'naiyou_type'		//記事内容・タイプ
+	//▼2020/12/17追加
+	,10=>'imgsize_f'	//画像サイズ指定・有効フラグ
+	,11=>'imgsize_n'	//画像サイズ指定・横幅
+			);
+		break;
+		
+		case 'order_count':
+			$res=array
+			('3ヵ月'=>'3 month'
+			,'2ヵ月'=>'2 month'
+			,'1ヵ月'=>'1 month'
+			,'3週間'=>'3 week'
+			,'2週間'=>'2 week'
+			,'1週間'=>'1 week'
+			,'5日'=>'5 day'
+			,'4日'=>'4 day'
+			,'3日'=>'3 day'
+			,'2日'=>'2 day'
+			,'1日'=>'1 day'
+			);
+			//date('Y-m-d', strtotime('+1 month'));
+		break;
+		case 'area':
+		include '../../../temp_php/data-area.php';
+		$res=$area_list_num;
+		break;
+		case 'phases'://※廃止
+			$res=array
+			(1=>'会員限定'
+			//,2=>'オーダー受付中'//販売開始
+			,3=>'イベント受付中'//外観完成
+			,4=>'モデルハウス公開'
+			,5=>'新規プロジェクト'
+			);
+		break;
+		case 'news_cate':
+			$res=array
+			(1=>'NEWS'
+			,2=>'アクセスランキング'
+			);
+		break;
+		case 'news_page_cate':
+			$res=array
+			(1=>'見学会／イベント情報'
+			,2=>'更新情報'
+			,3=>'アドバイザーNEWS'
+			);
+		break;
+		//↓2025/04/14追加
+		case 'dbDataStructure-voice'://登録データ（カラム順の変更厳禁。追加の場合は末尾に）
+			$res=array('id','up_ymd','title','category','url','window','comment@','public_flag'
+			, 8=>'set_type@'//セットタイプ
+			, 9=>'name@'//住所・名前・家族構成			
+			);
+		break;
+		case 'brand'://voice用
+		include '../../../temp_php/data-area.php';
+		$res=$area_list_2025['ブランド']+$area_list_2025sub['ブランド・voice'];
+		ksort($res);
+		break;
+		case 'area2025':
+		include '../../../temp_php/data-area.php';
+		$res=$area_list_2025;
+		break;
+	}
+	return $res;
+}
+?>

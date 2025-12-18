@@ -2,3 +2,6 @@ node_modules
 system/**/*.png
 system/**/*.jpg
 system/**/*.mp4
+src/kodate/system/life/admin/js/editor/images/buttons.gif
+src/kodate/system/life/admin/js/editor/images/toolbar.gif
+src/kodate/system/life/admin/js/editor/images/_notes/dwsync.xml
