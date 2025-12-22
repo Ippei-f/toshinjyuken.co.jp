@@ -39,8 +39,8 @@ if ($_GET['id'] != '') {
 		CMS_IMGSET($sysdata[0]);
 		break;
 	}
-	//物件情報データ取得
-	$bukken_data = SEARCH_PRICE($sysdata[11][0]);
+	//物件概要データ取得
+	$bukken_data = SEARCH_PRICE($sysdata[17][0] ?? '');
 	$arr = array(
 		'価格' => $sysdata[21][0],
 		'権利金' => $sysdata[21][1],

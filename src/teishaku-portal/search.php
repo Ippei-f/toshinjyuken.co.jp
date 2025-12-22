@@ -144,8 +144,8 @@ require $kaisou . "system/function/func-price.php"; //物件情報の分解用
 						echo '<div class="s_list_bukken-wrap">
 <ul class="s_list_bukken col3">' . chr(10);
 						foreach ($search_arr[$v][$k2] as $bukkensuu => $sysdata) {
-							//物件情報データ取得
-							$bukken_data = SEARCH_PRICE($sysdata[11][0]);
+							//物件概要データ取得
+							$bukken_data = SEARCH_PRICE($sysdata[17][0] ?? '');
 							//物件リストテンプレ
 							require $kaisou . "temp_php/search/temp-bukken-list.php";
 						}
