@@ -137,7 +137,7 @@
 			li {
 				margin-bottom: 30px;
 				a {
-					display: block;
+					display: inline-block;
 
 					img {
 						width: 460px;
