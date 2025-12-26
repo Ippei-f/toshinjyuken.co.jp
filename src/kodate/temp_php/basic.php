@@ -548,11 +548,17 @@ switch ($p_title) {
 
 //◆body末尾
 $temp_bodyend = '';
-//SATORIタグ
-$temp_bodyend .= '<script type="text/javascript" id="_-s-js-_" src="//satori.segs.jp/s.js?c=65abdfb0"></script>
+
+// SATORIタグ
+$temp_bodyend .= '<script type="text/javascript" id="_-s-js-_" src="//satori.segs.jp/s.js?c=65abdfb0"></script>' . chr(10);
+
+// 追加クリエイティブ
+$temp_bodyend .= '
 <div id="satori__creative_container">
-    <script id="-_-satori_creative-_-" src="//delivery.satr.jp/js/creative_set.js?d=20251119" data-key="c6adbfe547778421"></script>
-</div>' . chr(10); //DUPと同じ
+  <script id="-_-satori_creative-_-" src="// delivery.satr.jp/js/creative_set.js?d=20251119 " data-key="271b4c45feef6ca5"></script>
+</div>
+' . chr(10);
+
 
 require $kaisou . "temp_php/temp-html.php"; //その他テンプレは別ファイルにまとめ
 
