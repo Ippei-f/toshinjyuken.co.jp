@@ -555,7 +555,7 @@ $temp_bodyend .= '<script type="text/javascript" id="_-s-js-_" src="//satori.seg
 // 追加クリエイティブ
 $temp_bodyend .= '
 <div id="satori__creative_container">
-  <script id="-_-satori_creative-_-" src="// delivery.satr.jp/js/creative_set.js?d=20251119 " data-key="271b4c45feef6ca5"></script>
+<script id="-_-satori_creative-_-" src="//delivery.satr.jp/js/creative_set.js?d=20251119" data-key="271b4c45feef6ca5"></script>
 </div>
 ' . chr(10);
 

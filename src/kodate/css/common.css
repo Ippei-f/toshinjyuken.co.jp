@@ -2933,9 +2933,11 @@ img.sp-only {
 	.l-header-inner {
 		max-width: 1350px;
 		margin: 0 auto;
+		padding: 0 4vw;
 
 		@media screen and (max-width: 999px) {
 			height: 100%;
+			padding: 0;
 		}
 	}
 	.l-header-flex {
