@@ -3226,6 +3226,12 @@ img.sp-only {
 .l-footer {
 	.l-footer-inner {
 		max-width: 1350px;
+		margin: 0 auto;
+		padding: 0 4vw;
+
+		@media screen and (max-width: 999px) {
+			padding: 0;
+		}
 	}
 	.l-footer-upper {
 		border-bottom: 1px solid #c6c7c7;
