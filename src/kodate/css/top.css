@@ -697,6 +697,16 @@
 			padding: 0px 0 0 20px;
 		}
 	}
+
+	.top_news__bnr {
+		margin-top: 40px;
+		a {
+			display: inline-block;
+			img {
+				max-width: 100%;
+			}
+		}
+	}
 }
 
 .index-halforder {
