@@ -211,11 +211,13 @@ if($nowdate<=20230331){
 			}
 		</style>
 
+		<!--
 		<div class="top_bnr_campaign">
 			<a href="https://www.toshinjyuken.co.jp/teishaku-portal/news.php?id=116">
 				<img src="images/top/bnr-shinshun-2026.jpg" alt="新春フェア" />
 			</a>
 		</div>
+-->
 
 
 		<div class="top_movie content_box">

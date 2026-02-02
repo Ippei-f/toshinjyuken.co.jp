@@ -189,7 +189,7 @@ function LOCAL_SP_FIXBTN_FLAG(){
 <?php echo PAN(array($p_title)); ?>
 <?php echo PAGE_TITLE($p_title); ?>
 <!-- *** -->
-<form action="<?php echo $_SERVER['SCRIPT_NAME']; ?>" method="post" class="local_search"><div class="Wbase">
+<!-- <form action="<?php echo $_SERVER['SCRIPT_NAME']; ?>" method="post" class="local_search"><div class="Wbase">
 <h3><div>ブランドで絞り込む</div><?php echo file_get_contents($kaisou.'images/content/search/2025/arrow-base.svg'); ?></h3>
 <div class="acc">
 <div class="set">
@@ -225,7 +225,7 @@ foreach($area_list_2025['ブランド'] as $k => $v){
 <div class="submit">
 <label><input type="submit" name="submit_search" value="絞り込む"><img src="images/content/search/2025/arrow-R-W.svg"></label>
 </div>
-</div>
+</div> -->
 <?php
 /*
 print_r($sysdata_prm['other-check']);

@@ -93,12 +93,7 @@ $rand = '?' . rand();
 						<img class="pc_vanish" src="images/top/sp/kv-slider-3.jpg" alt="" />
 					</a>
 				</li>
-				<li class="index-kv__item">
-					<a href="https://www.toshinjyuken.co.jp/kodate/news.php?id=199">
-						<img class="sp_vanish" src="images/top/kv-slider-4.jpg" alt="" />
-						<img class="pc_vanish" src="images/top/sp/kv-slider-4.jpg" alt="" />
-					</a>
-				</li>
+
 
 			</ul>
 		</div>
@@ -141,11 +136,13 @@ $rand = '?' . rand();
 			?>
 			<div class="top_catch__bnr">
 				<ul>
+					<!--
 					<li>
 						<a href="https://www.toshinjyuken.co.jp/kodate/news.php?id=199">
 							<img src="images/top/bnr-shinshun-2026.jpg" alt="新春フェア" />
 						</a>
 					</li>
+-->
 					<li>
 						<a href="https://www.toshinjyuken.co.jp/kodate/voice.php">
 							<img src="images/top/bnr-voice.PNG" alt="お客様の声" />
