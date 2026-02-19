@@ -1463,13 +1463,14 @@ footer .copy {
 	margin-bottom: var(--pad-100);
 	display: flex;
 	justify-content: space-between;
+	gap: 20px;
+	max-width: 1100px !important;
 }
 .search_btn2025 * {
 	margin: 0;
 }
 .search_btn2025 dl {
-	width: 23.5%;
-	max-width: 100%;
+	flex: 1;
 }
 .search_btn2025 dt,
 .search_btn2025 dd a > div {
