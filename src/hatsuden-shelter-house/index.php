@@ -113,9 +113,7 @@ require $kaisou . "system/function/cms-load.php";
 					2 => '地震に強い
 4.3倍2×4工法',
 					3 => '安定した
-地盤補強',
-					4 => '2人くらいに
-ちょうどいい<div></div>コンパクトな間取り'
+地盤補強'
 				);
 				foreach ($arr as $k => $v) {
 					echo '<li><a href="#sec' . sprintf('%02d', $k) . '"><div class="num">' . $k . '</div><div class="text"><div>' . WORD_BR($v) . '</div></div><div class="arrow"></div></a></li>' . chr(10);
@@ -418,9 +416,13 @@ require $kaisou . "system/function/cms-load.php";
 		<!-- *** -->
 		<?php echo $temp_box_search; ?>
 		<!-- *** -->
-		<?php TOP_BOX_FUKI(4, '[コンパクト]な
-間取りで
-ムダのない暮らし'); ?>
+
+		<?php //TOP_BOX_FUKI(4, '[コンパクト]な
+		//間取りで
+		//ムダのない暮らし'); 
+		?>
+
+
 		<div class="top_sec04">
 			<img src="images/top/sec04-kandou.svg">
 			<div class="fontS2 col_Dgray pc_br_del">発電シェルターハウスに<br>お住まいのお客様の声</div>

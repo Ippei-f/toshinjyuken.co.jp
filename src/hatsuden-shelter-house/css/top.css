@@ -89,7 +89,8 @@ img[src*="catch-kaiketu"] {
 }
 .top_mainpic .kaiketu_list {
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
+	gap: 0 30px;
 	margin-top: 65px;
 	margin-bottom: 75px;
 }
