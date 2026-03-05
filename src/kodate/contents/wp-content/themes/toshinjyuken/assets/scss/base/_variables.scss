@@ -1,0 +1,70 @@
+@charset "UTF-8";
+
+/* -------------------
+
+
+  ！！！！！注意！！！！！
+
+  index.cssはSassから生成されていますので、
+  直接編集しないようご注意ください
+
+  ！！！！！注意！！！！！
+
+
+  
+--------------------*/
+
+/* -------------------
+  VARIABLES
+--------------------*/
+
+// Color
+$lrpd: calc((100vw - 970px) / 2);
+$ls1: 0.1em;
+$ls2: 0.2em;
+$font-color: #434343;
+$font-color-2: #000;
+$orange: #000;
+$green: #3fb2c7;
+$green2: #72cb8a;
+$blue: #000;
+$red: #000;
+$yellow: #000;
+$purple: #000;
+$pink: #ed8da4;
+$transition: all 0.3s ease 0s;
+$sp-padding: 3.9vw;
+$sp-padding: 35px;
+$tb-padding: 10vw;
+$box-shadow: 0px 3px 6px
+	rgba(
+		$color: #000000,
+		$alpha: 0.16,
+	);
+
+// Font Family
+$font-base: "Archivo", "Zen Kaku Gothic Antique", sans-serif;
+$font-a: "Archivo", "Zen Kaku Gothic Antique", sans-serif;
+$font-b: "Archivo", "Zen Kaku Gothic Antique", sans-serif;
+$font-c: "Archivo", "Zen Kaku Gothic Antique", sans-serif;
+
+.font-a {
+	font-family: $font-a;
+}
+.font-b {
+	font-family: $font-b;
+	font-style: normal;
+}
+
+.zen-kaku-gothic-antique-regular {
+	font-family: "Zen Kaku Gothic Antique", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
+.archivo {
+	font-family: "Archivo", sans-serif;
+	font-optical-sizing: auto;
+	font-style: normal;
+	font-variation-settings: "wdth" 100;
+}

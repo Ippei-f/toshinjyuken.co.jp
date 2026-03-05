@@ -1,0 +1,61 @@
+@charset "UTF-8";
+// ===========================
+// FORM, INPUT,
+// CHECKBOX, SELECT, ...
+// ===========================
+
+// Form, input, checkbox
+
+select {
+	background-color: #fff;
+	background-image: url(../images/common/select-down.svg);
+	background-repeat: no-repeat;
+	background-position: right 15px center;
+	background-size: 13px auto;
+	border: 1px solid #d1d1d1;
+	padding: 11px 16px;
+	padding-right: 35px;
+	width: 290px;
+	border-radius: 5px;
+
+	@include mq(sm2) {
+		width: 100%;
+		padding: 15px 28px;
+		padding-right: 35px;
+	}
+}
+
+.ui-datepicker {
+	select {
+		padding: 0;
+		background-size: 10px auto;
+	}
+}
+
+/* Datepicker 全体のサイズを調整 */
+.ui-datepicker {
+	width: 280px !important;
+	font-size: 14px !important;
+}
+
+/* 日付セルのサイズを調整 */
+.ui-datepicker td span,
+.ui-datepicker td a {
+	width: 32px !important;
+	height: 32px !important;
+	line-height: 32px !important;
+	font-size: 14px !important;
+	display: inline-block;
+	padding: 0 !important;
+}
+
+/* 月・年のタイトル部分 */
+.ui-datepicker-title {
+	font-size: 16px !important;
+}
+
+/* 前月・次月ボタン */
+.ui-datepicker-prev,
+.ui-datepicker-next {
+	top: 5px !important;
+}
