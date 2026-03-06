@@ -7,11 +7,11 @@
 // px to vw
 // =========================================
 @function vw($size) {
-	@return $size / 1366 * 100vw;
+	@return $size / 1500 * 100vw;
 }
 
 @function vw2($size) {
-	@return $size / 390 * 100vw;
+	@return $size / 414 * 100vw;
 }
 
 /*タブレット*/
@@ -43,7 +43,7 @@
 $breakpoints: (
 	"sm3": "screen and (max-width: 350px)",
 	// <- Small SmartPhone (iPhone5,..)
-	"sm2": "screen and (max-width: 767px)",
+	"sm2": "screen and (max-width: 999px)",
 	// <- Big SmartPhone (iPhoneX,..)
 	"tb2": "screen and (min-width: 768px) and (max-width: 949px)",
 	// <- Table only (iPad) and SmartPhone Landscape

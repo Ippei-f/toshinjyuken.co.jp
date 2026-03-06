@@ -22,19 +22,18 @@
 $lrpd: calc((100vw - 970px) / 2);
 $ls1: 0.1em;
 $ls2: 0.2em;
-$font-color: #434343;
+$font-color: #000;
 $font-color-2: #000;
 $orange: #000;
-$green: #3fb2c7;
-$green2: #72cb8a;
+$green: #000;
+$green2: #000;
 $blue: #000;
-$red: #000;
+$red: #f63402;
 $yellow: #000;
 $purple: #000;
-$pink: #ed8da4;
+$pink: #000;
 $transition: all 0.3s ease 0s;
-$sp-padding: 3.9vw;
-$sp-padding: 35px;
+$sp-padding: 5vw;
 $tb-padding: 10vw;
 $box-shadow: 0px 3px 6px
 	rgba(
@@ -43,10 +42,10 @@ $box-shadow: 0px 3px 6px
 	);
 
 // Font Family
-$font-base: "Archivo", "Zen Kaku Gothic Antique", sans-serif;
-$font-a: "Archivo", "Zen Kaku Gothic Antique", sans-serif;
-$font-b: "Archivo", "Zen Kaku Gothic Antique", sans-serif;
-$font-c: "Archivo", "Zen Kaku Gothic Antique", sans-serif;
+$font-base: "Manrope", "Noto Sans JP", sans-serif;
+$font-a: "Manrope", "Noto Sans JP", sans-serif;
+$font-b: "Manrope", "Noto Sans JP", sans-serif;
+$font-c: "Manrope", "Noto Sans JP", sans-serif;
 
 .font-a {
 	font-family: $font-a;
@@ -56,15 +55,14 @@ $font-c: "Archivo", "Zen Kaku Gothic Antique", sans-serif;
 	font-style: normal;
 }
 
-.zen-kaku-gothic-antique-regular {
-	font-family: "Zen Kaku Gothic Antique", sans-serif;
-	font-weight: 400;
+.noto-sans-jp {
+	font-family: "Noto Sans JP", sans-serif;
+	font-optical-sizing: auto;
 	font-style: normal;
 }
 
-.archivo {
-	font-family: "Archivo", sans-serif;
+.manrope {
+	font-family: "Manrope", sans-serif;
 	font-optical-sizing: auto;
 	font-style: normal;
-	font-variation-settings: "wdth" 100;
 }

@@ -229,12 +229,9 @@
 
 			<!-- /ここまで HEADER -->
 
-			<section class="page-header">
+			<section class="page-header single-gallery-header">
 				<div class="sect-inner">
-					<h2 class="page-header__ttl">
-						<span class="en">GALLERY</span>
-						<span class="jp">施工例</span>
-					</h2>
+					<h2 class="page-header__ttl">檜香る和モダンの家～バリアフリー～</h2>
 					<div class="breadcrumbs">
 						<ul class="breadcrumbs-list">
 							<li class="home"><a href="">ホーム</a><span class="arrow">＞</span></li>
@@ -244,58 +241,78 @@
 				</div>
 			</section>
 
-			<section class="gallery-sect">
+			<section class="single-gallery">
 				<div class="sect-inner">
-					<ul class="gallery-sect__list">
-						<li class="gallery-sect__item">
-							<a href="">
+					<ul class="single-gallery__list">
+						<li class="single-gallery__item">
+							<button class="openModal" data-image="assets/images/gallery/single-1-1.jpg" data-icon="assets/images/gallery/people-icon-1.svg" data-text="この文章はダミーです。実際とは異なります。レイアウト、コピー、写真の3要素が響きあい美しいデザインとな・・・">
+								<div class="img">
+									<img src="assets/images/gallery/single-1-1.jpg" alt="" />
+								</div>
 								<div class="txt">
-									ロフト付2Fリビングで<br />
-									圧倒的開放感のある家
+									<div class="icon">
+										<img class="icon-1" src="assets/images/gallery/people-icon-1.svg" alt="" />
+									</div>
+									<div class="body">この文章はダミーです。実際とは異なります。レイアウト、コピー、写真の3要素が響きあい美しいデザインとな・・・</div>
 								</div>
-								<div class="img">
-									<img src="assets/images/gallery/gallery-1.jpg" alt="" />
-								</div>
-							</a>
+							</button>
 						</li>
-						<li class="gallery-sect__item">
-							<a href="">
-								<div class="txt">ALCコンクリートの家</div>
+						<li class="single-gallery__item">
+							<button class="openModal" data-image="assets/images/gallery/single-1-2.jpg" data-icon="assets/images/gallery/people-icon-2.svg" data-text="この文章はダミーです。実際とは異なります。レイアウト、コピー、写真の3要素が響きあい美しいデザインとな・・・">
 								<div class="img">
-									<img src="assets/images/gallery/gallery-2.jpg" alt="" />
+									<img src="assets/images/gallery/single-1-2.jpg" alt="" />
 								</div>
-							</a>
-						</li>
-						<li class="gallery-sect__item">
-							<a href="">
 								<div class="txt">
-									檜香る和モダンの家<br />
-									～バリアフリー～
+									<div class="icon">
+										<img class="icon-2" src="assets/images/gallery/people-icon-2.svg" alt="" />
+									</div>
+									<div class="body">この文章はダミーです。実際とは異なります。レイアウト、コピー、写真の3要素が響きあい美しいデザインとな・・・</div>
 								</div>
-								<div class="img">
-									<img src="assets/images/gallery/gallery-3.jpg" alt="" />
-								</div>
-							</a>
+							</button>
 						</li>
-						<li class="gallery-sect__item">
-							<a href="">
-								<div class="txt">ユニバーサルデザインの家</div>
+						<li class="single-gallery__item">
+							<button class="openModal" data-image="assets/images/gallery/single-1-3.jpg" data-icon="assets/images/gallery/people-icon-3.svg" data-text="この文章はダミーです。実際とは異なります。レイアウト、コピー、写真の3要素が響きあい美しいデザインとな・・・">
 								<div class="img">
-									<img src="assets/images/gallery/gallery-4.jpg" alt="" />
+									<img src="assets/images/gallery/single-1-3.jpg" alt="" />
 								</div>
-							</a>
-						</li>
-						<li class="gallery-sect__item">
-							<a href="">
-								<div class="txt">ユニバーサルデザインの家</div>
-								<div class="img">
-									<img src="assets/images/gallery/gallery-5.jpg" alt="" />
+								<div class="txt">
+									<div class="icon">
+										<img class="icon-3" src="assets/images/gallery/people-icon-3.svg" alt="" />
+									</div>
+									<div class="body">この文章はダミーです。実際とは異なります。レイアウト、コピー、写真の3要素が響きあい美しいデザインとな・・・</div>
 								</div>
-							</a>
+							</button>
 						</li>
 					</ul>
 				</div>
 			</section>
+
+			<div class="modal" id="galleryModal" aria-hidden="true">
+				<div class="modal__overlay"></div>
+
+				<div class="modal__inner">
+					<div class="modal__image">
+						<img id="modalImage" src="" />
+					</div>
+
+					<div class="modal__nav">
+						<div class="modal__prev" type="button">◀</div>
+						<div class="modal__next" type="button">▶</div>
+						<span class="modal__count">
+							<span id="modalCurrent">1</span> /
+							<span id="modalTotal">11</span>
+						</span>
+						<div class="modal__close">×</div>
+					</div>
+
+					<div class="modal__textArea">
+						<div class="modal__icon">
+							<img id="modalIcon" src="" />
+						</div>
+						<div class="modal__text" id="modalText"></div>
+					</div>
+				</div>
+			</div>
 
 			<!-- /ここから FOOTER -->
 
@@ -470,19 +487,102 @@
 				<div class="clear"></div>
 			</div>
 		</div>
-		<!-- login -->
-		<!-- ===== SATORI Message : 計測タグ START ===== -->
-		<script type="text/javascript" id="_-s-js-_" src="//satori.segs.jp/s.js?c=65abdfb0"></script>
-		<!-- ===== SATORI Message : 計測タグ END ===== -->
-		<!-- ===== SATORI Message : Creative（複数） START ===== -->
+
 		<script>
-			if (typeof __SatoriCreativeSetInitiators === "undefined") {
-				__SatoriCreativeSetInitiators = [];
-			}
-			__SatoriCreativeSetInitiators.push("c6adbfe547778421");
-			__SatoriCreativeSetInitiators.push("271b4c45feef6ca5");
+			document.addEventListener("DOMContentLoaded", function () {
+				const modal = document.getElementById("galleryModal");
+				const modalImage = document.getElementById("modalImage");
+				const modalIcon = document.getElementById("modalIcon");
+				const modalText = document.getElementById("modalText");
+				const modalCurrent = document.getElementById("modalCurrent");
+				const modalTotal = document.getElementById("modalTotal");
+
+				const prevBtn = document.querySelector(".modal__prev");
+				const nextBtn = document.querySelector(".modal__next");
+				const closeBtn = document.querySelector(".modal__close");
+				const openButtons = Array.from(document.querySelectorAll(".openModal"));
+				const overlay = document.querySelector(".modal__overlay");
+
+				const items = openButtons.map((btn, index) => ({
+					image: btn.dataset.image || "",
+					icon: btn.dataset.icon || "",
+					text: btn.dataset.text || "",
+					alt: btn.querySelector(".img img")?.alt || "",
+					index: index,
+				}));
+
+				let currentIndex = 0;
+
+				function updateModal(index) {
+					const item = items[index];
+					if (!item) return;
+
+					currentIndex = index;
+
+					modalImage.src = item.image;
+					modalImage.alt = item.alt;
+
+					modalIcon.src = item.icon;
+					modalIcon.alt = "";
+
+					modalText.textContent = item.text;
+
+					modalCurrent.textContent = index + 1;
+					modalTotal.textContent = items.length;
+
+					prevBtn.disabled = index === 0;
+					nextBtn.disabled = index === items.length - 1;
+				}
+
+				function openModal(index) {
+					updateModal(index);
+					modal.classList.add("is-active");
+					modal.setAttribute("aria-hidden", "false");
+					document.body.style.overflow = "hidden";
+				}
+
+				function closeModal() {
+					modal.classList.remove("is-active");
+					modal.setAttribute("aria-hidden", "true");
+					document.body.style.overflow = "";
+				}
+
+				openButtons.forEach((btn, index) => {
+					btn.addEventListener("click", function (e) {
+						e.preventDefault();
+						openModal(index);
+					});
+				});
+
+				prevBtn.addEventListener("click", function () {
+					if (currentIndex > 0) {
+						updateModal(currentIndex - 1);
+					}
+				});
+
+				nextBtn.addEventListener("click", function () {
+					if (currentIndex < items.length - 1) {
+						updateModal(currentIndex + 1);
+					}
+				});
+
+				closeBtn.addEventListener("click", closeModal);
+				overlay.addEventListener("click", closeModal);
+
+				modal.addEventListener("click", function (e) {
+					if (e.target === modal) {
+						closeModal();
+					}
+				});
+
+				document.addEventListener("keydown", function (e) {
+					if (!modal.classList.contains("is-active")) return;
+
+					if (e.key === "Escape") closeModal();
+					if (e.key === "ArrowLeft" && currentIndex > 0) updateModal(currentIndex - 1);
+					if (e.key === "ArrowRight" && currentIndex < items.length - 1) updateModal(currentIndex + 1);
+				});
+			});
 		</script>
-		<script type="text/javascript" src="//delivery.satr.jp/js/creative_set_initiator.js"></script>
-		<!-- ===== SATORI Message : Creative（複数） END ===== -->
 	</body>
 </html>

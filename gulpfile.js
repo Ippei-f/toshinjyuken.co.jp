@@ -1,10 +1,17 @@
-const browsersync = require("browser-sync");
+const browsersync = require("browser-sync").create();
 const gulp = require("gulp");
 const phpConnect = require("gulp-connect-php");
-const sass = require("gulp-sass");
+const sass = require("gulp-sass")(require("sass"));
 const sourcemaps = require("gulp-sourcemaps");
 
-function connectsync() {
+const paths = {
+	scssEntry: "src/kodate/contents/wp-content/themes/toshinjyuken/assets/scss/index.scss",
+	scssWatch: "src/kodate/contents/wp-content/themes/toshinjyuken/assets/scss/**/*.scss",
+	cssDest: "src/kodate/contents/wp-content/themes/toshinjyuken/assets/css",
+	reloadFiles: ["src/**/*.php", "src/**/*.html", "src/**/*.js", "src/**/*.css"],
+};
+
+function connectsync(done) {
 	phpConnect.server(
 		{
 			port: 8000,
@@ -12,10 +19,12 @@ function connectsync() {
 			base: "src",
 		},
 		function () {
-			browsersync({
+			browsersync.init({
 				proxy: "127.0.0.1:8000",
+				notify: false,
 			});
-		}
+			done();
+		},
 	);
 }
 
@@ -24,34 +33,16 @@ function browserSyncReload(done) {
 	done();
 }
 
-function watchFiles() {
-	gulp.watch("src/**/*.php", browserSyncReload);
-	gulp.watch("src/**/*.html", browserSyncReload);
-	gulp.watch("src/assets/scss/**", css);
-	gulp.watch("src/**/css/*.css").on("change", browsersync.reload);
-	gulp.watch("src/assets/scss/**/*.scss").on("change", browsersync.reload);
-	gulp.watch("src/assets/js/**/*.js").on("change", browsersync.reload);
-}
-
-//compile scss into css
 function css() {
-	//1.where is my scss
-	return (
-		gulp
-			.src("src/assets/scss/**/*.scss")
-			//2. init source maps
-			.pipe(sourcemaps.init())
-			//3. pass that file through sass compiler
-			.pipe(sass().on("error", sass.logError))
-			//4. write source maps
-			.pipe(sourcemaps.write("../maps"))
-			//5. where do I save the compiled css file
-			.pipe(gulp.dest("src/assets/css"))
-			//6. stream change to all browsers
-			.pipe(browsersync.stream())
-	);
+	return gulp.src(paths.scssEntry).pipe(sourcemaps.init()).pipe(sass().on("error", sass.logError)).pipe(sourcemaps.write("../maps")).pipe(gulp.dest(paths.cssDest)).pipe(browsersync.stream());
 }
 
-const watch = gulp.parallel([watchFiles, connectsync]);
+function watchFiles() {
+	gulp.watch(paths.reloadFiles, browserSyncReload);
+	gulp.watch(paths.scssWatch, css);
+}
 
-exports.default = watch;
+const dev = gulp.parallel(connectsync, watchFiles);
+
+exports.css = css;
+exports.default = dev;
