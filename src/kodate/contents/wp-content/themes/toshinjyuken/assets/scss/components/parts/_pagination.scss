@@ -3,9 +3,9 @@
 .pagination {
 	line-height: 1;
 	font-size: 20px;
+	margin-top: 100px;
 
 	.wp-pagenavi {
-		padding-top: 48px;
 		display: flex;
 		align-items: flex-start;
 		justify-content: center;
@@ -37,6 +37,12 @@
 			display: flex;
 			align-items: center;
 			justify-content: center;
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: auto 14px;
+			border: 1px solid $blue;
+			border-radius: 50%;
+			background-color: #eee;
 
 			&:before {
 				font-size: 11px;
@@ -47,35 +53,25 @@
 		}
 		.nextpostslink {
 			margin-left: 20px;
+			background-image: url(../images/pagination/right.svg);
 
 			@include mq(sm2) {
 				margin-left: 0;
 			}
-
-			&:before {
-				content: url(../images/pagination/right.svg);
-			}
 		}
 		.last {
-			&:before {
-				content: url(../images/pagination/right2.svg);
-			}
+			background-image: url(../images/pagination/right2.svg);
 		}
 		.previouspostslink {
 			margin-right: 20px;
+			background-image: url(../images/pagination/left.svg);
 
 			@include mq(sm2) {
 				margin-right: 0;
 			}
-
-			&:before {
-				content: url(../images/pagination/left.svg);
-			}
 		}
 		.first {
-			&:before {
-				content: url(../images/pagination/left2.svg);
-			}
+			background-image: url(../images/pagination/left2.svg);
 		}
 		.disabled {
 			opacity: 0.4 !important;

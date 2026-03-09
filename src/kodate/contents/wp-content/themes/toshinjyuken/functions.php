@@ -73,7 +73,7 @@ function post_has_archive($args, $post_type)
         $args['rewrite'] = true;
         $args['has_archive'] = 'gallery';
         $args['labels'] = array(
-            'name' => '施工例'
+            'name' => 'ギャラリー'
         );
     }
     return $args;
@@ -86,3 +86,7 @@ add_filter('register_post_type_args', 'post_has_archive', 10, 2);
 add_action('after_setup_theme', function () {
     add_theme_support('title-tag');
 });
+
+
+// /koate/階層のCSSやimagesのパス
+define('KODATE_ASSETS', trailingslashit(dirname(dirname(content_url()))));
