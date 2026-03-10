@@ -61,6 +61,8 @@ if(!file_exists($url=$sysdata_dt['upfile'][0])){
 }
 echo '<img src="'.$url.'" class="W100per LSD_mainpic'.$add.'">';
 if(!is_array($sysdata_dt[6])){$sysdata_dt[6]=array($sysdata_dt[6]);}
+if(!is_array($sysdata_dt[8])){$sysdata_dt[8]=array($sysdata_dt[8]);}
+if(!is_array($sysdata_dt[11])){$sysdata_dt[11]=array($sysdata_dt[11]);}
 ?>
 <h3 class="LSD_title">【<?php echo $sysdata_dt[2]; ?>】</h3>
 <div class="LSD_catch"><?php echo $sysdata_dt[6][0]; ?></div>
@@ -71,6 +73,7 @@ $upsizeArr1='';
 $a=array();
 if(!empty($sysdata_dt[10])){
 	$a=$sysdata_dt[10];
+	if(!is_array($a)){$a=array($a);}
 	unset($a[0]);
 }
 foreach($a as $v){

@@ -370,6 +370,8 @@ foreach($area_list_2025['エリア'] as $k => $v){
 				$v3['写真']='<img src="images/content/search/2025/soldout.png" class="photo soldout">';
 				$class['p']='';
 				$sold_out=true;
+				$v3['所在地']='';//住所非表示
+				$v3['タイプ']='';//タイプ非表示
 			}
 			/*
 			switch($v3['フェーズ'][0]){

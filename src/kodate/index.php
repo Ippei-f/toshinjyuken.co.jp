@@ -144,6 +144,11 @@ $rand = '?' . rand();
 					</li>
 -->
 					<li>
+						<a href="https://www.toshinjyuken.co.jp/kodate/search.php?search=%E3%81%9D%E3%81%AE%E4%BB%96,%E3%82%AD%E3%83%A3%E3%83%B3%E3%83%9A%E3%83%BC%E3%83%B3%E5%AF%BE%E8%B1%A1">
+							<img src="images/top/bnr-newlifesupport.png" alt="新生活応援キャンペーン" />
+						</a>
+					</li>
+					<li>
 						<a href="https://www.toshinjyuken.co.jp/kodate/voice.php">
 							<img src="images/top/bnr-voice.PNG" alt="お客様の声" />
 						</a>
