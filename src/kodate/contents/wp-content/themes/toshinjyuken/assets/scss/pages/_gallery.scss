@@ -128,37 +128,32 @@
 				line-height: 1.75;
 				font-weight: bold;
 				position: relative;
-				padding-left: 73px;
+				display: flex;
 
 				@include mq(sm2) {
 					font-size: 8px;
-					padding-left: 55px;
 				}
 
 				.icon {
-					position: absolute;
-					left: 0;
+					position: relative;
 					top: -23px;
+					flex: 0 0 73px;
+
+					@include mq(sm2) {
+						flex: 0 0 55px;
+					}
+
 					img {
+						width: 63px;
+
+						@include mq(sm2) {
+							width: 49px;
+						}
 						&.icon-1 {
 							width: 51px;
 
 							@include mq(sm2) {
 								width: 40px;
-							}
-						}
-						&.icon-2 {
-							width: 63px;
-
-							@include mq(sm2) {
-								width: 49px;
-							}
-						}
-						&.icon-3 {
-							width: 63px;
-
-							@include mq(sm2) {
-								width: 49px;
 							}
 						}
 					}
@@ -280,18 +275,24 @@
 	&__textArea {
 		display: flex;
 		text-align: left;
+		gap: 15px;
 
 		.modal__icon {
-			width: 83px;
-			flex-shrink: 0;
+			flex: 0 0 83px;
 			text-align: center;
 
 			@include mq(sm2) {
-				width: 50px;
+				flex: 0 0 50px;
 			}
 
 			img {
 				display: inline;
+
+				width: 81px;
+
+				@include mq(sm2) {
+					width: 49px;
+				}
 
 				&.icon-1 {
 					width: 66px;
@@ -300,27 +301,12 @@
 						width: 40px;
 					}
 				}
-				&.icon-2 {
-					width: 81px;
-
-					@include mq(sm2) {
-						width: 49px;
-					}
-				}
-				&.icon-3 {
-					width: 81px;
-
-					@include mq(sm2) {
-						width: 49px;
-					}
-				}
 			}
 		}
 		.modal__text {
 			font-size: 18px;
 			line-height: 1.75;
 			font-weight: bold;
-			padding-left: 15px;
 
 			@include mq(sm2) {
 				font-size: 14px;

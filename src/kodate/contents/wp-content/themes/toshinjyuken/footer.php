@@ -118,10 +118,10 @@
 			document.addEventListener("DOMContentLoaded", function() {
 				const modal = document.getElementById("galleryModal");
 				const modalImage = document.getElementById("modalImage");
-				const modalIcon = document.getElementById("modalIcon");
 				const modalText = document.getElementById("modalText");
 				const modalCurrent = document.getElementById("modalCurrent");
 				const modalTotal = document.getElementById("modalTotal");
+				const modalTextArea = modal.querySelector(".modal__textArea");
 
 				const prevBtn = document.querySelector(".modal__prev");
 				const nextBtn = document.querySelector(".modal__next");
@@ -129,7 +129,7 @@
 				const openButtons = Array.from(document.querySelectorAll(".openModal"));
 				const overlay = document.querySelector(".modal__overlay");
 
-				if (!modal || !modalImage || !modalIcon || !modalText || !modalCurrent || !modalTotal) return;
+				if (!modal || !modalImage || !modalText || !modalCurrent || !modalTotal || !modalTextArea) return;
 				if (!prevBtn || !nextBtn || !closeBtn || openButtons.length === 0) return;
 
 				const items = openButtons.map((btn, index) => {
@@ -148,6 +148,46 @@
 
 				let currentIndex = 0;
 
+				function removeModalIcon() {
+					const currentIconWrap = modalTextArea.querySelector(".modal__icon");
+					if (currentIconWrap) {
+						currentIconWrap.remove();
+					}
+				}
+
+				function createModalIcon(iconSrc, iconClass) {
+					let iconWrap = modalTextArea.querySelector(".modal__icon");
+
+					// なければ作る
+					if (!iconWrap) {
+						iconWrap = document.createElement("div");
+						iconWrap.className = "modal__icon";
+
+						const img = document.createElement("img");
+						img.id = "modalIcon";
+						iconWrap.appendChild(img);
+
+						// .modal__text の前に差し込む
+						modalTextArea.insertBefore(iconWrap, modalText);
+					}
+
+					const modalIcon = iconWrap.querySelector("#modalIcon");
+					if (!modalIcon) return;
+
+					modalIcon.src = iconSrc;
+					modalIcon.alt = "";
+					modalIcon.className = "";
+
+					if (iconClass) {
+						iconClass
+							.split(" ")
+							.filter(Boolean)
+							.forEach(function(cls) {
+								modalIcon.classList.add(cls);
+							});
+					}
+				}
+
 				function updateModal(index) {
 					const item = items[index];
 					if (!item) return;
@@ -159,20 +199,10 @@
 					modalImage.alt = item.alt;
 
 					// アイコン画像
-					modalIcon.src = item.icon;
-					modalIcon.alt = "";
-
-					// modalIcon の class を付け替え
-					// idは消さず、classだけ初期化したいので className を空にする
-					modalIcon.className = "";
-
-					if (item.iconClass) {
-						item.iconClass
-							.split(" ")
-							.filter(Boolean)
-							.forEach(function(cls) {
-								modalIcon.classList.add(cls);
-							});
+					if (item.icon) {
+						createModalIcon(item.icon, item.iconClass);
+					} else {
+						removeModalIcon();
 					}
 
 					// テキスト

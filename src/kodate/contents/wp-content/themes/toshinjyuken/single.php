@@ -28,24 +28,30 @@
                         <button
                             class="openModal"
                             data-image="<?php echo $gallery_img['url']; ?>"
-                            data-icon="<?php if ($gallery_icon == 'icon-1'): ?><?php echo get_template_directory_uri(); ?>/assets/images/gallery/people-icon-1.svg<?php elseif ($gallery_icon == 'icon-2'): ?><?php echo get_template_directory_uri(); ?>/assets/images/gallery/people-icon-2.svg<?php elseif ($gallery_icon == 'icon-3'): ?><?php echo get_template_directory_uri(); ?>/assets/images/gallery/people-icon-3.svg<?php else: ?><?php echo get_template_directory_uri(); ?>/assets/images/gallery/people-icon-1.svg<?php endif; ?>"
+                            data-icon="<?php if ($gallery_icon == 'icon-1'): ?><?php echo get_template_directory_uri(); ?>/assets/images/gallery/people-icon-1.svg<?php elseif ($gallery_icon == 'icon-2'): ?><?php echo get_template_directory_uri(); ?>/assets/images/gallery/people-icon-2.svg<?php elseif ($gallery_icon == 'icon-3'): ?><?php echo get_template_directory_uri(); ?>/assets/images/gallery/people-icon-3.svg<?php elseif ($gallery_icon == 'icon-4'): ?><?php echo get_template_directory_uri(); ?>/assets/images/gallery/people-icon-4.svg<?php else: ?><?php endif; ?>"
                             data-text="<?php echo $gallery_txt; ?>">
                             <div class="img">
                                 <img src="<?php echo $gallery_img['url']; ?>" alt="<?php echo $gallery_img['alt'] ?>" />
                             </div>
                             <div class="txt">
-                                <div class="icon">
-                                    <?php if ($gallery_icon == 'icon-1'): ?>
+                                <?php if ($gallery_icon == 'icon-1'): ?>
+                                    <div class="icon">
                                         <img class="icon-1" src="<?php echo get_template_directory_uri(); ?>/assets/images/gallery/people-icon-1.svg" alt="" />
-                                    <?php elseif ($gallery_icon == 'icon-2'): ?>
+                                    </div>
+                                <?php elseif ($gallery_icon == 'icon-2'): ?>
+                                    <div class="icon">
                                         <img class="icon-2" src="<?php echo get_template_directory_uri(); ?>/assets/images/gallery/people-icon-2.svg" alt="" />
-                                    <?php elseif ($gallery_icon == 'icon-3'): ?>
+                                    </div>
+                                <?php elseif ($gallery_icon == 'icon-3'): ?>
+                                    <div class="icon">
                                         <img class="icon-3" src="<?php echo get_template_directory_uri(); ?>/assets/images/gallery/people-icon-3.svg" alt="" />
-                                    <?php else: ?>
-                                        <img class="icon-1" src="<?php echo get_template_directory_uri(); ?>/assets/images/gallery/people-icon-1.svg" alt="" />
-                                    <?php endif; ?>
-                                </div>
-                                <div class="body"><?php echo $gallery_txt; ?></div>
+                                    </div>
+                                <?php elseif ($gallery_icon == 'icon-4'): ?>
+                                    <div class="icon">
+                                        <img class="icon-4" src="<?php echo get_template_directory_uri(); ?>/assets/images/gallery/people-icon-4.svg" alt="" />
+                                    </div>
+                                    <?php else: ?><?php endif; ?>
+                                    <div class="body"><?php echo $gallery_txt; ?></div>
                             </div>
                         </button>
                     </li>
