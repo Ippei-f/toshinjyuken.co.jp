@@ -13,7 +13,7 @@ get_header(); ?>
 		<div class="breadcrumbs">
 			<ul class="breadcrumbs-list">
 				<li class="home"><a href="https://www.toshinjyuken.co.jp/kodate/">ホーム</a><span class="arrow">＞</span></li>
-				<li>ギャラリー</li>
+				<li>施工事例</li>
 			</ul>
 		</div>
 	</div>

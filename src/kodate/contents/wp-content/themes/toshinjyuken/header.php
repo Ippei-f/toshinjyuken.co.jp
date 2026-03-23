@@ -110,8 +110,8 @@
 							</a>
 						</li>
 						<li class="gnav__item">
-							<a href="../lifestyle.php">
-								<div class="text">コラム</div>
+							<a href="<?php echo home_url(); ?>/">
+								<div class="text">施工事例</div>
 							</a>
 						</li>
 						<li class="gnav__item">

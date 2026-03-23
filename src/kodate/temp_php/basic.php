@@ -298,7 +298,7 @@ $temp_header = '<header class="l-header">
 								<a href="qa.php"><div class="text">Q&A</div></a>
 							</li>
 							<li class="gnav__item">
-								<a href="lifestyle.php"><div class="text">コラム</div></a>
+								<a href="https://www.toshinjyuken.co.jp/kodate/contents/"><div class="text">施工事例</div></a>
 							</li>
 							<li class="gnav__item">
 								<a href="voice.php"><div class="text">お客様の声</div></a>
@@ -348,9 +348,16 @@ $temp_header = '<header class="l-header">
 								</li>
 								<li>
 									<a href="qa.php">Q & A</a>
-								</li>
+								</li>		
+								
+								<!--
 								<li>
 									<a href="lifestyle.php">コラム</a>
+								</li>
+								-->
+								
+								<li>
+									<a href="https://www.toshinjyuken.co.jp/kodate/contents/">施工事例</a>
 								</li>
 								<li>
 									<a href="voice.php">お客様の声</a>
@@ -549,15 +556,25 @@ switch ($p_title) {
 //◆body末尾
 $temp_bodyend = '';
 
-// SATORIタグ
+// ==============================
+// SATORI 計測タグ
+// ==============================
+$temp_bodyend .= '<!-- ===== SATORI Message : 計測タグ START ===== -->' . chr(10);
 $temp_bodyend .= '<script type="text/javascript" id="_-s-js-_" src="//satori.segs.jp/s.js?c=65abdfb0"></script>' . chr(10);
+$temp_bodyend .= '<!-- ===== SATORI Message : 計測タグ END ===== -->' . chr(10);
 
-// 追加クリエイティブ
-$temp_bodyend .= '
-<div id="satori__creative_container">
-<script id="-_-satori_creative-_-" src="//delivery.satr.jp/js/creative_set.js?d=20251119" data-key="271b4c45feef6ca5"></script>
-</div>
-' . chr(10);
+// ==============================
+// SATORI 追加クリエイティブ（複数起動：右下＋中央）
+// ==============================
+$temp_bodyend .= '<!-- ===== SATORI Message : Creative（複数） START ===== -->' . chr(10);
+$temp_bodyend .= '<script>' . chr(10);
+$temp_bodyend .= '  if (typeof __SatoriCreativeSetInitiators === "undefined") { __SatoriCreativeSetInitiators = []; }' . chr(10);
+$temp_bodyend .= '  __SatoriCreativeSetInitiators.push("c6adbfe547778421");' . chr(10); // 会員登録（右下）
+$temp_bodyend .= '  __SatoriCreativeSetInitiators.push("271b4c45feef6ca5");' . chr(10); // 新春フェア（中央）
+$temp_bodyend .= '</script>' . chr(10);
+$temp_bodyend .= '<script type="text/javascript" src="//delivery.satr.jp/js/creative_set_initiator.js"></script>' . chr(10);
+$temp_bodyend .= '<!-- ===== SATORI Message : Creative（複数） END ===== -->' . chr(10);
+
 
 
 require $kaisou . "temp_php/temp-html.php"; //その他テンプレは別ファイルにまとめ

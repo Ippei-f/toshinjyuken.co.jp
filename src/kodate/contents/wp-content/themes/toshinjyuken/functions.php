@@ -73,7 +73,7 @@ function post_has_archive($args, $post_type)
         $args['rewrite'] = true;
         $args['has_archive'] = 'gallery';
         $args['labels'] = array(
-            'name' => 'ギャラリー'
+            'name' => '施工事例'
         );
     }
     return $args;

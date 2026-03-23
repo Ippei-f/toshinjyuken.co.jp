@@ -6,7 +6,7 @@
         <div class="breadcrumbs">
             <ul class="breadcrumbs-list">
                 <li class="home"><a href="https://www.toshinjyuken.co.jp/kodate/">ホーム</a><span class="arrow">＞</span></li>
-                <li class="home"><a href="<?php echo home_url(); ?>/">ギャラリー</a><span class="arrow">＞</span></li>
+                <li class="home"><a href="<?php echo home_url(); ?>/">施工事例</a><span class="arrow">＞</span></li>
                 <li><?php the_title(); ?></li>
             </ul>
         </div>
