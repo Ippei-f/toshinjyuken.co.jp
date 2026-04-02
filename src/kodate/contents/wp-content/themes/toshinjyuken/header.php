@@ -65,7 +65,7 @@
 			<div class="l-header-inner">
 				<div class="l-header-flex">
 					<h1 class="l-header__logo">
-						<a href="../index.php"> <img src="<?php echo esc_url(KODATE_ASSETS); ?>images/common/logo-2025.svg" class="logo ver2025" title="東新住建の家" /></a>
+						<a href="/kodate/index.php"> <img src="<?php echo esc_url(KODATE_ASSETS); ?>images/common/logo-2025.svg" class="logo ver2025" title="東新住建の家" /></a>
 					</h1>
 					<div class="l-header__sns">
 						<ul>
@@ -90,22 +90,22 @@
 				<nav class="gnav sp_vanish">
 					<ul class="gnav__list">
 						<li class="gnav__item">
-							<a href="../search.php">
+							<a href="/kodate/search.php">
 								<div class="text">物件情報</div>
 							</a>
 						</li>
 						<li class="gnav__item">
-							<a href="../index.php#brand">
+							<a href="/kodate/index.php#brand">
 								<div class="text">ブランドコンセプト</div>
 							</a>
 						</li>
 						<li class="gnav__item">
-							<a href="../structure.php">
+							<a href="/kodate/structure.php">
 								<div class="text">東新住建の家づくり</div>
 							</a>
 						</li>
 						<li class="gnav__item">
-							<a href="../qa.php">
+							<a href="/kodate/qa.php">
 								<div class="text">Q&A</div>
 							</a>
 						</li>
@@ -115,7 +115,7 @@
 							</a>
 						</li>
 						<li class="gnav__item">
-							<a href="../voice.php">
+							<a href="/kodate/voice.php">
 								<div class="text">お客様の声</div>
 							</a>
 						</li>
@@ -136,13 +136,13 @@
 					<div class="pad">
 						<ul class="iconbtn LH125">
 							<li class="W">
-								<a href="../search.php">
+								<a href="/kodate/search.php">
 									<div class="icon"><img src="<?php echo esc_url(KODATE_ASSETS); ?>images/common/icon-search2.svg" /></div>
 									<div class="text">物件情報</div>
 								</a>
 							</li>
 							<li class="O">
-								<a href="../member.php">
+								<a href="/kodate/member.php">
 									<div class="icon"><img src="<?php echo esc_url(KODATE_ASSETS); ?>images/common/icon-member.svg" /></div>
 									<div class="text">会員登録</div>
 								</a>
@@ -151,32 +151,32 @@
 
 						<ul class="menu_sp__list">
 							<li>
-								<a href="../index.php#brand">ブランドコンセプト</a>
+								<a href="/kodate/index.php#brand">ブランドコンセプト</a>
 							</li>
 							<li>
-								<a href="../bunjo-halforder.php">インテリアセレクト<br />
+								<a href="/kodate/bunjo-halforder.php">インテリアセレクト<br />
 									ハーフオーダー</a>
 							</li>
 							<li>
-								<a href="../structure.php">東新住建の家づくり</a>
+								<a href="/kodate/structure.php">東新住建の家づくり</a>
 							</li>
 							<li>
-								<a href="../qa.php">Q & A</a>
+								<a href="/kodate/qa.php">Q & A</a>
 							</li>
 							<li>
-								<a href="../lifestyle.php">コラム</a>
+								<a href="/kodate/lifestyle.php">コラム</a>
 							</li>
 							<li>
-								<a href="../voice.php">お客様の声</a>
+								<a href="/kodate/voice.php">お客様の声</a>
 							</li>
 							<li>
-								<a href="../news.php">NEWS</a>
+								<a href="/kodate/news.php">NEWS</a>
 							</li>
 							<li>
-								<a href="../sdgs.php">SDGsへの取り組み</a>
+								<a href="/kodate/sdgs.php">SDGsへの取り組み</a>
 							</li>
 							<li class="w-100">
-								<a href="../contact.php">ご来場予約・お問い合わせ・資料請求</a>
+								<a href="/kodate/contact.php">ご来場予約・お問い合わせ・資料請求</a>
 							</li>
 						</ul>
 						<div class="menu_sp__sns">
@@ -208,13 +208,13 @@
 		<div class="fix-nav">
 			<ul>
 				<li class="search">
-					<a href="../search.php">
+					<a href="/kodate/search.php">
 						<div class="icon"><img src="<?php echo esc_url(KODATE_ASSETS); ?>images/common/icon-search.svg" /></div>
 						<div class="text">物件情報</div>
 					</a>
 				</li>
 				<li class="member">
-					<a href="../member.php">
+					<a href="/kodate/member.php">
 						<div class="icon"><img src="<?php echo esc_url(KODATE_ASSETS); ?>images/common/icon-member.svg" /></div>
 						<div class="text">会員登録</div>
 					</a>

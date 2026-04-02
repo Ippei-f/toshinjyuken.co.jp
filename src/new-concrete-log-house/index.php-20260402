@@ -53,6 +53,7 @@ include $kaisou . '_assets/php/basic.php';
 							</li>
 							<li>
 								<p><a href="https://www.toshinjyuken.co.jp/kodate/search-detail.php?id=361" target="_blank"><i><img src="_assets/img/top/i-pin.svg" alt="" /></i>モデルハウスの詳細はこちら</a></p>
+								<p><a href="https://www.toshinjyuken.co.jp/kodate/voice-detail.php?case=46" target="_blank"><i><img src="_assets/img/top/i-family.svg" alt="" /></i>実際に購入されたお客様の声</a></p>
 							</li>
 						</ul>
 					</div>

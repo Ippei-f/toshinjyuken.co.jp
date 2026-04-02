@@ -21,7 +21,7 @@
 
 			<div class="top_search">
 				<div class="btnbox num1">
-					<a href="../contact.php" class="btn_bgLtoR colO pc_br_del">
+					<a href="/kodate/contact.php" class="btn_bgLtoR colO pc_br_del">
 						<div>
 							<span>資料請求・お問い合わせ</span><svg xmlns="http://www.w3.org/2000/svg" class="arrow-btn" viewBox="0 0 21.77 11.86">
 								<defs>
@@ -53,30 +53,30 @@
 					<div class="l-footer-flex">
 						<!-- ロゴ -->
 						<div class="l-footer__logo">
-							<a href="../index.php" class="logo"><img src="<?php echo esc_url(KODATE_ASSETS); ?>images/common/logo-2025.svg" /></a>
+							<a href="/kodate/index.php" class="logo"><img src="<?php echo esc_url(KODATE_ASSETS); ?>images/common/logo-2025.svg" /></a>
 						</div>
 
 						<!-- ナビメニュー -->
 						<nav class="fnav">
 							<ul class="fnav__list">
-								<li class="fnav__item"><a href="../index.php">ホーム</a></li>
-								<li class="fnav__item"><a href="../search.php">物件情報</a></li>
-								<li class="fnav__item"><a href="../news.php">NEWS</a></li>
-								<li class="fnav__item"><a href="../structure.php">東新住建の家づくり</a></li>
+								<li class="fnav__item"><a href="/kodate/index.php">ホーム</a></li>
+								<li class="fnav__item"><a href="/kodate/search.php">物件情報</a></li>
+								<li class="fnav__item"><a href="/kodate/news.php">NEWS</a></li>
+								<li class="fnav__item"><a href="/kodate/structure.php">東新住建の家づくり</a></li>
 							</ul>
 
 							<ul class="fnav__list">
-								<li class="fnav__item"><a href="../index.php#brand">ブランドコンセプト</a></li>
-								<li class="fnav__item"><a href="../bunjo-halforder.php" target="_blank">インテリアセレクト / ハーフオーダー</a></li>
-								<li class="fnav__item"><a href="../sdgs.php">SDGsへの取り組み</a></li>
-								<li class="fnav__item"><a href="../qa.php">Q&A</a></li>
+								<li class="fnav__item"><a href="/kodate/index.php#brand">ブランドコンセプト</a></li>
+								<li class="fnav__item"><a href="/kodate/bunjo-halforder.php" target="_blank">インテリアセレクト / ハーフオーダー</a></li>
+								<li class="fnav__item"><a href="/kodate/sdgs.php">SDGsへの取り組み</a></li>
+								<li class="fnav__item"><a href="/kodate/qa.php">Q&A</a></li>
 							</ul>
 
 							<ul class="fnav__list">
-								<li class="fnav__item"><a href="../voice.php">お客様の声</a></li>
-								<li class="fnav__item"><a href="../lifestyle.php">コラム</a></li>
-								<li class="fnav__item"><a href="../member.php">会員登録</a></li>
-								<li class="fnav__item"><a href="../contact.php">資料請求・お問い合わせ</a></li>
+								<li class="fnav__item"><a href="/kodate/voice.php">お客様の声</a></li>
+								<li class="fnav__item"><a href="/kodate/lifestyle.php">コラム</a></li>
+								<li class="fnav__item"><a href="/kodate/member.php">会員登録</a></li>
+								<li class="fnav__item"><a href="/kodate/contact.php">資料請求・お問い合わせ</a></li>
 							</ul>
 						</nav>
 					</div>

@@ -230,6 +230,9 @@ if (empty($get_arr['p'])) {
 		<!-- * -->
 		<?php echo $temp_header; ?>
 		<!-- ** -->
+
+		<?php echo $temp_fix_nav; ?>
+
 		<?php echo PAN(array($p_title)); ?>
 		<?php echo PAGE_TITLE($p_title); ?>
 		<!-- *** -->

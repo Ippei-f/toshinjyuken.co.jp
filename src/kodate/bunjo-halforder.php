@@ -29,6 +29,9 @@ require $kaisou . "temp_php/basic.php";
         <!-- * -->
         <?php echo $temp_header; ?>
         <!-- ** -->
+
+        <?php echo $temp_fix_nav; ?>
+
         <!-- *** -->
 
         <section class="BHO-kv">
@@ -402,7 +405,7 @@ require $kaisou . "temp_php/basic.php";
                             <div class="img">
                                 <img src="images/bunjohalforder/interiorselect-option-4.jpg" alt="" />
                             </div>
-                            <div class="txt">幹太くん</div>
+                            <div class="txt">乾太くん</div>
                         </li>
                         <li class="option__item">
                             <div class="img">

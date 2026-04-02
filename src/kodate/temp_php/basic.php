@@ -176,6 +176,21 @@ if ($democheck == '') {
 $temp_pagetop = '<a name="pt" id="pt"></a><div id="pagetop_btn"><a href="#pt" class="bg_cover bright"></a></div>' . PHP_EOL;
 
 
+
+
+// サイドボタン
+$temp_fix_nav = '';
+$fix_nav_path = $kaisou . 'temp_php/inc/fix-nav.php';
+
+if (file_exists($fix_nav_path)) {
+	ob_start();
+	include $fix_nav_path;
+	$temp_fix_nav = ob_get_clean();
+}
+
+
+
+
 //◆ヘッダ
 function HEADER_MENU_PC($arr = array())
 {
