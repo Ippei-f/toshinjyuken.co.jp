@@ -64,6 +64,12 @@ $rand = '?' . rand();
 					<img class="pc_vanish" src="images/top/sp/kv-slider-1.jpg" alt="" />
 				</li>
 				<li class="index-kv__item">
+					<a href="https://www.toshinjyuken.co.jp/kodate/news.php?id=210" target="_blank">
+						<img class="sp_vanish" src="images/top/kv-slider-haru.png" alt="" />
+						<img class="pc_vanish" src="images/top/sp/kv-slider-haru.png" alt="" />
+					</a>
+				</li>
+				<li class="index-kv__item">
 					<a href="bunjo-halforder.php" target="_blank">
 						<img class="sp_vanish" src="images/top/kv-slider-2.jpg" alt="" />
 						<img class="pc_vanish" src="images/top/sp/kv-slider-2.jpg" alt="" />
@@ -75,8 +81,6 @@ $rand = '?' . rand();
 						<img class="pc_vanish" src="images/top/sp/kv-slider-3.jpg" alt="" />
 					</a>
 				</li>
-
-
 			</ul>
 		</div>
 
@@ -126,20 +130,23 @@ $rand = '?' . rand();
 					</li>
 -->
 					<li>
-						<a href="https://www.toshinjyuken.co.jp/kodate/search.php?search=%E3%81%9D%E3%81%AE%E4%BB%96,%E3%82%AD%E3%83%A3%E3%83%B3%E3%83%9A%E3%83%BC%E3%83%B3%E5%AF%BE%E8%B1%A1">
-							<img src="images/top/bnr-newlifesupport.png" alt="新生活応援キャンペーン" />
+						<a href="https://www.toshinjyuken.co.jp/kodate/news.php?id=210">
+							<img src="images/top/bnr-harunosumaihaku.png" alt="春の住まい博" />
 						</a>
 					</li>
 					<li>
 						<a href="https://www.toshinjyuken.co.jp/kodate/voice.php">
-							<img src="images/top/bnr-voice.PNG" alt="お客様の声" />
+							<img src="images/top/bnr-voice.png" alt="お客様の声" />
 						</a>
 					</li>
+
+					<!--
 					<li>
 						<a href="./contact.php">
 							<img src="images/top/bnr-online-soudan.png" alt="オンライン相談受付中！" />
 						</a>
 					</li>
+					-->
 				</ul>
 			</div>
 		</section>
@@ -414,12 +421,16 @@ foreach($sysdata_proto as $key => $sysdata){
 				</tr>
 			</table>
 			<div class="top_news__btn"><a href="<?php echo $link_list['NEWS'][0]; ?>">すべての記事を見る</a></div>
+
+			<!--
 			<div class="top_news__bnr">
 				<a href="https://www.toshinjyuken.co.jp/kodate/news.php?id=170">
 					<img class="pc-only" src="images/top/bnr-newsx.PNG" alt="CBCテレビ「newsX(ニュースクロス)」にて、東新住建の「平屋回帰」が紹介されました！" />
 					<img class="sp-only" src="images/top/sp/bnr-newsx.jpg" alt="CBCテレビ「newsX(ニュースクロス)」にて、東新住建の「平屋回帰」が紹介されました！" />
 				</a>
 			</div>
+			-->
+
 		</section>
 		<!-- *** -->
 		<?php echo ANCHOR('brand'); ?>
