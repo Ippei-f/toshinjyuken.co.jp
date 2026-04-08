@@ -36,7 +36,9 @@ $rand = '?' . rand();
 		<?php echo $temp_header; ?>
 		<!-- ** -->
 
-		<?php echo $temp_fix_nav; ?>
+		<div class="pc-only">
+			<?php echo $temp_fix_nav; ?>
+		</div>
 
 		<?php echo PAN(array($p_title)); ?>
 		<?php echo PAGE_TITLE($p_title); ?>
