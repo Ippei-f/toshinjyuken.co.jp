@@ -705,9 +705,7 @@ require $kaisou . "temp_php/temp_logincheck.php"; //ログインチェック
 		<?php echo $temp_header; ?>
 		<!-- ** -->
 
-		<div class="pc-only">
-			<?php echo $temp_fix_nav; ?>
-		</div>
+		<?php echo $temp_fix_nav; ?>
 
 		<?php echo PAN(array($p_title, $sysdata[2])); ?>
 		<?php echo PAGE_TITLE($p_title); ?>
@@ -1770,6 +1768,14 @@ echo '</div>';
 									if (!is_array($v)) {
 										continue;
 									} //非公開は除外
+									//販売済みは除外
+									if (!is_array($v[3])) {
+										$v[3] = array($v[3]);
+									}
+									$v3_check = '｜' . implode('｜', $v[3]) . '｜';
+									if (strpos($v3_check, '｜5｜') !== false) {
+										continue;
+									}
 
 									$rk_rewrite = array();
 									$rk_rewrite[] = RANKING_ACCESS($v[6][0]);
