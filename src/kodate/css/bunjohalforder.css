@@ -88,7 +88,7 @@
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			background: #f63402;
+			background: #987a02;
 			border-radius: 100vh;
 			color: #fff;
 			font-size: 22px;
@@ -103,14 +103,15 @@
 			}
 
 			.arrow {
-				position: absolute;
-				right: 30px;
+				position: absolute; /* Border方式 */
+				right: 20px;
 				top: 50%;
 				transform: translate(0, -50%);
-
-				img {
-					width: 22px;
-				}
+				width: 0;
+				height: 0;
+				border-style: solid;
+				border-width: 10px 0px 10px 10px;
+				border-color: transparent transparent transparent #fff;
 			}
 		}
 	}
@@ -140,7 +141,7 @@ KV
 	}
 
 	img {
-		width: 604px;
+		width: 809px;
 
 		@media screen and (max-width: 999px) {
 			width: 95%;
@@ -367,12 +368,131 @@ KV
 }
 
 /* ------------------------
+導入　2604
+------------------------ */
+
+.BHO-intro2604 {
+	line-height: 2;
+	padding: 60px 0 210px;
+	text-align: left;
+	background: #f0f2f4;
+
+	@media screen and (max-width: 999px) {
+		margin: 0px 0 90px;
+		padding: 0 20px;
+	}
+}
+.BHO-intro2604-inner {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+.BHO-intro2604-flex {
+	display: flex;
+	flex-direction: row-reverse;
+	align-items: center;
+	gap: 40px;
+}
+.BHO-intro2604-flex-img {
+	flex: 0 0 407px;
+}
+.BHO-intro2604-flex-text__title {
+	font-size: 65px;
+	line-height: 1.53;
+	letter-spacing: 0.1em;
+	margin-bottom: 20px;
+}
+.BHO-intro2604-flex-text__title span {
+	color: #688097;
+}
+.BHO-intro2604-flex-text__lead {
+	font-size: 30px;
+	line-height: 1.67;
+	letter-spacing: 0.1em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.BHO-intro2604__btn a {
+	border: 1px solid #688097;
+	color: #688097;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 525px;
+	height: 64px;
+	margin: 0 auto;
+	font-size: 25px;
+	position: relative;
+}
+.BHO-intro2604__btn a .arrow {
+	position: absolute; /* Border方式 */
+	right: 20px;
+	top: 50%;
+	transform: translate(0, -50%);
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 10px 0px 10px 10px;
+	border-color: transparent transparent transparent #688097;
+}
+
+/* ------------------------
+導入　02
+------------------------ */
+
+.BHO-intro02 {
+	line-height: 2;
+	text-align: left;
+	margin-top: -110px;
+}
+.BHO-intro02-flex {
+	display: flex;
+	justify-content: center;
+	padding-right: 100px;
+	gap: 50px;
+}
+.BHO-intro02__text {
+	width: 532px;
+	flex-shrink: 0;
+	position: relative;
+	padding-right: 100px;
+}
+.BHO-intro02__title {
+	-ms-writing-mode: tb-rl;
+	writing-mode: vertical-rl;
+	position: absolute;
+	right: 0;
+	top: -2px;
+	font-size: 34px;
+}
+.BHO-intro02__badge img {
+	width: 200px;
+	margin: 0 0 50px auto;
+}
+.BHO-intro02__body {
+	font-size: 15px;
+	margin-bottom: 40px;
+}
+.BHO-intro02__img-1 {
+	max-width: 658px;
+}
+.BHO-intro02__img-2 {
+	padding-left: 20px;
+}
+.BHO-intro02__img-3 {
+	max-width: 418px;
+	margin: -140px 0 0 -430px;
+}
+
+/* ------------------------
 ご入居までの流れ
 ------------------------ */
 
 .BHO-flow {
 	line-height: 2;
-	margin: 60px 0 90px;
+	padding: 170px 0 30px;
+	margin: -70px 0 0;
+	background: #a4b3c1;
 
 	@media screen and (max-width: 999px) {
 		padding: 0 20px;
@@ -380,12 +500,261 @@ KV
 }
 .BHO-flow__ttl {
 	font-size: 30px;
-	color: #525a70;
-	margin-bottom: 20px;
+	color: #231815;
+	margin-bottom: 40px;
 }
 .BHO-flow__figure {
 	max-width: 850px;
 	margin: 0 auto;
+}
+
+/* ------------------------
+家族の"好き"をカタチにする、ハーフオーダーの家。
+------------------------ */
+
+.BHO-step {
+	line-height: 2;
+	padding: 110px 0;
+	background: #f0f2f4;
+
+	@media screen and (max-width: 999px) {
+		padding: 0 20px;
+	}
+}
+.BHO-step-inner {
+	max-width: 1000px;
+	margin: 0 auto;
+}
+.BHO-step__title {
+	font-size: 37px;
+	line-height: 1.46;
+	color: #fff;
+	background: #688097;
+	position: relative;
+	padding: 40px 0 20px;
+	margin-bottom: 50px;
+}
+.BHO-step__title:before {
+	content: "";
+	display: block;
+	position: relative;
+	width: calc(100% + 4px);
+	height: auto;
+	aspect-ratio: 1000 / 62;
+	background-color: #688097;
+	clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+	position: absolute;
+	left: 50%;
+	top: calc(100% - 1px);
+	transform: translate(-50%, 0);
+}
+.BHO-step-inner-2 {
+	background: #fff;
+	padding: 30px;
+}
+.BHO-step-unit {
+	max-width: 800px;
+	margin: 0 auto 40px;
+	padding: 0 0 80px;
+	position: relative;
+}
+.BHO-step-unit:after {
+	content: "";
+	display: block;
+	background: url(../images/bunjohalforder/steps-arrow-down.svg) no-repeat center / contain;
+	width: 97px;
+	height: 36px;
+	position: absolute;
+	left: 50%;
+	bottom: 0;
+	transform: translate(-50%, 0);
+}
+.BHO-step-unit.step-3 {
+	padding: 0 0 0;
+}
+.BHO-step-unit.step-3:after {
+	display: none;
+}
+.BHO-step-unit-header {
+	display: flex;
+	gap: 10px;
+	margin-bottom: 35px;
+}
+
+.BHO-step-unit-header__badge {
+	width: 158px;
+	flex-shrink: 0;
+	background: #987a02;
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 5px;
+	line-height: 1.7;
+}
+.BHO-step-unit-header__badge .label {
+	font-size: 29px;
+	font-weight: 200;
+	line-height: 1;
+}
+.BHO-step-unit-header__badge .num {
+	font-size: 39px;
+	font-weight: 400;
+	position: relative;
+	top: -3px;
+}
+.BHO-step-unit-header__title {
+	background: #e1e6ea;
+	width: calc(100% - 168px);
+	font-size: 31px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-right: 30px;
+}
+.BHO-step-unit-header__title span {
+	color: #987a02;
+}
+.BHO-step-unit.step-3 .body {
+	font-size: 38px;
+	line-height: 1.4;
+	font-weight: bold;
+}
+.BHO-step-unit.step-3 .body span {
+	color: #af9b01;
+}
+.BHO-step-unit.step-3 .BHO-step-unit-cont {
+	background: url(../images/bunjohalforder/steps-arrow-down-2.svg) no-repeat right 40px center / contain;
+}
+
+/* ------------------------
+選べる外観・内装
+------------------------ */
+
+.choose {
+	max-width: 800px;
+	margin: 80px auto 0;
+	text-align: left;
+	position: relative;
+}
+.choose__title {
+	background: #688097;
+	color: #fff;
+	font-size: 56px;
+	font-weight: 300;
+	display: inline-block;
+	padding: 0 30px;
+	line-height: 1.7;
+	position: absolute;
+	left: -20px;
+	top: -20px;
+	z-index: 1;
+}
+.choose__title span {
+	font-weight: 500;
+}
+.choose__list {
+	margin-bottom: 20px;
+}
+.choose__item {
+	background: #e1e6ea;
+}
+.choose__item-text {
+	padding: 20px 30px;
+}
+.choose__item-text-header {
+	display: flex;
+	align-items: center;
+	gap: 35px;
+	padding: 20px 0 10px;
+}
+.choose__item-text-header .number {
+	font-size: 40px;
+	line-height: 1.46;
+	color: #fff;
+	background: #688097;
+	position: relative;
+	text-align: center;
+	width: 76px;
+}
+.choose__item-text-header .number:before {
+	content: "";
+	display: block;
+	position: relative;
+	width: calc(100% + 2px);
+	height: auto;
+	aspect-ratio: 76 / 22;
+	background-color: #688097;
+	clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+	position: absolute;
+	left: 50%;
+	bottom: calc(100% - 1px);
+	transform: translate(-50%, 0);
+}
+.choose__item-text-header .title {
+	line-height: 1.3;
+	padding-bottom: 5px;
+}
+.choose__item-text-header .title .en {
+	font-size: 27px;
+	font-weight: 300;
+}
+.choose__item-text-header .title .en strong {
+	font-size: 37px;
+	font-weight: 500;
+}
+.choose__item-text-header .title .jp {
+}
+.choose__item-text-cont ul {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+}
+.choose__item-text-cont ul li {
+	width: calc((100% - 40px) / 3);
+	text-align: center;
+	font-size: 15px;
+}
+.choose__item-text-cont ul li .img {
+	margin-bottom: 10px;
+}
+
+.choose__list-thumbnail {
+	display: flex;
+	gap: 4px;
+}
+.choose__list-thumbnail .slick-track {
+	transform: unset !important;
+	display: flex;
+	flex-wrap: wrap;
+	width: 100% !important;
+	gap: 4px;
+}
+.choose__list-thumbnail .slick-track:before,
+.choose__list-thumbnail .slick-track:after {
+	display: none;
+}
+
+.choose__item-thumbnail {
+	width: calc((100% - 16px) / 5) !important;
+	background: #000;
+	position: relative;
+}
+.choose__item-thumbnail .number {
+	color: #fff;
+	font-size: 40px;
+	font-weight: 300;
+	position: absolute;
+	right: 5px;
+	top: 5px;
+	line-height: 1;
+}
+.choose__item-thumbnail .img {
+	opacity: 0.5;
+	transition: opacity 0.3s linear;
+}
+.choose__item-thumbnail.slick-current .img {
+	opacity: 1;
 }
 
 /* ------------------------
