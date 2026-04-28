@@ -114,6 +114,11 @@
 				border-color: transparent transparent transparent #fff;
 			}
 		}
+		&.blue {
+			a {
+				background: #688097;
+			}
+		}
 	}
 }
 
@@ -514,7 +519,7 @@ KV
 
 .BHO-step {
 	line-height: 2;
-	padding: 110px 0;
+	padding: 110px 0 180px;
 	background: #f0f2f4;
 
 	@media screen and (max-width: 999px) {
@@ -633,7 +638,7 @@ KV
 
 .choose {
 	max-width: 800px;
-	margin: 80px auto 0;
+	margin: 80px auto 30px;
 	text-align: left;
 	position: relative;
 }
@@ -661,6 +666,18 @@ KV
 }
 .choose__item-text {
 	padding: 20px 30px;
+}
+.choose__item-text .parts-list {
+	display: flex;
+	gap: 12px;
+	margin-bottom: 20px;
+}
+.choose__item-text .parts-list li {
+	width: calc((100% - 36px) / 4);
+	background: #fff;
+	text-align: center;
+	font-size: 21px;
+	color: #688097;
 }
 .choose__item-text-header {
 	display: flex;
@@ -755,6 +772,93 @@ KV
 }
 .choose__item-thumbnail.slick-current .img {
 	opacity: 1;
+}
+.choose .option {
+	text-align: center;
+	padding: 60px 0 0;
+}
+.choose .option__title {
+	font-size: 24px;
+	margin-bottom: 15px;
+}
+.choose .option__list {
+	display: flex;
+	gap: 7px;
+	margin-bottom: 20px;
+}
+.choose .option__item {
+	width: calc((100% - 42px) / 7);
+}
+.choose .option__item .img {
+}
+.choose .option__item .text {
+	font-size: 12px;
+}
+.choose .option__note {
+	text-align: right;
+	font-size: 12px;
+}
+
+/* ------------------------
+実邸REPORT
+------------------------ */
+
+.BHO-report {
+	line-height: 2;
+	padding: 70px 0;
+	text-align: left;
+}
+
+.BHO-report-inner {
+	border: 1px solid #688097;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+.BHO-report-inner a {
+	display: flex;
+	padding: 45px;
+	padding-right: 90px;
+	gap: 60px;
+	position: relative;
+}
+/* Clip-path方式 */
+.BHO-report-inner a::after {
+	content: "";
+	width: 10px;
+	height: 19px;
+	background-color: #688097;
+	clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
+	position: absolute;
+	right: 45px;
+	top: 50%;
+	transform: translate(0, -50%);
+}
+.BHO-report__text {
+	width: 300px;
+}
+.BHO-report__title {
+	font-size: 34px;
+	color: #688097;
+	border-bottom: 4px solid #af9b01;
+	text-align: center;
+	line-height: 1.7;
+	margin-bottom: 15px;
+	font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", "Noto Sans JP", sans-serif;
+	letter-spacing: 0.25em;
+}
+.BHO-report__body {
+	font-size: 15px;
+	line-height: 1.87;
+}
+.BHO-report__img {
+	width: calc(100% - 360px);
+}
+.BHO-report__img ul {
+	display: flex;
+	gap: 40px;
+}
+.BHO-report__img ul li {
+	width: calc((100% - 80px) / 3);
 }
 
 /* ------------------------
@@ -1441,15 +1545,15 @@ KV
 ------------------------ */
 
 .BHO-memberregistration {
-	margin: 75px 0 100px;
+	padding: 55px 0 70px;
+	background: #f0f2f4;
 
 	@media screen and (max-width: 999px) {
-		margin: 60px 0;
 	}
 
 	.BHO-memberregistration__ttl {
 		font-size: 26px;
-		font-weight: 600;
+		font-weight: 400;
 		margin-bottom: 20px;
 
 		@media screen and (max-width: 999px) {
@@ -1575,14 +1679,35 @@ KV
 	margin: 0 auto;
 }
 .BHO-voice__ttl {
-	font-size: 30px;
+	font-size: 38px;
 	margin-bottom: 30px;
+	color: #688097;
 
 	@media screen and (max-width: 999px) {
 		font-size: 25px;
 		line-height: 1.32;
 		text-align: left;
 	}
+}
+.BHO-voice__ttl span {
+	display: inline-block;
+	position: relative;
+}
+.BHO-voice__ttl span:before,
+.BHO-voice__ttl span:after {
+	content: "";
+	display: block;
+	width: 40px;
+	height: 40px;
+	background: url(../images/bunjohalforder/voice-title-icon.svg);
+	position: absolute;
+	top: 13px;
+}
+.BHO-voice__ttl span:before {
+	left: -60px;
+}
+.BHO-voice__ttl span:after {
+	right: -60px;
 }
 .BHO-voice__list {
 	@media screen and (max-width: 999px) {

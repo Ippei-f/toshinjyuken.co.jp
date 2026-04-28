@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_2" data-name="レイヤー 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #688097;
+      }
+
+      .cls-2 {
+        fill: #af9b01;
+      }
+    </style>
+  </defs>
+  <g id="_文字" data-name="文字">
+    <g>
+      <polygon class="cls-1" points="40 40 20 40 0 40 0 20 0 11.32 20 0 40 11.32 40 20 40 40"/>
+      <polyline class="cls-2" points="20 40 0 40 0 20 0 11.32 20 0"/>
+    </g>
+  </g>
+</svg>
