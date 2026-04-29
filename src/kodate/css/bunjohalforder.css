@@ -135,7 +135,7 @@ KV
 
 	@media screen and (max-width: 999px) {
 		padding: 10vw 20px 0;
-		aspect-ratio: 415 / 462;
+		aspect-ratio: 415 / 370;
 	}
 }
 .BHO-kv__badge {
@@ -383,8 +383,7 @@ KV
 	background: #f0f2f4;
 
 	@media screen and (max-width: 999px) {
-		margin: 0px 0 90px;
-		padding: 0 20px;
+		padding: 20px 20px 130px;
 	}
 }
 .BHO-intro2604-inner {
@@ -396,15 +395,34 @@ KV
 	flex-direction: row-reverse;
 	align-items: center;
 	gap: 40px;
+
+	@media screen and (max-width: 999px) {
+		flex-direction: column;
+		gap: 0;
+	}
 }
 .BHO-intro2604-flex-img {
 	flex: 0 0 407px;
+
+	@media screen and (max-width: 999px) {
+		flex: auto;
+	}
+}
+.BHO-intro2604-flex-img img {
+	@media screen and (max-width: 999px) {
+		width: 60%;
+		margin: 0 auto;
+	}
 }
 .BHO-intro2604-flex-text__title {
 	font-size: 65px;
 	line-height: 1.53;
 	letter-spacing: 0.1em;
 	margin-bottom: 20px;
+
+	@media screen and (max-width: 999px) {
+		font-size: 32px;
+	}
 }
 .BHO-intro2604-flex-text__title span {
 	color: #688097;
@@ -416,6 +434,15 @@ KV
 	display: flex;
 	justify-content: center;
 	align-items: center;
+
+	@media screen and (max-width: 999px) {
+		font-size: 16px;
+	}
+}
+.BHO-intro2604__btn {
+	@media screen and (max-width: 999px) {
+		margin: 30px 10px 40px;
+	}
 }
 .BHO-intro2604__btn a {
 	border: 1px solid #688097;
@@ -428,6 +455,11 @@ KV
 	margin: 0 auto;
 	font-size: 25px;
 	position: relative;
+
+	@media screen and (max-width: 999px) {
+		width: 100%;
+		font-size: 15px;
+	}
 }
 .BHO-intro2604__btn a .arrow {
 	position: absolute; /* Border方式 */
@@ -439,6 +471,11 @@ KV
 	border-style: solid;
 	border-width: 10px 0px 10px 10px;
 	border-color: transparent transparent transparent #688097;
+
+	@media screen and (max-width: 999px) {
+		border-width: 5px 0px 5px 5px;
+		right: 10px;
+	}
 }
 
 /* ------------------------
@@ -455,12 +492,22 @@ KV
 	justify-content: center;
 	padding-right: 100px;
 	gap: 50px;
+
+	@media screen and (max-width: 999px) {
+		flex-direction: column;
+		padding: 0 10px 0 30px;
+	}
 }
 .BHO-intro02__text {
 	width: 532px;
 	flex-shrink: 0;
 	position: relative;
 	padding-right: 100px;
+
+	@media screen and (max-width: 999px) {
+		width: 100%;
+		padding-right: 80px;
+	}
 }
 .BHO-intro02__title {
 	-ms-writing-mode: tb-rl;
@@ -473,6 +520,11 @@ KV
 .BHO-intro02__badge img {
 	width: 200px;
 	margin: 0 0 50px auto;
+
+	@media screen and (max-width: 999px) {
+		width: 150px;
+		margin: 0 0 30px auto;
+	}
 }
 .BHO-intro02__body {
 	font-size: 15px;
@@ -480,13 +532,26 @@ KV
 }
 .BHO-intro02__img-1 {
 	max-width: 658px;
+
+	@media screen and (max-width: 999px) {
+		padding: 0 20px;
+	}
 }
 .BHO-intro02__img-2 {
 	padding-left: 20px;
+
+	@media screen and (max-width: 999px) {
+		padding: 0;
+		margin-bottom: 20px;
+	}
 }
 .BHO-intro02__img-3 {
 	max-width: 418px;
 	margin: -140px 0 0 -430px;
+
+	@media screen and (max-width: 999px) {
+		margin: 0 0 40px;
+	}
 }
 
 /* ------------------------
@@ -500,7 +565,8 @@ KV
 	background: #a4b3c1;
 
 	@media screen and (max-width: 999px) {
-		padding: 0 20px;
+		padding: 50px 20px 20px;
+		margin: 0;
 	}
 }
 .BHO-flow__ttl {
@@ -523,7 +589,7 @@ KV
 	background: #f0f2f4;
 
 	@media screen and (max-width: 999px) {
-		padding: 0 20px;
+		padding: 50px 20px;
 	}
 }
 .BHO-step-inner {
@@ -538,6 +604,11 @@ KV
 	position: relative;
 	padding: 40px 0 20px;
 	margin-bottom: 50px;
+
+	@media screen and (max-width: 999px) {
+		font-size: 18px;
+		padding: 25px 0 15px;
+	}
 }
 .BHO-step__title:before {
 	content: "";
@@ -584,6 +655,11 @@ KV
 	display: flex;
 	gap: 10px;
 	margin-bottom: 35px;
+
+	@media screen and (max-width: 999px) {
+		gap: 5px;
+		margin-bottom: 20px;
+	}
 }
 
 .BHO-step-unit-header__badge {
@@ -596,17 +672,29 @@ KV
 	align-items: center;
 	gap: 5px;
 	line-height: 1.7;
+
+	@media screen and (max-width: 999px) {
+		width: 80px;
+	}
 }
 .BHO-step-unit-header__badge .label {
 	font-size: 29px;
 	font-weight: 200;
 	line-height: 1;
+
+	@media screen and (max-width: 999px) {
+		font-size: 15px;
+	}
 }
 .BHO-step-unit-header__badge .num {
 	font-size: 39px;
 	font-weight: 400;
 	position: relative;
 	top: -3px;
+
+	@media screen and (max-width: 999px) {
+		font-size: 24px;
+	}
 }
 .BHO-step-unit-header__title {
 	background: #e1e6ea;
@@ -616,6 +704,13 @@ KV
 	justify-content: center;
 	align-items: center;
 	padding-right: 30px;
+
+	@media screen and (max-width: 999px) {
+		font-size: 20px;
+		width: calc(100% - 85px);
+		line-height: 1.5;
+		padding: 10px;
+	}
 }
 .BHO-step-unit-header__title span {
 	color: #987a02;
@@ -624,12 +719,28 @@ KV
 	font-size: 38px;
 	line-height: 1.4;
 	font-weight: bold;
+
+	@media screen and (max-width: 999px) {
+		font-size: 20px;
+	}
 }
 .BHO-step-unit.step-3 .body span {
 	color: #af9b01;
 }
+.BHO-step-unit.step-3 .note {
+	@media screen and (max-width: 999px) {
+		font-size: 15px;
+		line-height: 1.6;
+		padding-top: 10px;
+	}
+}
 .BHO-step-unit.step-3 .BHO-step-unit-cont {
 	background: url(../images/bunjohalforder/steps-arrow-down-2.svg) no-repeat right 40px center / contain;
+
+	@media screen and (max-width: 999px) {
+		padding-right: 20px;
+		background: url(../images/bunjohalforder/steps-arrow-down-2.svg) no-repeat right -10px center / contain;
+	}
 }
 
 /* ------------------------
@@ -654,6 +765,13 @@ KV
 	left: -20px;
 	top: -20px;
 	z-index: 1;
+
+	@media screen and (max-width: 999px) {
+		font-size: 30px;
+		left: -10px;
+		top: -10px;
+		padding: 0 15px;
+	}
 }
 .choose__title span {
 	font-weight: 500;
@@ -839,7 +957,7 @@ KV
 .BHO-report__title {
 	font-size: 34px;
 	color: #688097;
-	border-bottom: 4px solid #af9b01;
+	border-bottom: 4px solid #d7cd80;
 	text-align: center;
 	line-height: 1.7;
 	margin-bottom: 15px;
@@ -1716,6 +1834,13 @@ KV
 		gap: 60px;
 	}
 
+	.slick-track {
+		display: flex;
+	}
+	.slick-slide {
+		height: auto !important;
+	}
+
 	.slick-prev,
 	.slick-next {
 		width: 96px;
@@ -1772,7 +1897,9 @@ KV
 }
 .BHO-voice__item {
 	margin: 0 30px;
+	padding: 30px;
 	text-align: left;
+	background: #f0f2f4;
 
 	@media screen and (max-width: 999px) {
 		width: 100%;
@@ -1783,30 +1910,34 @@ KV
 		margin-bottom: 20px;
 	}
 	.txt {
+		.voice {
+			font-size: 21px;
+			font-weight: bold;
+			line-height: 1.47;
+			margin-bottom: 10px;
+		}
 		.data {
 			font-size: 14px;
+			line-height: 1.5;
 			margin-bottom: 13px;
+			border-top: 1px solid #a0a8ba;
 			border-bottom: 1px solid #a0a8ba;
 			color: #525a70;
-			padding-bottom: 5px;
-		}
-		.voice {
-			font-size: 20px;
-			font-weight: bold;
-			line-height: 1.35;
+			padding: 10px 0;
+			text-align: center;
 		}
 	}
 	.btn {
 		text-align: center;
 		margin-top: 30px;
 		a {
-			border: 1px solid #525a70;
 			width: 188px;
 			height: 43px;
 			display: inline-flex;
 			justify-content: center;
 			align-items: center;
-			color: #525a70;
+			color: #fff;
+			background: #d7cd80;
 		}
 	}
 }
@@ -1819,15 +1950,14 @@ KV
 	line-height: 2;
 	padding: 60px 0 90px;
 	margin-bottom: 80px;
-	background: url(../images/bunjohalforder/eco-bg.jpg) no-repeat center top / cover;
+	background: #f0f2f4;
 
 	@media screen and (max-width: 999px) {
 		padding: 60px 20px 60px;
-		background: url(../images/bunjohalforder/sp/eco-bg.jpg) no-repeat center top / cover;
 	}
 }
 .BHO-eco-inner {
-	max-width: 860px;
+	max-width: 1295px;
 	margin: 0 auto;
 }
 .BHO-eco__ttl {
@@ -1882,12 +2012,42 @@ KV
 	margin-top: 30px;
 	a {
 		border: 1px solid #525a70;
-		padding: 5px 34px;
+		padding: 4px 70px;
 		display: inline-flex;
 		justify-content: center;
 		align-items: center;
 		color: #525a70;
+		font-size: 20px;
 	}
+}
+
+/* ------------------------
+History
+------------------------ */
+.BHO-history {
+	line-height: 2;
+	padding: 0px 0 100px;
+
+	@media screen and (max-width: 999px) {
+		margin: 0px 0 90px;
+		padding: 0 20px;
+	}
+}
+.BHO-history-inner {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+.BHO-history__title {
+	background: #688097;
+	color: #fff;
+	font-size: 48px;
+	font-weight: 400;
+	border-radius: 40px 40px 0 0;
+	padding: 10px;
+	margin-bottom: 15px;
+}
+.BHO-history .c-btn {
+	margin: 70px 0 50px;
 }
 
 /* ------------------------
