@@ -709,6 +709,8 @@
 	}
 }
 
+/* ------------------------------- */
+
 .index-halforder {
 	background: #cbc5c1;
 	background: linear-gradient(24deg, rgba(203, 197, 193, 1) 0%, rgba(239, 233, 227, 1) 10%, rgba(239, 233, 227, 1) 82%, rgba(203, 197, 193, 1) 100%);
@@ -888,6 +890,8 @@
 	}
 }
 
+/* ------------------------------- */
+
 .index-bottombnr {
 	padding: 130px var(--pad-side);
 	line-height: 1.71;
@@ -948,5 +952,88 @@
 				}
 			}
 		}
+	}
+}
+
+/* ------------------------------- 
+2604追加
+------------------------------- */
+
+.index-halforder2604 {
+	background: #c2c6c7;
+	background: linear-gradient(24deg, rgba(194, 198, 199, 1) 0%, rgba(229, 234, 236, 1) 9%, rgba(229, 234, 236, 1) 78%, rgba(194, 198, 200, 1) 100%);
+	padding: 120px 30px 170px;
+	line-height: 1.71;
+}
+@media screen and (max-width: 999px) {
+	.index-halforder2604 {
+		padding: 50px 20px 70px;
+	}
+}
+.index-halforder2604 .Wbase {
+	max-width: 1096px;
+}
+.index-halforder2604__badge {
+	margin-bottom: 50px;
+}
+@media screen and (max-width: 999px) {
+	.index-halforder2604__badge {
+		margin-bottom: 30px;
+	}
+}
+.index-halforder2604__badge img {
+	width: 336px;
+}
+@media screen and (max-width: 999px) {
+	.index-halforder2604__badge img {
+		width: 220px;
+	}
+}
+.index-halforder2604__title {
+	font-size: 47px;
+	font-weight: 700;
+	margin-bottom: 30px;
+	letter-spacing: 0.1em;
+}
+@media screen and (max-width: 999px) {
+	.index-halforder2604__title {
+		font-size: 31px;
+		margin-bottom: 20px;
+	}
+}
+.index-halforder2604__title span {
+	color: #688097;
+}
+.index-halforder2604__lead {
+	margin-bottom: 60px;
+}
+@media screen and (max-width: 999px) {
+	.index-halforder2604__lead {
+		margin-bottom: 40px;
+	}
+}
+.index-halforder2604__lead p {
+	font-size: 25px;
+	font-weight: 400;
+}
+@media screen and (max-width: 999px) {
+	.index-halforder2604__lead p {
+		font-size: 15px;
+	}
+}
+.index-halforder2604__bnr {
+	margin-bottom: 60px;
+}
+@media screen and (max-width: 999px) {
+	.index-halforder2604__bnr {
+		margin-bottom: 40px;
+	}
+}
+.index-halforder2604__btn img {
+	width: 332px;
+}
+@media screen and (max-width: 999px) {
+	.index-halforder2604__btn img {
+		width: 270px;
 	}
 }

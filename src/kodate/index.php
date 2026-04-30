@@ -71,8 +71,8 @@ $rand = '?' . rand();
 				</li>
 				<li class="index-kv__item">
 					<a href="bunjo-halforder.php" target="_blank">
-						<img class="sp_vanish" src="images/top/kv-slider-2.jpg" alt="" />
-						<img class="pc_vanish" src="images/top/sp/kv-slider-2.jpg" alt="" />
+						<img class="sp_vanish" src="images/top/kv-slider-halforder.jpg" alt="" />
+						<img class="pc_vanish" src="images/top/sp/kv-slider-halforder.jpg" alt="" />
 					</a>
 				</li>
 				<li class="index-kv__item">
@@ -734,6 +734,7 @@ foreach($sysdata_proto as $key => $sysdata){
 		</section>
 		<!-- *** -->
 
+		<!--
 		<section class="index-halforder">
 			<div class="Wbase">
 				<h2 class="index-halforder__ttl">分譲住宅に、選ぶ自由を。</h2>
@@ -799,6 +800,35 @@ foreach($sysdata_proto as $key => $sysdata){
 								<img class="sp-only" src="images/common/bottom/2025/sp/bnr-ie-isho-txt.svg" alt="インテリアセレクト、ハーフオーダーについて詳しくはこちら" />
 							</div>
 						</div>
+					</a>
+				</div>
+			</div>
+		</section>
+-->
+
+		<section class="index-halforder2604">
+			<div class="Wbase">
+				<div class="index-halforder2604__badge">
+					<img src="images/top/halforder-badge.svg" alt="ハーフオーダー" />
+				</div>
+				<h2 class="index-halforder2604__title">注文住宅より<span>気楽</span>に<br class="sp-only" />もっと<span>シンプル</span>に。</h2>
+				<div class="index-halforder2604__lead">
+					<p>
+						土地探しや打合せの負担を抑えながら、<br />
+						外観や内装、間取りを自分らしくデザイン。<br />
+						「ハーフオーダー」で理想の住まいを叶えます
+					</p>
+				</div>
+				<div class="index-halforder2604__bnr">
+					<a href="./bunjo-halforder.php" target="_blank">
+						<img class="pc-only" src="images/top/halforder-bnr.jpg" alt="ハーフオーダーについて詳しくはこちら" />
+						<img class="sp-only" src="images/top/sp/halforder-bnr.jpg" alt="ハーフオーダーについて詳しくはこちら" />
+					</a>
+				</div>
+				<div class="index-halforder2604__btn">
+					<a href="https://www.toshinjyuken.co.jp/kodate/search.php?search=%E3%83%95%E3%82%A7%E3%83%BC%E3%82%BA,%E3%83%8F%E3%83%BC%E3%83%95%E3%82%AA%E3%83%BC%E3%83%80%E3%83%BC" target="_blank">
+						<img class="pc-only" src="images/top/halforder-btn.svg" alt="物件地位欄はこちら" />
+						<img class="sp-only" src="images/top/sp/halforder-btn.svg" alt="物件地位欄はこちら" />
 					</a>
 				</div>
 			</div>
