@@ -395,14 +395,14 @@ require $kaisou . "temp_php/basic.php";
                                     <img src="images/bunjohalforder/steps-interior-1.jpg" alt="" />
                                 </div>
                                 <div class="choose__item-text">
-                                    <!--
-										<ul class="parts-list">
-											<li>壁</li>
-											<li>床</li>
-											<li>設備</li>
-											<li>建具</li>
-										</ul>
-										-->
+
+                                    <ul class="parts-list">
+                                        <li>壁</li>
+                                        <li>床</li>
+                                        <li>設備</li>
+                                        <li>建具</li>
+                                    </ul>
+
                                     <div class="choose__item-text-header">
                                         <div class="number manrope">01</div>
                                         <div class="title">
@@ -417,14 +417,12 @@ require $kaisou . "temp_php/basic.php";
                                     <img src="images/bunjohalforder/steps-interior-2.jpg" alt="" />
                                 </div>
                                 <div class="choose__item-text">
-                                    <!--
-										<ul class="parts-list">
-											<li>壁</li>
-											<li>床</li>
-											<li>設備</li>
-											<li>建具</li>
-										</ul>
-										-->
+                                    <ul class="parts-list">
+                                        <li>壁</li>
+                                        <li>床</li>
+                                        <li>設備</li>
+                                        <li>建具</li>
+                                    </ul>
                                     <div class="choose__item-text-header">
                                         <div class="number manrope">02</div>
                                         <div class="title">
@@ -439,14 +437,12 @@ require $kaisou . "temp_php/basic.php";
                                     <img src="images/bunjohalforder/steps-interior-3.jpg" alt="" />
                                 </div>
                                 <div class="choose__item-text">
-                                    <!--
-										<ul class="parts-list">
-											<li>壁</li>
-											<li>床</li>
-											<li>設備</li>
-											<li>建具</li>
-										</ul>
-										-->
+                                    <ul class="parts-list">
+                                        <li>壁</li>
+                                        <li>床</li>
+                                        <li>設備</li>
+                                        <li>建具</li>
+                                    </ul>
                                     <div class="choose__item-text-header">
                                         <div class="number manrope">03</div>
                                         <div class="title">
@@ -461,14 +457,12 @@ require $kaisou . "temp_php/basic.php";
                                     <img src="images/bunjohalforder/steps-interior-4.jpg" alt="" />
                                 </div>
                                 <div class="choose__item-text">
-                                    <!--
-										<ul class="parts-list">
-											<li>壁</li>
-											<li>床</li>
-											<li>設備</li>
-											<li>建具</li>
-										</ul>
-										-->
+                                    <ul class="parts-list">
+                                        <li>壁</li>
+                                        <li>床</li>
+                                        <li>設備</li>
+                                        <li>建具</li>
+                                    </ul>
                                     <div class="choose__item-text-header">
                                         <div class="number manrope">04</div>
                                         <div class="title">
@@ -483,14 +477,12 @@ require $kaisou . "temp_php/basic.php";
                                     <img src="images/bunjohalforder/steps-interior-5.jpg" alt="" />
                                 </div>
                                 <div class="choose__item-text">
-                                    <!--
-										<ul class="parts-list">
-											<li>壁</li>
-											<li>床</li>
-											<li>設備</li>
-											<li>建具</li>
-										</ul>
-										-->
+                                    <ul class="parts-list">
+                                        <li>壁</li>
+                                        <li>床</li>
+                                        <li>設備</li>
+                                        <li>建具</li>
+                                    </ul>
                                     <div class="choose__item-text-header">
                                         <div class="number manrope">05</div>
                                         <div class="title">
@@ -633,18 +625,7 @@ require $kaisou . "temp_php/basic.php";
                 </h2>
 
                 <ul class="BHO-voice__list">
-                    <li class="BHO-voice__item">
-                        <div class="img">
-                            <img src="images/bunjohalforder/voice-1.jpg" alt="" />
-                        </div>
-                        <div class="txt">
-                            <h3 class="voice">早期契約のおかげで、注文住宅レベルのこだわりを実現できました</h3>
-                            <div class="data">岡崎市　S様／ご家族構成：ご夫婦、愛猫</div>
-                        </div>
-                        <div class="btn">
-                            <a href="https://www.toshinjyuken.co.jp/kodate/voice-detail.php?case=28" target="_blank">詳しく見る</a>
-                        </div>
-                    </li>
+
                     <li class="BHO-voice__item">
                         <div class="img">
                             <img src="images/bunjohalforder/voice-2.jpg" alt="" />
