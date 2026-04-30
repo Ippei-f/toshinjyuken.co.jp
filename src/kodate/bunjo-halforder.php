@@ -35,80 +35,63 @@ require $kaisou . "temp_php/basic.php";
         <!-- *** -->
 
         <section class="BHO-kv">
-            <div class="BHO-kv__badge">
-                <img src="images/bunjohalforder/kv-badge.svg" alt="INTERIOR SELECT / HALF ORDER" />
-            </div>
-            <h1 class="BHO-kv__catch">
-                <img class="pc-only" src="images/bunjohalforder/kv-catch.svg" alt="分譲住宅に選ぶ自由を。" />
-                <img class="sp-only" src="images/bunjohalforder/sp/kv-catch.svg" alt="分譲住宅に選ぶ自由を。" />
+            <h1 class="BHO-kv__badge">
+                <img src="images/bunjohalforder/kv-badge.svg" alt="ハーフオーダー" />
             </h1>
         </section>
 
-        <section class="BHO-intro">
-            <div class="BHO-intro-inner">
-                <div class="BHO-intro-header">
-                    <h2 class="BHO-intro__ttl">
-                        これから家を買うなら、<br class="sp-only" /><strong>“<span>選</span><span>べ</span><span>る</span>分譲住宅”</strong>
-                    </h2>
-                    <div class="BHO-intro__txt-1">
-                        内装を選べる<strong>「インテリアセレクト」、</strong><br />
-                        外観や間取りまで叶う<strong>「ハーフオーダー」。</strong>
+        <section class="BHO-intro2604">
+            <div class="BHO-intro2604-inner">
+                <div class="BHO-intro2604-flex">
+                    <div class="BHO-intro2604-flex-img">
+                        <img src="images/bunjohalforder/intro-yume.png" alt="夢" />
                     </div>
-                    <div class="BHO-intro__txt-2">理想の住まいを、<br class="sp-only" />自分らしくデザインしましょう！</div>
-                    <div class="BHO-intro__btn">
-                        <a href="#BHO-birthhistory">誕生ヒストリーはこちら</a>
+                    <div class="BHO-intro2604-flex-text">
+                        <h2 class="BHO-intro2604-flex-text__title">
+                            注文住宅より<span>気楽</span>に<br />
+                            もっと<span>シンプル</span>に。
+                        </h2>
+                        <div class="BHO-intro2604-flex-text__lead">
+                            <p>
+                                土地探しや打合せの負担を抑えながら、<br />
+                                外観や内装、間取りを自分らしくデザイン。<br />
+                                「ハーフオーダー」で理想の住まいを叶えます
+                            </p>
+                        </div>
                     </div>
                 </div>
-                <ul class="BHO-intro__list">
-                    <li class="BHO-intro__item">
-                        <div class="img">
-                            <div class="img">
-                                <img src="images/bunjohalforder/intro-interiorselect.jpg" alt="" />
-                            </div>
-                            <div class="badge">
-                                <img src="images/bunjohalforder/intro-interiorselect-badge.svg" alt="INTERIOR SELECT" />
-                            </div>
-                        </div>
-                        <div class="txt">
-                            <h3 class="ttl">“内観デザイン”をセレクト</h3>
-                            <div class="body">
-                                <p>分譲住宅では選べない壁・床・設備・建具などのカラーや仕様、間取りを変えることができます。お好みに合うプランをご用意していますので、安心して理想の家づくりが楽しめます。</p>
-                            </div>
-                            <div class="btn">
-                                <a
-                                    href="https://www.toshinjyuken.co.jp/kodate/search.php?search=フェーズ,インテリアセレクト
-"
-                                    target="_blank">物件はこちら</a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="BHO-intro__item">
-                        <div class="img">
-                            <div class="img">
-                                <img src="images/bunjohalforder/intro-halforder.jpg" alt="" />
-                            </div>
-                            <div class="badge">
-                                <img src="images/bunjohalforder/intro-halforder-badge.svg" alt="HALF ORDER" />
-                            </div>
-                        </div>
-                        <div class="txt">
-                            <h3 class="ttl">“内観と外観デザイン”を両方セレクト</h3>
-                            <div class="body">
-                                <p>
-                                    注文住宅のような自由度と、分譲住宅のコストパフォーマンスを兼ね備えた「いいとこどり」がハーフオーダーの魅力。<br />
-                                    今はまだ真っ白な空間だからこそ、間取りや外観も、あなたの理想に合わせてプランニングできます。
-                                </p>
-                            </div>
-                            <div class="btn">
-                                <a
-                                    href="https://www.toshinjyuken.co.jp/kodate/search.php?search=フェーズ,ハーフオーダー
-"
-                                    target="_blank">物件はこちら</a>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-                <div class="BHO-intro__note">※各物件ごとに「インテリアセレクト」か「ハーフオーダー」が設定されています</div>
+                <div class="BHO-intro2604__btn">
+                    <a href="https://www.toshinjyuken.co.jp/kodate/search.php?search=%E3%83%95%E3%82%A7%E3%83%BC%E3%82%BA,%E3%83%8F%E3%83%BC%E3%83%95%E3%82%AA%E3%83%BC%E3%83%80%E3%83%BC" target="_blank">
+                        <span class="label">ハーフオーダーの物件はこちら</span>
+                        <span class="arrow"></span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="BHO-intro02">
+            <div class="BHO-intro02-flex">
+                <div class="BHO-intro02__img-1">
+                    <img src="images/bunjohalforder/intro02-1.jpg" alt="" />
+                </div>
+                <div class="BHO-intro02__text">
+                    <h2 class="BHO-intro02__title">『外観』と『内装』両方オーダー可能</h2>
+                    <div class="BHO-intro02__badge">
+                        <img src="images/bunjohalforder/intro02-badge.svg" alt="ハーフオーダー" />
+                    </div>
+                    <div class="BHO-intro02__body">
+                        <p>
+                            注文住宅のような自由度と、分譲住宅のコストパフォーマンスを兼ね備えた「いいとこどり」がハーフオーダーの魅力。<br />
+                            今はまだ真っ白な空間だからこそ、外観・内装・間取りまで、あなたの理想に合わせてプランニングできます。
+                        </p>
+                    </div>
+                    <div class="BHO-intro02__img-2">
+                        <img src="images/bunjohalforder/intro02-2.jpg" alt="" />
+                    </div>
+                    <div class="BHO-intro02__img-3">
+                        <img src="images/bunjohalforder/intro02-3.jpg" alt="" />
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -119,499 +102,535 @@ require $kaisou . "temp_php/basic.php";
                     <img src="images/bunjohalforder/flow.svg" alt="ご入居までの流れ" />
                 </div>
                 <div class="c-btn">
-                    <a href="<?php echo $link_list['お問い合わせ'][0]; ?>">資料請求・お問い合わせ<span class="arrow"><img src="images/bunjohalforder/arrow-right.svg" alt="" /></span></a>
+                    <a href="<?php echo $link_list['お問い合わせ'][0]; ?>">
+                        <span class="label">資料請求・お問い合わせ</span>
+                        <span class="arrow"></span>
+                    </a>
                 </div>
             </div>
         </section>
 
-        <section class="BHO-interiorselect">
-            <div class="BHO-interiorselect-inner">
-                <h2 class="BHO-interiorselect__ttl">
-                    <div class="badge"><img src="images/bunjohalforder/interiorselect-ttl-badge.svg" alt="インテリアセレクト" /></div>
-                    <div class="txt">※ハーフオーダーにはインテリアセレクトが含まれます</div>
+        <section class="BHO-step">
+            <div class="BHO-step-inner">
+                <h2 class="BHO-step__title">
+                    注文住宅と分譲住宅の「いいとこ取り」。 <br />
+                    家族の"好き"をカタチにする、<br class="sp-only" />ハーフオーダーの家。
                 </h2>
-                <div class="BHO-interiorselect-header">
-                    <div class="ttl">内装デザインや間取りが選べる</div>
-                    <ul>
-                        <li>壁</li>
-                        <li>床</li>
-                        <li>設備</li>
-                        <li>建具</li>
-                        <li>間取り</li>
-                    </ul>
-                </div>
-                <div class="BHO-interiorselect__ttl-2">
-                    <h3 class="jp"><span>基本プラン</span></h3>
-                    <div class="en manrope"><strong>Basic</strong> Style</div>
-                </div>
-                <div class="BHO-interiorselect__gallery">
-                    <div class="BHO-interiorselect__gallery-main">
-                        <ul class="BHO-interiorselect__gallery-main__list">
-                            <li class="BHO-interiorselect__gallery-main__item">
-                                <div class="img">
-                                    <img src="images/bunjohalforder/interiorselect-gallery-1.jpg" alt="" />
+                <div class="BHO-step-inner-2">
+                    <div class="BHO-step-unit step-1">
+                        <div class="BHO-step-unit-header">
+                            <div class="BHO-step-unit-header__badge"><span class="label">STEP</span><span class="num">1</span></div>
+                            <h3 class="BHO-step-unit-header__title">
+                                <div class="BHO-step-unit-header__title-inner">土地<span>選び</span></div>
+                            </h3>
+                        </div>
+                        <div class="BHO-step-unit-cont">
+                            <div class="BHO-intro2604__btn">
+                                <a href="https://www.toshinjyuken.co.jp/kodate/search.php?search=%E3%83%95%E3%82%A7%E3%83%BC%E3%82%BA,%E3%83%8F%E3%83%BC%E3%83%95%E3%82%AA%E3%83%BC%E3%83%80%E3%83%BC" target="_blank">
+                                    <span class="label">ハーフオーダーの物件はこちら</span>
+                                    <span class="arrow"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="BHO-step-unit step-2">
+                        <div class="BHO-step-unit-header">
+                            <div class="BHO-step-unit-header__badge"><span class="label">STEP</span><span class="num">2</span></div>
+                            <h3 class="BHO-step-unit-header__title">
+                                <div class="BHO-step-unit-header__title-inner">間取りを<span>設計</span></div>
+                            </h3>
+                        </div>
+                        <div class="BHO-step-unit-cont">
+                            <img src="images/bunjohalforder/steps-plan-1.svg" alt="基本プラン" />
+                        </div>
+                    </div>
+                    <div class="BHO-step-unit">
+                        <div class="BHO-step-unit-cont">
+                            <img src="images/bunjohalforder/steps-example.svg" alt="例えばこんなお客様のご要望に" />
+                        </div>
+                    </div>
+                    <div class="BHO-step-unit">
+                        <div class="BHO-step-unit-cont">
+                            <img src="images/bunjohalforder/steps-plan-2.svg" alt="カスタムプラン" />
+                        </div>
+                    </div>
+                    <div class="BHO-step-unit step-3">
+                        <div class="BHO-step-unit-header">
+                            <div class="BHO-step-unit-header__badge"><span class="label">STEP</span><span class="num">3</span></div>
+                            <h3 class="BHO-step-unit-header__title">
+                                <div class="BHO-step-unit-header__title-inner">外観・内装デザインを<span>設計</span></div>
+                            </h3>
+                        </div>
+                        <div class="BHO-step-unit-cont">
+                            <div class="body">
+                                外観・内装は、<br />
+                                それぞれ<span>厳選したプラン</span>から<br />
+                                お選びいただけます。
+                            </div>
+                            <div class="note">※ベースプランをもとに、オプションで自由度を高めることも可能です。</div>
+                        </div>
+                    </div>
+                    <div class="choose">
+                        <h3 class="choose__title">選べる<span>外観</span></h3>
+                        <ul class="choose__list slider">
+                            <li class="choose__item">
+                                <div class="choose__item-img">
+                                    <img src="images/bunjohalforder/steps-exterior-1.jpg" alt="" />
                                 </div>
-                                <div class="txt">
-                                    <div class="number manrope">01</div>
-                                    <div class="ttl">
-                                        <div class="en manrope"><strong>Hotel Like</strong> Style</div>
-                                        <h4 class="jp">ホテルライクスタイル</h4>
+                                <div class="choose__item-text">
+                                    <div class="choose__item-text-header">
+                                        <div class="number manrope">01</div>
+                                        <div class="title">
+                                            <div class="en manrope"><strong>Simple</strong> Style</div>
+                                            <h4 class="jp">シンプルスタイル</h4>
+                                        </div>
+                                    </div>
+                                    <div class="choose__item-text-cont">
+                                        <ul>
+                                            <li>
+                                                <div class="img">
+                                                    <img src="images/bunjohalforder/steps-exterior-1-parts-1.jpg" alt="" />
+                                                </div>
+                                                <div class="text">ベースサイディング</div>
+                                            </li>
+                                            <li>
+                                                <div class="img">
+                                                    <img src="images/bunjohalforder/steps-exterior-1-parts-2.jpg" alt="" />
+                                                </div>
+                                                <div class="text">アクセントサイディング</div>
+                                            </li>
+                                            <li>
+                                                <div class="img">
+                                                    <img src="images/bunjohalforder/steps-exterior-1-parts-3.jpg" alt="" />
+                                                </div>
+                                                <div class="text">玄関ドア</div>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
                             </li>
-                            <li class="BHO-interiorselect__gallery-main__item">
-                                <div class="img">
-                                    <img src="images/bunjohalforder/interiorselect-gallery-2.jpg" alt="" />
+                            <li class="choose__item">
+                                <div class="choose__item-img">
+                                    <img src="images/bunjohalforder/steps-exterior-2.jpg" alt="" />
                                 </div>
-                                <div class="txt">
-                                    <div class="number manrope">02</div>
-                                    <div class="ttl">
-                                        <div class="en manrope"><strong>Natural Botanical</strong> Style</div>
-                                        <h4 class="jp">ナチュラルボタニカルスタイル</h4>
+                                <div class="choose__item-text">
+                                    <div class="choose__item-text-header">
+                                        <div class="number manrope">02</div>
+                                        <div class="title">
+                                            <div class="en manrope"><strong>Black Modern</strong> Style</div>
+                                            <h4 class="jp">ブラックモダンスタイル</h4>
+                                        </div>
+                                    </div>
+                                    <div class="choose__item-text-cont">
+                                        <ul>
+                                            <li>
+                                                <div class="img">
+                                                    <img src="images/bunjohalforder/steps-exterior-2-parts-1.jpg" alt="" />
+                                                </div>
+                                                <div class="text">ベースサイディング</div>
+                                            </li>
+                                            <li>
+                                                <div class="img">
+                                                    <img src="images/bunjohalforder/steps-exterior-2-parts-2.jpg" alt="" />
+                                                </div>
+                                                <div class="text">アクセントサイディング</div>
+                                            </li>
+                                            <li>
+                                                <div class="img">
+                                                    <img src="images/bunjohalforder/steps-exterior-2-parts-3.jpg" alt="" />
+                                                </div>
+                                                <div class="text">玄関ドア</div>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
                             </li>
-                            <li class="BHO-interiorselect__gallery-main__item">
-                                <div class="img">
-                                    <img src="images/bunjohalforder/interiorselect-gallery-3.jpg" alt="" />
+                            <li class="choose__item">
+                                <div class="choose__item-img">
+                                    <img src="images/bunjohalforder/steps-exterior-3.jpg" alt="" />
                                 </div>
-                                <div class="txt">
-                                    <div class="number manrope">03</div>
-                                    <div class="ttl">
-                                        <div class="en manrope"><strong>Modern</strong> Style</div>
-                                        <h4 class="jp">モダンスタイル</h4>
+                                <div class="choose__item-text">
+                                    <div class="choose__item-text-header">
+                                        <div class="number manrope">03</div>
+                                        <div class="title">
+                                            <div class="en manrope"><strong>Natural Black</strong> Style</div>
+                                            <h4 class="jp">ナチュラルブラックスタイル</h4>
+                                        </div>
+                                    </div>
+                                    <div class="choose__item-text-cont">
+                                        <ul>
+                                            <li>
+                                                <div class="img">
+                                                    <img src="images/bunjohalforder/steps-exterior-3-parts-1.jpg" alt="" />
+                                                </div>
+                                                <div class="text">ベースサイディング</div>
+                                            </li>
+                                            <li>
+                                                <div class="img">
+                                                    <img src="images/bunjohalforder/steps-exterior-3-parts-2.jpg" alt="" />
+                                                </div>
+                                                <div class="text">アクセントサイディング</div>
+                                            </li>
+                                            <li>
+                                                <div class="img">
+                                                    <img src="images/bunjohalforder/steps-exterior-3-parts-3.jpg" alt="" />
+                                                </div>
+                                                <div class="text">玄関ドア</div>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
                             </li>
-                            <li class="BHO-interiorselect__gallery-main__item">
-                                <div class="img">
-                                    <img src="images/bunjohalforder/interiorselect-gallery-4.jpg" alt="" />
+                            <li class="choose__item">
+                                <div class="choose__item-img">
+                                    <img src="images/bunjohalforder/steps-exterior-4.jpg" alt="" />
                                 </div>
-                                <div class="txt">
-                                    <div class="number manrope">04</div>
-                                    <div class="ttl">
-                                        <div class="en manrope"><strong>California</strong> Style</div>
-                                        <h4 class="jp">カリフォルニアスタイル</h4>
+                                <div class="choose__item-text">
+                                    <div class="choose__item-text-header">
+                                        <div class="number manrope">04</div>
+                                        <div class="title">
+                                            <div class="en manrope"><strong>Natural Wood</strong> Style</div>
+                                            <h4 class="jp">ナチュラルウッドスタイル</h4>
+                                        </div>
+                                    </div>
+                                    <div class="choose__item-text-cont">
+                                        <ul>
+                                            <li>
+                                                <div class="img">
+                                                    <img src="images/bunjohalforder/steps-exterior-4-parts-1.jpg" alt="" />
+                                                </div>
+                                                <div class="text">ベースサイディング</div>
+                                            </li>
+                                            <li>
+                                                <div class="img">
+                                                    <img src="images/bunjohalforder/steps-exterior-4-parts-2.jpg" alt="" />
+                                                </div>
+                                                <div class="text">アクセントサイディング</div>
+                                            </li>
+                                            <li>
+                                                <div class="img">
+                                                    <img src="images/bunjohalforder/steps-exterior-4-parts-3.jpg" alt="" />
+                                                </div>
+                                                <div class="text">玄関ドア</div>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
                             </li>
-                            <li class="BHO-interiorselect__gallery-main__item">
-                                <div class="img">
-                                    <img src="images/bunjohalforder/interiorselect-gallery-5.jpg" alt="" />
+                            <li class="choose__item">
+                                <div class="choose__item-img">
+                                    <img src="images/bunjohalforder/steps-exterior-5.jpg" alt="" />
                                 </div>
-                                <div class="txt">
-                                    <div class="number manrope">05</div>
-                                    <div class="ttl">
-                                        <div class="en manrope"><strong>Grayish</strong> Style</div>
-                                        <h4 class="jp">グレイッシュスタイル</h4>
+                                <div class="choose__item-text">
+                                    <div class="choose__item-text-header">
+                                        <div class="number manrope">05</div>
+                                        <div class="title">
+                                            <div class="en manrope"><strong>California</strong> Style</div>
+                                            <h4 class="jp">カリフォルニアスタイル</h4>
+                                        </div>
+                                    </div>
+                                    <div class="choose__item-text-cont">
+                                        <ul>
+                                            <li>
+                                                <div class="img">
+                                                    <img src="images/bunjohalforder/steps-exterior-5-parts-1.jpg" alt="" />
+                                                </div>
+                                                <div class="text">ベースサイディング</div>
+                                            </li>
+                                            <li>
+                                                <div class="img">
+                                                    <img src="images/bunjohalforder/steps-exterior-5-parts-2.jpg" alt="" />
+                                                </div>
+                                                <div class="text">アクセントサイディング</div>
+                                            </li>
+                                            <li>
+                                                <div class="img">
+                                                    <img src="images/bunjohalforder/steps-exterior-5-parts-3.jpg" alt="" />
+                                                </div>
+                                                <div class="text">玄関ドア</div>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
                             </li>
                         </ul>
-                        <div class="BHO-interiorselect__gallery__note">※間取りタイプによってお選びいただけるスタイルが異なります。</div>
-                    </div>
-                    <div class="BHO-interiorselect__gallery-sub">
-                        <ul class="BHO-interiorselect__gallery-sub__list">
-                            <li class="BHO-interiorselect__gallery-sub__item">
+                        <ul class="choose__list-thumbnail thumbnail">
+                            <li class="choose__item-thumbnail">
                                 <div class="img">
-                                    <img src="images/bunjohalforder/interiorselect-gallery-1.jpg" alt="" />
+                                    <img src="images/bunjohalforder/steps-exterior-1.jpg" alt="" />
                                 </div>
                                 <div class="number manrope">01</div>
                             </li>
-                            <li class="BHO-interiorselect__gallery-sub__item">
+                            <li class="choose__item-thumbnail">
                                 <div class="img">
-                                    <img src="images/bunjohalforder/interiorselect-gallery-2.jpg" alt="" />
+                                    <img src="images/bunjohalforder/steps-exterior-2.jpg" alt="" />
                                 </div>
                                 <div class="number manrope">02</div>
                             </li>
-                            <li class="BHO-interiorselect__gallery-sub__item">
+                            <li class="choose__item-thumbnail">
                                 <div class="img">
-                                    <img src="images/bunjohalforder/interiorselect-gallery-3.jpg" alt="" />
+                                    <img src="images/bunjohalforder/steps-exterior-3.jpg" alt="" />
                                 </div>
                                 <div class="number manrope">03</div>
                             </li>
-                            <li class="BHO-interiorselect__gallery-sub__item">
+                            <li class="choose__item-thumbnail">
                                 <div class="img">
-                                    <img src="images/bunjohalforder/interiorselect-gallery-4.jpg" alt="" />
+                                    <img src="images/bunjohalforder/steps-exterior-4.jpg" alt="" />
                                 </div>
                                 <div class="number manrope">04</div>
                             </li>
-                            <li class="BHO-interiorselect__gallery-sub__item">
+                            <li class="choose__item-thumbnail">
                                 <div class="img">
-                                    <img src="images/bunjohalforder/interiorselect-gallery-5.jpg" alt="" />
+                                    <img src="images/bunjohalforder/steps-exterior-5.jpg" alt="" />
                                 </div>
                                 <div class="number manrope">05</div>
                             </li>
                         </ul>
                     </div>
-                </div>
-
-                <div class="premium">
-                    <div class="BHO-interiorselect__ttl-2">
-                        <h3 class="jp"><span>もっと素材にこだわりたい方</span></h3>
-                        <div class="en manrope"><strong>Premium</strong> Style</div>
-                        <div class="note">※追加料金となります。詳しくはお問い合わせください</div>
-                    </div>
-                    <ul class="premium__list">
-                        <li class="premium__item modal__trigger" data-target="modal_1">
-                            <div class="img">
-                                <img src="images/bunjohalforder/interiorselect-premium-luxury.jpg" alt="" />
-                            </div>
-                            <div class="txt">
-                                <div class="ttl">
-                                    <div class="en manrope"><strong>Luxury</strong> Style</div>
-                                    <h4 class="jp">ラグジュアリースタイル</h4>
+                    <div class="choose">
+                        <h3 class="choose__title">選べる<span>内装</span></h3>
+                        <ul class="choose__list slider2">
+                            <li class="choose__item">
+                                <div class="choose__item-img">
+                                    <img src="images/bunjohalforder/steps-interior-1.jpg" alt="" />
                                 </div>
-                            </div>
-                        </li>
-                        <li class="premium__item modal__trigger" data-target="modal_2">
-                            <div class="img">
-                                <img src="images/bunjohalforder/interiorselect-premium-natural.jpg" alt="" />
-                            </div>
-                            <div class="txt">
-                                <div class="ttl">
-                                    <div class="en manrope"><strong>Natural</strong> Style</div>
-                                    <h4 class="jp">ナチュラルスタイル</h4>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="premium__item modal__trigger" data-target="modal_3">
-                            <div class="img">
-                                <img src="images/bunjohalforder/interiorselect-premium-frenchmodern.jpg" alt="" />
-                            </div>
-                            <div class="txt">
-                                <div class="ttl">
-                                    <div class="en manrope"><strong>French Modern</strong> Style</div>
-                                    <h4 class="jp">フレンチモダンスタイル</h4>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-
-                    <!--.modal-area-->
-                    <div class="modal-area">
-                        <div id="modal_1" class="modal__wrapper">
-                            <div class="modal__layer"></div>
-                            <div class="modal__container">
-                                <div class="modal__inner">
-                                    <!-- モーダル内のコンテンツ -->
-                                    <div class="modal__content">
-                                        <div class="img">
-                                            <img src="images/bunjohalforder/interiorselect-premium-luxury.jpg" alt="" />
+                                <div class="choose__item-text">
+                                    <!--
+										<ul class="parts-list">
+											<li>壁</li>
+											<li>床</li>
+											<li>設備</li>
+											<li>建具</li>
+										</ul>
+										-->
+                                    <div class="choose__item-text-header">
+                                        <div class="number manrope">01</div>
+                                        <div class="title">
+                                            <div class="en manrope"><strong>Hotel Like</strong> Style</div>
+                                            <h4 class="jp">ホテルライクスタイル</h4>
                                         </div>
-                                        <div class="txt">
-                                            <div class="ttl">
-                                                <div class="en manrope"><strong>Luxury</strong> Style</div>
-                                                <h4 class="jp">ラグジュアリースタイル</h4>
-                                            </div>
-                                            <div class="body">
-                                                <p>セラミック調フローリングとブラックでまとめたキッチン・扉が高級感を演出。天然石風エコカラットやコンクリート調壁に間接照明が映え、光と影が織りなすドラマチックな空間に。</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- / モーダル内のコンテンツ -->
-                                    <!-- モーダルを閉じるボタン -->
-                                    <div class="modal__close">
-                                        <img src="images/bunjohalforder/modal-close.svg" alt="Close" />
-                                    </div>
-                                    <!-- / モーダルを閉じるボタン -->
-                                </div>
-                            </div>
-                        </div>
-
-                        <div id="modal_2" class="modal__wrapper">
-                            <div class="modal__layer"></div>
-                            <div class="modal__container">
-                                <div class="modal__inner">
-                                    <!-- モーダル内のコンテンツ -->
-                                    <div class="modal__content">
-                                        <div class="img">
-                                            <img src="images/bunjohalforder/interiorselect-premium-natural.jpg" alt="" />
-                                        </div>
-                                        <div class="txt">
-                                            <div class="ttl">
-                                                <div class="en manrope"><strong>Natural</strong> Style</div>
-                                                <h4 class="jp">ナチュラルスタイル</h4>
-                                            </div>
-                                            <div class="body">
-                                                <p>本物の木の質感を楽しめる突板で床と天井を仕上げ、扉も同色で統一。焼き物を表現した陶連子調のエコカラットがアクセントとなり、柔らかな照明が住まい全体を包み込む心地よい空間に。</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- / モーダル内のコンテンツ -->
-                                    <!-- モーダルを閉じるボタン -->
-                                    <div class="modal__close">
-                                        <img src="images/bunjohalforder/modal-close.svg" alt="Close" />
-                                    </div>
-                                    <!-- / モーダルを閉じるボタン -->
-                                </div>
-                            </div>
-                        </div>
-
-                        <div id="modal_3" class="modal__wrapper">
-                            <div class="modal__layer"></div>
-                            <div class="modal__container">
-                                <div class="modal__inner">
-                                    <!-- モーダル内のコンテンツ -->
-                                    <div class="modal__content">
-                                        <div class="img">
-                                            <img src="images/bunjohalforder/interiorselect-premium-frenchmodern.jpg" alt="" />
-                                        </div>
-                                        <div class="txt">
-                                            <div class="ttl">
-                                                <div class="en manrope"><strong>French Modern</strong> Style</div>
-                                                <h4 class="jp">フレンチモダンスタイル</h4>
-                                            </div>
-                                            <div class="body">
-                                                <p>床とキッチンをウォルナットで統一し、落ち着いた重厚感を演出。ホワイトの扉やモールディングが華やかさを添え、室内用窓のデコマドで光とデザインが調和する上品な空間に。</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- / モーダル内のコンテンツ -->
-                                    <!-- モーダルを閉じるボタン -->
-                                    <div class="modal__close">
-                                        <img src="images/bunjohalforder/modal-close.svg" alt="Close" />
-                                    </div>
-                                    <!-- / モーダルを閉じるボタン -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--/.modal-area-->
-                </div>
-
-                <div class="option">
-                    <h3 class="option__ttl">設備オプションもカスタマイズできます</h3>
-                    <ul class="option__list">
-                        <li class="option__item">
-                            <div class="img">
-                                <img src="images/bunjohalforder/interiorselect-option-1.jpg" alt="" />
-                            </div>
-                            <div class="txt">スマートキー</div>
-                        </li>
-                        <li class="option__item">
-                            <div class="img">
-                                <img src="images/bunjohalforder/interiorselect-option-2.jpg" alt="" />
-                            </div>
-                            <div class="txt">宅配BOX</div>
-                        </li>
-                        <li class="option__item">
-                            <div class="img">
-                                <img src="images/bunjohalforder/interiorselect-option-3.jpg" alt="" />
-                            </div>
-                            <div class="txt">ウッドデッキ</div>
-                        </li>
-                        <li class="option__item">
-                            <div class="img">
-                                <img src="images/bunjohalforder/interiorselect-option-4.jpg" alt="" />
-                            </div>
-                            <div class="txt">乾太くん</div>
-                        </li>
-                        <li class="option__item">
-                            <div class="img">
-                                <img src="images/bunjohalforder/interiorselect-option-5.jpg" alt="" />
-                            </div>
-                            <div class="txt">タンクレストイレ</div>
-                        </li>
-                        <li class="option__item">
-                            <div class="img">
-                                <img src="images/bunjohalforder/interiorselect-option-6.jpg" alt="" />
-                            </div>
-                            <div class="txt">IHコンロ</div>
-                        </li>
-                        <li class="option__item">
-                            <div class="img">
-                                <img src="images/bunjohalforder/interiorselect-option-7.jpg" alt="" />
-                            </div>
-                            <div class="txt">カップボード</div>
-                        </li>
-                    </ul>
-                    <div class="option__note">※写真はすべてイメージです</div>
-                </div>
-
-                <div class="bukken-btn">
-                    <a
-                        href="https://www.toshinjyuken.co.jp/kodate/search.php?search=フェーズ,インテリアセレクト
-"
-                        target="_blank">インテリアセレクトの物件はこちら</a>
-                </div>
-            </div>
-        </section>
-
-        <section class="BHO-halforder">
-            <div class="BHO-halforder-inner">
-                <h2 class="BHO-interiorselect__ttl">
-                    <div class="badge"><img src="images/bunjohalforder/halforder-ttl-badge.svg" alt="ハーフオーダー" /></div>
-                </h2>
-                <div class="BHO-halforder-header">
-                    <div class="ttl">外観と内装が選べる</div>
-                    <ul>
-                        <li class="col3">外壁</li>
-                        <li class="col3">玄関ドア</li>
-                        <li class="col3">外構</li>
-                        <li class="col5">壁</li>
-                        <li class="col5">床</li>
-                        <li class="col5">設備</li>
-                        <li class="col5">建具</li>
-                        <li class="col5">間取り</li>
-                    </ul>
-                </div>
-                <div class="BHO-halforder__ttl-2">
-                    <h3 class="jp">
-                        <span>内観と組み合わせて<br class="sp-only" />オーダーできる外観Style</span>
-                    </h3>
-                </div>
-                <div class="BHO-interiorselect__gallery">
-                    <div class="BHO-interiorselect__gallery-main">
-                        <ul class="BHO-interiorselect__gallery-main__list">
-                            <li class="BHO-interiorselect__gallery-main__item">
-                                <div class="img">
-                                    <img src="images/bunjohalforder/halforder-gallery-1.jpg" alt="" />
-                                </div>
-                                <div class="txt">
-                                    <div class="number manrope">01</div>
-                                    <div class="ttl">
-                                        <div class="en manrope"><strong>Japanese Modern</strong> Style</div>
-                                        <h4 class="jp">和モダンスタイル</h4>
                                     </div>
                                 </div>
                             </li>
-                            <li class="BHO-interiorselect__gallery-main__item">
-                                <div class="img">
-                                    <img src="images/bunjohalforder/halforder-gallery-2.jpg" alt="" />
+                            <li class="choose__item">
+                                <div class="choose__item-img">
+                                    <img src="images/bunjohalforder/steps-interior-2.jpg" alt="" />
                                 </div>
-                                <div class="txt">
-                                    <div class="number manrope">02</div>
-                                    <div class="ttl">
-                                        <div class="en manrope"><strong>Natural Black</strong> Style</div>
-                                        <h4 class="jp">ナチュラルブラックスタイル</h4>
+                                <div class="choose__item-text">
+                                    <!--
+										<ul class="parts-list">
+											<li>壁</li>
+											<li>床</li>
+											<li>設備</li>
+											<li>建具</li>
+										</ul>
+										-->
+                                    <div class="choose__item-text-header">
+                                        <div class="number manrope">02</div>
+                                        <div class="title">
+                                            <div class="en manrope"><strong>Modern</strong> Style</div>
+                                            <h4 class="jp">モダンスタイル</h4>
+                                        </div>
                                     </div>
                                 </div>
                             </li>
-                            <li class="BHO-interiorselect__gallery-main__item">
-                                <div class="img">
-                                    <img src="images/bunjohalforder/halforder-gallery-3.jpg" alt="" />
+                            <li class="choose__item">
+                                <div class="choose__item-img">
+                                    <img src="images/bunjohalforder/steps-interior-3.jpg" alt="" />
                                 </div>
-                                <div class="txt">
-                                    <div class="number manrope">03</div>
-                                    <div class="ttl">
-                                        <div class="en manrope"><strong>Simple</strong> Style</div>
-                                        <h4 class="jp">シンプルスタイル</h4>
+                                <div class="choose__item-text">
+                                    <!--
+										<ul class="parts-list">
+											<li>壁</li>
+											<li>床</li>
+											<li>設備</li>
+											<li>建具</li>
+										</ul>
+										-->
+                                    <div class="choose__item-text-header">
+                                        <div class="number manrope">03</div>
+                                        <div class="title">
+                                            <div class="en manrope"><strong>Greige</strong> Style</div>
+                                            <h4 class="jp">グレージュスタイル</h4>
+                                        </div>
                                     </div>
                                 </div>
                             </li>
-                            <li class="BHO-interiorselect__gallery-main__item">
-                                <div class="img">
-                                    <img src="images/bunjohalforder/halforder-gallery-4.jpg" alt="" />
+                            <li class="choose__item">
+                                <div class="choose__item-img">
+                                    <img src="images/bunjohalforder/steps-interior-4.jpg" alt="" />
                                 </div>
-                                <div class="txt">
-                                    <div class="number manrope">04</div>
-                                    <div class="ttl">
-                                        <div class="en manrope"><strong>Monotone </strong> Style</div>
-                                        <h4 class="jp">モノトーンスタイル</h4>
+                                <div class="choose__item-text">
+                                    <!--
+										<ul class="parts-list">
+											<li>壁</li>
+											<li>床</li>
+											<li>設備</li>
+											<li>建具</li>
+										</ul>
+										-->
+                                    <div class="choose__item-text-header">
+                                        <div class="number manrope">04</div>
+                                        <div class="title">
+                                            <div class="en manrope"><strong>Botanical</strong> Style</div>
+                                            <h4 class="jp">ボタニカルスタイル</h4>
+                                        </div>
                                     </div>
                                 </div>
                             </li>
-                            <li class="BHO-interiorselect__gallery-main__item">
-                                <div class="img">
-                                    <img src="images/bunjohalforder/halforder-gallery-5.jpg" alt="" />
+                            <li class="choose__item">
+                                <div class="choose__item-img">
+                                    <img src="images/bunjohalforder/steps-interior-5.jpg" alt="" />
                                 </div>
-                                <div class="txt">
-                                    <div class="number manrope">05</div>
-                                    <div class="ttl">
-                                        <div class="en manrope"><strong>California </strong> Style</div>
-                                        <h4 class="jp">カリフォルニアスタイル</h4>
+                                <div class="choose__item-text">
+                                    <!--
+										<ul class="parts-list">
+											<li>壁</li>
+											<li>床</li>
+											<li>設備</li>
+											<li>建具</li>
+										</ul>
+										-->
+                                    <div class="choose__item-text-header">
+                                        <div class="number manrope">05</div>
+                                        <div class="title">
+                                            <div class="en manrope"><strong>California</strong> Style</div>
+                                            <h4 class="jp">カリフォルニアスタイル</h4>
+                                        </div>
                                     </div>
                                 </div>
                             </li>
                         </ul>
-                        <div class="BHO-interiorselect__gallery_note">
-                            ※05 カリフォルニアスタイルのみ別途追加費用となります。<br />
-                            ※間取りタイプによってお選びいただけるスタイルが異なります。
-                        </div>
-                    </div>
-                    <div class="BHO-interiorselect__gallery-sub">
-                        <ul class="BHO-interiorselect__gallery-sub__list">
-                            <li class="BHO-interiorselect__gallery-sub__item">
+                        <ul class="choose__list-thumbnail thumbnail2">
+                            <li class="choose__item-thumbnail">
                                 <div class="img">
-                                    <img src="images/bunjohalforder/halforder-gallery-1.jpg" alt="" />
+                                    <img src="images/bunjohalforder/steps-interior-1.jpg" alt="" />
                                 </div>
                                 <div class="number manrope">01</div>
                             </li>
-                            <li class="BHO-interiorselect__gallery-sub__item">
+                            <li class="choose__item-thumbnail">
                                 <div class="img">
-                                    <img src="images/bunjohalforder/halforder-gallery-2.jpg" alt="" />
+                                    <img src="images/bunjohalforder/steps-interior-2.jpg" alt="" />
                                 </div>
                                 <div class="number manrope">02</div>
                             </li>
-                            <li class="BHO-interiorselect__gallery-sub__item">
+                            <li class="choose__item-thumbnail">
                                 <div class="img">
-                                    <img src="images/bunjohalforder/halforder-gallery-3.jpg" alt="" />
+                                    <img src="images/bunjohalforder/steps-interior-3.jpg" alt="" />
                                 </div>
                                 <div class="number manrope">03</div>
                             </li>
-                            <li class="BHO-interiorselect__gallery-sub__item">
+                            <li class="choose__item-thumbnail">
                                 <div class="img">
-                                    <img src="images/bunjohalforder/halforder-gallery-4.jpg" alt="" />
+                                    <img src="images/bunjohalforder/steps-interior-4.jpg" alt="" />
                                 </div>
                                 <div class="number manrope">04</div>
                             </li>
-                            <li class="BHO-interiorselect__gallery-sub__item">
+                            <li class="choose__item-thumbnail">
                                 <div class="img">
-                                    <img src="images/bunjohalforder/halforder-gallery-5.jpg" alt="" />
+                                    <img src="images/bunjohalforder/steps-interior-5.jpg" alt="" />
                                 </div>
                                 <div class="number manrope">05</div>
                             </li>
                         </ul>
+                        <div class="option">
+                            <h4 class="option__title">設備オプションも<br class="sp-only" />カスタマイズできます</h4>
+                            <ul class="option__list">
+                                <li class="option__item">
+                                    <div class="img">
+                                        <img src="images/bunjohalforder/steps-interior-parts-1.jpg" alt="" />
+                                    </div>
+                                    <div class="text">スマートキー</div>
+                                </li>
+                                <li class="option__item">
+                                    <div class="img">
+                                        <img src="images/bunjohalforder/steps-interior-parts-2.jpg" alt="" />
+                                    </div>
+                                    <div class="text">宅配BOX</div>
+                                </li>
+                                <li class="option__item">
+                                    <div class="img">
+                                        <img src="images/bunjohalforder/steps-interior-parts-3.jpg" alt="" />
+                                    </div>
+                                    <div class="text">ウッドデッキ</div>
+                                </li>
+                                <li class="option__item">
+                                    <div class="img">
+                                        <img src="images/bunjohalforder/steps-interior-parts-4.jpg" alt="" />
+                                    </div>
+                                    <div class="text">幹太くん</div>
+                                </li>
+                                <li class="option__item">
+                                    <div class="img">
+                                        <img src="images/bunjohalforder/steps-interior-parts-5.jpg" alt="" />
+                                    </div>
+                                    <div class="text">タンクレストイレ</div>
+                                </li>
+                                <li class="option__item">
+                                    <div class="img">
+                                        <img src="images/bunjohalforder/steps-interior-parts-6.jpg" alt="" />
+                                    </div>
+                                    <div class="text">IHコンロ</div>
+                                </li>
+                                <li class="option__item">
+                                    <div class="img">
+                                        <img src="images/bunjohalforder/steps-interior-parts-7.jpg" alt="" />
+                                    </div>
+                                    <div class="text">カップボード</div>
+                                </li>
+                            </ul>
+                            <div class="option__note">※写真はすべてイメージです</div>
+                        </div>
                     </div>
-                </div>
-                <div class="bukken-btn">
-                    <a
-                        href="https://www.toshinjyuken.co.jp/kodate/search.php?search=フェーズ,ハーフオーダー
-"
-                        target="_blank">ハーフオーダーの物件はこちら</a>
                 </div>
             </div>
         </section>
+
+        <!--
+        <section class="BHO-report">
+            <div class="BHO-report-inner">
+                <a href="">
+                    <div class="BHO-report__text">
+                        <h2 class="BHO-report__title">実邸REPORT</h2>
+                        <div class="BHO-report__body">
+                            <p>お客様の希望と、作り手のこだわりから、お引渡し、お引越しまで「理想の住まい」が出来上がるまでの実際の流れをご覧いただけます。</p>
+                        </div>
+                    </div>
+                    <div class="BHO-report__img">
+                        <ul>
+                            <li>
+                                <img src="images/bunjohalforder/report-1.jpg" alt="" />
+                            </li>
+                            <li>
+                                <img src="images/bunjohalforder/report-2.jpg" alt="" />
+                            </li>
+                            <li>
+                                <img src="images/bunjohalforder/report-3.jpg" alt="" />
+                            </li>
+                        </ul>
+                    </div>
+                </a>
+            </div>
+        </section>
+-->
 
         <section class="BHO-memberregistration">
             <div class="BHO-memberregistration-inner">
                 <h2 class="BHO-memberregistration__ttl"><span>最新情報をいち早くお届け</span></h2>
-                <div class="c-btn">
-                    <a href="member.php">会員登録<span class="arrow"><img src="images/bunjohalforder/arrow-right.svg" alt="" /></span></a>
-                </div>
-            </div>
-        </section>
-
-        <section id="BHO-birthhistory" class="BHO-birthhistory">
-            <div class="BHO-birthhistory-bg">
-                <img src="images/bunjohalforder/birthhistory-bg.jpg" class="parallax-img" data-rellax-speed="-2" alt="" />
-            </div>
-            <div class="BHO-birthhistory-inner">
-                <h2 class="BHO-birthhistory__ttl">誕生ヒストリー</h2>
-                <div class="BHO-birthhistory__body">
-                    <p>
-                        分譲住宅と聞くと、“決まったものを買うだけ”と思われがちです。<br />
-                        しかし実際には、「壁紙を選びたい」「間取りにこだわりたい」というお客様の声を多くいただきます。
-                    </p>
-
-                    <p>
-                        そこで私たちは、24,000棟に及ぶ実績と自社工場による高い生産力を生かし、<br />
-                        建売の安心価格やスピードはそのままに、“自分らしさ”を叶える新しい家づくりを実現しました。
-                    </p>
-
-                    <p>
-                        <strong>内装を選べる「インテリアセレクト」、外観と内装を選べる「ハーフオーダー」</strong>。<br />
-                        分譲住宅でも、暮らしに合わせて自分らしい家をつくる。<br />
-                        それが、私たちの“選べる分譲住宅”です。
-                    </p>
+                <div class="c-btn blue">
+                    <a href="member.php">
+                        <span class="label">会員登録</span>
+                        <span class="arrow"></span>
+                    </a>
                 </div>
             </div>
         </section>
 
         <section class="BHO-voice">
             <div class="BHO-voice-inner">
-                <h2 class="BHO-voice__ttl">インテリアセレクト・ハーフオーダーで購入されたお客様</h2>
+                <h2 class="BHO-voice__ttl">
+                    <span>ハーフオーダーで<br class="sp-only" />購入されたお客様</span>
+                </h2>
 
                 <ul class="BHO-voice__list">
                     <li class="BHO-voice__item">
@@ -619,8 +638,8 @@ require $kaisou . "temp_php/basic.php";
                             <img src="images/bunjohalforder/voice-1.jpg" alt="" />
                         </div>
                         <div class="txt">
-                            <div class="data">岡崎市　S様／ご家族構成：ご夫婦、愛猫</div>
                             <h3 class="voice">早期契約のおかげで、注文住宅レベルのこだわりを実現できました</h3>
+                            <div class="data">岡崎市　S様／ご家族構成：ご夫婦、愛猫</div>
                         </div>
                         <div class="btn">
                             <a href="https://www.toshinjyuken.co.jp/kodate/voice-detail.php?case=28" target="_blank">詳しく見る</a>
@@ -631,8 +650,8 @@ require $kaisou . "temp_php/basic.php";
                             <img src="images/bunjohalforder/voice-2.jpg" alt="" />
                         </div>
                         <div class="txt">
-                            <div class="data">犬山市　O様／ご家族構成：ご夫婦、長女、長男、愛猫</div>
                             <h3 class="voice">家族の気配がいつもそばにある、平屋という選択</h3>
+                            <div class="data">犬山市　O様／ご家族構成：ご夫婦、長女、長男、愛猫</div>
                         </div>
                         <div class="btn">
                             <a href="https://www.toshinjyuken.co.jp/kodate/voice-detail.php?case=41" target="_blank">詳しく見る</a>
@@ -643,8 +662,8 @@ require $kaisou . "temp_php/basic.php";
                             <img src="images/bunjohalforder/voice-3.jpg" alt="" />
                         </div>
                         <div class="txt">
-                            <div class="data">東郷町　I様／ご家族構成：ご夫婦</div>
                             <h3 class="voice">建売でも、ここまで希望が叶うなんて思っていませんでした</h3>
+                            <div class="data">東郷町　I様／ご家族構成：ご夫婦</div>
                         </div>
                         <div class="btn">
                             <a href="https://www.toshinjyuken.co.jp/kodate/voice-detail.php?case=43" target="_blank">詳しく見る</a>
@@ -655,8 +674,8 @@ require $kaisou . "temp_php/basic.php";
                             <img src="images/bunjohalforder/voice-4.jpg" alt="" />
                         </div>
                         <div class="txt">
-                            <div class="data">岩倉市　T様／ご家族構成：ご夫婦</div>
                             <h3 class="voice">ハーフオーダーの自由度が、バリアフリーにも役立ちました</h3>
+                            <div class="data">岩倉市　T様／ご家族構成：ご夫婦</div>
                         </div>
                         <div class="btn">
                             <a href="https://www.toshinjyuken.co.jp/kodate/voice-detail.php?case=45" target="_blank">詳しく見る</a>
@@ -668,14 +687,25 @@ require $kaisou . "temp_php/basic.php";
 
         <section class="BHO-eco">
             <div class="BHO-eco-inner">
-                <h2 class="BHO-eco__ttl">環境にもやさしい住まいづくり</h2>
+                <h2 class="BHO-eco__ttl">自然と安心に寄り添う<br class="sp-only" />住まいづくり</h2>
                 <ul class="BHO-eco__list">
                     <li class="BHO-eco__item">
                         <div class="img">
                             <img src="images/bunjohalforder/eco-1.jpg" alt="" />
                         </div>
                         <div class="txt">
-                            <h3 class="ttl">国産材の4.3倍2×4住宅</h3>
+                            <h3 class="ttl">独自技術 4.3倍 2×4工法</h3>
+                            <div class="body">
+                                <p>強い衝撃を壁・天井・床の6面全体で受け止めバランス良く吸収するため、水平・垂直、両方向からの力に優れた強さを発揮する2×4工法をさらに進化させた壁量4.3倍パネルを開発。従来の1.4倍以上の耐力アップを実現しました。</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="BHO-eco__item">
+                        <div class="img">
+                            <img src="images/bunjohalforder/eco-2.jpg" alt="" />
+                        </div>
+                        <div class="txt">
+                            <h3 class="ttl">国産材の利用</h3>
                             <div class="body">
                                 <p>東新住建独自の4.3倍2×4パネルの一部に、国産材を利用しています。元々、2×4工法は北米で発達した工法であるため、輸入材の使用量がほぼ100％となっています。その中に国産材を採り入れる事で、日本の森を守る活動を積極的に行っています。</p>
                             </div>
@@ -683,7 +713,7 @@ require $kaisou . "temp_php/basic.php";
                     </li>
                     <li class="BHO-eco__item">
                         <div class="img">
-                            <img src="images/bunjohalforder/eco-2.jpg" alt="" />
+                            <img src="images/bunjohalforder/eco-3.jpg" alt="" />
                         </div>
                         <div class="txt">
                             <h3 class="ttl">太陽光パネル</h3>
@@ -699,9 +729,27 @@ require $kaisou . "temp_php/basic.php";
             </div>
         </section>
 
-        <div class="c-btn">
-            <a href="<?php echo $link_list['お問い合わせ'][0]; ?>">資料請求・お問い合わせ<span class="arrow"><img src="images/bunjohalforder/arrow-right.svg" alt="" /></span></a>
-        </div>
+        <section class="BHO-history">
+            <div class="BHO-history-inner">
+                <h2 class="BHO-history__title">History</h2>
+                <div class="BHO-history__figure">
+                    <img src="images/bunjohalforder/history.svg" alt="" />
+                </div>
+                <div class="c-btn">
+                    <a href="<?php echo $link_list['お問い合わせ'][0]; ?>">
+                        <span class="label">資料請求・お問い合わせ</span>
+                        <span class="arrow"></span>
+                    </a>
+                </div>
+
+                <div class="BHO-intro2604__btn">
+                    <a href="https://www.toshinjyuken.co.jp/kodate/search.php?search=%E3%83%95%E3%82%A7%E3%83%BC%E3%82%BA,%E3%83%8F%E3%83%BC%E3%83%95%E3%82%AA%E3%83%BC%E3%83%80%E3%83%BC" target="_blank">
+                        <span class="label">ハーフオーダーの物件はこちら</span>
+                        <span class="arrow"></span>
+                    </a>
+                </div>
+            </div>
+        </section>
 
         <!-- parallax -->
         <script>
@@ -756,35 +804,57 @@ require $kaisou . "temp_php/basic.php";
         <script type="text/javascript" src="js/slick.min.js"></script>
 
         <script>
-            $(".BHO-interiorselect__gallery-main__list").slick({
+            $(".slider").slick({
                 autoplay: true,
                 arrows: false,
                 fade: true,
-                asNavFor: ".BHO-interiorselect__gallery-sub__list",
+                asNavFor: ".thumbnail",
             });
-            $(".BHO-interiorselect__gallery-sub__list").slick({
+            $(".thumbnail").slick({
                 slidesToShow: 20,
-                asNavFor: ".BHO-interiorselect__gallery-main__list",
+                asNavFor: ".slider",
                 focusOnSelect: true,
-                variableWidth: true, // スライド幅の自動計算を無効
+            });
+            $(".slider2").slick({
+                autoplay: true,
+                arrows: false,
+                fade: true,
+                asNavFor: ".thumbnail2",
+            });
+            $(".thumbnail2").slick({
+                slidesToShow: 20,
+                asNavFor: ".slider2",
+                focusOnSelect: true,
             });
 
-            $(".BHO-voice__list").slick({
-                slidesToShow: 2,
-                slidesToScroll: 1,
-                centerMode: true,
-                centerPadding: "20%",
-                autoplay: true,
-                autoplaySpeed: 3000,
-                speed: 1000,
-                infinite: true,
-                responsive: [{
-                    breakpoint: 1000, // 999px以下のサイズに適用
-                    settings: {
-                        slidesToShow: 1,
-                        centerMode: false,
-                    },
-                }, ],
+            $(window).on("load", function() {
+                var $voiceSlider = $(".BHO-voice__list");
+
+                if ($voiceSlider.length && !$voiceSlider.hasClass("slick-initialized")) {
+                    $voiceSlider.slick({
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                        centerMode: true,
+                        centerPadding: "20%",
+                        autoplay: true,
+                        autoplaySpeed: 3000,
+                        speed: 1000,
+                        infinite: true,
+                        responsive: [{
+                            breakpoint: 1000,
+                            settings: {
+                                slidesToShow: 1,
+                                slidesToScroll: 1,
+                                centerMode: false,
+                                centerPadding: "0px"
+                            }
+                        }]
+                    });
+                }
+
+                setTimeout(function() {
+                    $voiceSlider.slick("setPosition");
+                }, 300);
             });
         </script>
 

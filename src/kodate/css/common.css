@@ -2025,6 +2025,14 @@ footer {
 	min-width: 414px;
 }
 
+@media screen and (max-width: 999px) {
+	body > div[align="center"],
+	header,
+	footer {
+		min-width: 0;
+	}
+}
+
 /* ----- */
 
 .pc_vanish {
