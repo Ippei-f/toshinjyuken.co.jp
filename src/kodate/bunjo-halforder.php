@@ -628,6 +628,37 @@ require $kaisou . "temp_php/basic.php";
 
                     <li class="BHO-voice__item">
                         <div class="img">
+                            <img src="images/bunjohalforder/voice-5.jpg" alt="" />
+                        </div>
+                        <div class="txt">
+                            <h3 class="voice">二人暮らしの１LDKが、一軒家を考えるきっかけに</h3>
+                            <div class="data">岐阜県　T様／ご家族構成：ご夫婦</div>
+                        </div>
+                        <div class="btn">
+                            <a href="https://www.toshinjyuken.co.jp/kodate/voice-detail.php?case=52" target="_blank">詳しく見る</a>
+                        </div>
+                    </li>
+
+                    <li class="BHO-voice__item">
+                        <div class="img">
+                            <img src="images/bunjohalforder/voice-6.jpg" alt="" />
+                        </div>
+                        <div class="txt">
+                            <h3 class="voice">マンションでは、叶えられなかった猫と犬との暮らし</h3>
+                            <div class="data">豊田市　M様／ご家族構成：お母さま、<br>
+                                ご長男、お祖母さま、愛猫9匹、愛犬1匹
+                            </div>
+                        </div>
+                        <div class="btn">
+                            <a href="https://www.toshinjyuken.co.jp/kodate/voice-detail.php?case=45" target="_blank">詳しく見る</a>
+                        </div>
+                    </li>
+
+
+
+
+                    <li class="BHO-voice__item">
+                        <div class="img">
                             <img src="images/bunjohalforder/voice-2.jpg" alt="" />
                         </div>
                         <div class="txt">
@@ -786,7 +817,6 @@ require $kaisou . "temp_php/basic.php";
 
         <script>
             $(".slider").slick({
-                autoplay: true,
                 arrows: false,
                 fade: true,
                 asNavFor: ".thumbnail",
@@ -797,7 +827,6 @@ require $kaisou . "temp_php/basic.php";
                 focusOnSelect: true,
             });
             $(".slider2").slick({
-                autoplay: true,
                 arrows: false,
                 fade: true,
                 asNavFor: ".thumbnail2",

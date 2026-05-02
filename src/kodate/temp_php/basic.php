@@ -365,8 +365,7 @@ $temp_header = '<header class="l-header">
 								</li>
 								<li>
 									<a href="bunjo-halforder.php"
-										>インテリアセレクト<br />
-										ハーフオーダー</a
+										>ハーフオーダー</a
 									>
 								</li>
 								<li>
@@ -532,7 +531,7 @@ $temp_footer = '
 
 					<ul class="fnav__list">
 						<li class="fnav__item"><a href="' . $link_list['TOP'][0] . '#brand">ブランドコンセプト</a></li>
-						<li class="fnav__item"><a href="bunjo-halforder.php" target="_blank">インテリアセレクト / ハーフオーダー</a></li>
+						<li class="fnav__item"><a href="bunjo-halforder.php" target="_blank">ハーフオーダー</a></li>
 						<li class="fnav__item"><a href="sdgs.php">SDGsへの取り組み</a></li>
 						<li class="fnav__item"><a href="qa.php">Q&A</a></li>
 					</ul>
