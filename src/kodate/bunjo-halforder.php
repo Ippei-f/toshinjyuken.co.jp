@@ -662,11 +662,11 @@ require $kaisou . "temp_php/basic.php";
                             <img src="images/bunjohalforder/voice-2.jpg" alt="" />
                         </div>
                         <div class="txt">
-                            <h3 class="voice">家族の気配がいつもそばにある、平屋という選択</h3>
+                            <h3 class="voice">子育ても家事もラクに。共働き家族が選んだ“家事ラク”間取り</h3>
                             <div class="data">犬山市　O様／ご家族構成：ご夫婦、長女、長男、愛猫</div>
                         </div>
                         <div class="btn">
-                            <a href="https://www.toshinjyuken.co.jp/kodate/voice-detail.php?case=41" target="_blank">詳しく見る</a>
+                            <a href="https://www.toshinjyuken.co.jp/kodate/voice-detail.php?case=36" target="_blank">詳しく見る</a>
                         </div>
                     </li>
                     <li class="BHO-voice__item">
@@ -674,11 +674,11 @@ require $kaisou . "temp_php/basic.php";
                             <img src="images/bunjohalforder/voice-3.jpg" alt="" />
                         </div>
                         <div class="txt">
-                            <h3 class="voice">建売でも、ここまで希望が叶うなんて思っていませんでした</h3>
+                            <h3 class="voice">注文住宅は予算オーバー。それでも理想の造作洗面台が叶いました</h3>
                             <div class="data">東郷町　I様／ご家族構成：ご夫婦</div>
                         </div>
                         <div class="btn">
-                            <a href="https://www.toshinjyuken.co.jp/kodate/voice-detail.php?case=43" target="_blank">詳しく見る</a>
+                            <a href="https://www.toshinjyuken.co.jp/kodate/voice-detail.php?case=37" target="_blank">詳しく見る</a>
                         </div>
                     </li>
                     <li class="BHO-voice__item">
@@ -690,7 +690,7 @@ require $kaisou . "temp_php/basic.php";
                             <div class="data">岩倉市　T様／ご家族構成：ご夫婦</div>
                         </div>
                         <div class="btn">
-                            <a href="https://www.toshinjyuken.co.jp/kodate/voice-detail.php?case=45" target="_blank">詳しく見る</a>
+                            <a href="https://www.toshinjyuken.co.jp/kodate/voice-detail.php?case=38" target="_blank">詳しく見る</a>
                         </div>
                     </li>
                 </ul>
