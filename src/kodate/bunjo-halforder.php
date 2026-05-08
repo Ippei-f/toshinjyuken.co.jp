@@ -550,7 +550,7 @@ require $kaisou . "temp_php/basic.php";
                                     <div class="img">
                                         <img src="images/bunjohalforder/steps-interior-parts-4.jpg" alt="" />
                                     </div>
-                                    <div class="text">幹太くん</div>
+                                    <div class="text">乾太くん</div>
                                 </li>
                                 <li class="option__item">
                                     <div class="img">

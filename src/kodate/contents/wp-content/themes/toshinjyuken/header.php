@@ -105,8 +105,8 @@
 							</a>
 						</li>
 						<li class="gnav__item">
-							<a href="/kodate/qa.php">
-								<div class="text">Q&A</div>
+							<a href="/kodate/bunjo-halforder.php">
+								<div class="text">ハーフオーダー</div>
 							</a>
 						</li>
 						<li class="gnav__item">
@@ -154,8 +154,7 @@
 								<a href="/kodate/index.php#brand">ブランドコンセプト</a>
 							</li>
 							<li>
-								<a href="/kodate/bunjo-halforder.php">インテリアセレクト<br />
-									ハーフオーダー</a>
+								<a href="/kodate/bunjo-halforder.php">ハーフオーダー</a>
 							</li>
 							<li>
 								<a href="/kodate/structure.php">東新住建の家づくり</a>
