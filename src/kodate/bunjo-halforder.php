@@ -426,8 +426,8 @@ require $kaisou . "temp_php/basic.php";
                                     <div class="choose__item-text-header">
                                         <div class="number manrope">02</div>
                                         <div class="title">
-                                            <div class="en manrope"><strong>Modern</strong> Style</div>
-                                            <h4 class="jp">モダンスタイル</h4>
+                                            <div class="en manrope"><strong>Botanical</strong> Style</div>
+                                            <h4 class="jp">ボタニカルスタイル</h4>
                                         </div>
                                     </div>
                                 </div>
@@ -446,8 +446,8 @@ require $kaisou . "temp_php/basic.php";
                                     <div class="choose__item-text-header">
                                         <div class="number manrope">03</div>
                                         <div class="title">
-                                            <div class="en manrope"><strong>Greige</strong> Style</div>
-                                            <h4 class="jp">グレージュスタイル</h4>
+                                            <div class="en manrope"><strong>Modern</strong> Style</div>
+                                            <h4 class="jp">モダンスタイル</h4>
                                         </div>
                                     </div>
                                 </div>
@@ -466,8 +466,8 @@ require $kaisou . "temp_php/basic.php";
                                     <div class="choose__item-text-header">
                                         <div class="number manrope">04</div>
                                         <div class="title">
-                                            <div class="en manrope"><strong>Botanical</strong> Style</div>
-                                            <h4 class="jp">ボタニカルスタイル</h4>
+                                            <div class="en manrope"><strong>California</strong> Style</div>
+                                            <h4 class="jp">カリフォルニアスタイル</h4>
                                         </div>
                                     </div>
                                 </div>
@@ -486,8 +486,8 @@ require $kaisou . "temp_php/basic.php";
                                     <div class="choose__item-text-header">
                                         <div class="number manrope">05</div>
                                         <div class="title">
-                                            <div class="en manrope"><strong>California</strong> Style</div>
-                                            <h4 class="jp">カリフォルニアスタイル</h4>
+                                            <div class="en manrope"><strong>Greige</strong> Style</div>
+                                            <h4 class="jp">グレージュスタイル</h4>
                                         </div>
                                     </div>
                                 </div>
