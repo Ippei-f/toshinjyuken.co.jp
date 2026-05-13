@@ -455,7 +455,9 @@ a:hover {
 	.fadeInObj {
 		opacity: 0;
 		transform: translateY(100px);
-		transition: opacity 1s ease-out, transform 2s ease-out;
+		transition:
+			opacity 1s ease-out,
+			transform 2s ease-out;
 	}
 	.fadeInObj.fomLeft {
 		transform: translate(-100px, 0);
@@ -868,7 +870,9 @@ a:hover {
 	.fadeInObj {
 		opacity: 0;
 		transform: translateY(25vw);
-		transition: opacity 1s ease-out, transform 2s ease-out;
+		transition:
+			opacity 1s ease-out,
+			transform 2s ease-out;
 	}
 	.fadeInObj.fomLeft {
 		transform: translate(-25vw, 0);
@@ -10202,6 +10206,8 @@ body.inview #yokinhikakuImg #anmaku {
 	}
 	#fv .alterBtn {
 		margin: 14.133vw auto 0;
+		position: relative;
+		z-index: 1;
 	}
 	/*fv*/
 	#bnrSec {
