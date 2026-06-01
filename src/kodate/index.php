@@ -64,12 +64,6 @@ $rand = '?' . rand();
 					<img class="pc_vanish" src="images/top/sp/kv-slider-1.jpg" alt="" />
 				</li>
 				<li class="index-kv__item">
-					<a href="https://www.toshinjyuken.co.jp/kodate/news.php?id=210" target="_blank">
-						<img class="sp_vanish" src="images/top/kv-slider-haru.png" alt="" />
-						<img class="pc_vanish" src="images/top/sp/kv-slider-haru.png" alt="" />
-					</a>
-				</li>
-				<li class="index-kv__item">
 					<a href="bunjo-halforder.php" target="_blank">
 						<img class="sp_vanish" src="images/top/kv-slider-halforder.jpg" alt="" />
 						<img class="pc_vanish" src="images/top/sp/kv-slider-halforder.jpg" alt="" />
@@ -129,11 +123,6 @@ $rand = '?' . rand();
 						</a>
 					</li>
 -->
-					<li>
-						<a href="https://www.toshinjyuken.co.jp/kodate/news.php?id=210">
-							<img src="images/top/bnr-harunosumaihaku.png" alt="春の住まい博" />
-						</a>
-					</li>
 					<li>
 						<a href="https://www.toshinjyuken.co.jp/kodate/voice.php">
 							<img src="images/top/bnr-voice.png" alt="お客様の声" />
