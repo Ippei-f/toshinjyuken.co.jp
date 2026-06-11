@@ -101,7 +101,7 @@ $rand = '?' . rand();
 			?>
 			<div class="LH200 pc_div_del sp_br_del sp_textL"><?php
 																$top_catch_num = array();
-																$top_catch_num['創業'] = floor((date('Ymd') - 19750414) / 10000);
+																$top_catch_num['創業'] = floor((date('Ymd') - 19760420) / 10000);
 																$top_catch_num['累計'] = NUMBER_COMMA($comp_data['数値']['累計棟数']);
 
 																echo WORD_BR('東新住建の家は、創業' . $top_catch_num['創業'] . '年、累計' . $top_catch_num['累計'] . '棟の実績ノウハウを凝縮した、

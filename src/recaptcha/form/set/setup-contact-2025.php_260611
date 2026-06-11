@@ -13,19 +13,6 @@ $form_arr = array(
 		array('その他', 'x', 'no_text' => true)
 	), 'type' => 'check')
 	//=======================
-
-	,
-	'見学方法' => array(
-		'見学方法',
-		'kengaku_type',
-		'select' => array(
-			'スタッフの案内を希望する',
-			'自由見学を希望する（ご家族だけでゆっくり見学できます）'
-		),
-		'type' => 'radio'
-	)
-
-	//=======================
 	,
 	'div=>acobox" n="1,2' //----------
 	,
@@ -132,7 +119,6 @@ switch (true) {
 		if (strpos($check, '見学') === false) {
 			unset($form_arr['希望見学日']);
 			unset($form_arr['家族構成']);
-			unset($form_arr['見学方法']);
 		}
 		if (strpos($check, '資料') === false) {
 			unset($form_arr['住所']);

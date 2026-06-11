@@ -157,19 +157,6 @@ echo FORM_SET_MAKE('電話番号') . '<hr>';
 	?>
 </div>
 <div class="acobox" n="1">
-	<div class="contact_title">
-		<span>・</span>見学方法
-	</div>
-
-	<?php
-	$a = $form_arr['見学方法'];
-	echo FORM_PARTS($a, 'radio');
-	?>
-
-	<div class="contact_I_caution">※自由見学をご希望の場合、鍵の解錠およびアンケートのご案内のみ販売スタッフが対応させていただきます。<br>
-		建物内はご家族だけでごゆっくりご見学いただけます。</div>
-
-
 	<div class="contact_title"><span>・</span>ご希望の来場日時<span class="col_F00">＊</span></div>
 	<?php
 	$a = $form_arr['希望見学日'];

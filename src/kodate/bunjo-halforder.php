@@ -578,10 +578,10 @@ require $kaisou . "temp_php/basic.php";
             </div>
         </section>
 
-        <!--
+        
         <section class="BHO-report">
             <div class="BHO-report-inner">
-                <a href="">
+                <a href="https://www.toshinjyuken.co.jp/kodate/contents/report/">
                     <div class="BHO-report__text">
                         <h2 class="BHO-report__title">実邸REPORT</h2>
                         <div class="BHO-report__body">
@@ -604,7 +604,7 @@ require $kaisou . "temp_php/basic.php";
                 </a>
             </div>
         </section>
--->
+
 
         <section class="BHO-memberregistration">
             <div class="BHO-memberregistration-inner">
