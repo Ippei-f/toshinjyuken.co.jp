@@ -70,6 +70,12 @@ $rand = '?' . rand();
 					</a>
 				</li>
 				<li class="index-kv__item">
+					<a href="./news.php?id=219" target="_blank">
+						<img class="sp_vanish" src="images/top/kv-slider-260616.png" alt="" />
+						<img class="pc_vanish" src="images/top/sp/kv-slider-260616.png" alt="" />
+					</a>
+				</li>
+				<li class="index-kv__item">
 					<a href="https://www.toshinjyuken.co.jp/hiraya/" target="_blank">
 						<img class="sp_vanish" src="images/top/kv-slider-3.jpg" alt="" />
 						<img class="pc_vanish" src="images/top/sp/kv-slider-3.jpg" alt="" />
