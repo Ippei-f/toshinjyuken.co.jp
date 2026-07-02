@@ -237,6 +237,9 @@ form.conf .contact_box .contact_inputarea {
 	width: 100%;
 	min-height: 10em;
 }
+.contact_box textarea::placeholder {
+	color: #999;
+}
 .bg_FFF_gray .contact_box input,
 .bg_FFF_gray .contact_box select,
 .bg_FFF_gray .contact_box textarea {

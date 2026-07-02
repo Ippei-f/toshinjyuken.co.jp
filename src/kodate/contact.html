@@ -1,0 +1,1039 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<!-- Google Tag Manager -->
+		<script>
+			(function (w, d, s, l, i) {
+				w[l] = w[l] || [];
+				w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+				var f = d.getElementsByTagName(s)[0],
+					j = d.createElement(s),
+					dl = l != "dataLayer" ? "&l=" + l : "";
+				j.async = true;
+				j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+				f.parentNode.insertBefore(j, f);
+			})(window, document, "script", "dataLayer", "GTM-PRRJRDR");
+		</script>
+		<!-- End Google Tag Manager -->
+		<script type="text/javascript">
+			(function (w, d, s) {
+				var f = d.getElementsByTagName(s)[0],
+					j = d.createElement(s);
+				j.async = true;
+				j.src = "https://dmp.im-apps.net/js/1013764/0001/itm.js";
+				f.parentNode.insertBefore(j, f);
+			})(window, document, "script");
+		</script>
+		<script type="text/javascript">
+			(function (c, l, a, r, i, t, y) {
+				c[a] =
+					c[a] ||
+					function () {
+						(c[a].q = c[a].q || []).push(arguments);
+					};
+				t = l.createElement(r);
+				t.async = 1;
+				t.src = "https://www.clarity.ms/tag/" + i;
+				y = l.getElementsByTagName(r)[0];
+				y.parentNode.insertBefore(t, y);
+			})(window, document, "clarity", "script", "w3rqf5eo0q");
+		</script>
+		<meta name="keywords" content="一軒家,物件情報,愛知県,名古屋市,岐阜県,家,新築,一戸建て,分譲住宅,建売,売り建て,売り土地,土地探し,分譲マンション,東新住建" />
+		<meta name="description" content="愛知県・名古屋市・岐阜県で新築一戸建て、建売、分譲住宅の豊富な物件一覧はこちら。注文住宅と分譲住宅のメリットをあわせ持ち、内装オーダーできる広い家なので、土地探しにお困りの方もおまかせください。" />
+		<!-- viewport=normal -->
+		<meta name="viewport" content="width=device-width" />
+		<title>愛知・岐阜の新築一戸建て｜東新住建の家</title>
+		<link href="css/common.css" rel="stylesheet" type="text/css" />
+		<link href="css/contact.css" rel="stylesheet" type="text/css" />
+		<script src="js/jquery.v1.11.1.min.js" type="text/javascript"></script>
+		<script src="js/common.js" type="text/javascript"></script>
+		<!-- start Promolayer JS code-->
+		<script type="module" src="https://modules.promolayer.io/index.js" data-pluid="z8hsh4Gf3jZDTv5WX9uyqn1JdvO2" data-workspace="aDuOQM5TfZJUmgcFeYKR" crossorigin async></script>
+		<!-- end Promolayer JS code-->
+		<script src="https://www.google.com/recaptcha/api.js"></script>
+		<script src="https://ajaxzip3.github.io/ajaxzip3.js" charset="UTF-8"></script>
+		<script src="js/jquery.validationEngine.js" charset="UTF-8"></script>
+		<script src="js/jquery.validationEngine-ja.js" charset="UTF-8"></script>
+		<script src="js/form.js" charset="UTF-8"></script>
+		<style>
+			.bg_FFF_gray .content_box {
+				min-height: 0;
+			}
+
+			.contact_box .contact_inputarea.box_raijou .checkbox:nth-child(1) {
+				font-size: 125%;
+				font-size: calc(1em * 5 / 4);
+				font-weight: bold;
+				margin-right: 0.8em;
+				margin-right: calc(1em * 4 / 5);
+			}
+
+			.contact_box .contact_inputarea.box_raijou .checkbox:nth-child(1) input {
+				font-size: 80%;
+				font-size: calc(1em * 4 / 5);
+			}
+		</style>
+		<script>
+			$(window).load(function () {
+				FORM_ACO_2025($(".contact_box > .colorbox"), false);
+				$('input[name*="koumoku"]').on("change", function () {
+					FORM_ACO_2025($(this).parents(".colorbox"), true);
+				});
+				$('select[name="toi_bukken1_1"]').change(function () {
+					v = $(this).val();
+					FORM_BUKKEN_CHANGE('select[name="toi_bukken1_2"]', v);
+				});
+			});
+
+			function FORM_ACO_2025(obj, slide_f) {
+				$(".acobox").removeClass("opened");
+				obj.find("input").each(function (i, e) {
+					num = parseInt(i + 1);
+					//console.log($(this).prop('checked'));
+					if ($(this).prop("checked")) {
+						$(".acobox[n*=" + num + "]").addClass("opened");
+					}
+				});
+				if (slide_f) {
+					$(".acobox.opened").slideDown();
+					$(".acobox:not(.opened)").slideUp();
+				}
+				$(".acobox.opened").find("input,select,textarea").removeProp("disabled");
+				$(".acobox:not(.opened)").find("input,select,textarea").prop("disabled", true);
+			}
+
+			function FORM_BUKKEN_CHANGE(obj, v) {
+				$(obj).empty();
+				str = '<option value="">── 物件名 ──</option>';
+				switch (v) {
+					case "名古屋エリア":
+						str +=
+							"<option>DUP　鳴海駅V</option><option>フレスト一社駅</option><option>フレスト星ヶ丘駅</option><option>フレスト野並</option><option>土地　千種区月ケ丘</option><option>天白区土原IIIプロジェクト近日公開！</option><option>平屋回帰　中川区戸田</option><option>平屋回帰　喜多山駅II</option><option>平屋回帰　緑区大高町小坂II</option><option>東新の家　千種区光が丘</option><option>東新の家　千種区南ケ丘</option><option>東新の家　千種区宮根台III</option><option>東新の家　名東区大針</option><option>東新の家　天白区一つ山II</option><option>東新の家　守山区新守西</option><option>東新の家　守山区白沢町</option><option>東新の家　有松駅東</option><option>東新の家　東山公園駅北</option><option>東新の家　熱田神宮西駅</option><option>東新の家　緑区大高町北平部</option><option>東新の家　緑区有松</option><option>東新の家　緑区桶狭間上の山</option><option>東新の家　緑区青山I</option><option>東新の家　野並駅南</option><option>東新の家　香流橋公園北</option><option>東新の家／DUP　川名駅北</option><option>東新の家／発電SH　守山区深沢</option><option>発電SH　北区川中町</option><option>発電SH　喜多山駅II</option><option>発電SH　天白区高宮町</option><option>発電SH　守山区川北町</option><option>発電SH　守山区笹ヶ根</option><option>発電SH　岩塚駅西</option><option>発電SH　桜本町駅II</option><option>発電SH　緑区青山II</option><option>発電SH　緑区鳴海町山ノ神</option><option>発電SH／DUP　名東区神月町</option>";
+						break;
+					case "尾張東エリア":
+						str +=
+							"<option>平屋回帰　日進市南ケ丘</option><option>平屋回帰　日進市藤塚</option><option>平屋回帰　東郷町春木半ノ木</option><option>平屋回帰　東郷町春木屋敷</option><option>平屋回帰　豊明市栄町大根I</option><option>平屋回帰　豊明市栄町西大根I</option><option>平屋回帰　豊明市栄町西大根II</option><option>平屋回帰　豊明市栄町西大根III</option><option>東新の家　前後駅IV</option><option>東新の家　瀬戸市西松山町</option><option>東新の家　豊明市三崎町</option><option>東新の家　豊明市新栄町II</option><option>東新の家　豊明市栄町殿ノ山</option><option>東新の家　豊明市栄町西大根II</option><option>東新の家　豊明市栄町西大根III</option><option>発電SH　前後駅I</option><option>発電SH　前後駅II</option><option>発電SH　小牧原駅東</option><option>発電SH　尾張旭市南新町</option><option>発電SH　尾張旭市桜ケ丘町</option><option>発電SH　春日井市篠木町II</option><option>発電SH　瑞鳳小学校東</option><option>発電SH　豊明市栄町南舘I</option><option>発電SH　豊明市栄町南舘II</option><option>豊明市栄町大根IIプロジェクト近日公開！</option>";
+						break;
+					case "尾張西・あまエリア":
+						str += "<option>NEWコンクリートログハウス　稲沢市国府宮</option><option>平屋回帰　岩倉市神野町</option><option>平屋回帰　清須市春日振形</option><option>東新の家　清須市春日宮重町</option><option>東新の家　稲沢市小沢三丁目</option><option>東新の家　稲沢市稲沢町</option><option>発電SH　岩倉市大山寺町</option><option>発電SH　岩倉市神野町</option><option>発電SH　岩倉駅西</option><option>発電SH　清須市東外町</option><option>発電SH　稲沢市増田北町</option><option>発電SH　稲沢市奥田神ノ木町</option>";
+						break;
+					case "東海・知多エリア":
+						str += "<option>平屋回帰　半田市白山町II</option><option>平屋回帰　巽ヶ丘駅西</option><option>平屋回帰　船島小学校北</option><option>東新の家　半田市春日町</option><option>東新の家　大府市横根町II</option><option>発電SH　半田市白山町II</option><option>発電SH　巽ヶ丘駅西</option><option>発電SH　朝倉駅東</option><option>発電SH　東海市富木島町峰畑</option><option>発電SH　東海市東海町II</option>";
+						break;
+					case "三河エリア":
+						str +=
+							"<option>DUP　岡崎駅IV</option><option>HILLS岡崎市稲熊町</option><option>平屋回帰　みよし市東陣取山</option><option>平屋回帰　刈谷市泉田町II</option><option>平屋回帰　刈谷市重原本町II</option><option>平屋回帰　前山小学校III</option><option>平屋回帰　岡崎市井田町II</option><option>平屋回帰　東刈谷駅</option><option>平屋回帰　梅園小学校北</option><option>平屋回帰　知立市新林町II</option><option>平屋回帰　豊田市東新町</option><option>平屋回帰　豊田市豊栄町</option><option>平屋回帰　豊田市鴛鴨町</option><option>建築条件付き土地　知立市逢妻町II</option><option>東新の家　みよし市三好町弥栄</option><option>東新の家　みよし市明知町</option><option>東新の家　刈谷市泉田町II</option><option>東新の家　刈谷市高津波町</option><option>東新の家　安城市横山町</option><option>東新の家　富士松東小学校II</option><option>東新の家　知立市上重原町</option><option>東新の家　知立市山屋敷町</option><option>東新の家　知立市谷田町</option><option>東新の家　知立市逢妻町II</option><option>東新の家　豊田市平芝町</option><option>東新の家　豊田市駅南</option><option>東新の家／発電SH　知立市西町</option><option>発電SH　E-LOOP前山町</option><option>発電SH　E-LOOP明和町</option><option>発電SH　みよし市三好町上</option><option>発電SH　エコスマートタウン野田新町駅</option><option>発電SH　刈谷市井ヶ谷町II</option><option>発電SH　大樹寺小学校東</option><option>発電SH　富士松東小学校I</option><option>発電SH　梅園小学校北</option><option>発電SH　矢作公園北</option>";
+						break;
+					case "岐阜エリア":
+						str += "";
+						break;
+					case "三重エリア":
+						str += "<option>平屋回帰　四日市市川島町</option><option>平屋回帰　桑名市星川</option>";
+						break;
+					default:
+				}
+				$(obj).prepend(str);
+			}
+		</script>
+	</head>
+
+	<body class="borderbox">
+		<a name="pt" id="pt"></a>
+		<div id="pagetop_btn"><a href="#pt" class="bg_cover bright"></a></div>
+		<div align="center">
+			<!-- * -->
+			<header class="l-header">
+				<div class="l-header-inner">
+					<div class="l-header-flex">
+						<div class="l-header__logo">
+							<a href="index.php"> <img src="images/common/logo-2025.svg" class="logo ver2025" title="東新住建の家" /></a>
+						</div>
+						<div class="l-header__sns">
+							<ul>
+								<li class="insta">
+									<a href="https://www.instagram.com/toshinjyuken_no_ie/" target="_blank">
+										<img src="images/common/icon-insta-gray.svg" />
+									</a>
+								</li>
+								<li class="youtube">
+									<a href="https://www.youtube.com/@toshinjyuken_house" target="_blank">
+										<img src="images/common/icon-youtube-gray.svg" />
+									</a>
+								</li>
+								<li class="line">
+									<a href="https://lin.ee/v4vz5KD" target="_blank">
+										<img src="images/common/icon-LINE-gray.svg" />
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<nav class="gnav sp_vanish">
+						<ul class="gnav__list">
+							<li class="gnav__item">
+								<a href="search.php"><div class="text">物件情報</div></a>
+							</li>
+							<li class="gnav__item">
+								<a href="index.php#brand"><div class="text">ブランドコンセプト</div></a>
+							</li>
+							<li class="gnav__item">
+								<a href="structure.php"><div class="text">東新住建の家づくり</div></a>
+							</li>
+							<li class="gnav__item">
+								<a href="bunjo-halforder.php"><div class="text">ハーフオーダー</div></a>
+							</li>
+							<li class="gnav__item">
+								<a href="https://www.toshinjyuken.co.jp/kodate/contents/"><div class="text">施工事例</div></a>
+							</li>
+							<li class="gnav__item">
+								<a href="voice.php"><div class="text">お客様の声</div></a>
+							</li>
+						</ul>
+					</nav>
+					<!--  -->
+					<div class="menubtn pc_vanish">
+						<div>
+							<span></span>
+							<span></span>
+							<span></span>
+						</div>
+					</div>
+
+					<!-- -->
+					<div class="clear"></div>
+					<div class="menu_sp font_sizebase">
+						<div class="pad">
+							<ul class="iconbtn LH125">
+								<li class="W">
+									<a href="search.php"
+										><div class="icon"><img src="images/common/icon-search2.svg" /></div>
+										<div class="text">物件情報</div></a
+									>
+								</li>
+								<li class="O">
+									<a href="member.php"
+										><div class="icon"><img src="images/common/icon-member.svg" /></div>
+										<div class="text">会員登録</div></a
+									>
+								</li>
+							</ul>
+
+							<ul class="menu_sp__list">
+								<li>
+									<a href="index.php#brand">ブランドコンセプト</a>
+								</li>
+								<li>
+									<a href="bunjo-halforder.php">ハーフオーダー</a>
+								</li>
+								<li>
+									<a href="structure.php">東新住建の家づくり</a>
+								</li>
+								<li>
+									<a href="qa.php">Q & A</a>
+								</li>
+
+								<!--
+								<li>
+									<a href="lifestyle.php">コラム</a>
+								</li>
+								-->
+
+								<li>
+									<a href="https://www.toshinjyuken.co.jp/kodate/contents/">施工事例</a>
+								</li>
+								<li>
+									<a href="voice.php">お客様の声</a>
+								</li>
+								<li>
+									<a href="news.php">NEWS</a>
+								</li>
+								<li>
+									<a href="sdgs.php">SDGsへの取り組み</a>
+								</li>
+								<li class="w-100">
+									<a href="contact.php">ご来場予約・お問い合わせ・資料請求</a>
+								</li>
+							</ul>
+							<div class="menu_sp__sns">
+								<ul>
+									<li class="insta">
+										<a href="https://www.instagram.com/toshinjyuken_no_ie/" target="_blank">
+											<img src="images/common/icon-insta-gray2.svg" />
+										</a>
+									</li>
+									<li class="youtube">
+										<a href="https://www.youtube.com/@toshinjyuken_house" target="_blank">
+											<img src="images/common/icon-youtube-gray2.svg" />
+										</a>
+									</li>
+									<li class="line">
+										<a href="https://lin.ee/v4vz5KD" target="_blank">
+											<img src="images/common/icon-LINE-gray2.svg" />
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- -->
+				</div>
+			</header>
+			<!-- ** -->
+
+			<div class="fix-nav">
+				<ul>
+					<li class="search">
+						<a href="search.php">
+							<div class="icon"><img src="images/common/icon-search.svg" /></div>
+							<div class="text">物件情報</div>
+						</a>
+					</li>
+					<li class="member">
+						<a href="member.php">
+							<div class="icon"><img src="images/common/icon-member.svg" /></div>
+							<div class="text">会員登録</div>
+						</a>
+					</li>
+					<li class="pagetop sp_vanish">
+						<a href="#pt"><img src="images/common/btn-submenu-pagetop2.svg" /></a>
+					</li>
+				</ul>
+			</div>
+			<div class="pan LH100">
+				<div><a href="index.php">ホーム</a><span class="arrow">&gt;</span>ご来場予約・お問い合わせ・資料請求</div>
+			</div>
+			<div class="p_title">
+				<h2>
+					<div>東新住建の家</div>
+					<span class="textJ">ご来場予約・お問い合わせ・資料請求</span>
+				</h2>
+			</div>
+			<!-- *** -->
+
+			<div class="LINE-area">
+				<div class="LINE-area__fukidashi"><span>お問い合わせはLINEが便利です</span></div>
+				<div class="LINE-area__bnr">
+					<a href="https://lin.ee/v4vz5KD" target="_blank">
+						<img src="images/contact/line-bnr.svg" alt="LINE公式アカウント" />
+					</a>
+				</div>
+				<div class="LINE-area__note">
+					<ul>
+						<li>◎ <span>メールアドレス登録不要</span></li>
+						<li>◎ <span>最短1分</span>でラクラクお問い合わせ</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="LINE-area">
+				<div class="LINE-area__fukidashi"><span>自由見学はじめました</span></div>
+				<div class="LINE-area__bnr">
+					<a href="./news.php?id=220" target="_blank">
+						<img class="sp_vanish" src="images/top/kv-slider-260701.jpg" alt="" />
+						<img class="pc_vanish" src="images/top/sp/kv-slider-260701.jpg" alt="" />
+					</a>
+				</div>
+				<div class="LINE-area__note">
+					<ul>
+						<li>◎ 営業スタッフは<span>同行しません</span></li>
+						<li>◎ <span>ご家族だけで</span>ゆっくり見学</li>
+					</ul>
+				</div>
+			</div>
+
+			<form action="/kodate/contact.php" method="post" class="">
+				<div class="content_box">
+					<div class="contact_box">
+						<style>
+							/*
+.font_hiragino900{
+	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", "sans-serif";
+	font-weight: 900;
+}
+*/
+							.contact_box svg {
+								display: block;
+							}
+							.contact_box svg[data-name="cut"] {
+								position: absolute;
+								right: 0;
+								bottom: 0;
+								height: 100%;
+								width: 43px;
+								z-index: -1;
+							}
+							.contact_box svg[data-name="cut"] > * {
+								fill: #fff;
+							}
+							.contact_box svg[data-name="icon-tel"] {
+								width: 24px;
+							}
+							.contact_box svg[data-name="icon-form"] {
+								width: 29px;
+							}
+							.contact_box svg[data-name="icon-line"] {
+								width: 34px;
+							}
+							.contact_box svg[data-name="icon-tel"] .col1,
+							.contact_box svg[data-name="icon-form"] .col1,
+							.contact_box svg[data-name="icon-line"] .col1,
+							.contact_box svg[data-name*="customer-"] .col2 {
+								fill: #738da0;
+							}
+							.contact_box svg[data-name="icon-tel"] .col2,
+							.contact_box svg[data-name="icon-form"] .col2 {
+								fill: #d5dde2;
+							}
+							.contact_box svg[data-name="icon-line"] .col2 {
+								fill: none;
+								stroke: #d5dde2;
+								stroke-linecap: round;
+								stroke-linejoin: round;
+								stroke-width: 4px;
+							}
+							.contact_box svg[data-name*="customer-"] .col1 {
+								fill: none;
+								stroke: #d5dde2;
+								stroke-miterlimit: 10;
+							}
+							.contact_box svg[data-name="tel-v20230809"] .col1 {
+								fill: #f63402;
+							}
+							.contact_box svg[data-name="tel-beta-v20230809"] .col1 {
+								fill: #f63402;
+							}
+							.contact_box svg[data-name="tel-beta-v20230809"] .col2,
+							.contact_box svg[data-name="tel-beta-v20230809"] .col5 {
+								fill: #fff;
+							}
+							.contact_box svg[data-name="tel-beta-v20230809"] .col3 {
+								fill: #fdccc0;
+							}
+							.contact_box svg[data-name="tel-beta-v20230809"] .col4 {
+								fill: #fa9980;
+							}
+							.contact_box svg[data-name="tel-beta-v20230809"] .col5 {
+								stroke: #f63402;
+								stroke-linecap: round;
+								stroke-linejoin: round;
+								stroke-width: 1.65px;
+							}
+							.local_okonomi {
+								display: flex;
+								flex-direction: column;
+								align-items: center;
+							}
+							.local_okonomi h3 {
+								font-size: 125%;
+								line-height: normal;
+								text-align: center;
+							}
+							.local_okonomi ul {
+								display: flex;
+								flex-direction: column;
+								margin-top: 60px;
+							}
+							.local_okonomi ul li {
+								display: flex;
+								align-items: flex-start;
+							}
+							.local_okonomi ul li:nth-child(n + 2) {
+								margin-top: 40px;
+							}
+							.local_okonomi ul li > *:nth-child(1) {
+								color: #738da0;
+								background-color: #d5dde2;
+								display: flex;
+								align-items: center;
+								position: relative;
+								z-index: 2;
+								padding: 20px;
+								padding-right: 0;
+								font-size: 20px;
+								line-height: 100%;
+								font-weight: bold;
+							}
+							.local_okonomi ul li > *:nth-child(1) span {
+								display: inline-flex;
+								align-items: center;
+								min-width: 40px;
+							}
+							.local_okonomi ul li > *:nth-child(1) font {
+								display: inline-block;
+								font-size: 60%;
+								margin-top: 0.4em;
+								margin-left: 0.25em;
+							}
+							.local_okonomi ul li > *:nth-child(2) {
+								flex-grow: 1;
+							}
+							.local_okonomi ul li > *:nth-child(2) h4 {
+								font-size: 100%;
+								line-height: normal;
+							}
+							.local_okonomi ul li > *:nth-child(2) a[href*="tel:"] {
+								display: block;
+								margin-top: 10px;
+							}
+							.local_okonomi ul li > *:nth-child(2) a[href*="tel:"] + * {
+								font-size: 90%;
+								margin-top: 0.25em;
+								text-align: center;
+							}
+							.local_okonomi ul li > *:nth-child(2) a[href*="#form"],
+							.local_okonomi ul li > *:nth-child(2) a[href*="http"] {
+								color: #fff;
+								background-color: #f63402;
+								display: flex;
+								justify-content: space-between;
+								align-items: center;
+								width: 240px;
+								height: 40px;
+								font-weight: bold;
+								padding: 0 1em;
+								margin-top: 0.5em;
+								font-size: 12pt;
+							}
+							.local_okonomi ul li > *:nth-child(2) img[src*="bnr-line-v"] {
+								margin-top: 0.5em;
+							}
+							.local_okonomi ul li > *:nth-child(2) img[src*="bnr-line-v20230809"] {
+								width: 320px;
+							}
+							.local_okonomi ul li > *:nth-child(2) img[src*="bnr-line-v20231122"] {
+								width: 344px;
+							}
+							.local_customer {
+								margin-top: 110px;
+								display: flex;
+								flex-direction: column;
+								align-items: center;
+							}
+							.local_customer h3 {
+								font-size: 112.5%;
+								line-height: normal;
+								text-align: center;
+								color: #738da0;
+								border-bottom: solid 1px #738da0;
+								width: 100%;
+								max-width: 24em;
+							}
+							.local_customer h3 + div {
+								display: flex;
+								flex-wrap: wrap;
+								justify-content: space-between;
+								width: 100%;
+								margin-top: 40px;
+							}
+							.local_customer h3 + div > * {
+								width: 149px;
+							}
+							.local_f_title {
+								margin-top: 170px;
+								margin-bottom: 66px;
+							}
+							.local_f_title h2 {
+								background-color: #231815;
+								color: #fff;
+								font-size: 125%;
+								line-height: normal;
+								padding: 0.5em 0.75em;
+								text-align: center;
+							}
+							@media screen and (min-width: 1000px) {
+								.local_okonomi ul li > *:nth-child(1) {
+									width: 200px;
+									min-width: 200px;
+									margin-right: 10px;
+								}
+								.local_okonomi ul li > *:nth-child(2) a[href*="tel:"],
+								.local_okonomi ul li > *:nth-child(2) a[href*="tel:"] + * {
+									max-width: 328px;
+								}
+							}
+							@media screen and (max-width: 999px) {
+								.contact_box svg[data-name="cut"] {
+									right: -1px;
+									bottom: -1px;
+									width: 31px;
+									height: calc(100% + 1px);
+								}
+								.local_okonomi ul li {
+									flex-direction: column;
+								}
+								.local_okonomi ul li > *:nth-child(1) {
+									width: 100%;
+									padding: 6px 8px;
+									margin-bottom: 15px;
+								}
+								.local_customer {
+									margin-top: 70px;
+								}
+								.local_customer h3 + div {
+									justify-content: center;
+									width: calc(100% + 4px);
+									margin: 0 2px;
+									margin-top: 20px;
+								}
+								.local_customer h3 + div > * {
+									width: 124px;
+									margin: 0 2px;
+								}
+								.local_f_title {
+									margin-top: 80px;
+									margin-bottom: 6px;
+								}
+							}
+
+							.local_flex1 {
+								display: flex;
+								justify-content: space-between;
+							}
+							.local_flex1.center {
+								justify-content: center;
+							}
+							.local_flex1.first {
+								margin-bottom: 3.5em;
+							}
+							.local_flex1 > * {
+								width: 380px;
+								margin-top: 1em;
+								display: flex;
+								flex-direction: column;
+								justify-content: center;
+								align-items: center;
+							}
+							.local_flex1.first > * {
+								margin-top: 0;
+							}
+							.local_flex1 > * a {
+								display: block;
+								width: 328px;
+								width: calc(100% * 328 / 380);
+							}
+							.local_flex1 > * img {
+								width: 100%;
+							}
+							.local_flex1 > * a[href*="tel:"] + * {
+								font-size: 80%;
+								margin-top: 0.5em;
+							}
+							.local_flex1 > * a[href*="tel:"] > svg {
+								width: 100%;
+							}
+							.local_flex1 > * a[href*="tel:"] > svg * {
+								fill: #f63402;
+							}
+							.local_flex1 > * img[src*="bnr-line"] + * {
+								font-size: 70%;
+								margin-top: 0.5em;
+								text-align: left;
+								width: 100%;
+							}
+							.local_flex1 > a {
+								display: block;
+							}
+							@media screen and (max-width: 999px) {
+								.local_flex1 {
+									flex-direction: column;
+								}
+								.local_flex1 > *,
+								.local_flex1 > * a[href*="http"] {
+									width: 100%;
+								}
+								.local_flex1.first {
+									margin-bottom: 0;
+								}
+							}</style
+						><img src="images/common/clear-W800H50.png" class="contact_step step1 sp_vanish mgnAuto W100per" /> <img src="images/common/clear-W380H54.png" class="contact_step step1 pc_vanish mgnAuto W100per" />
+						<div class="contact_caution sp_br_del LH175">
+							※お問い合わせの際には、個人情報に関する取扱いへの同意が必要です。<br />文字化けやエラーの原因となりますので、ローマ数字・丸付き数字などの機種依存文字、半角カタカナ（半角文字）は使用しないでください。<br />住所にローマ数字が含まれる場合、アラビア数字や漢数字に置換えて入力してください。
+							<div><span class="col_F00">＊</span>印は必須項目です。</div>
+						</div>
+						<hr />
+						<div class="contact_title sp_LH150"><span>・</span>お問い合わせの項目をお選びください（複数選択可能）<span class="col_F00">＊</span></div>
+						<div class="contact_inputarea_ver2023 colorbox">
+							<div class="checkbox err_block"><input type="checkbox" name="koumoku[]" value="見学予約をする" class="required validate[required]" />見学予約をする</div>
+							<div class="checkbox err_block"><input type="checkbox" name="koumoku[]" value="資料をもらう" class="required validate[required]" />資料をもらう</div>
+							<div class="checkbox err_block"><input type="checkbox" name="koumoku[]" value="その他" class="required validate[required]" />その他</div>
+						</div>
+						<hr />
+
+						<div class="acobox" n="1">
+							<div class="contact_title"><span>・</span>見学方法<span class="col_F00">＊</span></div>
+							<div class="contact_inputarea box_kengaku_type">
+								<div class="checkbox err_block"><input type="radio" name="kengaku_type" value="スタッフの案内を希望する" class="required validate[required]" />スタッフの案内を希望する</div>
+								<div class="checkbox err_block"><input type="radio" name="kengaku_type" value="自由見学を希望する（ご家族だけでゆっくり見学できます）" class="required validate[required]" />自由見学を希望する（ご家族だけでゆっくり見学できます）</div>
+							</div>
+
+							<div class="contact_I_caution">
+								※自由見学をご希望の場合、鍵の解錠およびアンケートのご案内のみ販売スタッフが対応させていただきます。<br />
+								建物内はご家族だけでごゆっくりご見学いただけます。
+							</div>
+						</div>
+
+						<div class="acobox" n="1,2">
+							<div class="contact_title"><span>・</span>お問い合わせ物件名<span class="col_F00">＊</span></div>
+							<div class="contact_inputarea box_toi_bukken1_">
+								<div class="selectbox err_block">
+									<select name="toi_bukken1_1" class="required validate[required]">
+										<option value="">── 全体エリア ──</option>
+										<option>名古屋エリア</option>
+										<option>尾張東エリア</option>
+										<option>尾張西・あまエリア</option>
+										<option>東海・知多エリア</option>
+										<option>三河エリア</option>
+										<option>岐阜エリア</option>
+										<option>三重エリア</option>
+									</select>
+								</div>
+								<div class="selectbox err_block">
+									<select name="toi_bukken1_2" class="required validate[required]">
+										<option value="">── 物件名 ──</option>
+									</select>
+								</div>
+							</div>
+							<hr />
+						</div>
+						<div class="contact_title"><span>・</span>お名前（漢字）<span class="col_F00">＊</span></div>
+						<div class="contact_inputarea box_">
+							<div class="namebox err_block">
+								<table border="0" cellpadding="0" cellspacing="0">
+									<tr>
+										<th>姓</th>
+										<td><input type="text" name="name_k1" class="required validate[required]" value="" /></td>
+									</tr>
+								</table>
+							</div>
+							<div class="namebox err_block">
+								<table border="0" cellpadding="0" cellspacing="0">
+									<tr>
+										<th>名</th>
+										<td><input type="text" name="name_k2" class="required validate[required]" value="" /></td>
+									</tr>
+								</table>
+							</div>
+						</div>
+						<hr />
+						<div class="contact_title"><span>・</span>メールアドレス（半角英数字）<span class="col_F00">＊</span></div>
+						<div class="contact_inputarea box_a">
+							<div class="normalbox err_block"><input type="text" name="mail" class="required validate[required,custom[email]] W100per" value="" /></div>
+						</div>
+						<hr />
+						<div class="contact_title"><span>・</span>お電話番号</div>
+						<div class="contact_inputarea box_tel1">
+							<div class="numbox tel err_block">
+								<table border="0" cellpadding="0" cellspacing="0">
+									<tr>
+										<td><input type="text" name="tel1" class="validate[custom[phone]]" value="" /></td>
+										<td class="pad">－</td>
+										<td><input type="text" name="tel2" class="validate[custom[phone]]" value="" /></td>
+										<td class="pad">－</td>
+										<td><input type="text" name="tel3" class="validate[custom[phone]]" value="" /></td>
+									</tr>
+								</table>
+							</div>
+						</div>
+						<hr />
+						<div class="acobox" n="2">
+							<div class="contact_title"><span>・</span>郵便番号<span class="col_F00">＊</span></div>
+							<div class="contact_inputarea box_pos1">
+								<div class="numbox pos err_block">
+									<table border="0" cellpadding="0" cellspacing="0">
+										<tr>
+											<td><input type="text" name="pos1" class="required validate[required]" value="" /></td>
+											<td class="pad">－</td>
+											<td><input type="text" name="pos2" class="required validate[required]" value="" /></td>
+										</tr>
+									</table>
+								</div>
+								<input type="button" class="pos_addr_btn" value="自動住所入力" onclick="AjaxZip3.zip2addr('pos1', 'pos2', 'addr1', 'addr1')" />
+							</div>
+							<div class="contact_title"><span>・</span>ご住所<span class="col_F00">＊</span></div>
+							<div class="contact_inputarea box_d">
+								<div class="normalbox err_block"><input type="text" name="addr1" class="required validate[required] W100per" value="" /></div>
+							</div>
+							<div class="contact_title"><span>・</span>番地・マンション名<span class="col_F00">＊</span></div>
+							<div class="contact_inputarea box_d">
+								<div class="normalbox err_block"><input type="text" name="addr2" class="required validate[required] W100per" value="" /></div>
+							</div>
+							<hr />
+						</div>
+						<div class="acobox" n="1">
+							<div class="contact_title"><span>・</span>ご希望の来場日時<span class="col_F00">＊</span></div>
+							<div class="contact_inputarea box_kengakubi">
+								<div class="selectbox err_block">
+									<select name="kengakubi_M" class="required validate[required]">
+										<option value="">-</option>
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+										<option>6</option>
+										<option>7</option>
+										<option>8</option>
+										<option>9</option>
+										<option>10</option>
+										<option>11</option>
+										<option>12</option></select
+									>月
+								</div>
+								<div class="selectbox err_block">
+									<select name="kengakubi_D" class="required validate[required]">
+										<option value="">-</option>
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+										<option>6</option>
+										<option>7</option>
+										<option>8</option>
+										<option>9</option>
+										<option>10</option>
+										<option>11</option>
+										<option>12</option>
+										<option>13</option>
+										<option>14</option>
+										<option>15</option>
+										<option>16</option>
+										<option>17</option>
+										<option>18</option>
+										<option>19</option>
+										<option>20</option>
+										<option>21</option>
+										<option>22</option>
+										<option>23</option>
+										<option>24</option>
+										<option>25</option>
+										<option>26</option>
+										<option>27</option>
+										<option>28</option>
+										<option>29</option>
+										<option>30</option>
+										<option>31</option></select
+									>日
+								</div>
+								<div class="selectbox err_block">
+									<select name="kengakubi_H" class="required validate[required]">
+										<option value="">-</option>
+										<option>0</option>
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+										<option>6</option>
+										<option>7</option>
+										<option>8</option>
+										<option>9</option>
+										<option>10</option>
+										<option>11</option>
+										<option>12</option>
+										<option>13</option>
+										<option>14</option>
+										<option>15</option>
+										<option>16</option>
+										<option>17</option>
+										<option>18</option>
+										<option>19</option>
+										<option>20</option>
+										<option>21</option>
+										<option>22</option>
+										<option>23</option></select
+									>時
+								</div>
+							</div>
+							<div class="contact_I_caution">※ご来場希望日はお申し込みの24時間後以降のお時間でご予約ください。<br />※ご予約のキャンセルについては前日までにTELもしくはこちらのフォームよりお願いいたします。<br />※建物完成前のプロジェクトをお選びいただいた場合には、近隣の類似モデルハウスおよびご希望に応じて現地をご案内させていただきます。</div>
+							<hr />
+						</div>
+						<div class="contact_title"><span>・</span>その他の質問</div>
+						<div class="contact_inputarea box_msg">
+							<div class="normalbox err_block">
+								<textarea
+									name="msg"
+									class=""
+									placeholder="参考例：
+・同じエリアで他の物件も見学できますか？
+・シングルマザーですが、ローン審査が不安です。
+・子どもの通学や治安等、周辺について教えて下さい。
+・オンラインでの相談希望です。　等"
+								></textarea>
+							</div>
+						</div>
+						<hr />
+						<div class="contact_title"><span>・</span>「個人情報保護方針」への同意<span class="col_F00">＊</span></div>
+						<div class="contact_inputarea box_doui">
+							<div class="checkbox err_block"><input type="checkbox" name="doui[]" value="同意する" class="required validate[required]" />同意する</div>
+						</div>
+						<div class="contact_I_caution">※下記をお読みいただき、個人情報の取扱いについてご確認ください。</div>
+						<style>
+							.privacy_box.ver2023 {
+								border: solid 1px #000;
+								padding: 1em;
+								margin-top: 1.5em;
+							}
+							.privacy_box.ver2023 .title {
+								width: 10.375em;
+								max-width: 100%;
+								margin-right: auto;
+							}
+							.privacy_box.ver2023 hr {
+								border-top: solid 1px #000;
+								margin-top: 0.75em;
+							}
+							.privacy_box.ver2023 .text {
+								margin-top: 0.75em;
+								overflow: auto;
+								height: 15em;
+								font-size: 90%;
+								line-height: 150%;
+								padding-right: 1em;
+							}
+							.privacy_box.ver2023 .text hr {
+								border-top: dashed 1px #999;
+							}
+						</style>
+						<div class="privacy_box ver2023">
+							<img src="../recaptcha/form/img/title-privacy.svg" class="title" />
+							<hr />
+							<div class="text">
+								<b>１．個人情報保護基本方針</b
+								><br /><br />東新住建株式会社およびその関係会社（以下あわせて「当社」といいます）は、当社が業務上取り扱う、お客様・取引関係者・当社従業員等の個人情報について、個人情報保護に関する法令及びその他の規範（以下、個人情報保護法等といいます）の趣旨を遵守し、かつ社内規定等を整備し個人情報体制を確立いたします。そのため、ここに当社の個人情報保護基本方針を定め、これを実行し、かつ継続的に見直しを行い改善に努めます。<br /><br />（定義）<br />「個人情報」とは、個人情報の保護に関する法律（平成15年法律第57号、以下「個人情報保護法」といいます。）に定義される「個人情報」を指します。<br /><br />　1.当社は、個人情報保護規定等の社内規定を定め、これらを当社従業員（役員、社員、契約社員、派遣社員、パートナー社員、パートタイマー、アルバイト等を含む）その他関係者に周知徹底し実行いたします。<br />　2.当社は、個人情報の紛失、破壊、改ざん及び漏えい等を防止するため、不正アクセス・コンピュータウイルス対策等の適切な情報セキュリティ対策を講じます。<br />　3.当社は、個人情報を取得する場合、適法かつ公正な手段によって行い、個人情報の主体である本人（以下、本人といいます）に対し、個人情報の利用目的等について明示もしくは通知するか、または当社ホームページに公表します。<br />　4.当社は、要配慮個人情報について、個人情報保護法に定める場合を除き、本人の同意なく取得することをいたしません。<br />　5.当社は、個人情報の利用は、利用目的の範囲内で業務の遂行上必要な限りにおいて行います。事前に本人に明示または公表した利用目的以外の目的で利用するときは、個人情報保護法等に定める場合を除き、本人の同意を得るものとします。<br />　6.当社は、次の場合を除き、個人情報を第三者には提供いたしません。<br />　　(1)本人から事前の同意を得た場合<br />　　(2)業務を委託するために個人情報を業務委託先に提供する場合<br />　　(3)個人情報を当社の関係会社との間で共同利用する場合<br />　　(4)その他個人情報保護法で定められている場合<br />　7.当社は、保有個人データについて、本人から開示、訂正、利用停止等の求めを受けた場合は速やかに対応する体制を整備します。<br />　8.当社は、個人情報の取り扱いに関する苦情について、適切かつ迅速な対応に努め、そのために必要な体制を整備します。<br />
+								<hr />
+								<br /><b>２．個人情報のお取り扱いについて</b
+								><br /><br />個人情報の利用目的<br /><br />お客様の個人情報は、以下の目的のために利用します。当社は、お客様等のご同意を得た場合を除き、この利用目的の達成に必要な範囲を超えてお客様等の個人情報を利用いたしません。ただし、当社が行う事業は、追加・変更される場合があります。<br /><br />（１）注文住宅・分譲住宅・建築条件付土地・集合住宅・その他不動産商品の企画・設計・請負・販売・監理事業<br />（２）アフターサービス・リフォーム等の住宅関連事業<br />（３）環境エネルギー事業<br />（４）当社及び当社の関係会社が取り扱う商品・サービスの提供<br />（５）インテリア器具・住宅設備機器等の提案・販売<br />（６）当社が主催するイベント・セミナー・その他当社商品及びサービスに関連する各種情報の提供<br />（７）商品開発並びにお客様サービスの向上を目的としたアンケート調査及びその分析<br />（８）個人の属性情報・行動履歴・ウェブサイトの閲覧履歴等に基づく広告の個別化及び広告の配信・表示<br />（９）お客様からのお問合せや苦情等に関する連絡や対応<br />（10）各種ローン･借入れに関する諸手続き、会計監査上の確認作業<br />（11）雇用管理・採用選考及び採用の連絡ならびに会社情報の提供<br />（12）その他上記に付帯・関連する業務の実施<br />（13）上記の利用目的を達成するために必要となる第三者への提供<br />
+								<hr />
+								<br /><b>３．個人情報の共同利用について</b
+								><br /><br />　当社は、当社が有する個人情報について、その取り扱いを外部に委託する場合は、個人情報の保護に十分な措置を講じている者を選定し、委託先に対し必要かつ適切な監督を行います。また、関係会社全体で総合的なサービスを提供するため、業務上必要かつ法令で認められる場合に限り、当社が取得した個人情報を関係会社内で共同利用させていただくことがあります。この場合、個人情報保護のため、秘密保持契約等の締結その他法令上必要な措置を講じます。当社の個人情報の共同利用に関する事項は以下の通りです。<br /><br />　(1)共同利用者の利用目的<br />　　2.個人情報のお取り扱いについて「個人情報の利用目的」記載の利用目的<br />　(2)共同利用対象の個人データの項目<br />　　1.氏名<br />　　2.住所<br />　　3.生年月日<br />　　4.電話番号<br />　　5.メールアドレス<br />　　6.性別<br />　　7.その他共同利用目的のために必要な事項<br />
+								<hr />
+								<br /><b>４．安全管理措置</b><br /><br />　当社は個人情報について、個人情報の漏えい、減失または棄損等の防止その他個人情報の安全管理のため、基本方針の策定や個人情報の取り扱いに係る規定の整備、組織的安全管理措置、人的安全管理措置、物理的安全管理措置及び技術的安全管理措置を講じております。<br />
+								<hr />
+								<br /><b>５．お客様情報に関するお問合せ</b><br /><br />ご補任に関する保有個人データの利用目的の通知、開示、訂正、追加、削除、利用停止、消去等についての請求、個人情報の取り扱いに関する苦情等のご相談は、後記相談窓口へお問合せください。<br />■お客様情報お問合せ窓口<br />東新住建株式会社 代表窓口<br />電話番号 0587-23-0011<br />電話受付時間 9:30～17:00<br />※当社定休日（原則として水曜日・日曜日、正月休み、盆休み）を除きます。<br />
+								<hr />
+								<br /><b>６．お客様等からの開示、訂正、利用停止等のご請求</b><br /><br />お客様等の個人情報の開示、訂正、利用停止等を希望される場合は、「５．お客様情報に関するお問合せ」に記載の受付窓口に、郵送・電話にてお申し出ください。 受付後、当社所定の｢個人情報開示等請求書｣をお客様等の現住所に郵送いたしますので、必要事項をご記入のうえ、本人確認書類と併せて郵送にてご返送いただきます。 開示、訂正、利用停止等のお申し出に対する回答は、原則、書面でご本人様に行います。<br />（ご本人または代理人の確認）<br />ご本人の確認方法は原則として次の方法を実施いたします（ご本人の代理人による請求の場合は、委任状も必要となります）。ご本人であることを証明する以下のいずれかの書面の提出が必要となります。<br />　・運転免許証の写し<br />　・健康保険の被保険者証の写し<br />　・パスポートの写し<br />　・外国人登録証明書の写し<br />　・印鑑登録証明書の原本およびその実印を押印した請求書<br />　・その他当社が認める証明書類<br />（手数料）<br />1件のご請求につき手数料500円が必要となります。<br />※ご請求時に郵送いただいた書類は、返却いたしませんので、予めご了承ください。<br />
+								<hr />
+								<br /><b>７．クッキーについて</b
+								><br /><br />当社のウェブサイトは、お客様により便利に閲覧していただくために「クッキー（Cookie）」を使用することがあります。クッキーは当社ウェブサイトのウェブサーバーがお客様のパソコン等を識別することを目的とした業界標準の技術です。当社のクッキー情報は、以下の目的で利用しますが、閲覧者の個人情報を収集するものではございません。尚、ブラウザの設定によりクッキーの受信を拒否することも可能ですが、その結果、ウェブページ上のサービスの全部または一部がご利用いただけなくなる可能性がございます。<br />(1)スマートフォン等の電子デバイスにおける入力補助をするため<br />(2)お客様が興味を持っている内容や当社のウェブサイト上での利用状況を基にした各種コンテンツ配信及び広告表示をカスタマイズするため<br />
+								<hr />
+								<br /><b>８．免責</b><br /><br />当社のウェブサイトにリンクが設定されている他のウェブサイトにおけるお客様の個人情報に関しては、当社の責任範囲は及びません。<br />
+								<hr />
+								<br /><b>９. 「個人情報保護方針」の変更</b><br /><br />当社は、本「個人情報保護方針」を変更することがあります。変更後の方針については、すみやかに当社ウェブサイト等で公表いたします。<br /><br /><br />東新住建株式会社
+							</div>
+						</div>
+						<style>
+							.g-recaptcha {
+								margin-top: 50px;
+							}
+							.g-recaptcha > * {
+								margin: auto;
+							}
+							.recaptcha_err {
+								margin-bottom: 50px;
+								text-align: center;
+							}
+							.recaptcha_err > * {
+								display: inline-block;
+								margin: auto;
+								margin-top: 25px;
+								background-color: #f00;
+								color: #fff;
+								padding: 0.5em 0.75em;
+								border-radius: 2em;
+								-webkit-border-radius: 2em;
+								-moz-border-radius: 2em;
+								box-shadow: 1px 1px 0px 0px rgba(0, 0, 0, 0.2);
+								-webkit-box-shadow: 1px 1px 0px 0px rgba(0, 0, 0, 0.2);
+								-moz-box-shadow: 1px 1px 0px 0px rgba(0, 0, 0, 0.2);
+							}
+						</style>
+						<div class="g-recaptcha" data-sitekey="6LfliukeAAAAAKW7wsMz_dpR5Z9aVr_e941FqGZ-"></div>
+						<div class="recaptcha_err"></div>
+						<div class="submit_btn"><input type="submit" name="sm_conf" id="sm_conf" value="入力内容確認" /><input type="reset" value="リセット" /></div>
+					</div>
+				</div>
+			</form>
+			<div style="height: 90px"></div>
+			<!-- ** -->
+
+			<footer class="l-footer">
+				<div class="l-footer-inner">
+					<div class="l-footer-upper">
+						<div class="l-footer-flex">
+							<!-- ロゴ -->
+							<div class="l-footer__logo">
+								<a href="index.php" class="logo"><img src="images/common/logo-2025.svg" /></a>
+							</div>
+
+							<!-- ナビメニュー -->
+							<nav class="fnav">
+								<ul class="fnav__list">
+									<li class="fnav__item"><a href="index.php">ホーム</a></li>
+									<li class="fnav__item"><a href="search.php">物件情報</a></li>
+									<li class="fnav__item"><a href="news.php">NEWS</a></li>
+									<li class="fnav__item"><a href="structure.php">東新住建の家づくり</a></li>
+								</ul>
+
+								<ul class="fnav__list">
+									<li class="fnav__item"><a href="index.php#brand">ブランドコンセプト</a></li>
+									<li class="fnav__item"><a href="bunjo-halforder.php" target="_blank">ハーフオーダー</a></li>
+									<li class="fnav__item"><a href="sdgs.php">SDGsへの取り組み</a></li>
+									<li class="fnav__item"><a href="qa.php">Q&A</a></li>
+								</ul>
+
+								<ul class="fnav__list">
+									<li class="fnav__item"><a href="voice.php">お客様の声</a></li>
+									<li class="fnav__item"><a href="lifestyle.php">コラム</a></li>
+									<li class="fnav__item"><a href="member.php">会員登録</a></li>
+									<li class="fnav__item"><a href="contact.php">資料請求・お問い合わせ</a></li>
+								</ul>
+							</nav>
+						</div>
+
+						<!-- SNS -->
+						<div class="l-footer__sns">
+							<ul>
+								<li class="insta">
+									<a href="https://www.instagram.com/toshinjyuken_no_ie/" target="_blank"><img src="images/common/icon-insta-gray.svg" /></a>
+								</li>
+								<li class="youtube">
+									<a href="https://www.youtube.com/@toshinjyuken_house" target="_blank"><img src="images/common/icon-youtube-gray.svg" /></a>
+								</li>
+								<li class="line">
+									<a href="https://lin.ee/v4vz5KD" target="_blank"><img src="images/common/icon-LINE-gray.svg" /></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<!-- 下段 -->
+					<div class="l-footer-lower">
+						<div class="l-footer__logo2">
+							<a href="https://www.toshinjyuken.co.jp/" target="_blank" target="_blank" class="toushin"><img src="images/common/logo-toushin-2024-K.svg" /></a>
+						</div>
+						<div class="copyright">Copyright (C) TOSHIN JYUKEN All Rights Reserved.</div>
+					</div>
+				</div>
+			</footer>
+			<div id="pagebottom_btn">
+				<a href="#pt"><img src="images/common/btn-submenu-pagetop.svg" /></a>
+			</div>
+			<!-- * -->
+		</div>
+		<!-- ===== SATORI Message : 計測タグ START ===== -->
+		<script type="text/javascript" id="_-s-js-_" src="//satori.segs.jp/s.js?c=65abdfb0"></script>
+		<!-- ===== SATORI Message : 計測タグ END ===== -->
+		<!-- ===== SATORI Message : Creative（複数） START ===== -->
+		<script>
+			if (typeof __SatoriCreativeSetInitiators === "undefined") {
+				__SatoriCreativeSetInitiators = [];
+			}
+			__SatoriCreativeSetInitiators.push("c6adbfe547778421");
+			__SatoriCreativeSetInitiators.push("271b4c45feef6ca5");
+		</script>
+		<script type="text/javascript" src="//delivery.satr.jp/js/creative_set_initiator.js"></script>
+		<!-- ===== SATORI Message : Creative（複数） END ===== -->
+	</body>
+</html>

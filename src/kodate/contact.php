@@ -140,6 +140,22 @@ echo '-->'.chr(10);
 			</div>
 		</div>
 
+		<div class="LINE-area">
+			<div class="LINE-area__fukidashi"><span>自由見学はじめました</span></div>
+			<div class="LINE-area__bnr">
+				<a href="./news.php?id=220" target="_blank">
+					<img class="sp_vanish" src="images/top/kv-slider-260701.jpg" alt="" />
+					<img class="pc_vanish" src="images/top/sp/kv-slider-260701.jpg" alt="" />
+				</a>
+			</div>
+			<div class="LINE-area__note">
+				<ul>
+					<li>◎ 営業スタッフは<span>同行しません</span></li>
+					<li>◎ <span>ご家族だけで</span>ゆっくり見学</li>
+				</ul>
+			</div>
+		</div>
+
 		<form action="<?php echo $_SERVER["SCRIPT_NAME"]; ?>" method="post" class="<?php echo ($step == 3) ? 'conf' : ''; ?>">
 			<div class="content_box">
 				<div class="contact_box">
