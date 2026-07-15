@@ -5,11 +5,30 @@ const sass = require("gulp-sass")(require("sass"));
 const sourcemaps = require("gulp-sourcemaps");
 
 const paths = {
-	scssEntry: "src/kodate/contents/wp-content/themes/toshinjyuken/assets/scss/index.scss",
-	scssWatch: "src/kodate/contents/wp-content/themes/toshinjyuken/assets/scss/**/*.scss",
-	cssDest: "src/kodate/contents/wp-content/themes/toshinjyuken/assets/css",
+	main: {
+		scssEntry: "src/kodate/contents/wp-content/themes/toshinjyuken/assets/scss/index.scss",
+		scssWatch: "src/kodate/contents/wp-content/themes/toshinjyuken/assets/scss/**/*.scss",
+		cssDest: "src/kodate/contents/wp-content/themes/toshinjyuken/assets/css",
+	},
+
+	halforder: {
+		scssEntry: "src/kodate/halforder/assets/scss/index.scss",
+		scssWatch: "src/kodate/halforder/assets/scss/**/*.scss",
+		cssDest: "src/kodate/halforder/assets/css",
+	},
+
 	reloadFiles: ["src/**/*.php", "src/**/*.html", "src/**/*.js", "src/**/*.css"],
 };
+
+function cssMain() {
+	return gulp.src(paths.main.scssEntry).pipe(sourcemaps.init()).pipe(sass().on("error", sass.logError)).pipe(sourcemaps.write("../maps")).pipe(gulp.dest(paths.main.cssDest)).pipe(browsersync.stream());
+}
+
+function cssHalforder() {
+	return gulp.src(paths.halforder.scssEntry).pipe(sourcemaps.init()).pipe(sass().on("error", sass.logError)).pipe(sourcemaps.write("../maps")).pipe(gulp.dest(paths.halforder.cssDest)).pipe(browsersync.stream());
+}
+
+const css = gulp.parallel(cssMain, cssHalforder);
 
 function connectsync(done) {
 	phpConnect.server(
@@ -23,6 +42,7 @@ function connectsync(done) {
 				proxy: "127.0.0.1:8000",
 				notify: false,
 			});
+
 			done();
 		},
 	);
@@ -33,13 +53,10 @@ function browserSyncReload(done) {
 	done();
 }
 
-function css() {
-	return gulp.src(paths.scssEntry).pipe(sourcemaps.init()).pipe(sass().on("error", sass.logError)).pipe(sourcemaps.write("../maps")).pipe(gulp.dest(paths.cssDest)).pipe(browsersync.stream());
-}
-
 function watchFiles() {
 	gulp.watch(paths.reloadFiles, browserSyncReload);
-	gulp.watch(paths.scssWatch, css);
+	gulp.watch(paths.main.scssWatch, cssMain);
+	gulp.watch(paths.halforder.scssWatch, cssHalforder);
 }
 
 const dev = gulp.parallel(connectsync, watchFiles);
