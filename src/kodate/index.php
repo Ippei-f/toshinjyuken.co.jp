@@ -70,9 +70,9 @@ $rand = '?' . rand();
 					</a>
 				</li>
 				<li class="index-kv__item">
-					<a href="./news.php?id=219" target="_blank">
-						<img class="sp_vanish" src="images/top/kv-slider-260616.png" alt="" />
-						<img class="pc_vanish" src="images/top/sp/kv-slider-260616.png" alt="" />
+					<a href="news.php?id=221" target="_blank">
+						<img class="sp_vanish" src="images/top/kv-slider-50th.jpg" alt="" />
+						<img class="pc_vanish" src="images/top/sp/kv-slider-50th.jpg" alt="" />
 					</a>
 				</li>
 				<li class="index-kv__item">
@@ -134,13 +134,14 @@ $rand = '?' . rand();
 							<img src="images/top/bnr-shinshun-2026.jpg" alt="新春フェア" />
 						</a>
 					</li>
--->
+          -->
+					<!--
 					<li>
 						<a href="https://www.toshinjyuken.co.jp/kodate/voice.php">
 							<img src="images/top/bnr-voice.png" alt="お客様の声" />
 						</a>
 					</li>
-
+					-->
 					<!--
 					<li>
 						<a href="./contact.php">
@@ -422,6 +423,13 @@ foreach($sysdata_proto as $key => $sysdata){
 				</tr>
 			</table>
 			<div class="top_news__btn"><a href="<?php echo $link_list['NEWS'][0]; ?>">すべての記事を見る</a></div>
+
+			<div class="top_news__bnr">
+				<a href="read-home/02/">
+					<img class="pc-only" src="images/top/kv-slider-iedukuri01_pc_a.jpg" alt="家づくりと社会をよむ 今知っておきたい！中東情勢と家づくりへの影響" />
+					<img class="sp-only" src="images/top/sp/kv-slider-iedukuri01_sp_a.jpg" alt="家づくりと社会をよむ 今知っておきたい！中東情勢と家づくりへの影響" />
+				</a>
+			</div>
 
 			<!--
 			<div class="top_news__bnr">
@@ -812,13 +820,9 @@ foreach($sysdata_proto as $key => $sysdata){
 				<div class="index-halforder2604__badge">
 					<img src="images/top/halforder-badge.svg" alt="ハーフオーダー" />
 				</div>
-				<h2 class="index-halforder2604__title">注文住宅より<span>気楽</span>に<br class="sp-only" />もっと<span>シンプル</span>に。</h2>
+				<h2 class="index-halforder2604__title">注文住宅より<br class="sp-only" />もっとシンプルに。</h2>
 				<div class="index-halforder2604__lead">
-					<p>
-						土地探しや打合せの負担を抑えながら、<br />
-						外観や内装、間取りを自分らしくデザイン。<br />
-						「ハーフオーダー」で理想の住まいを叶えます
-					</p>
+					<p>外観・内装・間取りまで、<br class="sp-only" />自分らしく選べる。<br>あなただけのハーフオーダーの家づくり。</p>
 				</div>
 				<div class="index-halforder2604__bnr">
 					<a href="./bunjo-halforder.php" target="_blank">

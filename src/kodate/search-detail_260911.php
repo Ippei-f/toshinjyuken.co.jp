@@ -853,12 +853,6 @@ require $kaisou . "temp_php/temp_logincheck.php"; //ログインチェック
 			container-type: inline-size;
 		}
 
-		.halfbnr_2609 {
-			max-width: 482px;
-			margin: 40px auto 0;
-			display: block;
-		}
-
 		.halfbnr::before {
 			content: "";
 			position: absolute;
@@ -949,12 +943,6 @@ require $kaisou . "temp_php/temp_logincheck.php"; //ログインチェック
 				padding-top: 73.75%;
 				/* 支給素材の拡張子が異なる場合はこの1行だけ変える */
 				background-image: url(images/content/search/detail/bnr-halforder-bg-sp.jpg);
-			}
-
-			.halfbnr_2609 {
-
-				max-width: 381px;
-				margin-top: 24px;
 			}
 
 			.halfbnr::before {
@@ -1365,9 +1353,10 @@ $local_contactbtn='<table border="0" cellpadding="0" cellspacing="0" class="sp_t
 						//リンク先の組み立ては従来のテキストボタンと同一。見た目だけバナーに変えている。
 						if ($sim_unit) {
 							$sim_url = 'halforder/contents/simulator/?id=' . htmlspecialchars(urlencode($sysdata[0]), ENT_QUOTES, 'UTF-8') . '&unit=' . htmlspecialchars(urlencode($sysdata[9][$i]), ENT_QUOTES, 'UTF-8');
-							echo '<a href="' . $sim_url . '" class="halfbnr_2609">'
-								. '<img class="pc-only" src="images/content/search/halforder_simulation_bnr.png" alt="見積りシミュレーション">'
-								. '<img class="sp-only" src="images/content/search/halforder_simulation_bnr-sp.png" alt="見積りシミュレーション">'
+							echo '<a href="' . $sim_url . '" class="halfbnr">'
+								. '<span class="halfbnr_logo"></span>'
+								. '<span class="halfbnr_lead">仕様やオプションを選んで<br class="pc_vanish">月々の支払額がわかる！</span>'
+								. '<span class="halfbnr_btn"><span>見積りシミュレーション</span>' . SVG('arrow-btn') . '</span>'
 								. '</a>';
 						}
 
