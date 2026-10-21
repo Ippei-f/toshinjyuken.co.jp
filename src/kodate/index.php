@@ -64,15 +64,21 @@ $rand = '?' . rand();
 					<img class="pc_vanish" src="images/top/sp/kv-slider-1.jpg" alt="" />
 				</li>
 				<li class="index-kv__item">
-					<a href="bunjo-halforder.php" target="_blank">
-						<img class="sp_vanish" src="images/top/kv-slider-halforder.jpg" alt="" />
-						<img class="pc_vanish" src="images/top/sp/kv-slider-halforder.jpg" alt="" />
+					<a href="news.php?id=223" target="_blank">
+						<img class="sp_vanish" src="images/top/kv-slider-5.jpg" alt="" />
+						<img class="pc_vanish" src="images/top/sp/kv-slider-5.jpg" alt="" />
 					</a>
 				</li>
 				<li class="index-kv__item">
-					<a href="news.php?id=221" target="_blank">
-						<img class="sp_vanish" src="images/top/kv-slider-50th.jpg" alt="" />
-						<img class="pc_vanish" src="images/top/sp/kv-slider-50th.jpg" alt="" />
+					<a href="https://www.toshinjyuken.co.jp/teishaku-portal/" target="_blank">
+						<img class="sp_vanish" src="images/top/kv-slider-teishaku.jpg" alt="" />
+						<img class="pc_vanish" src="images/top/sp/kv-slider-teishaku.jpg" alt="" />
+					</a>
+				</li>
+				<li class="index-kv__item">
+					<a href="bunjo-halforder.php" target="_blank">
+						<img class="sp_vanish" src="images/top/kv-slider-halforder.jpg" alt="" />
+						<img class="pc_vanish" src="images/top/sp/kv-slider-halforder.jpg" alt="" />
 					</a>
 				</li>
 				<li class="index-kv__item">
@@ -442,6 +448,58 @@ foreach($sysdata_proto as $key => $sysdata){
 
 		</section>
 		<!-- *** -->
+
+
+		<section class="index-halforder2610">
+			<div class="Wbase">
+				<div class="index-halforder2610__badge">
+					<img src="images/top/halforder-badge.svg" alt="ハーフオーダー" />
+				</div>
+				<h2 class="index-halforder2610__title">注文住宅よりもっとシンプルに。</h2>
+				<div class="index-halforder2610__lead">
+					<p>外観・内装・間取りまで、自分らしく選べる。<br />あなただけのハーフオーダーの家づくり。</p>
+				</div>
+				<div class="index-halforder2610__bnr">
+					<a href="./bunjo-halforder.php" target="_blank">
+						<img src="images/top/halforder-bnr.jpg" alt="ハーフオーダーについて詳しくはこちら" />
+					</a>
+				</div>
+				<div class="index-halforder2610__btn">
+					<a href="https://www.toshinjyuken.co.jp/kodate/search.php?search=%E3%83%95%E3%82%A7%E3%83%BC%E3%82%BA,%E3%83%8F%E3%83%BC%E3%83%95%E3%82%AA%E3%83%BC%E3%83%80%E3%83%BC" target="_blank">
+						<img class="pc-only" src="images/top/halforder-btn.svg" alt="物件一覧はこちら" />
+						<img class="sp-only" src="images/top/sp/halforder-btn.svg" alt="物件一覧はこちら" />
+					</a>
+				</div>
+			</div>
+		</section>
+		<section class="index-teishaku">
+			<div class="index-teishaku__border">
+				<div class="Wbase">
+					<div class="index-teishaku__badge">
+						<img src="images/top/teishaku-badge.svg" alt="東新住建のテイシャク" />
+					</div>
+					<h2 class="index-teishaku__title">平屋を建てるなら<span class="green">テイシャク。</span></h2>
+					<div class="index-teishaku__lead">
+						<p>
+							土地は購入せず、借りる。<br />
+							テイシャクだから叶えられる平屋暮らし。
+						</p>
+					</div>
+					<div class="index-teishaku__bnr">
+						<a href="https://www.toshinjyuken.co.jp/teishaku-portal/" target="_blank">
+							<img src="images/top/teishaku-bnr.jpg" alt="テイシャクについて詳しくはこちら" />
+						</a>
+					</div>
+					<div class="index-teishaku__btn">
+						<a href="https://www.toshinjyuken.co.jp/teishaku-portal/search.php" target="_blank">
+							<img class="pc-only" src="images/top/halforder-btn.svg" alt="物件一覧はこちら" />
+							<img class="sp-only" src="images/top/sp/halforder-btn.svg" alt="物件一覧はこちら" />
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
 		<?php echo ANCHOR('brand'); ?>
 		<section class="brand_concept2025">
 			<!-- brand_concept -->
@@ -815,6 +873,7 @@ foreach($sysdata_proto as $key => $sysdata){
 		</section>
 -->
 
+		<!--
 		<section class="index-halforder2604">
 			<div class="Wbase">
 				<div class="index-halforder2604__badge">
@@ -838,6 +897,7 @@ foreach($sysdata_proto as $key => $sysdata){
 				</div>
 			</div>
 		</section>
+-->
 
 		<div class="index-bottombnr">
 			<div class="Wbase">

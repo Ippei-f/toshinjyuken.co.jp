@@ -315,13 +315,13 @@ $temp_header = '<header class="l-header">
 								<a href="search.php"><div class="text">物件情報</div></a>
 							</li>
 							<li class="gnav__item">
-								<a href="index.php#brand"><div class="text">ブランドコンセプト</div></a>
-							</li>
-							<li class="gnav__item">
 								<a href="structure.php"><div class="text">東新住建の家づくり</div></a>
 							</li>
 							<li class="gnav__item">
 								<a href="bunjo-halforder.php"><div class="text">ハーフオーダー</div></a>
+							</li>
+							<li class="gnav__item">
+								<a href="https://www.toshinjyuken.co.jp/teishaku-portal/" target="_blank"><div class="text">テイシャク</div></a>
 							</li>
 							<li class="gnav__item">
 								<a href="https://www.toshinjyuken.co.jp/kodate/contents/"><div class="text">施工事例</div></a>

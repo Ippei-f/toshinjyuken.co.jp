@@ -1,10 +1,12 @@
 {
 	"name": "gulp-dev-template",
-	"version": "1.0.0",
+	"version": "1.1.0",
+	"private": true,
 	"description": "Reusable Gulp development environment with BrowserSync, PHP, and Sass",
 	"main": "gulpfile.js",
 	"scripts": {
 		"dev": "gulp",
+		"start": "gulp",
 		"build:css": "gulp css"
 	},
 	"devDependencies": {

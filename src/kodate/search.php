@@ -21,6 +21,9 @@ $rand = '?' . rand();
 	<link href="css/common.css" rel="stylesheet" type="text/css">
 	<link href="css/top.css" rel="stylesheet" type="text/css">
 	<link href="css/search2025.css<?php echo $rand; ?>" rel="stylesheet" type="text/css">
+	<style>
+	.linkbnr {max-width:800px;width:100%;margin:5% auto 0;display:block}@media screen and (max-width: 767px) {.linkbnr{max-width:100%;margin:10% auto 0;}}
+	</style>
 	<?php
 	//バナーシステム2023年度ver読み込み
 	$toushin_bnr_url = $kaisou . '../recaptcha/';
@@ -520,6 +523,7 @@ require $kaisou."temp_php/temp_map.php";
 */
 					?>
 				</section>
+
 				<section class="menu">
 					<form action="<?php echo $_SERVER['SCRIPT_NAME']; ?>" method="post">
 						<div class="subt">現在の検索条件</div>
@@ -647,8 +651,9 @@ require $kaisou."temp_php/temp_map.php";
 							</div>
 						</div>
 					</form>
-				</section>
+				</section>					
 			</div>
+			<a href="../teishaku-portal/index.php" class="linkbnr"><img src="images/content/search/bnr-teishaku.png"></a>
 		</main>
 		<div class="sp_fixbtn">
 			<div>検索条件を変更・追加<img src="images/common/arrow-bottom.svg"></div>
