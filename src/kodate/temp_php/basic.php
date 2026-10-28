@@ -605,17 +605,17 @@ $temp_bodyend .= '<!-- ===== SATORI Message : Creative END ===== -->' . chr(10);
 
 
 // ==============================
-// SATORI 自由見学バナー
+// SATORI 秋の住まい博バナー
 // search.php のみ表示
 // ==============================
 $current_page = basename($_SERVER['SCRIPT_NAME']);
 
 if ($current_page === 'search.php') {
-	$temp_bodyend .= '<!-- ===== SATORI Message : 自由見学バナー START ===== -->' . chr(10);
+	$temp_bodyend .= '<!-- ===== SATORI Message : 秋の住まい博バナー START ===== -->' . chr(10);
 	$temp_bodyend .= '<div id="satori__creative_container">' . chr(10);
-	$temp_bodyend .= '  <script id="-_-satori_creative-_-" src="//delivery.satr.jp/js/creative_set.js?d=20251119" data-key="ac03daaf5010e87a"></script>' . chr(10);
+	$temp_bodyend .= '  <script id="-_-satori_creative-_-" src="//delivery.satr.jp/js/creative_set.js?d=20251119" data-key="e10c1f14113a733a"></script>' . chr(10);
 	$temp_bodyend .= '</div>' . chr(10);
-	$temp_bodyend .= '<!-- ===== SATORI Message : 自由見学バナー END ===== -->' . chr(10);
+	$temp_bodyend .= '<!-- ===== SATORI Message : 秋の住まい博バナー END ===== -->' . chr(10);
 }
 
 
